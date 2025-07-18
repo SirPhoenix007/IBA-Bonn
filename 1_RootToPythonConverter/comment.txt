@@ -1,0 +1,1 @@
+cat_root.py ist von Max aus dem repo zu How-To-Geant4 gezogen. Das muss adaptiert werden um für mich verständlich zu sein.
