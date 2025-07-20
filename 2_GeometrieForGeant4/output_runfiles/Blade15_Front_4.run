@@ -1,0 +1,12 @@
+make_custom_material; 2; command=make_custom_material; name=ybco; density=6.4; yttrium=0.1334866513348665; barium=0.4122587741225877; copper=0.28617138286171384; oxygen=0.16808319168083188; 
+make_custom_material; 2; command=make_custom_material; name=Blade15Front; density=8.8812266; copper=0.9262778833650092; arsenic=0.022006601980594172; silver=0.004301290387116134; tin=0.006802040612183654; antimony=0.004301290387116134; lead=0.005801740522156645; nickel=0.029008702610783227; zinc=0.0015004501350405117; 
+make_custom_material; 2; command=make_custom_material; name=Blade15Back; density=8.8931427; copper=0.941905809419058; arsenic=0.019798020197980198; silver=0.0036996300369962994; tin=0.0060993900609939; antimony=0.0018998100189980998; lead=0.0025997400259973997; nickel=0.023997600239976; 
+place; 4; command=place; object=cube; name=target; material=Blade15Front; pos_x=0.0; pos_y=0.0; pos_z=0.0; rot_x=0.0; rot_y=0.0; rot_z=0.0; size_x=10.0; size_y=10.0; size_z=0.1; 
+place; 4; command=place; object=sphere; name=source_marker; material=vacuum; pos_x=0.0; pos_y=0.0; pos_z=-50.0; rot_x=0.0; rot_y=0.0; rot_z=0.0; radius=2.0; alpha=0.5; red=0; green=100; 
+place; 4; command=place; object=sphere; name=detector; material=vacuum; pos_x=0.0; pos_y=0.0; pos_z=0.0; rot_x=0.0; rot_y=0.0; rot_z=0.0; radius=100; inner_radius=95.0; alpha=0.01; red=255; green=0; 
+make_sd; 7; command=make_sd; attach=ldetector; name=RBS; particle=primary; attrib_0=ekin; attrib_1=theta; attrib_2=phi; attrib_count=3; 
+make_sd; 7; command=make_sd; attach=ldetector; name=PIXE; particle=gamma; attrib_0=ekin; attrib_1=theta; attrib_2=phi; attrib_count=3; 
+particle_source; 4; command=particle_source; particle=alpha; mono_e=true; shape=beam; energy=4.0; sigma=0.0; x_pos=0; y_pos=0.0; z_pos=-50.0; x_facing=0; y_facing=0; z_facing=1; sigma_r=1; atomic_number=0; atomic_mass=0; charge=0; excitation=0; 
+prerun_macro; 2; command=prerun_macro; content=/custom/ana/setOutFolder test_geo_output; 
+prerun_macro; 2; command=prerun_macro; content=/custom/ana/setRunName BonnPIXE2_Blade15_Front; 
+no_macro_f; 1; command=no_macro_f; event_count=300000000000.0; thread_count=10; 

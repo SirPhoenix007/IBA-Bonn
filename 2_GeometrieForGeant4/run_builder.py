@@ -46,7 +46,7 @@ def string_arg_count(argument: Dict) -> int:
 
 
 def write_simple_ff(command: Dict):
-    write_str = f"{command["command"]}; {str(string_arg_count(command))}; "
+    write_str = f"{command['command']}; {str(string_arg_count(command))}; "
 
     # first put the string args
     for key in command:
@@ -289,7 +289,7 @@ def set_run_name(name: str):
 
 
 def start_run(path = None):
-    build_geo_file(path)
+    build_geo_file(path, not type(path) == NoneType)
     clear_setup()
 #    if type(path) != NoneType:
 #        global run_list
@@ -320,7 +320,7 @@ def build_geo_file(path = None, write_file = False):
     if write_file:
         command_list = [cmd + "\n" for cmd in command_list]
 
-        with open(path, "w") as file:
+        with open(path, "w+") as file:
             file.writelines(command_list)
     else:
         run_list.append((path, command_list))
