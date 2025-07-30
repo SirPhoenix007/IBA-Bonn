@@ -36,4 +36,4 @@ if __name__ == "__main__":
         print("Verwendung: python json_to_np.py input.json")
     else:
         data = json_to_np(sys.argv[1], sys.argv[2])
-        array_to_histo(data)
+        # array_to_histo(data)
