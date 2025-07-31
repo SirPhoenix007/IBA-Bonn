@@ -22,7 +22,7 @@ def root_to_json(root_file_path, json_file_name):
             else:
                 # Nicht unterstützter Typ (z.B. TH1, TGraph), hier ggf. erweitern
                 print(f"Überspringe nicht unterstütztes Objekt: {key}")
-            json_file_path = json_file_name + key + '.json'
+            json_file_path = json_file_name + '_' + key.replace(';','_') + '.json'
             # Schreibe die Daten als JSON
             with open(json_file_path, "w") as json_file:
                 json.dump(data_dict, json_file, indent=1)
