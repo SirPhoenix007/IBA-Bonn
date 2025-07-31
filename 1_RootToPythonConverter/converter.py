@@ -10,7 +10,7 @@ from json_to_np import *
 mac = hex(uuid.getnode())
 print(f"MAC address: {mac}")
 
-mac_dict = {'mac1': ['OfficePath'], '0x145afc4fe836': ['C://Users//schum//Documents//root_files_temp_storage', 'C://Users//schum//Documents//json_files_temp_storage'], 'mac3': ['HomePCPath']}
+mac_dict = {'mac1': ['OfficePath'], '0x145afc4fe836': ['C://Users//schum//Documents//root_files_temp_storage', 'C://Users//schum//Documents//json_files_temp_storage'], '0x1a7dda7115': ['B://IBA//root', 'B://IBA//json']}
 # Each mac adresse leads to a pair of paths, the first being the folder, 
 # where the root files are, the second, where the json files are supposed to be stored
 root_path = mac_dict[mac][0]
@@ -49,9 +49,9 @@ if (len(files_r) != 0):
 else:
     print('All current ROOT-files are already converted.')
 
-root_to_json(files_r[7], files_j[7])
-# for f in range(len(files_r)):
-#     root_to_json(files_r[f], files_j[f])
+# root_to_json(files_r[7], files_j[7])
+for f in range(len(files_r)):
+    root_to_json(files_r[f], files_j[f])
 
 
     
