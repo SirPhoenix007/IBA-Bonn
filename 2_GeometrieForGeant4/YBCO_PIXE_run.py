@@ -13,12 +13,12 @@ place("source_marker", "sphere", (0., 0., -5. * cm), material="vacuum", radius =
 place("detector", "sphere", (0., 0., 0.), material="vacuum", radius = 10 * cm, inner_radius = 9.5 * cm, alpha=0.1, red=255, green = 0)
 make_sd("RBS", "detector", ["ekin", "theta", "phi"], "primary")
 make_sd("PIXE", "detector", ["ekin", "theta", "phi"], "gamma")
-# make_beam_source("ion", 28., (0, 0., -5. * cm), (0, 0, 1), sigma_r = 1* mm, atomic_number=2, atomic_mass=4, charge=2)
-make_beam_source("proton", 28., (0, 0., -5. * cm), (0, 0, 1), sigma_r = 1* mm)
+make_beam_source("ion", 28., (0, 0., -5. * cm), (0, 0, 1), sigma_r = 1* mm, atomic_number=2, atomic_mass=4, charge=2)
+# make_beam_source("proton", 14., (0, 0., -5. * cm), (0, 0, 1), sigma_r = 1* mm)
 
 set_output_path("YBCO_100um_Alpha_28")
 set_run_name("YBCO_100um_Alpha_28_")
 # make_ui_commands()
-config_run(5e7, 12) #Splittet die Events auf die Threads auf. 2^32 - 1 = 4.2e9 ist maximum. Wenn Anwesend dann simulation sonst Interaktiv aber keine Simulation.
+config_run(5e8, 12) #Splittet die Events auf die Threads auf. 2^32 - 1 = 4.2e9 ist maximum. Wenn Anwesend dann simulation sonst Interaktiv aber keine Simulation.
 # start_run()
 start_run(path="./output_runfiles/YBCO_100um_Alpha_28.run", force_file_write=True) #Hier Pfad rein und der Code macht eine Datei mit dem Output.
