@@ -6,18 +6,33 @@ import matplotlib.pyplot as plt
 import pandas as pd
 
 
-def json_to_np(json_file_path, json_field):
+def json_to_np(json_file_path, json_field=None):
     print(os.path.exists(json_file_path))
-    
-    with open(json_file_path, "r") as j:
-        data = json.load(j)
-        
-    # print(data["RBS;1"])
-    # Zugriff auf das gewünschte Feld (z. B. "mydata")
-    array = np.array(data[json_field])
+    if (json_field != None):
+        with open(json_file_path, "r") as j:
+            data = json.load(j)
+            
+        # print(data["RBS;1"])
+        # Zugriff auf das gewünschte Feld (z. B. "mydata")
+        if (json_field != 'all'):
+            array = np.array(data[json_field])
 
-    print(array)
-    return array
+            print(array)
+            return array
+        else:
+            array_set = {}
+            i = 1
+            for k in data.keys():
+                array = np.array(data[k])
+                array_set[k] = array
+                print(f'Array for key {k} created. {i}/{len(data.keys())}')
+                i += 1
+            print(f'WARNING: The data is now structured in a dictionary, with the keys {data.keys()}')
+            return array_set
+    else:
+        print('ERROR: No json field specified!')
+        return 41
+    
 
 def array_to_histo(data):
     plt.figure(figsize=(4,4), dpi=250)

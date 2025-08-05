@@ -6,19 +6,19 @@ custom_material("ybco", 6.4, yttrium=13.35, barium=41.23, copper=28.62, oxygen=1
 # custom_material("Blade15Back",  8.893, copper=94.2, arsenic=1.98, silver=0.37, tin=0.61, antimony=0.19, lead=0.26, nickel=2.40)
 #~~~~~~~~~~~~~~~~~~~~~~~~ CUSTOM MATERIALS ~~~~~~~~~~~~~~~~~~~~~~~~#
 
-place("target", "cube", (0., 0., 0.), material= "ybco", size_x = 10. * mm, size_y = 10. * mm, size_z = 100. * um)
+place("target", "cube", (0., 0., 0.), material= "ybco", size_x = 10. * mm, size_y = 10. * mm, size_z = 10. * um)
 
 place("source_marker", "sphere", (0., 0., -5. * cm), material="vacuum", radius = 2. * mm, alpha=0.5, red=0, green = 100)
 
 place("detector", "sphere", (0., 0., 0.), material="vacuum", radius = 10 * cm, inner_radius = 9.5 * cm, alpha=0.1, red=255, green = 0)
 make_sd("RBS", "detector", ["ekin", "theta", "phi"], "primary")
 make_sd("PIXE", "detector", ["ekin", "theta", "phi"], "gamma")
-make_beam_source("ion", 28., (0, 0., -5. * cm), (0, 0, 1), sigma_r = 1* mm, atomic_number=2, atomic_mass=4, charge=2)
-# make_beam_source("proton", 14., (0, 0., -5. * cm), (0, 0, 1), sigma_r = 1* mm)
 
-set_output_path("YBCO_100um_Alpha_28")
-set_run_name("YBCO_100um_Alpha_28_")
-# make_ui_commands()
-config_run(5e8, 12) #Splittet die Events auf die Threads auf. 2^32 - 1 = 4.2e9 ist maximum. Wenn Anwesend dann simulation sonst Interaktiv aber keine Simulation.
-# start_run()
-start_run(path="./output_runfiles/YBCO_100um_Alpha_28.run", force_file_write=True) #Hier Pfad rein und der Code macht eine Datei mit dem Output.
+beam_type = "alpha"
+energy = 4. #in MeV
+make_beam_source(beam_type, energy, (0, 0., -5. * cm), (0, 0, 1), sigma_r = 1* mm)
+
+set_output_path(f"output_YBCO_10mu_{beam_type}_{str(energy).replace('.','-')}")
+set_run_name(f"YBCO_10mu_{beam_type}_{str(energy).replace('.','-')}_")
+config_run(1e9, 12) #Wenn Anwesend dann simulation sonst Interaktiv aber keine Simulation.
+start_run(f"./output_runfiles/YBCO_10mu_{beam_type}_{str(energy).replace('.','-')}.run", force_file_write=True) #Hier Pfad rein und der Code macht eine Datei mit dem Output.
