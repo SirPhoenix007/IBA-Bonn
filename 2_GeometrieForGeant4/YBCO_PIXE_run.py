@@ -14,11 +14,11 @@ place("detector", "sphere", (0., 0., 0.), material="vacuum", radius = 10 * cm, i
 make_sd("RBS", "detector", ["ekin", "theta", "phi"], "primary")
 make_sd("PIXE", "detector", ["ekin", "theta", "phi"], "gamma")
 
-beam_type = "alpha"
-energy = 4. #in MeV
+beam_type = "proton"
+energy = 7. #in MeV
 make_beam_source(beam_type, energy, (0, 0., -5. * cm), (0, 0, 1), sigma_r = 1* mm)
 
 set_output_path(f"output_YBCO_10mu_{beam_type}_{str(energy).replace('.','-')}")
 set_run_name(f"YBCO_10mu_{beam_type}_{str(energy).replace('.','-')}_")
-config_run(1e9, 12) #Wenn Anwesend dann simulation sonst Interaktiv aber keine Simulation.
+config_run(1e8, 12) #Wenn Anwesend dann simulation sonst Interaktiv aber keine Simulation.
 start_run(f"./output_runfiles/YBCO_10mu_{beam_type}_{str(energy).replace('.','-')}.run", force_file_write=True) #Hier Pfad rein und der Code macht eine Datei mit dem Output.
