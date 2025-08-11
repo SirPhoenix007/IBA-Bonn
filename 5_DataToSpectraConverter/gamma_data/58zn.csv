@@ -1,0 +1,11 @@
+z,n,symbol,start_level_idx,start_level_energy,unc_sle,start_level_jp,end_level_idx,end_level_energy,unc_ele,end_level_jp,gamma_idx,energy,unc_en,relative_intensity,unc_ri,multipolarity,mixing_ratio,unc_mr,b_e1,unc_be1,b_e2,unc_be2,b_m1,unc_bm1,b_m2,unc_bm2,tot_conv_coeff,tce_unc,ensdf_publication_cut-off,ensdf_authors,Extraction_date
+30,28,Zn,1,1356,3,(2+),0,0,,0+,0,1356,3,100,,,,,,,,,,,,,,,31-JUL-2014,BALRAJ SINGH,2025-08-08
+30,28,Zn,2,2499,4,(4+),1,1356,3,(2+),0,1143,3,100,,,,,,,,,,,,,,,31-JUL-2014,BALRAJ SINGH,2025-08-08
+30,28,Zn,3,2609,6,(2+),1,1356,3,(2+),0,1253,5,100,,,,,,,,,,,,,,,31-JUL-2014,BALRAJ SINGH,2025-08-08
+30,28,Zn,4,2862,3,(2+),1,1356,3,(2+),0,1507,4,100,25,,,,,,,,,,,,,,31-JUL-2014,BALRAJ SINGH,2025-08-08
+30,28,Zn,4,2862,3,(2+),0,0,,0+,1,2861,4,88,25,,,,,,,,,,,,,,31-JUL-2014,BALRAJ SINGH,2025-08-08
+30,28,Zn,5,2902,3,(1+),1,1356,3,(2+),0,1545,3,100,15,,,,,,,,,,,,,,31-JUL-2014,BALRAJ SINGH,2025-08-08
+30,28,Zn,5,2902,3,(1+),0,0,,0+,1,2904,5,23,8,,,,,,,,,,,,,,31-JUL-2014,BALRAJ SINGH,2025-08-08
+30,28,Zn,6,3263,4,(2+),1,1356,3,(2+),0,1906,4,57,29,,,,,,,,,,,,,,31-JUL-2014,BALRAJ SINGH,2025-08-08
+30,28,Zn,6,3263,4,(2+),0,0,,0+,1,3265,6,100,29,,,,,,,,,,,,,,31-JUL-2014,BALRAJ SINGH,2025-08-08
+30,28,Zn,7,3378,6,(3+),2,2499,4,(4+),0,879,4,100,,,,,,,,,,,,,,,31-JUL-2014,BALRAJ SINGH,2025-08-08

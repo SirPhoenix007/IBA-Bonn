@@ -1,0 +1,298 @@
+z,n,symbol,start_level_idx,start_level_energy,unc_sle,start_level_jp,end_level_idx,end_level_energy,unc_ele,end_level_jp,gamma_idx,energy,unc_en,relative_intensity,unc_ri,multipolarity,mixing_ratio,unc_mr,b_e1,unc_be1,b_e2,unc_be2,b_m1,unc_bm1,b_m2,unc_bm2,tot_conv_coeff,tce_unc,ensdf_publication_cut-off,ensdf_authors,Extraction_date
+58,84,Ce,1,641.282,0.009,2+,0,0,,0+,0,641.285,0.009,100,,E2,,,,,21.2,,,,,,0.00563,0.00008,1-Jun-2010,T.D. Johnson and  D. Symochko(a) and  M. Fadil(b) and  and J.K. Tuli,2025-08-08
+58,84,Ce,2,1219.37,0.03,4+,1,641.282,0.009,2+,0,578.09,0.04,2.8,0.1,E2,,,,,26.4,,,,,,0.00733,0.00011,1-Jun-2010,T.D. Johnson and  D. Symochko(a) and  M. Fadil(b) and  and J.K. Tuli,2025-08-08
+58,84,Ce,3,1536.33,0.04,2+,1,641.282,0.009,2+,0,895.1,0.1,100,,M1+E2,-1.5,,,,14,,0.005,,,,0.0029,0.0003,1-Jun-2010,T.D. Johnson and  D. Symochko(a) and  M. Fadil(b) and  and J.K. Tuli,2025-08-08
+58,84,Ce,3,1536.33,0.04,2+,0,0,,0+,1,1537.4,0.2,1.01,,E2,,,,,0.018,,,,,,0.000934,0.000013,1-Jun-2010,T.D. Johnson and  D. Symochko(a) and  M. Fadil(b) and  and J.K. Tuli,2025-08-08
+58,84,Ce,4,1652.91,0.04,3-,2,1219.37,0.03,4+,0,433.2,0.1,14.94,,E1,,,0.00022,,,,,,,,0.00501,0.00007,1-Jun-2010,T.D. Johnson and  D. Symochko(a) and  M. Fadil(b) and  and J.K. Tuli,2025-08-08
+58,84,Ce,4,1652.91,0.04,3-,1,641.282,0.009,2+,1,1011.7,0.1,100,,E1,,,0.00012,,,,,,,,0.000827,0.000012,1-Jun-2010,T.D. Johnson and  D. Symochko(a) and  M. Fadil(b) and  and J.K. Tuli,2025-08-08
+58,84,Ce,6,1743.05,0.06,6+,2,1219.37,0.03,4+,0,523.5,0.1,100,,E2,,,,,,,,,,,0.00952,0.00014,1-Jun-2010,T.D. Johnson and  D. Symochko(a) and  M. Fadil(b) and  and J.K. Tuli,2025-08-08
+58,84,Ce,7,2004.89,0.07,2+,4,1652.91,0.04,3-,0,352.1,0.1,2.857,,,,,,,,,,,,,,,1-Jun-2010,T.D. Johnson and  D. Symochko(a) and  M. Fadil(b) and  and J.K. Tuli,2025-08-08
+58,84,Ce,7,2004.89,0.07,2+,1,641.282,0.009,2+,1,1363.6,0.1,100,,M1+E2,-0.26,,,,3,,0.127,,,,0.00144,0.00004,1-Jun-2010,T.D. Johnson and  D. Symochko(a) and  M. Fadil(b) and  and J.K. Tuli,2025-08-08
+58,84,Ce,7,2004.89,0.07,2+,0,0,,0+,2,2004.9,0.2,40,,E2,,,,,2.5,,,,,,0.000808,0.000012,1-Jun-2010,T.D. Johnson and  D. Symochko(a) and  M. Fadil(b) and  and J.K. Tuli,2025-08-08
+58,84,Ce,8,2014.5,0.3,,1,641.282,0.009,2+,0,1372.9,0.7,50,50,,,,,,,,,,,,,,1-Jun-2010,T.D. Johnson and  D. Symochko(a) and  M. Fadil(b) and  and J.K. Tuli,2025-08-08
+58,84,Ce,8,2014.5,0.3,,0,0,,0+,1,2014.1,1,100,,,,,,,,,,,,,,,1-Jun-2010,T.D. Johnson and  D. Symochko(a) and  M. Fadil(b) and  and J.K. Tuli,2025-08-08
+58,84,Ce,9,2031.01,0.09,0+,1,641.282,0.009,2+,0,1389.7,0.1,100,,,,,,,,,,,,,,,1-Jun-2010,T.D. Johnson and  D. Symochko(a) and  M. Fadil(b) and  and J.K. Tuli,2025-08-08
+58,84,Ce,10,2044.51,0.06,4+,2,1219.37,0.03,4+,0,825.2,0.1,3.093,,M1(+E2),-0.06,,,,,,0.0036,,,,0.00457,0.00013,1-Jun-2010,T.D. Johnson and  D. Symochko(a) and  M. Fadil(b) and  and J.K. Tuli,2025-08-08
+58,84,Ce,10,2044.51,0.06,4+,1,641.282,0.009,2+,1,1403,0.1,100,,E2,,,,,7,,,,,,0.001054,0.000015,1-Jun-2010,T.D. Johnson and  D. Symochko(a) and  M. Fadil(b) and  and J.K. Tuli,2025-08-08
+58,84,Ce,11,2111.87,0.11,4+,2,1219.37,0.03,4+,0,892.5,0.1,100,,M1+E2,-0.43,,,,10,,0.07,,,,0.00361,0.00009,1-Jun-2010,T.D. Johnson and  D. Symochko(a) and  M. Fadil(b) and  and J.K. Tuli,2025-08-08
+58,84,Ce,12,2124.91,0.08,5-,6,1743.05,0.06,6+,0,381.8,0.1,11.25,,,,,,,,,,,,,,,1-Jun-2010,T.D. Johnson and  D. Symochko(a) and  M. Fadil(b) and  and J.K. Tuli,2025-08-08
+58,84,Ce,12,2124.91,0.08,5-,4,1652.91,0.04,3-,1,471,1,12.5,,,,,,,,,,,,,,,1-Jun-2010,T.D. Johnson and  D. Symochko(a) and  M. Fadil(b) and  and J.K. Tuli,2025-08-08
+58,84,Ce,12,2124.91,0.08,5-,2,1219.37,0.03,4+,2,905.6,0.1,100,,E1,,,0.00066,,,,,,,,0.001021,0.000015,1-Jun-2010,T.D. Johnson and  D. Symochko(a) and  M. Fadil(b) and  and J.K. Tuli,2025-08-08
+58,84,Ce,13,2181.95,0.05,3+,4,1652.91,0.04,3-,0,528.7,0.1,8.696,,,,,,,,,,,,,,,1-Jun-2010,T.D. Johnson and  D. Symochko(a) and  M. Fadil(b) and  and J.K. Tuli,2025-08-08
+58,84,Ce,13,2181.95,0.05,3+,3,1536.33,0.04,2+,1,645.6,0.1,26.09,,M1+E2,-0.4,,,,7,,0.03,,,,0.00789,0.00022,1-Jun-2010,T.D. Johnson and  D. Symochko(a) and  M. Fadil(b) and  and J.K. Tuli,2025-08-08
+58,84,Ce,13,2181.95,0.05,3+,2,1219.37,0.03,4+,2,962.5,0.1,100,,M1(+E2),-0.5,,,,,,0.03,,,,0.003,0.0007,1-Jun-2010,T.D. Johnson and  D. Symochko(a) and  M. Fadil(b) and  and J.K. Tuli,2025-08-08
+58,84,Ce,13,2181.95,0.05,3+,1,641.282,0.009,2+,3,1540.9,0.1,84.78,,M1+E2,0.09,,,,0.02,,0.009,,,,0.00118,0.000017,1-Jun-2010,T.D. Johnson and  D. Symochko(a) and  M. Fadil(b) and  and J.K. Tuli,2025-08-08
+58,84,Ce,14,2187.54,0.12,1-,4,1652.91,0.04,3-,0,534,1,0.5172,,,,,,,,,,,,,,,1-Jun-2010,T.D. Johnson and  D. Symochko(a) and  M. Fadil(b) and  and J.K. Tuli,2025-08-08
+58,84,Ce,14,2187.54,0.12,1-,1,641.282,0.009,2+,1,1546.3,0.2,70.69,,E1,,,0.0025,,,,,,,,0.00064,0.000009,1-Jun-2010,T.D. Johnson and  D. Symochko(a) and  M. Fadil(b) and  and J.K. Tuli,2025-08-08
+58,84,Ce,14,2187.54,0.12,1-,0,0,,0+,2,2187.4,0.2,100,,E1,,,0.00126,,,,,,,,0.000941,0.000014,1-Jun-2010,T.D. Johnson and  D. Symochko(a) and  M. Fadil(b) and  and J.K. Tuli,2025-08-08
+58,84,Ce,15,2210.6,0.06,6+,6,1743.05,0.06,6+,0,467.55,0.02,100,,,,,,,,,,,,,,,1-Jun-2010,T.D. Johnson and  D. Symochko(a) and  M. Fadil(b) and  and J.K. Tuli,2025-08-08
+58,84,Ce,15,2210.6,0.06,6+,2,1219.37,0.03,4+,1,991.21,0.06,20,,E2,,,,,,,,,,,0.00206,0.00003,1-Jun-2010,T.D. Johnson and  D. Symochko(a) and  M. Fadil(b) and  and J.K. Tuli,2025-08-08
+58,84,Ce,16,2278.14,0.08,4+,2,1219.37,0.03,4+,0,1058.5,0.1,40.85,,M1+E2,2.1,,,,28,,0.012,,,,0.00193,0.0001,1-Jun-2010,T.D. Johnson and  D. Symochko(a) and  M. Fadil(b) and  and J.K. Tuli,2025-08-08
+58,84,Ce,16,2278.14,0.08,4+,1,641.282,0.009,2+,1,1636.8,0.2,100,,E2,,,,,9,,,,,,0.000878,0.000013,1-Jun-2010,T.D. Johnson and  D. Symochko(a) and  M. Fadil(b) and  and J.K. Tuli,2025-08-08
+58,84,Ce,17,2329.88,0.1,3+,3,1536.33,0.04,2+,0,793.4,0.1,42.86,,M1+E2,0.37,,,,7,,0.06,,,,0.00483,0.00025,1-Jun-2010,T.D. Johnson and  D. Symochko(a) and  M. Fadil(b) and  and J.K. Tuli,2025-08-08
+58,84,Ce,17,2329.88,0.1,3+,1,641.282,0.009,2+,1,1689.2,0.2,100,,M1+E2,-0.16,0.13,,,0.08,,0.015,,,,0.00104,0.000018,1-Jun-2010,T.D. Johnson and  D. Symochko(a) and  M. Fadil(b) and  and J.K. Tuli,2025-08-08
+58,84,Ce,18,2364.91,0.12,2+,8,2014.5,0.3,,0,350.3,0.3,3,,,,,,,,,,,,,,,1-Jun-2010,T.D. Johnson and  D. Symochko(a) and  M. Fadil(b) and  and J.K. Tuli,2025-08-08
+58,84,Ce,18,2364.91,0.12,2+,1,641.282,0.009,2+,1,1723.6,0.2,100,,M1(+E2),-0.03,,,,,,0.2,,,,0.001022,0.000015,1-Jun-2010,T.D. Johnson and  D. Symochko(a) and  M. Fadil(b) and  and J.K. Tuli,2025-08-08
+58,84,Ce,18,2364.91,0.12,2+,0,0,,0+,2,2364.8,0.2,31.58,,E2,,,,,2.6,,,,,,0.000848,0.000012,1-Jun-2010,T.D. Johnson and  D. Symochko(a) and  M. Fadil(b) and  and J.K. Tuli,2025-08-08
+58,84,Ce,19,2374.96,0.08,+,6,1743.05,0.06,6+,0,631.8,0.1,92.3,,M1+E2,-1.5,,,,62,,,,,,0.0077,0.001,1-Jun-2010,T.D. Johnson and  D. Symochko(a) and  M. Fadil(b) and  and J.K. Tuli,2025-08-08
+58,84,Ce,19,2374.96,0.08,+,2,1219.37,0.03,4+,1,1155.7,0.1,100,,M1+E2,-0.09,,,,0.088,,0.011,,,,0.00208,0.00004,1-Jun-2010,T.D. Johnson and  D. Symochko(a) and  M. Fadil(b) and  and J.K. Tuli,2025-08-08
+58,84,Ce,20,2384.45,0.07,4-,13,2181.95,0.05,3+,0,202.3,0.1,6.329,,,,,,,,,,,,,,,1-Jun-2010,T.D. Johnson and  D. Symochko(a) and  M. Fadil(b) and  and J.K. Tuli,2025-08-08
+58,84,Ce,20,2384.45,0.07,4-,4,1652.91,0.04,3-,1,731.5,0.1,100,,M1+E2,-0.8,,,,300,,0.5,,,,0.0053,0.0005,1-Jun-2010,T.D. Johnson and  D. Symochko(a) and  M. Fadil(b) and  and J.K. Tuli,2025-08-08
+58,84,Ce,20,2384.45,0.07,4-,2,1219.37,0.03,4+,2,1165.3,0.1,20.25,,,,,,,,,,,,,,,1-Jun-2010,T.D. Johnson and  D. Symochko(a) and  M. Fadil(b) and  and J.K. Tuli,2025-08-08
+58,84,Ce,21,2398.42,0.07,1+,9,2031.01,0.09,0+,0,367.3,0.2,1,,,,,,,,,,,,,,,1-Jun-2010,T.D. Johnson and  D. Symochko(a) and  M. Fadil(b) and  and J.K. Tuli,2025-08-08
+58,84,Ce,21,2398.42,0.07,1+,7,2004.89,0.07,2+,1,393.6,0.2,1.4,,,,,,,,,,,,,,,1-Jun-2010,T.D. Johnson and  D. Symochko(a) and  M. Fadil(b) and  and J.K. Tuli,2025-08-08
+58,84,Ce,21,2398.42,0.07,1+,3,1536.33,0.04,2+,2,862.1,0.1,10.26,,M1(+E2),0.03,0.05,,,,,0.035,,,,0.00412,0.00006,1-Jun-2010,T.D. Johnson and  D. Symochko(a) and  M. Fadil(b) and  and J.K. Tuli,2025-08-08
+58,84,Ce,21,2398.42,0.07,1+,1,641.282,0.009,2+,3,1757.1,0.1,17.95,,M1+E2,-1.6,,,,1,,0.0021,,,,0.000882,0.00002,1-Jun-2010,T.D. Johnson and  D. Symochko(a) and  M. Fadil(b) and  and J.K. Tuli,2025-08-08
+58,84,Ce,21,2398.42,0.07,1+,0,0,,0+,4,2398.5,0.2,100,,M1,,,,,,,0.016,,,,0.000934,0.000013,1-Jun-2010,T.D. Johnson and  D. Symochko(a) and  M. Fadil(b) and  and J.K. Tuli,2025-08-08
+58,84,Ce,22,2539.72,0.1,4+,13,2181.95,0.05,3+,0,358.7,0.1,100,,(M1+E2),-0.5859,,,,,,6,,,,0.0341,,1-Jun-2010,T.D. Johnson and  D. Symochko(a) and  M. Fadil(b) and  and J.K. Tuli,2025-08-08
+58,84,Ce,22,2539.72,0.1,4+,2,1219.37,0.03,4+,1,1320.3,0.1,26.87,,E2,,,,,14,,,,,,0.001162,0.000017,1-Jun-2010,T.D. Johnson and  D. Symochko(a) and  M. Fadil(b) and  and J.K. Tuli,2025-08-08
+58,84,Ce,22,2539.72,0.1,4+,1,641.282,0.009,2+,2,1898.6,0.2,20.9,,E2,,,,,1.8,,,,,,0.000812,0.000012,1-Jun-2010,T.D. Johnson and  D. Symochko(a) and  M. Fadil(b) and  and J.K. Tuli,2025-08-08
+58,84,Ce,23,2542.65,0.19,1,0,0,,0+,0,2542.8,0.2,100,,,,,,,,,,,,,,,1-Jun-2010,T.D. Johnson and  D. Symochko(a) and  M. Fadil(b) and  and J.K. Tuli,2025-08-08
+58,84,Ce,24,2543.21,0.08,2+,18,2364.91,0.12,2+,0,178.3,0.3,1.9,0.5,,,,,,,,,,,,,,1-Jun-2010,T.D. Johnson and  D. Symochko(a) and  M. Fadil(b) and  and J.K. Tuli,2025-08-08
+58,84,Ce,24,2543.21,0.08,2+,14,2187.54,0.12,1-,1,355.3,0.3,0.5,,,,,,,,,,,,,,,1-Jun-2010,T.D. Johnson and  D. Symochko(a) and  M. Fadil(b) and  and J.K. Tuli,2025-08-08
+58,84,Ce,24,2543.21,0.08,2+,7,2004.89,0.07,2+,2,538.3,0.5,0.5,,,,,,,,,,,,,,,1-Jun-2010,T.D. Johnson and  D. Symochko(a) and  M. Fadil(b) and  and J.K. Tuli,2025-08-08
+58,84,Ce,24,2543.21,0.08,2+,3,1536.33,0.04,2+,3,1006.7,0.2,2.4,,,,,,,,,,,,,,,1-Jun-2010,T.D. Johnson and  D. Symochko(a) and  M. Fadil(b) and  and J.K. Tuli,2025-08-08
+58,84,Ce,24,2543.21,0.08,2+,2,1219.37,0.03,4+,4,1323.9,0.1,50,,E2,,,,,3,,,,,,0.001156,0.000017,1-Jun-2010,T.D. Johnson and  D. Symochko(a) and  M. Fadil(b) and  and J.K. Tuli,2025-08-08
+58,84,Ce,24,2543.21,0.08,2+,1,641.282,0.009,2+,5,1902.1,0.2,67.4,,M1+E2,0.65,0.05,,,0.2,,0.003,,,,0.000905,0.000014,1-Jun-2010,T.D. Johnson and  D. Symochko(a) and  M. Fadil(b) and  and J.K. Tuli,2025-08-08
+58,84,Ce,24,2543.21,0.08,2+,0,0,,0+,6,2543.1,0.2,100,,,,,,,,,,,,,,,1-Jun-2010,T.D. Johnson and  D. Symochko(a) and  M. Fadil(b) and  and J.K. Tuli,2025-08-08
+58,84,Ce,25,2570.08,0.11,5+,6,1743.05,0.06,6+,0,827.4,0.1,14.94,,(M1+E2),-0.5,,,,10,,0.03,,,,0.0042,0.0008,1-Jun-2010,T.D. Johnson and  D. Symochko(a) and  M. Fadil(b) and  and J.K. Tuli,2025-08-08
+58,84,Ce,25,2570.08,0.11,5+,2,1219.37,0.03,4+,1,1350.7,0.1,100,,M1+E2,-0.6,,,,5,,0.05,,,,0.00139,0.00018,1-Jun-2010,T.D. Johnson and  D. Symochko(a) and  M. Fadil(b) and  and J.K. Tuli,2025-08-08
+58,84,Ce,26,2576.23,0.06,3+,16,2278.14,0.08,4+,0,297.8,0.1,48.39,,M1+E2,1.1,,,,970,,0.13,,,,0.0539,0.0021,1-Jun-2010,T.D. Johnson and  D. Symochko(a) and  M. Fadil(b) and  and J.K. Tuli,2025-08-08
+58,84,Ce,26,2576.23,0.06,3+,13,2181.95,0.05,3+,1,394,0.1,61.29,,(M1+E2),0.5,,,,190,,0.11,,,,0.027,0.0022,1-Jun-2010,T.D. Johnson and  D. Symochko(a) and  M. Fadil(b) and  and J.K. Tuli,2025-08-08
+58,84,Ce,26,2576.23,0.06,3+,10,2044.51,0.06,4+,2,531.9,0.1,100,,M1(+E2),0,,,,,,0.065,,,,0.01331,,1-Jun-2010,T.D. Johnson and  D. Symochko(a) and  M. Fadil(b) and  and J.K. Tuli,2025-08-08
+58,84,Ce,26,2576.23,0.06,3+,4,1652.91,0.04,3-,3,923.4,0.1,38.71,,,,,,,,,,,,,,,1-Jun-2010,T.D. Johnson and  D. Symochko(a) and  M. Fadil(b) and  and J.K. Tuli,2025-08-08
+58,84,Ce,26,2576.23,0.06,3+,3,1536.33,0.04,2+,4,1039.9,0.1,77.42,,M1+E2,-0.8,,,,2.3,,0.0057,,,,0.00234,0.00025,1-Jun-2010,T.D. Johnson and  D. Symochko(a) and  M. Fadil(b) and  and J.K. Tuli,2025-08-08
+58,84,Ce,27,2591,0.3,,1,641.282,0.009,2+,0,1949.4,0.9,100,13,,,,,,,,,,,,,,1-Jun-2010,T.D. Johnson and  D. Symochko(a) and  M. Fadil(b) and  and J.K. Tuli,2025-08-08
+58,84,Ce,27,2591,0.3,,0,0,,0+,1,2590.6,1,37.5,,,,,,,,,,,,,,,1-Jun-2010,T.D. Johnson and  D. Symochko(a) and  M. Fadil(b) and  and J.K. Tuli,2025-08-08
+58,84,Ce,28,2592.5,0.9,(7-),6,1743.05,0.06,6+,0,849.5,,100,,,,,,,,,,,,,,,1-Jun-2010,T.D. Johnson and  D. Symochko(a) and  M. Fadil(b) and  and J.K. Tuli,2025-08-08
+58,84,Ce,29,2598.27,0.1,2+,3,1536.33,0.04,2+,0,1062,0.1,100,,M1+E2,-0.26,,,,0.35,,0.0059,,,,0.00248,0.00005,1-Jun-2010,T.D. Johnson and  D. Symochko(a) and  M. Fadil(b) and  and J.K. Tuli,2025-08-08
+58,84,Ce,29,2598.27,0.1,2+,0,0,,0+,1,2598,0.2,85.19,,E2,,,,,0.03,,,,,,0.000899,0.000013,1-Jun-2010,T.D. Johnson and  D. Symochko(a) and  M. Fadil(b) and  and J.K. Tuli,2025-08-08
+58,84,Ce,30,2602.55,0.06,(3 2)+,10,2044.51,0.06,4+,0,557.7,0.1,19.12,,,,,,,,,,,,,,,1-Jun-2010,T.D. Johnson and  D. Symochko(a) and  M. Fadil(b) and  and J.K. Tuli,2025-08-08
+58,84,Ce,30,2602.55,0.06,(3 2)+,3,1536.33,0.04,2+,1,1066.1,0.2,5.882,,(M1+E2),1.2,,,,0.5,,0.0006,,,,0.0021,0.0003,1-Jun-2010,T.D. Johnson and  D. Symochko(a) and  M. Fadil(b) and  and J.K. Tuli,2025-08-08
+58,84,Ce,30,2602.55,0.06,(3 2)+,2,1219.37,0.03,4+,2,1383.3,0.1,22.06,,M1+E2,1.1,,,,0.9,,0.002,,,,0.00123,0.00008,1-Jun-2010,T.D. Johnson and  D. Symochko(a) and  M. Fadil(b) and  and J.K. Tuli,2025-08-08
+58,84,Ce,30,2602.55,0.06,(3 2)+,1,641.282,0.009,2+,3,1961.5,0.1,100,,M1(+E2),0.03,0.03,,,,,0.008,,,,0.00093,0.000013,1-Jun-2010,T.D. Johnson and  D. Symochko(a) and  M. Fadil(b) and  and J.K. Tuli,2025-08-08
+58,84,Ce,31,2606.49,0.08,4+,2,1219.37,0.03,4+,0,1387.1,0.1,100,,M1+E2,1.1,0.4,,,20,,0.07,,,,0.00123,0.00008,1-Jun-2010,T.D. Johnson and  D. Symochko(a) and  M. Fadil(b) and  and J.K. Tuli,2025-08-08
+58,84,Ce,31,2606.49,0.08,4+,1,641.282,0.009,2+,1,1965.2,0.1,16.28,,,,,,,,,,,,,,,1-Jun-2010,T.D. Johnson and  D. Symochko(a) and  M. Fadil(b) and  and J.K. Tuli,2025-08-08
+58,84,Ce,32,2624.4,0.9,8+,6,1743.05,0.06,6+,0,881.4,,100,,E2,,,,,,,,,,,0.00266,0.00004,1-Jun-2010,T.D. Johnson and  D. Symochko(a) and  M. Fadil(b) and  and J.K. Tuli,2025-08-08
+58,84,Ce,33,2667,0.3,1+,3,1536.33,0.04,2+,0,1130.6,0.5,26,3,M1(+E2),-6,,,,,,0.0011,,,,0.00158,0.00003,1-Jun-2010,T.D. Johnson and  D. Symochko(a) and  M. Fadil(b) and  and J.K. Tuli,2025-08-08
+58,84,Ce,33,2667,0.3,1+,1,641.282,0.009,2+,1,2025.5,1,55,3,M1+(E2),1.3,0.3,,,1.3,,0.006,,,,0.00085,0.000019,1-Jun-2010,T.D. Johnson and  D. Symochko(a) and  M. Fadil(b) and  and J.K. Tuli,2025-08-08
+58,84,Ce,33,2667,0.3,1+,0,0,,0+,2,2666.8,0.9,100,6,M1,,,,,,,0.012,,,,0.000989,0.000014,1-Jun-2010,T.D. Johnson and  D. Symochko(a) and  M. Fadil(b) and  and J.K. Tuli,2025-08-08
+58,84,Ce,34,2680.5,0.2,(2 3 4)+,1,641.282,0.009,2+,0,2039.2,0.2,100,,M1(+E2),0.06,,,,,,0.017,,,,0.000918,0.000014,1-Jun-2010,T.D. Johnson and  D. Symochko(a) and  M. Fadil(b) and  and J.K. Tuli,2025-08-08
+58,84,Ce,35,2697.03,0.07,2+,27,2591,0.3,,0,105.9,0.3,5.3,,,,,,,,,,,,,,,1-Jun-2010,T.D. Johnson and  D. Symochko(a) and  M. Fadil(b) and  and J.K. Tuli,2025-08-08
+58,84,Ce,35,2697.03,0.07,2+,18,2364.91,0.12,2+,1,332.1,0.4,2,2,,,,,,,,,,,,,,1-Jun-2010,T.D. Johnson and  D. Symochko(a) and  M. Fadil(b) and  and J.K. Tuli,2025-08-08
+58,84,Ce,35,2697.03,0.07,2+,13,2181.95,0.05,3+,2,514.7,0.4,5,2,,,,,,,,,,,,,,1-Jun-2010,T.D. Johnson and  D. Symochko(a) and  M. Fadil(b) and  and J.K. Tuli,2025-08-08
+58,84,Ce,35,2697.03,0.07,2+,7,2004.89,0.07,2+,3,692.4,0.6,3.5,,,,,,,,,,,,,,,1-Jun-2010,T.D. Johnson and  D. Symochko(a) and  M. Fadil(b) and  and J.K. Tuli,2025-08-08
+58,84,Ce,35,2697.03,0.07,2+,4,1652.91,0.04,3-,4,1044.1,0.1,100,,,,,,,,,,,,,,,1-Jun-2010,T.D. Johnson and  D. Symochko(a) and  M. Fadil(b) and  and J.K. Tuli,2025-08-08
+58,84,Ce,35,2697.03,0.07,2+,3,1536.33,0.04,2+,5,1160.8,0.1,65.85,,M1+E2,-0.19,0.17,,,0.7,,0.04,,,,0.00204,0.00006,1-Jun-2010,T.D. Johnson and  D. Symochko(a) and  M. Fadil(b) and  and J.K. Tuli,2025-08-08
+58,84,Ce,35,2697.03,0.07,2+,1,641.282,0.009,2+,6,2055.8,0.2,78.05,,M1+E2,-1.2,,,,0.8,,0.004,,,,0.00085,0.00005,1-Jun-2010,T.D. Johnson and  D. Symochko(a) and  M. Fadil(b) and  and J.K. Tuli,2025-08-08
+58,84,Ce,36,2698.58,0.11,4+,2,1219.37,0.03,4+,0,1479.2,0.1,100,,M1+E2,1.3,,,,15,,0.03,,,,0.00108,0.00008,1-Jun-2010,T.D. Johnson and  D. Symochko(a) and  M. Fadil(b) and  and J.K. Tuli,2025-08-08
+58,84,Ce,37,2715.14,0.07,3+,3,1536.33,0.04,2+,0,1178.8,0.1,40,,M1+E2,-0.8,0.4,,,4,,0.014,,,,0.00177,0.00015,1-Jun-2010,T.D. Johnson and  D. Symochko(a) and  M. Fadil(b) and  and J.K. Tuli,2025-08-08
+58,84,Ce,37,2715.14,0.07,3+,2,1219.37,0.03,4+,1,1495.8,0.1,100,,M1+E2,0.37,0.07,,,0.9,,0.02,,,,0.001206,0.000021,1-Jun-2010,T.D. Johnson and  D. Symochko(a) and  M. Fadil(b) and  and J.K. Tuli,2025-08-08
+58,84,Ce,37,2715.14,0.07,3+,1,641.282,0.009,2+,2,2073.7,0.2,60,,M1(+E2),-0.03,0.06,,,,,0.006,,,,0.000916,0.000013,1-Jun-2010,T.D. Johnson and  D. Symochko(a) and  M. Fadil(b) and  and J.K. Tuli,2025-08-08
+58,84,Ce,38,2725.78,0.1,5+,6,1743.05,0.06,6+,0,982.7,0.1,47.06,,M1(+E2),-0.13,,,,,,0.15,,,,0.00302,0.00007,1-Jun-2010,T.D. Johnson and  D. Symochko(a) and  M. Fadil(b) and  and J.K. Tuli,2025-08-08
+58,84,Ce,38,2725.78,0.1,5+,2,1219.37,0.03,4+,1,1506.4,0.2,100,,M1+E2,0.09,,,,0.18,,0.09,,,,0.001223,0.000018,1-Jun-2010,T.D. Johnson and  D. Symochko(a) and  M. Fadil(b) and  and J.K. Tuli,2025-08-08
+58,84,Ce,39,2727.89,0.07,2(-),4,1652.91,0.04,3-,0,1074.9,0.1,23.4,,M1+E2,-2,,,,3,,0.0014,,,,0.00188,0.00013,1-Jun-2010,T.D. Johnson and  D. Symochko(a) and  M. Fadil(b) and  and J.K. Tuli,2025-08-08
+58,84,Ce,39,2727.89,0.07,2(-),3,1536.33,0.04,2+,1,1191.6,0.1,100,,D+Q,-0.43,0.1,,,,,,,,,,,1-Jun-2010,T.D. Johnson and  D. Symochko(a) and  M. Fadil(b) and  and J.K. Tuli,2025-08-08
+58,84,Ce,39,2727.89,0.07,2(-),1,641.282,0.009,2+,2,2086.6,0.1,89.36,,,,,,,,,,,,,,,1-Jun-2010,T.D. Johnson and  D. Symochko(a) and  M. Fadil(b) and  and J.K. Tuli,2025-08-08
+58,84,Ce,40,2734.77,0.09,(3 2)+,11,2111.87,0.11,4+,0,622.7,0.1,61.54,,(M1+E2),0.19,0.25,,,11,,0.062,,,,0.0089,0.0004,1-Jun-2010,T.D. Johnson and  D. Symochko(a) and  M. Fadil(b) and  and J.K. Tuli,2025-08-08
+58,84,Ce,40,2734.77,0.09,(3 2)+,4,1652.91,0.04,3-,1,1081.9,0.1,35.9,,(M1+E2),-0.09,,,,0.095,,0.0066,,,,0.00242,0.00006,1-Jun-2010,T.D. Johnson and  D. Symochko(a) and  M. Fadil(b) and  and J.K. Tuli,2025-08-08
+58,84,Ce,40,2734.77,0.09,(3 2)+,2,1219.37,0.03,4+,2,1515.4,0.2,100,,M1+E2,-0.29,,,,0.32,,0.0068,,,,0.00119,0.00004,1-Jun-2010,T.D. Johnson and  D. Symochko(a) and  M. Fadil(b) and  and J.K. Tuli,2025-08-08
+58,84,Ce,40,2734.77,0.09,(3 2)+,1,641.282,0.009,2+,3,2093.3,0.2,61.54,,M1+E2,5.2,,,,0.2,,0.000065,,,,0.000815,0.000014,1-Jun-2010,T.D. Johnson and  D. Symochko(a) and  M. Fadil(b) and  and J.K. Tuli,2025-08-08
+58,84,Ce,41,2741.97,0.1,(2 3)+,4,1652.91,0.04,3-,0,1089,0.1,28.21,,,,,,,,,,,,,,,1-Jun-2010,T.D. Johnson and  D. Symochko(a) and  M. Fadil(b) and  and J.K. Tuli,2025-08-08
+58,84,Ce,41,2741.97,0.1,(2 3)+,3,1536.33,0.04,2+,1,1205.7,0.5,4.6,,,,,,,,,,,,,,,1-Jun-2010,T.D. Johnson and  D. Symochko(a) and  M. Fadil(b) and  and J.K. Tuli,2025-08-08
+58,84,Ce,41,2741.97,0.1,(2 3)+,1,641.282,0.009,2+,2,2100.9,0.2,100,,M1+E2,-0.32,0.14,,,0.3,,0.021,,,,0.000905,0.000016,1-Jun-2010,T.D. Johnson and  D. Symochko(a) and  M. Fadil(b) and  and J.K. Tuli,2025-08-08
+58,84,Ce,42,2767.86,0.08,(1 2 3)+,4,1652.91,0.04,3-,0,1115,0.1,27.87,,,,,,,,,,,,,,,1-Jun-2010,T.D. Johnson and  D. Symochko(a) and  M. Fadil(b) and  and J.K. Tuli,2025-08-08
+58,84,Ce,42,2767.86,0.08,(1 2 3)+,3,1536.33,0.04,2+,1,1231.5,0.1,36.07,,M1+E2,0.47,,,,3.3,,0.039,,,,0.00172,0.00006,1-Jun-2010,T.D. Johnson and  D. Symochko(a) and  M. Fadil(b) and  and J.K. Tuli,2025-08-08
+58,84,Ce,42,2767.86,0.08,(1 2 3)+,1,641.282,0.009,2+,2,2126.5,0.2,100,,M1+E2,-0.19,0.08,,,0.11,,0.025,,,,0.00091,0.000014,1-Jun-2010,T.D. Johnson and  D. Symochko(a) and  M. Fadil(b) and  and J.K. Tuli,2025-08-08
+58,84,Ce,43,2773.92,0.09,(3)+,11,2111.87,0.11,4+,0,661.5,0.1,30.77,,(M1+E2),0.19,0.25,,,2.9,,0.019,,,,0.0077,0.0004,1-Jun-2010,T.D. Johnson and  D. Symochko(a) and  M. Fadil(b) and  and J.K. Tuli,2025-08-08
+58,84,Ce,43,2773.92,0.09,(3)+,3,1536.33,0.04,2+,1,1237.6,0.1,28.85,,M1+E2,0.4,,,,0.26,,0.0025,,,,0.00172,0.00008,1-Jun-2010,T.D. Johnson and  D. Symochko(a) and  M. Fadil(b) and  and J.K. Tuli,2025-08-08
+58,84,Ce,43,2773.92,0.09,(3)+,2,1219.37,0.03,4+,2,1553.8,0.2,32.69,,M1+E2,-0.9,,,,0.25,,0.0012,,,,0.00106,0.00009,1-Jun-2010,T.D. Johnson and  D. Symochko(a) and  M. Fadil(b) and  and J.K. Tuli,2025-08-08
+58,84,Ce,43,2773.92,0.09,(3)+,1,641.282,0.009,2+,3,2133.3,0.2,100,,M1+E2,0.19,,,,0.01,,0.0017,,,,0.00091,0.000013,1-Jun-2010,T.D. Johnson and  D. Symochko(a) and  M. Fadil(b) and  and J.K. Tuli,2025-08-08
+58,84,Ce,44,2784.78,0.21,(3 4 5),2,1219.37,0.03,4+,0,1565.4,0.2,100,,,,,,,,,,,,,,,1-Jun-2010,T.D. Johnson and  D. Symochko(a) and  M. Fadil(b) and  and J.K. Tuli,2025-08-08
+58,84,Ce,45,2792.9,0.3,,1,641.282,0.009,2+,0,2152,0.8,100,,,,,,,,,,,,,,,1-Jun-2010,T.D. Johnson and  D. Symochko(a) and  M. Fadil(b) and  and J.K. Tuli,2025-08-08
+58,84,Ce,46,2800.78,0.09,1(+),3,1536.33,0.04,2+,0,1264.4,0.1,58.93,,M1,,,,,,,0.36,,,,0.00171,0.000024,1-Jun-2010,T.D. Johnson and  D. Symochko(a) and  M. Fadil(b) and  and J.K. Tuli,2025-08-08
+58,84,Ce,46,2800.78,0.09,1(+),1,641.282,0.009,2+,1,2160,0.2,19.64,,M1,,,,,,,0.122,,,,0.000913,0.000013,1-Jun-2010,T.D. Johnson and  D. Symochko(a) and  M. Fadil(b) and  and J.K. Tuli,2025-08-08
+58,84,Ce,46,2800.78,0.09,1(+),0,0,,0+,2,2800.4,0.2,100,,M1,,,,,,,0.011,,,,0.001023,0.000015,1-Jun-2010,T.D. Johnson and  D. Symochko(a) and  M. Fadil(b) and  and J.K. Tuli,2025-08-08
+58,84,Ce,47,2806.42,0.09,3+,3,1536.33,0.04,2+,0,1270.2,0.1,97.62,,M1+E2,-0.16,,,,0.4,,0.04,,,,0.00168,0.00003,1-Jun-2010,T.D. Johnson and  D. Symochko(a) and  M. Fadil(b) and  and J.K. Tuli,2025-08-08
+58,84,Ce,47,2806.42,0.09,3+,2,1219.37,0.03,4+,1,1586.9,0.2,40.48,,M1(+E2),0.3,,,,,,0.009,,,,0.00111,0.00008,1-Jun-2010,T.D. Johnson and  D. Symochko(a) and  M. Fadil(b) and  and J.K. Tuli,2025-08-08
+58,84,Ce,47,2806.42,0.09,3+,1,641.282,0.009,2+,2,2164.8,0.2,100,,M1+E2,0.43,,,,0.18,,0.008,,,,0.000899,0.000014,1-Jun-2010,T.D. Johnson and  D. Symochko(a) and  M. Fadil(b) and  and J.K. Tuli,2025-08-08
+58,84,Ce,48,2842.56,0.12,(2 3)+,7,2004.89,0.07,2+,0,838,0.2,1.149,,,,,,,,,,,,,,,1-Jun-2010,T.D. Johnson and  D. Symochko(a) and  M. Fadil(b) and  and J.K. Tuli,2025-08-08
+58,84,Ce,48,2842.56,0.12,(2 3)+,2,1219.37,0.03,4+,1,1623,0.2,13.79,,,,,,,,,,,,,,,1-Jun-2010,T.D. Johnson and  D. Symochko(a) and  M. Fadil(b) and  and J.K. Tuli,2025-08-08
+58,84,Ce,48,2842.56,0.12,(2 3)+,1,641.282,0.009,2+,2,2201.1,0.2,100,,M1+E2,-0.26,,,,0.36,,0.045,,,,0.000909,0.000015,1-Jun-2010,T.D. Johnson and  D. Symochko(a) and  M. Fadil(b) and  and J.K. Tuli,2025-08-08
+58,84,Ce,49,2853.34,0.12,2+,2,1219.37,0.03,4+,0,1634.2,0.2,0.4688,,,,,,,,,,,,,,,1-Jun-2010,T.D. Johnson and  D. Symochko(a) and  M. Fadil(b) and  and J.K. Tuli,2025-08-08
+58,84,Ce,49,2853.34,0.12,2+,1,641.282,0.009,2+,1,2212.3,0.2,100,,M1+E2,-0.5,,,,0.4,,0.014,,,,0.0009,0.00003,1-Jun-2010,T.D. Johnson and  D. Symochko(a) and  M. Fadil(b) and  and J.K. Tuli,2025-08-08
+58,84,Ce,49,2853.34,0.12,2+,0,0,,0+,2,2852.8,0.2,56.25,,E2,,,,,0.32,,,,,,0.000966,0.000014,1-Jun-2010,T.D. Johnson and  D. Symochko(a) and  M. Fadil(b) and  and J.K. Tuli,2025-08-08
+58,84,Ce,50,2857.6,0.7,(8+),15,2210.6,0.06,6+,0,647,,,,,,,,,,,,,,,,,1-Jun-2010,T.D. Johnson and  D. Symochko(a) and  M. Fadil(b) and  and J.K. Tuli,2025-08-08
+58,84,Ce,50,2857.6,0.7,(8+),6,1743.05,0.06,6+,1,1114.4,,,,,,,,,,,,,,,,,1-Jun-2010,T.D. Johnson and  D. Symochko(a) and  M. Fadil(b) and  and J.K. Tuli,2025-08-08
+58,84,Ce,51,2859.75,0.1,4,4,1652.91,0.04,3-,0,1206.7,0.1,100,,,,,,,,,,,,,,,1-Jun-2010,T.D. Johnson and  D. Symochko(a) and  M. Fadil(b) and  and J.K. Tuli,2025-08-08
+58,84,Ce,51,2859.75,0.1,4,2,1219.37,0.03,4+,1,1640.9,0.2,28.21,,,,,,,,,,,,,,,1-Jun-2010,T.D. Johnson and  D. Symochko(a) and  M. Fadil(b) and  and J.K. Tuli,2025-08-08
+58,84,Ce,52,2868.97,0.1,(4)+,4,1652.91,0.04,3-,0,1216.1,0.1,100,,,,,,,,,,,,,,,1-Jun-2010,T.D. Johnson and  D. Symochko(a) and  M. Fadil(b) and  and J.K. Tuli,2025-08-08
+58,84,Ce,52,2868.97,0.1,(4)+,2,1219.37,0.03,4+,1,1649.4,0.2,89.74,,M1+E2,-0.4,,,,0.25,,0.0039,,,,0.00105,0.00006,1-Jun-2010,T.D. Johnson and  D. Symochko(a) and  M. Fadil(b) and  and J.K. Tuli,2025-08-08
+58,84,Ce,52,2868.97,0.1,(4)+,1,641.282,0.009,2+,2,2228.3,0.2,66.67,,,,,,,,,,,,,,,1-Jun-2010,T.D. Johnson and  D. Symochko(a) and  M. Fadil(b) and  and J.K. Tuli,2025-08-08
+58,84,Ce,53,2887.74,0.15,3+,2,1219.37,0.03,4+,0,1668.4,0.2,28.21,,M1+E2,1.1,,,,3,,0.012,,,,0.00095,0.00007,1-Jun-2010,T.D. Johnson and  D. Symochko(a) and  M. Fadil(b) and  and J.K. Tuli,2025-08-08
+58,84,Ce,53,2887.74,0.15,3+,1,641.282,0.009,2+,1,2246.4,0.2,100,,M1+E2,0.9,,,,2,,0.02,,,,0.00088,0.00004,1-Jun-2010,T.D. Johnson and  D. Symochko(a) and  M. Fadil(b) and  and J.K. Tuli,2025-08-08
+58,84,Ce,55,2935.14,0.21,(2 3 4),3,1536.33,0.04,2+,0,1398.8,0.2,,,,,,,,,,,,,,,,1-Jun-2010,T.D. Johnson and  D. Symochko(a) and  M. Fadil(b) and  and J.K. Tuli,2025-08-08
+58,84,Ce,55,2935.14,0.21,(2 3 4),1,641.282,0.009,2+,1,2292.7,0.2,100,,,,,,,,,,,,,,,1-Jun-2010,T.D. Johnson and  D. Symochko(a) and  M. Fadil(b) and  and J.K. Tuli,2025-08-08
+58,84,Ce,56,2956.39,0.15,3+,2,1219.37,0.03,4+,0,1737.1,0.2,51.52,,M1(+E2),0.06,,,,,,0.08,,,,0.001013,0.000015,1-Jun-2010,T.D. Johnson and  D. Symochko(a) and  M. Fadil(b) and  and J.K. Tuli,2025-08-08
+58,84,Ce,56,2956.39,0.15,3+,1,641.282,0.009,2+,1,2315,0.2,100,,M1+E2,-0.6,,,,2,,0.05,,,,0.0009,0.00005,1-Jun-2010,T.D. Johnson and  D. Symochko(a) and  M. Fadil(b) and  and J.K. Tuli,2025-08-08
+58,84,Ce,58,2994,1,9(-),32,2624.4,0.9,8+,0,369.6,,,,D,,,,,,,,,,,,,1-Jun-2010,T.D. Johnson and  D. Symochko(a) and  M. Fadil(b) and  and J.K. Tuli,2025-08-08
+58,84,Ce,58,2994,1,9(-),28,2592.5,0.9,(7-),1,401.5,,,,,,,,,,,,,,,,,1-Jun-2010,T.D. Johnson and  D. Symochko(a) and  M. Fadil(b) and  and J.K. Tuli,2025-08-08
+58,84,Ce,59,2999.02,0.15,1+,1,641.282,0.009,2+,0,2358.3,0.2,100,,E2+M1,,,,,,,,,,,0.00089,0.00005,1-Jun-2010,T.D. Johnson and  D. Symochko(a) and  M. Fadil(b) and  and J.K. Tuli,2025-08-08
+58,84,Ce,59,2999.02,0.15,1+,0,0,,0+,1,2998.4,0.2,51.52,,,,,,,,,,,,,,,1-Jun-2010,T.D. Johnson and  D. Symochko(a) and  M. Fadil(b) and  and J.K. Tuli,2025-08-08
+58,84,Ce,60,3009.9,0.2,,1,641.282,0.009,2+,0,2368.6,0.2,100,,,,,,,,,,,,,,,1-Jun-2010,T.D. Johnson and  D. Symochko(a) and  M. Fadil(b) and  and J.K. Tuli,2025-08-08
+58,84,Ce,61,3011.93,0.2,1,0,0,,0+,0,3011.9,0.2,100,,,,,,,,,,,,,,,1-Jun-2010,T.D. Johnson and  D. Symochko(a) and  M. Fadil(b) and  and J.K. Tuli,2025-08-08
+58,84,Ce,62,3042.29,0.15,,2,1219.37,0.03,4+,0,1822.9,0.2,100,,M1+E2,-0.37,0.1,,,0.2,,0.01,,,,0.000953,0.000017,1-Jun-2010,T.D. Johnson and  D. Symochko(a) and  M. Fadil(b) and  and J.K. Tuli,2025-08-08
+58,84,Ce,62,3042.29,0.15,,1,641.282,0.009,2+,1,2401,0.2,85.19,,,,,,,,,,,,,,,1-Jun-2010,T.D. Johnson and  D. Symochko(a) and  M. Fadil(b) and  and J.K. Tuli,2025-08-08
+58,84,Ce,63,3051.79,0.15,(3)+,14,2187.54,0.12,1-,0,864.6,0.2,,,,,,,,,,,,,,,,1-Jun-2010,T.D. Johnson and  D. Symochko(a) and  M. Fadil(b) and  and J.K. Tuli,2025-08-08
+58,84,Ce,63,3051.79,0.15,(3)+,4,1652.91,0.04,3-,1,1398.8,0.1,100,,,,,,,,,,,,,,,1-Jun-2010,T.D. Johnson and  D. Symochko(a) and  M. Fadil(b) and  and J.K. Tuli,2025-08-08
+58,84,Ce,63,3051.79,0.15,(3)+,2,1219.37,0.03,4+,2,1832.6,0.2,33.33,,M1+E2,-0.6,,,,0.053,,,,,,0.000948,0.000024,1-Jun-2010,T.D. Johnson and  D. Symochko(a) and  M. Fadil(b) and  and J.K. Tuli,2025-08-08
+58,84,Ce,63,3051.79,0.15,(3)+,1,641.282,0.009,2+,3,2410.3,0.2,17.39,,M1(+E2),0.09,0.14,,,0.00087,,0.00027,,,,0.000935,0.000014,1-Jun-2010,T.D. Johnson and  D. Symochko(a) and  M. Fadil(b) and  and J.K. Tuli,2025-08-08
+58,84,Ce,64,3060.98,0.09,+,3,1536.33,0.04,2+,0,1525.5,0.2,58.73,,M1(+E2),-0.09,,,,,,0.019,,,,0.001198,0.00002,1-Jun-2010,T.D. Johnson and  D. Symochko(a) and  M. Fadil(b) and  and J.K. Tuli,2025-08-08
+58,84,Ce,64,3060.98,0.09,+,1,641.282,0.009,2+,1,2419.8,0.2,100,,M1+E2,-0.26,0.17,,,0.05,,0.008,,,,0.000932,0.000015,1-Jun-2010,T.D. Johnson and  D. Symochko(a) and  M. Fadil(b) and  and J.K. Tuli,2025-08-08
+58,84,Ce,64,3060.98,0.09,+,0,0,,0+,2,3060.7,0.1,50,,,,,,,,,,,,,,,1-Jun-2010,T.D. Johnson and  D. Symochko(a) and  M. Fadil(b) and  and J.K. Tuli,2025-08-08
+58,84,Ce,66,3089.7,0.2,(2 3)+,11,2111.87,0.11,4+,0,978.1,0.2,38.89,,,,,,,,,,,,,,,1-Jun-2010,T.D. Johnson and  D. Symochko(a) and  M. Fadil(b) and  and J.K. Tuli,2025-08-08
+58,84,Ce,66,3089.7,0.2,(2 3)+,1,641.282,0.009,2+,1,2448.4,0.2,100,,M1+E2,-0.8,,,,0.7,,0.011,,,,0.000912,0.00002,1-Jun-2010,T.D. Johnson and  D. Symochko(a) and  M. Fadil(b) and  and J.K. Tuli,2025-08-08
+58,84,Ce,67,3101.87,0.24,,1,641.282,0.009,2+,0,2460.3,1,100,10,,,,,,,,,,,,,,1-Jun-2010,T.D. Johnson and  D. Symochko(a) and  M. Fadil(b) and  and J.K. Tuli,2025-08-08
+58,84,Ce,67,3101.87,0.24,,0,0,,0+,1,3101.5,1.2,30,,,,,,,,,,,,,,,1-Jun-2010,T.D. Johnson and  D. Symochko(a) and  M. Fadil(b) and  and J.K. Tuli,2025-08-08
+58,84,Ce,68,3106.04,0.15,3+,2,1219.37,0.03,4+,0,1887.5,0.2,23.46,,M1+E2,2.5,,,,1.7,,0.0016,,,,0.00083,0.00012,1-Jun-2010,T.D. Johnson and  D. Symochko(a) and  M. Fadil(b) and  and J.K. Tuli,2025-08-08
+58,84,Ce,68,3106.04,0.15,3+,1,641.282,0.009,2+,1,2463.9,0.2,100,,M1+E2,-2,,,,1.7,,0.005,,,,0.000884,0.000015,1-Jun-2010,T.D. Johnson and  D. Symochko(a) and  M. Fadil(b) and  and J.K. Tuli,2025-08-08
+58,84,Ce,69,3109.79,0.15,,2,1219.37,0.03,4+,0,1890.3,0.2,100,,,,,,,,,,,,,,,1-Jun-2010,T.D. Johnson and  D. Symochko(a) and  M. Fadil(b) and  and J.K. Tuli,2025-08-08
+58,84,Ce,69,3109.79,0.15,,1,641.282,0.009,2+,1,2468.6,0.2,42.86,,,,,,,,,,,,,,,1-Jun-2010,T.D. Johnson and  D. Symochko(a) and  M. Fadil(b) and  and J.K. Tuli,2025-08-08
+58,84,Ce,70,3122.4,0.4,,9,2031.01,0.09,0+,0,1091.2,0.8,50,,,,,,,,,,,,,,,1-Jun-2010,T.D. Johnson and  D. Symochko(a) and  M. Fadil(b) and  and J.K. Tuli,2025-08-08
+58,84,Ce,70,3122.4,0.4,,7,2004.89,0.07,2+,1,1117.7,0.5,25,,,,,,,,,,,,,,,1-Jun-2010,T.D. Johnson and  D. Symochko(a) and  M. Fadil(b) and  and J.K. Tuli,2025-08-08
+58,84,Ce,70,3122.4,0.4,,0,0,,0+,2,3121.9,1.3,100,,,,,,,,,,,,,,,1-Jun-2010,T.D. Johnson and  D. Symochko(a) and  M. Fadil(b) and  and J.K. Tuli,2025-08-08
+58,84,Ce,71,3125.71,0.2,(1 2 3),1,641.282,0.009,2+,0,2484.4,0.2,100,,,,,,,,,,,,,,,1-Jun-2010,T.D. Johnson and  D. Symochko(a) and  M. Fadil(b) and  and J.K. Tuli,2025-08-08
+58,84,Ce,72,3144.57,0.15,3+,3,1536.33,0.04,2+,0,1608.4,0.2,100,,M1+E2,-2,,,,,,,,,,0.00094,0.00018,1-Jun-2010,T.D. Johnson and  D. Symochko(a) and  M. Fadil(b) and  and J.K. Tuli,2025-08-08
+58,84,Ce,72,3144.57,0.15,3+,1,641.282,0.009,2+,1,2503.1,0.2,96.08,,M1+E2,-0.8,,,,,,,,,,0.000923,0.00002,1-Jun-2010,T.D. Johnson and  D. Symochko(a) and  M. Fadil(b) and  and J.K. Tuli,2025-08-08
+58,84,Ce,73,3153.76,0.14,2+,45,2792.9,0.3,,0,361.1,0.3,33,,,,,,,,,,,,,,,1-Jun-2010,T.D. Johnson and  D. Symochko(a) and  M. Fadil(b) and  and J.K. Tuli,2025-08-08
+58,84,Ce,73,3153.76,0.14,2+,3,1536.33,0.04,2+,1,1618.2,0.7,100,,,,,,,,,,,,,,,1-Jun-2010,T.D. Johnson and  D. Symochko(a) and  M. Fadil(b) and  and J.K. Tuli,2025-08-08
+58,84,Ce,73,3153.76,0.14,2+,1,641.282,0.009,2+,2,2512.4,0.2,33,,M1+E2,0.7,,,,0.05,,0.0012,,,,0.00093,0.00004,1-Jun-2010,T.D. Johnson and  D. Symochko(a) and  M. Fadil(b) and  and J.K. Tuli,2025-08-08
+58,84,Ce,73,3153.76,0.14,2+,0,0,,0+,3,3153.6,0.2,67,,E2,,,,,0.11,,,,,,0.001053,0.000015,1-Jun-2010,T.D. Johnson and  D. Symochko(a) and  M. Fadil(b) and  and J.K. Tuli,2025-08-08
+58,84,Ce,74,3155.36,0.15,,3,1536.33,0.04,2+,0,1619.1,0.2,100,,,,,,,,,,,,,,,1-Jun-2010,T.D. Johnson and  D. Symochko(a) and  M. Fadil(b) and  and J.K. Tuli,2025-08-08
+58,84,Ce,74,3155.36,0.15,,2,1219.37,0.03,4+,1,1935.9,0.2,100,,,,,,,,,,,,,,,1-Jun-2010,T.D. Johnson and  D. Symochko(a) and  M. Fadil(b) and  and J.K. Tuli,2025-08-08
+58,84,Ce,75,3164.7,0.5,,3,1536.33,0.04,2+,0,1628.5,0.7,50,,,,,,,,,,,,,,,1-Jun-2010,T.D. Johnson and  D. Symochko(a) and  M. Fadil(b) and  and J.K. Tuli,2025-08-08
+58,84,Ce,75,3164.7,0.5,,1,641.282,0.009,2+,1,2523.3,0.9,50,,,,,,,,,,,,,,,1-Jun-2010,T.D. Johnson and  D. Symochko(a) and  M. Fadil(b) and  and J.K. Tuli,2025-08-08
+58,84,Ce,75,3164.7,0.5,,0,0,,0+,2,3164.7,1.3,100,,,,,,,,,,,,,,,1-Jun-2010,T.D. Johnson and  D. Symochko(a) and  M. Fadil(b) and  and J.K. Tuli,2025-08-08
+58,84,Ce,76,3180.37,0.15,1,41,2741.97,0.1,(2 3)+,0,439,0.5,13,,,,,,,,,,,,,,,1-Jun-2010,T.D. Johnson and  D. Symochko(a) and  M. Fadil(b) and  and J.K. Tuli,2025-08-08
+58,84,Ce,76,3180.37,0.15,1,38,2725.78,0.1,5+,1,453.7,0.5,25,,,,,,,,,,,,,,,1-Jun-2010,T.D. Johnson and  D. Symochko(a) and  M. Fadil(b) and  and J.K. Tuli,2025-08-08
+58,84,Ce,76,3180.37,0.15,1,3,1536.33,0.04,2+,2,1644.3,0.7,63,,,,,,,,,,,,,,,1-Jun-2010,T.D. Johnson and  D. Symochko(a) and  M. Fadil(b) and  and J.K. Tuli,2025-08-08
+58,84,Ce,76,3180.37,0.15,1,1,641.282,0.009,2+,3,2539.4,0.3,100,,,,,,,,,,,,,,,1-Jun-2010,T.D. Johnson and  D. Symochko(a) and  M. Fadil(b) and  and J.K. Tuli,2025-08-08
+58,84,Ce,76,3180.37,0.15,1,0,0,,0+,4,3180.2,0.2,75,,,,,,,,,,,,,,,1-Jun-2010,T.D. Johnson and  D. Symochko(a) and  M. Fadil(b) and  and J.K. Tuli,2025-08-08
+58,84,Ce,77,3208.95,0.15,3+,2,1219.37,0.03,4+,0,1990.2,0.2,19.05,,,,,,,,,,,,,,,1-Jun-2010,T.D. Johnson and  D. Symochko(a) and  M. Fadil(b) and  and J.K. Tuli,2025-08-08
+58,84,Ce,77,3208.95,0.15,3+,1,641.282,0.009,2+,1,2567,0.2,100,,M1+E2,-0.32,,,,0.21,,0.023,,,,0.000959,0.000014,1-Jun-2010,T.D. Johnson and  D. Symochko(a) and  M. Fadil(b) and  and J.K. Tuli,2025-08-08
+58,84,Ce,78,3218.21,0.2,,1,641.282,0.009,2+,0,2576.9,0.2,100,,,,,,,,,,,,,,,1-Jun-2010,T.D. Johnson and  D. Symochko(a) and  M. Fadil(b) and  and J.K. Tuli,2025-08-08
+58,84,Ce,79,3228.64,0.1,(5-),4,1652.91,0.04,3-,0,1575.72,0.09,,,,,,,,,,,,,,,,1-Jun-2010,T.D. Johnson and  D. Symochko(a) and  M. Fadil(b) and  and J.K. Tuli,2025-08-08
+58,84,Ce,80,3300.74,0.21,,3,1536.33,0.04,2+,0,1764.4,0.2,100,,,,,,,,,,,,,,,1-Jun-2010,T.D. Johnson and  D. Symochko(a) and  M. Fadil(b) and  and J.K. Tuli,2025-08-08
+58,84,Ce,81,3304.5,0.6,2+,3,1536.33,0.04,2+,0,1768.2,0.7,33,7,,,,,,,,,,,,,,1-Jun-2010,T.D. Johnson and  D. Symochko(a) and  M. Fadil(b) and  and J.K. Tuli,2025-08-08
+58,84,Ce,81,3304.5,0.6,2+,1,641.282,0.009,2+,1,2663.1,1,100,14,Q+(D),1.1,,,,,,,,,,,,1-Jun-2010,T.D. Johnson and  D. Symochko(a) and  M. Fadil(b) and  and J.K. Tuli,2025-08-08
+58,84,Ce,82,3313.78,0.2,1,42,2767.86,0.08,(1 2 3)+,0,546,0.2,5,,,,,,,,,,,,,,,1-Jun-2010,T.D. Johnson and  D. Symochko(a) and  M. Fadil(b) and  and J.K. Tuli,2025-08-08
+58,84,Ce,82,3313.78,0.2,1,33,2667,0.3,1+,1,646.2,0.7,15,10,,,,,,,,,,,,,,1-Jun-2010,T.D. Johnson and  D. Symochko(a) and  M. Fadil(b) and  and J.K. Tuli,2025-08-08
+58,84,Ce,82,3313.78,0.2,1,1,641.282,0.009,2+,2,2672.6,1,21,3,,,,,,,,,,,,,,1-Jun-2010,T.D. Johnson and  D. Symochko(a) and  M. Fadil(b) and  and J.K. Tuli,2025-08-08
+58,84,Ce,82,3313.78,0.2,1,0,0,,0+,3,3313.8,1.2,100,5,,,,,,,,,,,,,,1-Jun-2010,T.D. Johnson and  D. Symochko(a) and  M. Fadil(b) and  and J.K. Tuli,2025-08-08
+58,84,Ce,83,3380.5,1,(9+),50,2857.6,0.7,(8+),0,522.9,,100,,,,,,,,,,,,,,,1-Jun-2010,T.D. Johnson and  D. Symochko(a) and  M. Fadil(b) and  and J.K. Tuli,2025-08-08
+58,84,Ce,84,3400.9,1,1,0,0,,0+,0,3400.9,,100,,,,,,,,,,,,,,,1-Jun-2010,T.D. Johnson and  D. Symochko(a) and  M. Fadil(b) and  and J.K. Tuli,2025-08-08
+58,84,Ce,85,3420.15,0.23,1- 2-,67,3101.87,0.24,,0,318,0.3,2.5,2.5,,,,,,,,,,,,,,1-Jun-2010,T.D. Johnson and  D. Symochko(a) and  M. Fadil(b) and  and J.K. Tuli,2025-08-08
+58,84,Ce,85,3420.15,0.23,1- 2-,23,2542.65,0.19,1,1,878.2,0.4,10,,,,,,,,,,,,,,,1-Jun-2010,T.D. Johnson and  D. Symochko(a) and  M. Fadil(b) and  and J.K. Tuli,2025-08-08
+58,84,Ce,85,3420.15,0.23,1- 2-,14,2187.54,0.12,1-,2,1233.1,0.6,100,2.5,D+Q,,,,,,,,,,,,,1-Jun-2010,T.D. Johnson and  D. Symochko(a) and  M. Fadil(b) and  and J.K. Tuli,2025-08-08
+58,84,Ce,86,3423.61,0.22,,41,2741.97,0.1,(2 3)+,0,681.2,0.6,14,15,,,,,,,,,,,,,,1-Jun-2010,T.D. Johnson and  D. Symochko(a) and  M. Fadil(b) and  and J.K. Tuli,2025-08-08
+58,84,Ce,86,3423.61,0.22,,18,2364.91,0.12,2+,1,1058.4,0.4,28.57,,,,,,,,,,,,,,,1-Jun-2010,T.D. Johnson and  D. Symochko(a) and  M. Fadil(b) and  and J.K. Tuli,2025-08-08
+58,84,Ce,86,3423.61,0.22,,13,2181.95,0.05,3+,2,1242,0.4,71.43,,,,,,,,,,,,,,,1-Jun-2010,T.D. Johnson and  D. Symochko(a) and  M. Fadil(b) and  and J.K. Tuli,2025-08-08
+58,84,Ce,86,3423.61,0.22,,9,2031.01,0.09,0+,3,1393,0.8,42.86,,,,,,,,,,,,,,,1-Jun-2010,T.D. Johnson and  D. Symochko(a) and  M. Fadil(b) and  and J.K. Tuli,2025-08-08
+58,84,Ce,86,3423.61,0.22,,4,1652.91,0.04,3-,4,1770.8,0.7,57,15,,,,,,,,,,,,,,1-Jun-2010,T.D. Johnson and  D. Symochko(a) and  M. Fadil(b) and  and J.K. Tuli,2025-08-08
+58,84,Ce,86,3423.61,0.22,,3,1536.33,0.04,2+,5,1887.3,0.8,40,30,,,,,,,,,,,,,,1-Jun-2010,T.D. Johnson and  D. Symochko(a) and  M. Fadil(b) and  and J.K. Tuli,2025-08-08
+58,84,Ce,86,3423.61,0.22,,1,641.282,0.009,2+,6,2782.2,1,100,,,,,,,,,,,,,,,1-Jun-2010,T.D. Johnson and  D. Symochko(a) and  M. Fadil(b) and  and J.K. Tuli,2025-08-08
+58,84,Ce,88,3459.91,0.21,,33,2667,0.3,1+,0,793.1,0.4,6,7,,,,,,,,,,,,,,1-Jun-2010,T.D. Johnson and  D. Symochko(a) and  M. Fadil(b) and  and J.K. Tuli,2025-08-08
+58,84,Ce,88,3459.91,0.21,,21,2398.42,0.07,1+,1,1061.5,0.4,0,,,,,,,,,,,,,,,1-Jun-2010,T.D. Johnson and  D. Symochko(a) and  M. Fadil(b) and  and J.K. Tuli,2025-08-08
+58,84,Ce,88,3459.91,0.21,,7,2004.89,0.07,2+,2,1455.1,0.5,12.5,,,,,,,,,,,,,,,1-Jun-2010,T.D. Johnson and  D. Symochko(a) and  M. Fadil(b) and  and J.K. Tuli,2025-08-08
+58,84,Ce,88,3459.91,0.21,,3,1536.33,0.04,2+,3,1923.3,0.7,25,7,,,,,,,,,,,,,,1-Jun-2010,T.D. Johnson and  D. Symochko(a) and  M. Fadil(b) and  and J.K. Tuli,2025-08-08
+58,84,Ce,88,3459.91,0.21,,1,641.282,0.009,2+,4,2818.5,1.1,100,7,,,,,,,,,,,,,,1-Jun-2010,T.D. Johnson and  D. Symochko(a) and  M. Fadil(b) and  and J.K. Tuli,2025-08-08
+58,84,Ce,88,3459.91,0.21,,0,0,,0+,5,3459.3,1.3,31.25,,,,,,,,,,,,,,,1-Jun-2010,T.D. Johnson and  D. Symochko(a) and  M. Fadil(b) and  and J.K. Tuli,2025-08-08
+58,84,Ce,89,3470.31,0.24,,45,2792.9,0.3,,0,677,0.6,17,17,,,,,,,,,,,,,,1-Jun-2010,T.D. Johnson and  D. Symochko(a) and  M. Fadil(b) and  and J.K. Tuli,2025-08-08
+58,84,Ce,89,3470.31,0.24,,21,2398.42,0.07,1+,1,1072.2,0.8,33,17,,,,,,,,,,,,,,1-Jun-2010,T.D. Johnson and  D. Symochko(a) and  M. Fadil(b) and  and J.K. Tuli,2025-08-08
+58,84,Ce,89,3470.31,0.24,,18,2364.91,0.12,2+,2,1104.8,0.8,16.67,,,,,,,,,,,,,,,1-Jun-2010,T.D. Johnson and  D. Symochko(a) and  M. Fadil(b) and  and J.K. Tuli,2025-08-08
+58,84,Ce,89,3470.31,0.24,,14,2187.54,0.12,1-,3,1283.2,0.5,16.67,,,,,,,,,,,,,,,1-Jun-2010,T.D. Johnson and  D. Symochko(a) and  M. Fadil(b) and  and J.K. Tuli,2025-08-08
+58,84,Ce,89,3470.31,0.24,,13,2181.95,0.05,3+,4,1288.5,0.4,16.67,,,,,,,,,,,,,,,1-Jun-2010,T.D. Johnson and  D. Symochko(a) and  M. Fadil(b) and  and J.K. Tuli,2025-08-08
+58,84,Ce,89,3470.31,0.24,,3,1536.33,0.04,2+,5,1933.6,0.7,50,,,,,,,,,,,,,,,1-Jun-2010,T.D. Johnson and  D. Symochko(a) and  M. Fadil(b) and  and J.K. Tuli,2025-08-08
+58,84,Ce,89,3470.31,0.24,,1,641.282,0.009,2+,6,2828.8,1.1,100,,,,,,,,,,,,,,,1-Jun-2010,T.D. Johnson and  D. Symochko(a) and  M. Fadil(b) and  and J.K. Tuli,2025-08-08
+58,84,Ce,89,3470.31,0.24,,0,0,,0+,7,3470,1.3,33.33,,,,,,,,,,,,,,,1-Jun-2010,T.D. Johnson and  D. Symochko(a) and  M. Fadil(b) and  and J.K. Tuli,2025-08-08
+58,84,Ce,90,3515.1,0.7,1,1,641.282,0.009,2+,0,2873.8,,100,,,,,,,,,,,,,,,1-Jun-2010,T.D. Johnson and  D. Symochko(a) and  M. Fadil(b) and  and J.K. Tuli,2025-08-08
+58,84,Ce,90,3515.1,0.7,1,0,0,,0+,1,3515.1,,90.9,,,,,,,,,,,,,,,1-Jun-2010,T.D. Johnson and  D. Symochko(a) and  M. Fadil(b) and  and J.K. Tuli,2025-08-08
+58,84,Ce,91,3536.3,1,(10+),83,3380.5,1,(9+),0,155.8,,,,,,,,,,,,,,,,,1-Jun-2010,T.D. Johnson and  D. Symochko(a) and  M. Fadil(b) and  and J.K. Tuli,2025-08-08
+58,84,Ce,91,3536.3,1,(10+),50,2857.6,0.7,(8+),1,678.7,,,,,,,,,,,,,,,,,1-Jun-2010,T.D. Johnson and  D. Symochko(a) and  M. Fadil(b) and  and J.K. Tuli,2025-08-08
+58,84,Ce,92,3612.5,0.3,2+,35,2697.03,0.07,2+,0,915.6,0.5,1.5,1.6,,,,,,,,,,,,,,1-Jun-2010,T.D. Johnson and  D. Symochko(a) and  M. Fadil(b) and  and J.K. Tuli,2025-08-08
+58,84,Ce,92,3612.5,0.3,2+,24,2543.21,0.08,2+,1,1069.4,0.5,3,1.6,,,,,,,,,,,,,,1-Jun-2010,T.D. Johnson and  D. Symochko(a) and  M. Fadil(b) and  and J.K. Tuli,2025-08-08
+58,84,Ce,92,3612.5,0.3,2+,21,2398.42,0.07,1+,2,1214,0.5,1.5,1.6,,,,,,,,,,,,,,1-Jun-2010,T.D. Johnson and  D. Symochko(a) and  M. Fadil(b) and  and J.K. Tuli,2025-08-08
+58,84,Ce,92,3612.5,0.3,2+,3,1536.33,0.04,2+,3,2076.1,0.9,26,3,D+Q,-0.7,0.3,,,,,,,,,,,1-Jun-2010,T.D. Johnson and  D. Symochko(a) and  M. Fadil(b) and  and J.K. Tuli,2025-08-08
+58,84,Ce,92,3612.5,0.3,2+,1,641.282,0.009,2+,4,2971,1.2,100,5,,,,,,,,,,,,,,1-Jun-2010,T.D. Johnson and  D. Symochko(a) and  M. Fadil(b) and  and J.K. Tuli,2025-08-08
+58,84,Ce,92,3612.5,0.3,2+,0,0,,0+,5,3612.1,1.4,28.8,1.6,,,,,,,,,,,,,,1-Jun-2010,T.D. Johnson and  D. Symochko(a) and  M. Fadil(b) and  and J.K. Tuli,2025-08-08
+58,84,Ce,93,3633.37,0.22,1,88,3459.91,0.21,,0,173.5,0.3,10,5,,,,,,,,,,,,,,1-Jun-2010,T.D. Johnson and  D. Symochko(a) and  M. Fadil(b) and  and J.K. Tuli,2025-08-08
+58,84,Ce,93,3633.37,0.22,1,67,3101.87,0.24,,1,531.6,0.2,14.29,,,,,,,,,,,,,,,1-Jun-2010,T.D. Johnson and  D. Symochko(a) and  M. Fadil(b) and  and J.K. Tuli,2025-08-08
+58,84,Ce,93,3633.37,0.22,1,24,2543.21,0.08,2+,2,1089.9,0.7,14.29,,,,,,,,,,,,,,,1-Jun-2010,T.D. Johnson and  D. Symochko(a) and  M. Fadil(b) and  and J.K. Tuli,2025-08-08
+58,84,Ce,93,3633.37,0.22,1,14,2187.54,0.12,1-,3,1445.5,0.5,14.29,,,,,,,,,,,,,,,1-Jun-2010,T.D. Johnson and  D. Symochko(a) and  M. Fadil(b) and  and J.K. Tuli,2025-08-08
+58,84,Ce,93,3633.37,0.22,1,3,1536.33,0.04,2+,4,2096.6,0.9,5,5,,,,,,,,,,,,,,1-Jun-2010,T.D. Johnson and  D. Symochko(a) and  M. Fadil(b) and  and J.K. Tuli,2025-08-08
+58,84,Ce,93,3633.37,0.22,1,1,641.282,0.009,2+,5,2991.6,1.1,9.524,,,,,,,,,,,,,,,1-Jun-2010,T.D. Johnson and  D. Symochko(a) and  M. Fadil(b) and  and J.K. Tuli,2025-08-08
+58,84,Ce,93,3633.37,0.22,1,0,0,,0+,6,3632.7,1.3,100,5,,,,,,,,,,,,,,1-Jun-2010,T.D. Johnson and  D. Symochko(a) and  M. Fadil(b) and  and J.K. Tuli,2025-08-08
+58,84,Ce,94,3643.5,1,1,0,0,,0+,0,3643.4,,100,,,,,,,,,,,,,,,1-Jun-2010,T.D. Johnson and  D. Symochko(a) and  M. Fadil(b) and  and J.K. Tuli,2025-08-08
+58,84,Ce,95,3648.6,0.4,,14,2187.54,0.12,1-,0,1461.2,0.5,100,5,,,,,,,,,,,,,,1-Jun-2010,T.D. Johnson and  D. Symochko(a) and  M. Fadil(b) and  and J.K. Tuli,2025-08-08
+58,84,Ce,95,3648.6,0.4,,3,1536.33,0.04,2+,1,2111.9,0.8,5,,,,,,,,,,,,,,,1-Jun-2010,T.D. Johnson and  D. Symochko(a) and  M. Fadil(b) and  and J.K. Tuli,2025-08-08
+58,84,Ce,95,3648.6,0.4,,1,641.282,0.009,2+,2,3006.8,1.2,10,,,,,,,,,,,,,,,1-Jun-2010,T.D. Johnson and  D. Symochko(a) and  M. Fadil(b) and  and J.K. Tuli,2025-08-08
+58,84,Ce,96,3675.8,0.5,1+,13,2181.95,0.05,3+,0,1494.1,0.7,27.27,,,,,,,,,,,,,,,1-Jun-2010,T.D. Johnson and  D. Symochko(a) and  M. Fadil(b) and  and J.K. Tuli,2025-08-08
+58,84,Ce,96,3675.8,0.5,1+,3,1536.33,0.04,2+,1,2139.3,0.8,100,19,D+Q,-0.56,0.1,,,,,,,,,,,1-Jun-2010,T.D. Johnson and  D. Symochko(a) and  M. Fadil(b) and  and J.K. Tuli,2025-08-08
+58,84,Ce,96,3675.8,0.5,1+,1,641.282,0.009,2+,2,3034.3,1.4,100,9,,,,,,,,,,,,,,1-Jun-2010,T.D. Johnson and  D. Symochko(a) and  M. Fadil(b) and  and J.K. Tuli,2025-08-08
+58,84,Ce,97,3688.9,0.4,,41,2741.97,0.1,(2 3)+,0,946.9,0.4,22.22,,,,,,,,,,,,,,,1-Jun-2010,T.D. Johnson and  D. Symochko(a) and  M. Fadil(b) and  and J.K. Tuli,2025-08-08
+58,84,Ce,97,3688.9,0.4,,1,641.282,0.009,2+,1,3047.4,1.4,100,,,,,,,,,,,,,,,1-Jun-2010,T.D. Johnson and  D. Symochko(a) and  M. Fadil(b) and  and J.K. Tuli,2025-08-08
+58,84,Ce,98,3703.9,0.3,,27,2591,0.3,,0,1112.9,0.5,10,10,,,,,,,,,,,,,,1-Jun-2010,T.D. Johnson and  D. Symochko(a) and  M. Fadil(b) and  and J.K. Tuli,2025-08-08
+58,84,Ce,98,3703.9,0.3,,14,2187.54,0.12,1-,1,1516.3,0.6,90,10,,,,,,,,,,,,,,1-Jun-2010,T.D. Johnson and  D. Symochko(a) and  M. Fadil(b) and  and J.K. Tuli,2025-08-08
+58,84,Ce,98,3703.9,0.3,,4,1652.91,0.04,3-,2,2050.9,0.8,100,20,,,,,,,,,,,,,,1-Jun-2010,T.D. Johnson and  D. Symochko(a) and  M. Fadil(b) and  and J.K. Tuli,2025-08-08
+58,84,Ce,98,3703.9,0.3,,1,641.282,0.009,2+,3,3062.4,1.3,20,,,,,,,,,,,,,,,1-Jun-2010,T.D. Johnson and  D. Symochko(a) and  M. Fadil(b) and  and J.K. Tuli,2025-08-08
+58,84,Ce,99,3717.81,0.22,1+,85,3420.15,0.23,1- 2-,0,297.9,0.3,9,9,,,,,,,,,,,,,,1-Jun-2010,T.D. Johnson and  D. Symochko(a) and  M. Fadil(b) and  and J.K. Tuli,2025-08-08
+58,84,Ce,99,3717.81,0.22,1+,39,2727.89,0.07,2(-),1,989.8,0.5,18.18,,,,,,,,,,,,,,,1-Jun-2010,T.D. Johnson and  D. Symochko(a) and  M. Fadil(b) and  and J.K. Tuli,2025-08-08
+58,84,Ce,99,3717.81,0.22,1+,35,2697.03,0.07,2+,2,1020.8,0.4,9.091,,,,,,,,,,,,,,,1-Jun-2010,T.D. Johnson and  D. Symochko(a) and  M. Fadil(b) and  and J.K. Tuli,2025-08-08
+58,84,Ce,99,3717.81,0.22,1+,18,2364.91,0.12,2+,3,1352.6,0.5,18.18,,,,,,,,,,,,,,,1-Jun-2010,T.D. Johnson and  D. Symochko(a) and  M. Fadil(b) and  and J.K. Tuli,2025-08-08
+58,84,Ce,99,3717.81,0.22,1+,3,1536.33,0.04,2+,4,2180.9,0.9,100,19,D+Q,-1.2,,,,,,,,,,,,1-Jun-2010,T.D. Johnson and  D. Symochko(a) and  M. Fadil(b) and  and J.K. Tuli,2025-08-08
+58,84,Ce,99,3717.81,0.22,1+,1,641.282,0.009,2+,5,3075.9,1.2,36.36,,,,,,,,,,,,,,,1-Jun-2010,T.D. Johnson and  D. Symochko(a) and  M. Fadil(b) and  and J.K. Tuli,2025-08-08
+58,84,Ce,100,3719.6,0.4,1,24,2543.21,0.08,2+,0,1176.4,0.4,50,,,,,,,,,,,,,,,1-Jun-2010,T.D. Johnson and  D. Symochko(a) and  M. Fadil(b) and  and J.K. Tuli,2025-08-08
+58,84,Ce,100,3719.6,0.4,1,9,2031.01,0.09,0+,1,1688.6,0.8,83.33,,,,,,,,,,,,,,,1-Jun-2010,T.D. Johnson and  D. Symochko(a) and  M. Fadil(b) and  and J.K. Tuli,2025-08-08
+58,84,Ce,100,3719.6,0.4,1,0,0,,0+,2,3719.1,1.3,100,,,,,,,,,,,,,,,1-Jun-2010,T.D. Johnson and  D. Symochko(a) and  M. Fadil(b) and  and J.K. Tuli,2025-08-08
+58,84,Ce,102,3745.8,1,1,0,0,,0+,0,3745.7,,100,,,,,,,,,,,,,,,1-Jun-2010,T.D. Johnson and  D. Symochko(a) and  M. Fadil(b) and  and J.K. Tuli,2025-08-08
+58,84,Ce,103,3776.7,1,1,0,0,,0+,0,3776.6,,100,,,,,,,,,,,,,,,1-Jun-2010,T.D. Johnson and  D. Symochko(a) and  M. Fadil(b) and  and J.K. Tuli,2025-08-08
+58,84,Ce,104,3832.6,1.2,11(-),58,2994,1,9(-),0,838.7,,100,,E2,,,,,,,,,,,0.00297,0.00005,1-Jun-2010,T.D. Johnson and  D. Symochko(a) and  M. Fadil(b) and  and J.K. Tuli,2025-08-08
+58,84,Ce,105,3851.1,0.6,,7,2004.89,0.07,2+,0,1846.2,0.8,20,20,,,,,,,,,,,,,,1-Jun-2010,T.D. Johnson and  D. Symochko(a) and  M. Fadil(b) and  and J.K. Tuli,2025-08-08
+58,84,Ce,105,3851.1,0.6,,1,641.282,0.009,2+,1,3210.2,1.2,40,,,,,,,,,,,,,,,1-Jun-2010,T.D. Johnson and  D. Symochko(a) and  M. Fadil(b) and  and J.K. Tuli,2025-08-08
+58,84,Ce,105,3851.1,0.6,,0,0,,0+,2,3850.4,1.3,100,,,,,,,,,,,,,,,1-Jun-2010,T.D. Johnson and  D. Symochko(a) and  M. Fadil(b) and  and J.K. Tuli,2025-08-08
+58,84,Ce,106,3884.2,0.5,,82,3313.78,0.2,1,0,570.6,0.5,25,25,,,,,,,,,,,,,,1-Jun-2010,T.D. Johnson and  D. Symochko(a) and  M. Fadil(b) and  and J.K. Tuli,2025-08-08
+58,84,Ce,106,3884.2,0.5,,3,1536.33,0.04,2+,1,2347.4,0.9,25,25,,,,,,,,,,,,,,1-Jun-2010,T.D. Johnson and  D. Symochko(a) and  M. Fadil(b) and  and J.K. Tuli,2025-08-08
+58,84,Ce,106,3884.2,0.5,,1,641.282,0.009,2+,2,3242.4,1.2,100,,,,,,,,,,,,,,,1-Jun-2010,T.D. Johnson and  D. Symochko(a) and  M. Fadil(b) and  and J.K. Tuli,2025-08-08
+58,84,Ce,107,3906.3,1.1,(11+),91,3536.3,1,(10+),0,370,,,,,,,,,,,,,,,,,1-Jun-2010,T.D. Johnson and  D. Symochko(a) and  M. Fadil(b) and  and J.K. Tuli,2025-08-08
+58,84,Ce,107,3906.3,1.1,(11+),83,3380.5,1,(9+),1,525.8,,,,,,,,,,,,,,,,,1-Jun-2010,T.D. Johnson and  D. Symochko(a) and  M. Fadil(b) and  and J.K. Tuli,2025-08-08
+58,84,Ce,108,3914.4,0.5,,45,2792.9,0.3,,0,1121.2,0.6,33.33,,,,,,,,,,,,,,,1-Jun-2010,T.D. Johnson and  D. Symochko(a) and  M. Fadil(b) and  and J.K. Tuli,2025-08-08
+58,84,Ce,108,3914.4,0.5,,3,1536.33,0.04,2+,1,2378.6,0.9,100,,,,,,,,,,,,,,,1-Jun-2010,T.D. Johnson and  D. Symochko(a) and  M. Fadil(b) and  and J.K. Tuli,2025-08-08
+58,84,Ce,108,3914.4,0.5,,1,641.282,0.009,2+,2,3273.2,1.4,100,,,,,,,,,,,,,,,1-Jun-2010,T.D. Johnson and  D. Symochko(a) and  M. Fadil(b) and  and J.K. Tuli,2025-08-08
+58,84,Ce,109,3975.94,0.17,,35,2697.03,0.07,2+,0,1280.1,0.4,33.33,,,,,,,,,,,,,,,1-Jun-2010,T.D. Johnson and  D. Symochko(a) and  M. Fadil(b) and  and J.K. Tuli,2025-08-08
+58,84,Ce,109,3975.94,0.17,,13,2181.95,0.05,3+,1,1793.8,0.7,33.33,,,,,,,,,,,,,,,1-Jun-2010,T.D. Johnson and  D. Symochko(a) and  M. Fadil(b) and  and J.K. Tuli,2025-08-08
+58,84,Ce,109,3975.94,0.17,,8,2014.5,0.3,,2,1961.5,0.9,100,,,,,,,,,,,,,,,1-Jun-2010,T.D. Johnson and  D. Symochko(a) and  M. Fadil(b) and  and J.K. Tuli,2025-08-08
+58,84,Ce,109,3975.94,0.17,,1,641.282,0.009,2+,3,3334.2,1.2,66.67,,,,,,,,,,,,,,,1-Jun-2010,T.D. Johnson and  D. Symochko(a) and  M. Fadil(b) and  and J.K. Tuli,2025-08-08
+58,84,Ce,109,3975.94,0.17,,0,0,,0+,4,3975.6,0.2,33.33,,,,,,,,,,,,,,,1-Jun-2010,T.D. Johnson and  D. Symochko(a) and  M. Fadil(b) and  and J.K. Tuli,2025-08-08
+58,84,Ce,110,4043.5,0.4,2+,98,3703.9,0.3,,0,339.5,0.4,10,5,,,,,,,,,,,,,,1-Jun-2010,T.D. Johnson and  D. Symochko(a) and  M. Fadil(b) and  and J.K. Tuli,2025-08-08
+58,84,Ce,110,4043.5,0.4,2+,24,2543.21,0.08,2+,1,1500.3,0.6,10,,,,,,,,,,,,,,,1-Jun-2010,T.D. Johnson and  D. Symochko(a) and  M. Fadil(b) and  and J.K. Tuli,2025-08-08
+58,84,Ce,110,4043.5,0.4,2+,7,2004.89,0.07,2+,2,2038.7,0.8,100,5,D+Q,-0.99,0.2,,,,,,,,,,,1-Jun-2010,T.D. Johnson and  D. Symochko(a) and  M. Fadil(b) and  and J.K. Tuli,2025-08-08
+58,84,Ce,110,4043.5,0.4,2+,1,641.282,0.009,2+,3,3401.9,1.2,35,,,,,,,,,,,,,,,1-Jun-2010,T.D. Johnson and  D. Symochko(a) and  M. Fadil(b) and  and J.K. Tuli,2025-08-08
+58,84,Ce,111,4045.6,0.4,,98,3703.9,0.3,,0,341.7,0.4,100,,,,,,,,,,,,,,,1-Jun-2010,T.D. Johnson and  D. Symochko(a) and  M. Fadil(b) and  and J.K. Tuli,2025-08-08
+58,84,Ce,111,4045.6,0.4,,35,2697.03,0.07,2+,1,1348.7,0.5,100,,,,,,,,,,,,,,,1-Jun-2010,T.D. Johnson and  D. Symochko(a) and  M. Fadil(b) and  and J.K. Tuli,2025-08-08
+58,84,Ce,111,4045.6,0.4,,0,0,,0+,2,4045.2,,,,,,,,,,,,,,,,,1-Jun-2010,T.D. Johnson and  D. Symochko(a) and  M. Fadil(b) and  and J.K. Tuli,2025-08-08
+58,84,Ce,112,4048.4,1.4,,104,3832.6,1.2,11(-),0,216,,,,,,,,,,,,,,,,,1-Jun-2010,T.D. Johnson and  D. Symochko(a) and  M. Fadil(b) and  and J.K. Tuli,2025-08-08
+58,84,Ce,113,4356.7,1.3,(12+),107,3906.3,1.1,(11+),0,450.3,,100,,,,,,,,,,,,,,,1-Jun-2010,T.D. Johnson and  D. Symochko(a) and  M. Fadil(b) and  and J.K. Tuli,2025-08-08
+58,84,Ce,114,4605.2,1.3,(13-),113,4356.7,1.3,(12+),0,248.4,,,,,,,,,,,,,,,,,1-Jun-2010,T.D. Johnson and  D. Symochko(a) and  M. Fadil(b) and  and J.K. Tuli,2025-08-08
+58,84,Ce,114,4605.2,1.3,(13-),112,4048.4,1.4,,1,557,,,,,,,,,,,,,,,,,1-Jun-2010,T.D. Johnson and  D. Symochko(a) and  M. Fadil(b) and  and J.K. Tuli,2025-08-08
+58,84,Ce,114,4605.2,1.3,(13-),104,3832.6,1.2,11(-),2,772.4,,100,,,,,,,,,,,,,,,1-Jun-2010,T.D. Johnson and  D. Symochko(a) and  M. Fadil(b) and  and J.K. Tuli,2025-08-08
+58,84,Ce,115,4717.2,1.4,,104,3832.6,1.2,11(-),0,884.6,,100,,,,,,,,,,,,,,,1-Jun-2010,T.D. Johnson and  D. Symochko(a) and  M. Fadil(b) and  and J.K. Tuli,2025-08-08
+58,84,Ce,116,4896.2,1.4,(14-),115,4717.2,1.4,,0,178.9,,,,,,,,,,,,,,,,,1-Jun-2010,T.D. Johnson and  D. Symochko(a) and  M. Fadil(b) and  and J.K. Tuli,2025-08-08
+58,84,Ce,116,4896.2,1.4,(14-),114,4605.2,1.3,(13-),1,290.9,,,,,,,,,,,,,,,,,1-Jun-2010,T.D. Johnson and  D. Symochko(a) and  M. Fadil(b) and  and J.K. Tuli,2025-08-08
+58,84,Ce,117,5173.4,1.4,(15-),116,4896.2,1.4,(14-),0,277.1,,,,,,,,,,,,,,,,,1-Jun-2010,T.D. Johnson and  D. Symochko(a) and  M. Fadil(b) and  and J.K. Tuli,2025-08-08
+58,84,Ce,117,5173.4,1.4,(15-),114,4605.2,1.3,(13-),1,568.4,,,,,,,,,,,,,,,,,1-Jun-2010,T.D. Johnson and  D. Symochko(a) and  M. Fadil(b) and  and J.K. Tuli,2025-08-08
+58,84,Ce,118,5514.6,1.5,(16-),117,5173.4,1.4,(15-),0,341,,,,,,,,,,,,,,,,,1-Jun-2010,T.D. Johnson and  D. Symochko(a) and  M. Fadil(b) and  and J.K. Tuli,2025-08-08
+58,84,Ce,118,5514.6,1.5,(16-),116,4896.2,1.4,(14-),1,618.4,,,,,,,,,,,,,,,,,1-Jun-2010,T.D. Johnson and  D. Symochko(a) and  M. Fadil(b) and  and J.K. Tuli,2025-08-08
+58,84,Ce,119,5877.2,1.6,(17-),118,5514.6,1.5,(16-),0,362.5,,,,,,,,,,,,,,,,,1-Jun-2010,T.D. Johnson and  D. Symochko(a) and  M. Fadil(b) and  and J.K. Tuli,2025-08-08
+58,84,Ce,119,5877.2,1.6,(17-),117,5173.4,1.4,(15-),1,703.9,,,,,,,,,,,,,,,,,1-Jun-2010,T.D. Johnson and  D. Symochko(a) and  M. Fadil(b) and  and J.K. Tuli,2025-08-08
+58,84,Ce,120,6528.1,1.8,,118,5514.6,1.5,(16-),0,1013.5,,100,,,,,,,,,,,,,,,1-Jun-2010,T.D. Johnson and  D. Symochko(a) and  M. Fadil(b) and  and J.K. Tuli,2025-08-08
+58,84,Ce,121,6879.9,1.9,,119,5877.2,1.6,(17-),0,1002.7,,100,,,,,,,,,,,,,,,1-Jun-2010,T.D. Johnson and  D. Symochko(a) and  M. Fadil(b) and  and J.K. Tuli,2025-08-08

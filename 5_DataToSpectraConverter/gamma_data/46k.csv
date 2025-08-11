@@ -1,0 +1,8 @@
+z,n,symbol,start_level_idx,start_level_energy,unc_sle,start_level_jp,end_level_idx,end_level_energy,unc_ele,end_level_jp,gamma_idx,energy,unc_en,relative_intensity,unc_ri,multipolarity,mixing_ratio,unc_mr,b_e1,unc_be1,b_e2,unc_be2,b_m1,unc_bm1,b_m2,unc_bm2,tot_conv_coeff,tce_unc,ensdf_publication_cut-off,ensdf_authors,Extraction_date
+19,27,K,1,587.4,0.4,3-,0,0,,(2-),0,587.3,0.5,100,,,,,,,,,,,,,,,15-Jul-2000,S. -C. WU,2025-08-08
+19,27,K,2,690.9,0.4,(4-),1,587.4,0.4,3-,0,103.5,0.5,100,,,,,,,,,,,,,,,15-Jul-2000,S. -C. WU,2025-08-08
+19,27,K,2,690.9,0.4,(4-),0,0,,(2-),1,691,0.5,38,11,,,,,,,,,,,,,,15-Jul-2000,S. -C. WU,2025-08-08
+19,27,K,3,885.5,0.7,5-,2,690.9,0.4,(4-),0,194.6,0.5,100,,,,,,,,,,,,,,,15-Jul-2000,S. -C. WU,2025-08-08
+19,27,K,4,1369.9,0.7,3-,2,690.9,0.4,(4-),0,679,0.5,100,,,,,,,,,,,,,,,15-Jul-2000,S. -C. WU,2025-08-08
+19,27,K,5,1738.4,2.1,(4-),1,587.4,0.4,3-,0,1151,2,100,,,,,,,,,,,,,,,15-Jul-2000,S. -C. WU,2025-08-08
+19,27,K,6,1944.34,0.09,1+,0,0,,(2-),0,1944.3,0.09,100,,,,,,,,,,,,,,,15-Jul-2000,S. -C. WU,2025-08-08

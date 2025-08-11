@@ -1,0 +1,7 @@
+z,n,symbol,start_level_idx,start_level_energy,unc_sle,start_level_jp,end_level_idx,end_level_energy,unc_ele,end_level_jp,gamma_idx,energy,unc_en,relative_intensity,unc_ri,multipolarity,mixing_ratio,unc_mr,b_e1,unc_be1,b_e2,unc_be2,b_m1,unc_bm1,b_m2,unc_bm2,tot_conv_coeff,tce_unc,ensdf_publication_cut-off,ensdf_authors,Extraction_date
+62,72,Sm,1,163,,2+,0,0,,0+,0,163,,100,,E2,,,,,202,,,,,,0.421,,31-Jul-2022,A.A. Sonzogni,2025-08-08
+62,72,Sm,2,479,,4+,1,163,,2+,0,316,,100,,E2,,,,,218,,,,,,0.0481,,31-Jul-2022,A.A. Sonzogni,2025-08-08
+62,72,Sm,3,897,,6+,2,479,,4+,0,418,,100,,E2,,,,,240,,,,,,0.021,,31-Jul-2022,A.A. Sonzogni,2025-08-08
+62,72,Sm,4,1388,,8+,3,897,,6+,0,491,,100,,E2,,,,,220,,,,,,0.0135,,31-Jul-2022,A.A. Sonzogni,2025-08-08
+62,72,Sm,5,1952,,10+,4,1388,,8+,0,564,,100,,E2,,,,,,,,,,,0.0095,,31-Jul-2022,A.A. Sonzogni,2025-08-08
+62,72,Sm,6,2594,2.5,12+,5,1952,,10+,0,642,,100,,E2,,,,,,,,,,,0.00684,,31-Jul-2022,A.A. Sonzogni,2025-08-08

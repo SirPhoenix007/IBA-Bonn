@@ -1,0 +1,10 @@
+z,n,symbol,start_level_idx,start_level_energy,unc_sle,start_level_jp,end_level_idx,end_level_energy,unc_ele,end_level_jp,gamma_idx,energy,unc_en,relative_intensity,unc_ri,multipolarity,mixing_ratio,unc_mr,b_e1,unc_be1,b_e2,unc_be2,b_m1,unc_bm1,b_m2,unc_bm2,tot_conv_coeff,tce_unc,ensdf_publication_cut-off,ensdf_authors,Extraction_date
+70,81,Yb,2,1531.3,,(15/2-),1,0,,(11/2-),0,1531.3,0.5,100,,,,,,,,,,,,,,,20-Nov-2008,BALRAJ SINGH,2025-08-08
+70,81,Yb,3,1734.7,,(17/2+),2,1531.3,,(15/2-),0,203.4,0.5,100,,E1,,,,,,,,,,,0.0531,,20-Nov-2008,BALRAJ SINGH,2025-08-08
+70,81,Yb,4,1791.2,,,3,1734.7,,(17/2+),0,57.1,0.2,55,15,,,,,,,,,,,,,,20-Nov-2008,BALRAJ SINGH,2025-08-08
+70,81,Yb,4,1791.2,,,2,1531.3,,(15/2-),1,259.4,0.3,100,15,,,,,,,,,,,,,,20-Nov-2008,BALRAJ SINGH,2025-08-08
+70,81,Yb,7,1993.2,,,6,1791.2,,,0,202,0.4,100,,,,,,,,,,,,,,,20-Nov-2008,BALRAJ SINGH,2025-08-08
+70,81,Yb,8,2165.4,,,7,1993.2,,,0,172.2,0.4,100,,,,,,,,,,,,,,,20-Nov-2008,BALRAJ SINGH,2025-08-08
+70,81,Yb,9,2391,,(23/2-),8,2165.4,,,0,226,0.4,9,1,,,,,,,,,,,,,,20-Nov-2008,BALRAJ SINGH,2025-08-08
+70,81,Yb,9,2391,,(23/2-),6,1791.2,,,1,599.9,0.4,100,7,,,,,,,,,,,,,,20-Nov-2008,BALRAJ SINGH,2025-08-08
+70,81,Yb,10,2448,,(27/2-),9,2391,,(23/2-),0,57,2,,,[E2],,,,,0.03,,,,,,32,6,20-Nov-2008,BALRAJ SINGH,2025-08-08

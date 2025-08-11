@@ -1,0 +1,10 @@
+z,n,symbol,start_level_idx,start_level_energy,unc_sle,start_level_jp,end_level_idx,end_level_energy,unc_ele,end_level_jp,gamma_idx,energy,unc_en,relative_intensity,unc_ri,multipolarity,mixing_ratio,unc_mr,b_e1,unc_be1,b_e2,unc_be2,b_m1,unc_bm1,b_m2,unc_bm2,tot_conv_coeff,tce_unc,ensdf_publication_cut-off,ensdf_authors,Extraction_date
+7,14,N,1,1160,30,(3/2-),0,0,,(1/2-),0,1159,29,100,,,,,,,,,,,,,,,15-Jan-2015,R.B. FIRESTONE,2025-08-08
+7,14,N,2,2380,50,(5/2-),1,1160,30,(3/2-),0,1220,29,100,35,,,,,,,,,,,,,,15-Jan-2015,R.B. FIRESTONE,2025-08-08
+7,14,N,2,2380,50,(5/2-),,,,,1,2405,,,,,,,,,,,,,,,,,15-Jan-2015,R.B. FIRESTONE,2025-08-08
+7,14,N,3,3300,50,(5/2-),,,,,0,884,27,,,,,,,,,,,,,,,,15-Jan-2015,R.B. FIRESTONE,2025-08-08
+7,14,N,3,3300,50,(5/2-),1,1160,30,(3/2-),1,2142,33,100,21,,,,,,,,,,,,,,15-Jan-2015,R.B. FIRESTONE,2025-08-08
+7,14,N,4,3600,50,(5/2+),,,,,0,1210,,,,,,,,,,,,,,,,,15-Jan-2015,R.B. FIRESTONE,2025-08-08
+7,14,N,4,3600,50,(5/2+),1,1160,30,(3/2-),1,2438,33,100,33,,,,,,,,,,,,,,15-Jan-2015,R.B. FIRESTONE,2025-08-08
+7,14,N,5,4170,50,(7/2-),,,,,0,884,27,,,,,,,,,,,,,,,,15-Jan-2015,R.B. FIRESTONE,2025-08-08
+7,14,N,5,4170,50,(7/2-),2,2380,50,(5/2-),1,1790,28,100,25,,,,,,,,,,,,,,15-Jan-2015,R.B. FIRESTONE,2025-08-08

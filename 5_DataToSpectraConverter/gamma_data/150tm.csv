@@ -1,0 +1,10 @@
+z,n,symbol,start_level_idx,start_level_energy,unc_sle,start_level_jp,end_level_idx,end_level_energy,unc_ele,end_level_jp,gamma_idx,energy,unc_en,relative_intensity,unc_ri,multipolarity,mixing_ratio,unc_mr,b_e1,unc_be1,b_e2,unc_be2,b_m1,unc_bm1,b_m2,unc_bm2,tot_conv_coeff,tce_unc,ensdf_publication_cut-off,ensdf_authors,Extraction_date
+69,81,Tm,1,16.89,0.17,(5-),0,0,,(6-),0,17,,100,,,,,,,,,,,,,,,1-Apr-2013,S. K. Basu and  A. A. Sonzogni,2025-08-08
+69,81,Tm,2,105.1,0.3,(5-),1,16.89,0.17,(5-),0,88,1,80,40,(M1),,,,,,,,,,,4.48,0.17,1-Apr-2013,S. K. Basu and  A. A. Sonzogni,2025-08-08
+69,81,Tm,2,105.1,0.3,(5-),0,0,,(6-),1,105,0.6,100,50,(M1),,,,,,,,,,,2.7,0.06,1-Apr-2013,S. K. Basu and  A. A. Sonzogni,2025-08-08
+69,81,Tm,3,219.99,0.14,(6-),2,105.1,0.3,(5-),0,114.9,0.3,21,4,(M1),,,,,,,,,,,2.08,0.04,1-Apr-2013,S. K. Basu and  A. A. Sonzogni,2025-08-08
+69,81,Tm,3,219.99,0.14,(6-),1,16.89,0.17,(5-),1,203.1,0.1,100,11,(M1),,,,,,,,,,,0.419,,1-Apr-2013,S. K. Basu and  A. A. Sonzogni,2025-08-08
+69,81,Tm,3,219.99,0.14,(6-),0,0,,(6-),2,219.9,0.2,43,7,(M1),,,,,,,,,,,0.337,,1-Apr-2013,S. K. Basu and  A. A. Sonzogni,2025-08-08
+69,81,Tm,4,340.11,0.15,(7-),3,219.99,0.14,(6-),0,120.1,0.1,51,5,(M1),,,,,,,,,,,1.84,,1-Apr-2013,S. K. Basu and  A. A. Sonzogni,2025-08-08
+69,81,Tm,4,340.11,0.15,(7-),0,0,,(6-),1,340.2,0.2,100,12,(M1),,,,,,,,,,,0.1036,,1-Apr-2013,S. K. Basu and  A. A. Sonzogni,2025-08-08
+69,81,Tm,5,671.3,1,(10+),4,340.11,0.15,(7-),0,331.2,,100,,(E3),,,,,,,,,,,0.209,,1-Apr-2013,S. K. Basu and  A. A. Sonzogni,2025-08-08

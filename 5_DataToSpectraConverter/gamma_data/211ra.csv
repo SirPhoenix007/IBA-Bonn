@@ -1,0 +1,7 @@
+z,n,symbol,start_level_idx,start_level_energy,unc_sle,start_level_jp,end_level_idx,end_level_energy,unc_ele,end_level_jp,gamma_idx,energy,unc_en,relative_intensity,unc_ri,multipolarity,mixing_ratio,unc_mr,b_e1,unc_be1,b_e2,unc_be2,b_m1,unc_bm1,b_m2,unc_bm2,tot_conv_coeff,tce_unc,ensdf_publication_cut-off,ensdf_authors,Extraction_date
+88,123,Ra,1,133.86,0.1,(1/2-),0,0,,5/2(-),0,133.88,0.1,100,,E2,,,,,,,,,,,2.78,,28-FEB-2013,D. ABRIOLA and  P. DEMETRIOU and  M. HASSANVAND and  M. HUSSAIN,2025-08-08
+88,123,Ra,2,194.54,0.13,(3/2-),1,133.86,0.1,(1/2-),0,60.9,0.3,11,3,(M1 E2),,,,,,,,,,,57,44,28-FEB-2013,D. ABRIOLA and  P. DEMETRIOU and  M. HASSANVAND and  M. HUSSAIN,2025-08-08
+88,123,Ra,2,194.54,0.13,(3/2-),0,0,,5/2(-),1,194.49,0.14,100,14,M1,,,,,,,,,,,2.37,,28-FEB-2013,D. ABRIOLA and  P. DEMETRIOU and  M. HASSANVAND and  M. HUSSAIN,2025-08-08
+88,123,Ra,3,295.1,0.3,(3/2-),0,0,,5/2(-),0,295.1,0.3,100,,(M1),,,,,,,,,,,0.742,,28-FEB-2013,D. ABRIOLA and  P. DEMETRIOU and  M. HASSANVAND and  M. HUSSAIN,2025-08-08
+88,123,Ra,4,802,0.6,(9/2-),0,0,,5/2(-),0,802,0.6,100,,(E2),,,,,,,,,,,0.01387,0.0002,28-FEB-2013,D. ABRIOLA and  P. DEMETRIOU and  M. HASSANVAND and  M. HUSSAIN,2025-08-08
+88,123,Ra,5,1198.1,0.8,(13/2+),4,802,0.6,(9/2-),0,396.1,0.6,100,,M2,,,,,,,,,0.0046,,1.014,0.015,28-FEB-2013,D. ABRIOLA and  P. DEMETRIOU and  M. HASSANVAND and  M. HUSSAIN,2025-08-08

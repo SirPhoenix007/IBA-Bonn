@@ -1,0 +1,7 @@
+z,n,symbol,start_level_idx,start_level_energy,unc_sle,start_level_jp,end_level_idx,end_level_energy,unc_ele,end_level_jp,gamma_idx,energy,unc_en,relative_intensity,unc_ri,multipolarity,mixing_ratio,unc_mr,b_e1,unc_be1,b_e2,unc_be2,b_m1,unc_bm1,b_m2,unc_bm2,tot_conv_coeff,tce_unc,ensdf_publication_cut-off,ensdf_authors,Extraction_date
+53,79,I,1,22,11,(5+),0,0,,4+,0,22,11,,,,,,,,,,,,,,,,10-Feb-2005,YU. KHAZOV and  A.A. RODIONOV AND S. SAKHAROV and  BALRAJ SINGH,2025-08-08
+53,79,I,2,49.72,0.01,3+,0,0,,4+,0,49.72,0.01,100,,M1,,,,,,,0.00374,,,,5.71,,10-Feb-2005,YU. KHAZOV and  A.A. RODIONOV AND S. SAKHAROV and  BALRAJ SINGH,2025-08-08
+53,79,I,3,120,20,(8-),1,22,11,(5+),0,98,1,100,,E3,,,,,,,,,,,21.6,,10-Feb-2005,YU. KHAZOV and  A.A. RODIONOV AND S. SAKHAROV and  BALRAJ SINGH,2025-08-08
+53,79,I,4,161.52,0.07,2+,2,49.72,0.01,3+,0,111.76,0.08,100,,M1+E2,0.58,0.1,,,34,,0.00193,,,,0.71,0.05,10-Feb-2005,YU. KHAZOV and  A.A. RODIONOV AND S. SAKHAROV and  BALRAJ SINGH,2025-08-08
+53,79,I,5,277.86,0.06,1+,4,161.52,0.07,2+,0,116.3,0.08,2.23,0.06,M1+E2,0.6,0.09,,,2.4,,0.000142,,,,0.64,0.04,10-Feb-2005,YU. KHAZOV and  A.A. RODIONOV AND S. SAKHAROV and  BALRAJ SINGH,2025-08-08
+53,79,I,5,277.86,0.06,1+,2,49.72,0.01,3+,1,228.16,0.06,100,2,E2,,,,,14.2,,,,,,0.1,,10-Feb-2005,YU. KHAZOV and  A.A. RODIONOV AND S. SAKHAROV and  BALRAJ SINGH,2025-08-08

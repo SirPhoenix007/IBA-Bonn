@@ -1,0 +1,12 @@
+z,n,symbol,start_level_idx,start_level_energy,unc_sle,start_level_jp,end_level_idx,end_level_energy,unc_ele,end_level_jp,gamma_idx,energy,unc_en,relative_intensity,unc_ri,multipolarity,mixing_ratio,unc_mr,b_e1,unc_be1,b_e2,unc_be2,b_m1,unc_bm1,b_m2,unc_bm2,tot_conv_coeff,tce_unc,ensdf_publication_cut-off,ensdf_authors,Extraction_date
+14,20,Si,1,3327.14,0.2,2+,0,0,,0+,0,3326.96,0.2,100,,[E2],,,,,2.6,,,,,,,,28-May-2012,NINEL NICA and  BALRAJ SINGH,2025-08-08
+14,20,Si,3,4256.1,0.4,(3-),1,3327.14,0.2,2+,0,929,0.3,100,10,,,,,,,,,,,,,,28-May-2012,NINEL NICA and  BALRAJ SINGH,2025-08-08
+14,20,Si,3,4256.1,0.4,(3-),0,0,,0+,1,4257,3,22,3,[E3],,,,,,,,,,,,,28-May-2012,NINEL NICA and  BALRAJ SINGH,2025-08-08
+14,20,Si,4,4380.2,0.4,(3-),3,4256.1,0.4,(3-),0,124.2,0.3,100,8,[M1+E2],,,,,,,,,,,0.025,0.023,28-May-2012,NINEL NICA and  BALRAJ SINGH,2025-08-08
+14,20,Si,4,4380.2,0.4,(3-),1,3327.14,0.2,2+,1,1052.8,0.4,7.5,1.2,,,,,,,,,,,,,,28-May-2012,NINEL NICA and  BALRAJ SINGH,2025-08-08
+14,20,Si,5,4520.2,1.1,,1,3327.14,0.2,2+,0,1193.34,0.2,100,,,,,,,,,,,,,,,28-May-2012,NINEL NICA and  BALRAJ SINGH,2025-08-08
+14,20,Si,6,4971.1,0.5,(3- 4- 5-),4,4380.2,0.4,(3-),0,590.9,0.3,100,,,,,,,,,,,,,,,28-May-2012,NINEL NICA and  BALRAJ SINGH,2025-08-08
+14,20,Si,7,5042.2,1.1,,1,3327.14,0.2,2+,0,1715.4,0.8,100,,,,,,,,,,,,,,,28-May-2012,NINEL NICA and  BALRAJ SINGH,2025-08-08
+14,20,Si,8,5330.4,1,2+,,,,,0,2000,,59,9,,,,,,,,,,,,,,28-May-2012,NINEL NICA and  BALRAJ SINGH,2025-08-08
+14,20,Si,8,5330.4,1,2+,0,0,,0+,1,5330,,100,,,,,,,,,,,,,,,28-May-2012,NINEL NICA and  BALRAJ SINGH,2025-08-08
+14,20,Si,9,6023.3,1.1,,1,3327.14,0.2,2+,0,2696.4,1.2,100,,,,,,,,,,,,,,,28-May-2012,NINEL NICA and  BALRAJ SINGH,2025-08-08

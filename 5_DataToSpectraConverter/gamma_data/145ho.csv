@@ -1,0 +1,5 @@
+z,n,symbol,start_level_idx,start_level_energy,unc_sle,start_level_jp,end_level_idx,end_level_energy,unc_ele,end_level_jp,gamma_idx,energy,unc_en,relative_intensity,unc_ri,multipolarity,mixing_ratio,unc_mr,b_e1,unc_be1,b_e2,unc_be2,b_m1,unc_bm1,b_m2,unc_bm2,tot_conv_coeff,tce_unc,ensdf_publication_cut-off,ensdf_authors,Extraction_date
+67,78,Ho,1,486.9,0.3,(15/2-),0,0,,(11/2-),0,486.9,0.3,100,,,,,,,,,,,,,,,1-Oct-2008,E. BROWNE and  J. K. TULI,2025-08-08
+67,78,Ho,2,1147.1,0.4,(19/2-),1,486.9,0.3,(15/2-),0,660.2,0.3,100,,,,,,,,,,,,,,,1-Oct-2008,E. BROWNE and  J. K. TULI,2025-08-08
+67,78,Ho,3,1894.2,0.5,(23/2-),2,1147.1,0.4,(19/2-),0,747.1,0.3,100,,,,,,,,,,,,,,,1-Oct-2008,E. BROWNE and  J. K. TULI,2025-08-08
+67,78,Ho,4,2681.6,0.6,(27/2-),3,1894.2,0.5,(23/2-),0,787.4,0.4,100,,,,,,,,,,,,,,,1-Oct-2008,E. BROWNE and  J. K. TULI,2025-08-08

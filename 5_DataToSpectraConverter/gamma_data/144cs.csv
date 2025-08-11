@@ -1,0 +1,9 @@
+z,n,symbol,start_level_idx,start_level_energy,unc_sle,start_level_jp,end_level_idx,end_level_energy,unc_ele,end_level_jp,gamma_idx,energy,unc_en,relative_intensity,unc_ri,multipolarity,mixing_ratio,unc_mr,b_e1,unc_be1,b_e2,unc_be2,b_m1,unc_bm1,b_m2,unc_bm2,tot_conv_coeff,tce_unc,ensdf_publication_cut-off,ensdf_authors,Extraction_date
+55,89,Cs,1,42.8,0.3,(2-),0,0,,1(-),0,42.8,,,,(M1+E2),,,,,,,,,,,27,17,30-APR-2010,BALRAJ SINGH,2025-08-08
+55,89,Cs,2,92.2,0.5,(4-),1,42.8,0.3,(2-),0,49.4,,,,(E2),,,,,1.5,,,,,,24.7,,30-APR-2010,BALRAJ SINGH,2025-08-08
+55,89,Cs,5,107.9,0.6,(J+1 J+2),3,0,,J,0,107.9,,100,,(M1+E2 E2),,,,,,,,,,,1.1,0.4,30-APR-2010,BALRAJ SINGH,2025-08-08
+55,89,Cs,6,222.7,0.6,(J+2 J+4),5,107.9,0.6,(J+1 J+2),0,114.8,,100,,(M1+E2 E2),,,,,,,,,,,0.9,0.3,30-APR-2010,BALRAJ SINGH,2025-08-08
+55,89,Cs,7,486.2,0.7,(J+4 J+6),6,222.7,0.6,(J+2 J+4),0,263.5,,100,,Q,,,,,,,,,,,,,30-APR-2010,BALRAJ SINGH,2025-08-08
+55,89,Cs,8,890.9,0.8,(J+6 J+8),7,486.2,0.7,(J+4 J+6),0,404.7,,100,,Q,,,,,,,,,,,,,30-APR-2010,BALRAJ SINGH,2025-08-08
+55,89,Cs,9,1365,0.8,,8,890.9,0.8,(J+6 J+8),0,474.1,,100,,,,,,,,,,,,,,,30-APR-2010,BALRAJ SINGH,2025-08-08
+55,89,Cs,10,1426,0.9,,8,890.9,0.8,(J+6 J+8),0,535.1,,100,,,,,,,,,,,,,,,30-APR-2010,BALRAJ SINGH,2025-08-08

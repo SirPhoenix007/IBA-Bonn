@@ -1,0 +1,6 @@
+z,n,symbol,start_level_idx,start_level_energy,unc_sle,start_level_jp,end_level_idx,end_level_energy,unc_ele,end_level_jp,gamma_idx,energy,unc_en,relative_intensity,unc_ri,multipolarity,mixing_ratio,unc_mr,b_e1,unc_be1,b_e2,unc_be2,b_m1,unc_bm1,b_m2,unc_bm2,tot_conv_coeff,tce_unc,ensdf_publication_cut-off,ensdf_authors,Extraction_date
+47,73,Ag,1,52.5,0.2,(+),0,0,,3(+),0,52.5,0.2,100,,,,,,,,,,,,,,,1-Dec-2001,K. KITAO and  Y. TENDOW AND A. HASHIZUME,2025-08-08
+47,73,Ag,2,203,1,6(-),0,0,,3(+),0,203,1,100,,E3,,,,,,,,,,,0.605,0.018,1-Dec-2001,K. KITAO and  Y. TENDOW AND A. HASHIZUME,2025-08-08
+47,73,Ag,3,210.6,0.3,,1,52.5,0.2,(+),0,158.1,0.2,100,,,,,,,,,,,,,,,1-Dec-2001,K. KITAO and  Y. TENDOW AND A. HASHIZUME,2025-08-08
+47,73,Ag,4,300.4,0.5,(1+),3,210.6,0.3,,0,89.8,0.3,100,,D,,,,,,,,,,,,,1-Dec-2001,K. KITAO and  Y. TENDOW AND A. HASHIZUME,2025-08-08
+47,73,Ag,5,805.8,0.5,(1+),3,210.6,0.3,,0,595.2,0.4,100,,,,,,,,,,,,,,,1-Dec-2001,K. KITAO and  Y. TENDOW AND A. HASHIZUME,2025-08-08

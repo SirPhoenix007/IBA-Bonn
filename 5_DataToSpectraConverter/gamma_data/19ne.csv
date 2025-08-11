@@ -1,0 +1,24 @@
+z,n,symbol,start_level_idx,start_level_energy,unc_sle,start_level_jp,end_level_idx,end_level_energy,unc_ele,end_level_jp,gamma_idx,energy,unc_en,relative_intensity,unc_ri,multipolarity,mixing_ratio,unc_mr,b_e1,unc_be1,b_e2,unc_be2,b_m1,unc_bm1,b_m2,unc_bm2,tot_conv_coeff,tce_unc,ensdf_publication_cut-off,ensdf_authors,Extraction_date
+10,9,Ne,1,238.27,0.11,5/2+,0,0,,1/2+,0,238.3,,100,,E2,,,,,13.2,,,,,,,,31-OCT-1994,TILLEY and  WELLER and  CHEVES and  CHASTELER,2025-08-08
+10,9,Ne,2,275.09,0.13,1/2-,0,0,,1/2+,0,275.1,,100,,E1,,,0.00106,,,,,,,,,,31-OCT-1994,TILLEY and  WELLER and  CHEVES and  CHASTELER,2025-08-08
+10,9,Ne,3,1507.56,0.3,5/2-,2,275.09,0.13,1/2-,0,1232.5,,88,3,E2,,,,,58,,,,,,,,31-OCT-1994,TILLEY and  WELLER and  CHEVES and  CHASTELER,2025-08-08
+10,9,Ne,3,1507.56,0.3,5/2-,1,238.27,0.11,5/2+,1,1269.3,,12,3,E1,,,0.000057,,,,,,,,,,31-OCT-1994,TILLEY and  WELLER and  CHEVES and  CHASTELER,2025-08-08
+10,9,Ne,4,1536,0.4,3/2+,2,275.09,0.13,1/2-,0,1260.9,,5,3,E1,,,0.001,,,,,,,,,,31-OCT-1994,TILLEY and  WELLER and  CHEVES and  CHASTELER,2025-08-08
+10,9,Ne,4,1536,0.4,3/2+,1,238.27,0.11,5/2+,1,1297.7,,95,3,M1,,,,,,,0.5,,,,,,31-OCT-1994,TILLEY and  WELLER and  CHEVES and  CHASTELER,2025-08-08
+10,9,Ne,5,1615.6,0.5,3/2-,2,275.09,0.13,1/2-,0,1340.5,,70,4,M1,,,,,,,0.063,,,,,,31-OCT-1994,TILLEY and  WELLER and  CHEVES and  CHASTELER,2025-08-08
+10,9,Ne,5,1615.6,0.5,3/2-,1,238.27,0.11,5/2+,1,1377,,10,3,E1,,,0.00036,,,,,,,,,,31-OCT-1994,TILLEY and  WELLER and  CHEVES and  CHASTELER,2025-08-08
+10,9,Ne,5,1615.6,0.5,3/2-,0,0,,1/2+,2,1616,,20,3,E1,,,0.00045,,,,,,,,,,31-OCT-1994,TILLEY and  WELLER and  CHEVES and  CHASTELER,2025-08-08
+10,9,Ne,6,2794.7,0.6,9/2+,1,238.27,0.11,5/2+,0,2556.4,,100,,E2,,,,,17,,,,,,,,31-OCT-1994,TILLEY and  WELLER and  CHEVES and  CHASTELER,2025-08-08
+10,9,Ne,7,4032.9,2.4,3/2+,4,1536,0.4,3/2+,0,2497,,15,5,,,,,,,,,,,,,,31-OCT-1994,TILLEY and  WELLER and  CHEVES and  CHASTELER,2025-08-08
+10,9,Ne,7,4032.9,2.4,3/2+,2,275.09,0.13,1/2-,1,3758,,5,5,,,,,,,,,,,,,,31-OCT-1994,TILLEY and  WELLER and  CHEVES and  CHASTELER,2025-08-08
+10,9,Ne,7,4032.9,2.4,3/2+,0,0,,1/2+,2,4033,,80,15,,,,,,,,,,,,,,31-OCT-1994,TILLEY and  WELLER and  CHEVES and  CHASTELER,2025-08-08
+10,9,Ne,8,4140,4,(9/2)-,3,1507.56,0.3,5/2-,0,2632,,100,,,,,,,,,,,,,,,31-OCT-1994,TILLEY and  WELLER and  CHEVES and  CHASTELER,2025-08-08
+10,9,Ne,9,4197.1,2.4,(7/2)-,3,1507.56,0.3,5/2-,0,2689.5,,80,5,,,,,,,,,,,,,,31-OCT-1994,TILLEY and  WELLER and  CHEVES and  CHASTELER,2025-08-08
+10,9,Ne,9,4197.1,2.4,(7/2)-,1,238.27,0.11,5/2+,1,3958.8,,20,5,,,,,,,,,,,,,,31-OCT-1994,TILLEY and  WELLER and  CHEVES and  CHASTELER,2025-08-08
+10,9,Ne,10,4379.1,2.2,7/2+,6,2794.7,0.6,9/2+,0,1584.4,,15,4,,,,,,,,,,,,,,31-OCT-1994,TILLEY and  WELLER and  CHEVES and  CHASTELER,2025-08-08
+10,9,Ne,10,4379.1,2.2,7/2+,1,238.27,0.11,5/2+,1,4140.8,,85,4,,,,,,,,,,,,,,31-OCT-1994,TILLEY and  WELLER and  CHEVES and  CHASTELER,2025-08-08
+10,9,Ne,11,4549,4,(1/2 3/2)-,2,275.09,0.13,1/2-,0,4274,,65,25,,,,,,,,,,,,,,31-OCT-1994,TILLEY and  WELLER and  CHEVES and  CHASTELER,2025-08-08
+10,9,Ne,11,4549,4,(1/2 3/2)-,0,0,,1/2+,1,4549,,35,25,,,,,,,,,,,,,,31-OCT-1994,TILLEY and  WELLER and  CHEVES and  CHASTELER,2025-08-08
+10,9,Ne,12,4600,4,(5/2+),4,1536,0.4,3/2+,0,3064,,10,5,,,,,,,,,,,,,,31-OCT-1994,TILLEY and  WELLER and  CHEVES and  CHASTELER,2025-08-08
+10,9,Ne,12,4600,4,(5/2+),1,238.27,0.11,5/2+,1,4362,,90,5,,,,,,,,,,,,,,31-OCT-1994,TILLEY and  WELLER and  CHEVES and  CHASTELER,2025-08-08
+10,9,Ne,13,4635,4,13/2+,6,2794.7,0.6,9/2+,0,1840,,100,,E2,,,,,13,,,,,,,,31-OCT-1994,TILLEY and  WELLER and  CHEVES and  CHASTELER,2025-08-08

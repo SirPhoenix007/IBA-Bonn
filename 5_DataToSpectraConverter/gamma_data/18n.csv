@@ -1,0 +1,13 @@
+z,n,symbol,start_level_idx,start_level_energy,unc_sle,start_level_jp,end_level_idx,end_level_energy,unc_ele,end_level_jp,gamma_idx,energy,unc_en,relative_intensity,unc_ri,multipolarity,mixing_ratio,unc_mr,b_e1,unc_be1,b_e2,unc_be2,b_m1,unc_bm1,b_m2,unc_bm2,tot_conv_coeff,tce_unc,ensdf_publication_cut-off,ensdf_authors,Extraction_date
+7,11,N,1,114.71,0.1,(2-),0,0,,1-,0,114.7,0.1,100,,,,,,,,,0.036,,,,,,30-Jun-2021,R. Spitzer and  J.H. Kelley,2025-08-08
+7,11,N,2,587.39,0.2,(2-),1,114.71,0.1,(2-),0,472.7,0.2,100,16,,,,,,,,,,,,,,30-Jun-2021,R. Spitzer and  J.H. Kelley,2025-08-08
+7,11,N,3,742,0.4,(3-),2,587.39,0.2,(2-),0,154.6,0.3,20,,,,,,,,,,,,,,,30-Jun-2021,R. Spitzer and  J.H. Kelley,2025-08-08
+7,11,N,3,742,0.4,(3-),1,114.71,0.1,(2-),1,627,1,100,,,,,,,,,,,,,,,30-Jun-2021,R. Spitzer and  J.H. Kelley,2025-08-08
+7,11,N,5,1734.75,0.19,(1 2),2,587.39,0.2,(2-),0,1147.8,0.4,68,20,,,,,,,,,,,,,,30-Jun-2021,R. Spitzer and  J.H. Kelley,2025-08-08
+7,11,N,5,1734.75,0.19,(1 2),1,114.71,0.1,(2-),1,1619.9,0.3,100,25,,,,,,,,,,,,,,30-Jun-2021,R. Spitzer and  J.H. Kelley,2025-08-08
+7,11,N,5,1734.75,0.19,(1 2),0,0,,1-,2,1734.8,0.4,100,25,,,,,,,,,,,,,,30-Jun-2021,R. Spitzer and  J.H. Kelley,2025-08-08
+7,11,N,7,2405,0.9,,3,742,0.4,(3-),0,1663,0.8,100,,,,,,,,,,,,,,,30-Jun-2021,R. Spitzer and  J.H. Kelley,2025-08-08
+7,11,N,8,2614.35,0.21,1+,5,1734.75,0.19,(1 2),0,879.7,0.2,44,4,,,,,,,,,,,,,,30-Jun-2021,R. Spitzer and  J.H. Kelley,2025-08-08
+7,11,N,8,2614.35,0.21,1+,2,587.39,0.2,(2-),1,2025.3,0.8,7,5,,,,,,,,,,,,,,30-Jun-2021,R. Spitzer and  J.H. Kelley,2025-08-08
+7,11,N,8,2614.35,0.21,1+,1,114.71,0.1,(2-),2,2499.3,0.4,41,9,,,,,,,,,,,,,,30-Jun-2021,R. Spitzer and  J.H. Kelley,2025-08-08
+7,11,N,8,2614.35,0.21,1+,0,0,,1-,3,2614.2,0.4,100,11,,,,,,,,,,,,,,30-Jun-2021,R. Spitzer and  J.H. Kelley,2025-08-08

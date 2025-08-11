@@ -1,0 +1,25 @@
+z,n,symbol,start_level_idx,start_level_energy,unc_sle,start_level_jp,end_level_idx,end_level_energy,unc_ele,end_level_jp,gamma_idx,energy,unc_en,relative_intensity,unc_ri,multipolarity,mixing_ratio,unc_mr,b_e1,unc_be1,b_e2,unc_be2,b_m1,unc_bm1,b_m2,unc_bm2,tot_conv_coeff,tce_unc,ensdf_publication_cut-off,ensdf_authors,Extraction_date
+33,45,As,1,184.5,0.3,(3-),0,0,,2-,0,184.5,,,,,,,,,,,,,,,,,30-Jun-2009,AMEENAH R. FARHAN and  BALRAJ SINGH,2025-08-08
+33,45,As,2,211.7,0.3,(4-),1,184.5,0.3,(3-),0,27.2,,,,[M1],,,,,,,0.038,,,,3.66,,30-Jun-2009,AMEENAH R. FARHAN and  BALRAJ SINGH,2025-08-08
+33,45,As,2,211.7,0.3,(4-),0,0,,2-,1,211.7,,,,[E2],,,,,4.8,,,,,,0.0484,,30-Jun-2009,AMEENAH R. FARHAN and  BALRAJ SINGH,2025-08-08
+33,45,As,3,277.3,0.3,1+,0,0,,2-,0,277.3,0.3,100,,,,,,,,,,,,,,,30-Jun-2009,AMEENAH R. FARHAN and  BALRAJ SINGH,2025-08-08
+33,45,As,4,293.9,0.5,1+,0,0,,2-,0,293.9,0.5,100,,,,,,,,,,,,,,,30-Jun-2009,AMEENAH R. FARHAN and  BALRAJ SINGH,2025-08-08
+33,45,As,5,364.7,0.3,(5-),2,211.7,0.3,(4-),0,153.1,,,,[M1],,,,,,,0.0019,,,,0.0288,,30-Jun-2009,AMEENAH R. FARHAN and  BALRAJ SINGH,2025-08-08
+33,45,As,5,364.7,0.3,(5-),1,184.5,0.3,(3-),1,180.2,,,,[E2],,,,,2.3,,,,,,0.0876,,30-Jun-2009,AMEENAH R. FARHAN and  BALRAJ SINGH,2025-08-08
+33,45,As,6,371.9,0.4,(4+),1,184.5,0.3,(3-),0,187.5,,,,,,,,,,,,,,,,,30-Jun-2009,AMEENAH R. FARHAN and  BALRAJ SINGH,2025-08-08
+33,45,As,7,439.4,0.3,(5-),2,211.7,0.3,(4-),0,227.7,,,,,,,,,,,,,,,,,30-Jun-2009,AMEENAH R. FARHAN and  BALRAJ SINGH,2025-08-08
+33,45,As,11,567.6,0.3,(5+),7,439.4,0.3,(5-),0,128.1,,,,,,,,,,,,,,,,,30-Jun-2009,AMEENAH R. FARHAN and  BALRAJ SINGH,2025-08-08
+33,45,As,11,567.6,0.3,(5+),6,371.9,0.4,(4+),1,195.8,,,,,,,,,,,,,,,,,30-Jun-2009,AMEENAH R. FARHAN and  BALRAJ SINGH,2025-08-08
+33,45,As,11,567.6,0.3,(5+),5,364.7,0.3,(5-),2,202.9,,,,,,,,,,,,,,,,,30-Jun-2009,AMEENAH R. FARHAN and  BALRAJ SINGH,2025-08-08
+33,45,As,11,567.6,0.3,(5+),2,211.7,0.3,(4-),3,355.8,,,,,,,,,,,,,,,,,30-Jun-2009,AMEENAH R. FARHAN and  BALRAJ SINGH,2025-08-08
+33,45,As,13,622.1,0.4,(6+),11,567.6,0.3,(5+),0,54.3,,,,,,,,,,,,,,,,,30-Jun-2009,AMEENAH R. FARHAN and  BALRAJ SINGH,2025-08-08
+33,45,As,13,622.1,0.4,(6+),5,364.7,0.3,(5-),1,257.5,,,,,,,,,,,,,,,,,30-Jun-2009,AMEENAH R. FARHAN and  BALRAJ SINGH,2025-08-08
+33,45,As,15,735.7,0.5,,6,371.9,0.4,(4+),0,363.8,,,,,,,,,,,,,,,,,30-Jun-2009,AMEENAH R. FARHAN and  BALRAJ SINGH,2025-08-08
+33,45,As,16,750,0.5,(7+),13,622.1,0.4,(6+),0,127.9,,,,,,,,,,,,,,,,,30-Jun-2009,AMEENAH R. FARHAN and  BALRAJ SINGH,2025-08-08
+33,45,As,18,758.4,0.4,(6-),7,439.4,0.3,(5-),0,319,,,,,,,,,,,,,,,,,30-Jun-2009,AMEENAH R. FARHAN and  BALRAJ SINGH,2025-08-08
+33,45,As,18,758.4,0.4,(6-),5,364.7,0.3,(5-),1,393.6,,,,,,,,,,,,,,,,,30-Jun-2009,AMEENAH R. FARHAN and  BALRAJ SINGH,2025-08-08
+33,45,As,23,1007.6,0.6,(8+),16,750,0.5,(7+),0,257.6,,,,,,,,,,,,,,,,,30-Jun-2009,AMEENAH R. FARHAN and  BALRAJ SINGH,2025-08-08
+33,45,As,25,1105,0.5,,18,758.4,0.4,(6-),0,346.6,,,,,,,,,,,,,,,,,30-Jun-2009,AMEENAH R. FARHAN and  BALRAJ SINGH,2025-08-08
+33,45,As,32,1503.4,0.7,(9+),23,1007.6,0.6,(8+),0,495.8,,,,,,,,,,,,,,,,,30-Jun-2009,AMEENAH R. FARHAN and  BALRAJ SINGH,2025-08-08
+33,45,As,39,2024,0.7,(10+),32,1503.4,0.7,(9+),0,520.6,,,,,,,,,,,,,,,,,30-Jun-2009,AMEENAH R. FARHAN and  BALRAJ SINGH,2025-08-08
+33,45,As,39,2024,0.7,(10+),23,1007.6,0.6,(8+),1,1016,,,,,,,,,,,,,,,,,30-Jun-2009,AMEENAH R. FARHAN and  BALRAJ SINGH,2025-08-08

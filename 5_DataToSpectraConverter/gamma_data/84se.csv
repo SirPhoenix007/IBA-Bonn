@@ -1,0 +1,62 @@
+z,n,symbol,start_level_idx,start_level_energy,unc_sle,start_level_jp,end_level_idx,end_level_energy,unc_ele,end_level_jp,gamma_idx,energy,unc_en,relative_intensity,unc_ri,multipolarity,mixing_ratio,unc_mr,b_e1,unc_be1,b_e2,unc_be2,b_m1,unc_bm1,b_m2,unc_bm2,tot_conv_coeff,tce_unc,ensdf_publication_cut-off,ensdf_authors,Extraction_date
+34,50,Se,1,1454.55,0.08,2+,0,0,,0+,0,1454.66,0.1,100,,E2,,,,,9.6,,,,,,,,30-Sep-2009,A.A. Sonzogni and  M. Fadil and  and B. Pfeiffer,2025-08-08
+34,50,Se,4,2121.65,0.1,4+,1,1454.55,0.08,2+,0,666.99,0.07,100,,E2,,,,,10,,,,,,,,30-Sep-2009,A.A. Sonzogni and  M. Fadil and  and B. Pfeiffer,2025-08-08
+34,50,Se,6,2461.38,0.09,(1 2+),1,1454.55,0.08,2+,0,1007.12,0.1,41.9,1.7,,,,,,,,,,,,,,30-Sep-2009,A.A. Sonzogni and  M. Fadil and  and B. Pfeiffer,2025-08-08
+34,50,Se,6,2461.38,0.09,(1 2+),0,0,,0+,1,2461.35,0.15,100,5,,,,,,,,,,,,,,30-Sep-2009,A.A. Sonzogni and  M. Fadil and  and B. Pfeiffer,2025-08-08
+34,50,Se,8,2699.47,0.12,(2 3 4),4,2121.65,0.1,4+,0,577.77,0.14,100,3,,,,,,,,,,,,,,30-Sep-2009,A.A. Sonzogni and  M. Fadil and  and B. Pfeiffer,2025-08-08
+34,50,Se,8,2699.47,0.12,(2 3 4),1,1454.55,0.08,2+,1,1245,0.4,82,6,,,,,,,,,,,,,,30-Sep-2009,A.A. Sonzogni and  M. Fadil and  and B. Pfeiffer,2025-08-08
+34,50,Se,11,2984.75,0.13,2+,6,2461.38,0.09,(1 2+),0,522.2,,9.5,,,,,,,,,,,,,,,30-Sep-2009,A.A. Sonzogni and  M. Fadil and  and B. Pfeiffer,2025-08-08
+34,50,Se,11,2984.75,0.13,2+,1,1454.55,0.08,2+,1,1530.19,0.1,100,5,,,,,,,,,,,,,,30-Sep-2009,A.A. Sonzogni and  M. Fadil and  and B. Pfeiffer,2025-08-08
+34,50,Se,12,3024.3,0.12,(2+),8,2699.47,0.12,(2 3 4),0,325.03,0.1,5.3,1.6,,,,,,,,,,,,,,30-Sep-2009,A.A. Sonzogni and  M. Fadil and  and B. Pfeiffer,2025-08-08
+34,50,Se,12,3024.3,0.12,(2+),1,1454.55,0.08,2+,1,1569.53,0.1,100,3,,,,,,,,,,,,,,30-Sep-2009,A.A. Sonzogni and  M. Fadil and  and B. Pfeiffer,2025-08-08
+34,50,Se,13,3069.77,0.22,,1,1454.55,0.08,2+,0,1615.2,0.2,100,,,,,,,,,,,,,,,30-Sep-2009,A.A. Sonzogni and  M. Fadil and  and B. Pfeiffer,2025-08-08
+34,50,Se,14,3125.97,0.15,,8,2699.47,0.12,(2 3 4),0,426.4,0.2,29,15,,,,,,,,,,,,,,30-Sep-2009,A.A. Sonzogni and  M. Fadil and  and B. Pfeiffer,2025-08-08
+34,50,Se,14,3125.97,0.15,,1,1454.55,0.08,2+,1,1671.45,0.15,100,8,,,,,,,,,,,,,,30-Sep-2009,A.A. Sonzogni and  M. Fadil and  and B. Pfeiffer,2025-08-08
+34,50,Se,15,3232.43,0.14,,4,2121.65,0.1,4+,0,1110.77,0.1,100,,,,,,,,,,,,,,,30-Sep-2009,A.A. Sonzogni and  M. Fadil and  and B. Pfeiffer,2025-08-08
+34,50,Se,16,3297.05,0.12,,4,2121.65,0.1,4+,0,1175.9,0.2,9.8,0.8,,,,,,,,,,,,,,30-Sep-2009,A.A. Sonzogni and  M. Fadil and  and B. Pfeiffer,2025-08-08
+34,50,Se,16,3297.05,0.12,,1,1454.55,0.08,2+,1,1843.24,0.24,100,3,,,,,,,,,,,,,,30-Sep-2009,A.A. Sonzogni and  M. Fadil and  and B. Pfeiffer,2025-08-08
+34,50,Se,17,3370.54,0.16,(6+),4,2121.65,0.1,4+,0,1248.88,0.13,100,,[E2],,,,,1.1,,,,,,,,30-Sep-2009,A.A. Sonzogni and  M. Fadil and  and B. Pfeiffer,2025-08-08
+34,50,Se,18,3408.73,0.14,,4,2121.65,0.1,4+,0,1287.06,0.1,100,,,,,,,,,,,,,,,30-Sep-2009,A.A. Sonzogni and  M. Fadil and  and B. Pfeiffer,2025-08-08
+34,50,Se,19,3439.15,0.13,,4,2121.65,0.1,4+,0,1317.45,0.1,100,5,,,,,,,,,,,,,,30-Sep-2009,A.A. Sonzogni and  M. Fadil and  and B. Pfeiffer,2025-08-08
+34,50,Se,19,3439.15,0.13,,1,1454.55,0.08,2+,1,1984.7,0.2,23.6,1.4,,,,,,,,,,,,,,30-Sep-2009,A.A. Sonzogni and  M. Fadil and  and B. Pfeiffer,2025-08-08
+34,50,Se,20,3481.7,1,,4,2121.65,0.1,4+,0,1360,,100,,,,,,,,,,,,,,,30-Sep-2009,A.A. Sonzogni and  M. Fadil and  and B. Pfeiffer,2025-08-08
+34,50,Se,21,3537.09,0.18,(5+),4,2121.65,0.1,4+,0,1415.3,0.17,100,,,,,,,,,,,,,,,30-Sep-2009,A.A. Sonzogni and  M. Fadil and  and B. Pfeiffer,2025-08-08
+34,50,Se,22,3541.23,0.1,2+,6,2461.38,0.09,(1 2+),0,1080.15,0.1,15.8,0.7,,,,,,,,,,,,,,30-Sep-2009,A.A. Sonzogni and  M. Fadil and  and B. Pfeiffer,2025-08-08
+34,50,Se,22,3541.23,0.1,2+,1,1454.55,0.08,2+,1,2086.69,0.1,100,4,,,,,,,,,,,,,,30-Sep-2009,A.A. Sonzogni and  M. Fadil and  and B. Pfeiffer,2025-08-08
+34,50,Se,23,3548.3,0.3,,4,2121.65,0.1,4+,0,1426.6,0.3,100,,,,,,,,,,,,,,,30-Sep-2009,A.A. Sonzogni and  M. Fadil and  and B. Pfeiffer,2025-08-08
+34,50,Se,25,3701.47,0.19,(6+),21,3537.09,0.18,(5+),0,164.18,0.21,41,8,D,,,,,,,,,,,,,30-Sep-2009,A.A. Sonzogni and  M. Fadil and  and B. Pfeiffer,2025-08-08
+34,50,Se,25,3701.47,0.19,(6+),4,2121.65,0.1,4+,1,1580,0.21,100,15,Q,,,,,,,,,,,,,30-Sep-2009,A.A. Sonzogni and  M. Fadil and  and B. Pfeiffer,2025-08-08
+34,50,Se,26,3862.5,1,,17,3370.54,0.16,(6+),0,492,,100,,,,,,,,,,,,,,,30-Sep-2009,A.A. Sonzogni and  M. Fadil and  and B. Pfeiffer,2025-08-08
+34,50,Se,27,3872.01,0.14,,16,3297.05,0.12,,0,573.9,,21.4,,,,,,,,,,,,,,,30-Sep-2009,A.A. Sonzogni and  M. Fadil and  and B. Pfeiffer,2025-08-08
+34,50,Se,27,3872.01,0.14,,4,2121.65,0.1,4+,1,1750.35,0.1,100,4,,,,,,,,,,,,,,30-Sep-2009,A.A. Sonzogni and  M. Fadil and  and B. Pfeiffer,2025-08-08
+34,50,Se,28,3928,9,2+,,,,,0,2462,11,100,,,,,,,,,,,,,,,30-Sep-2009,A.A. Sonzogni and  M. Fadil and  and B. Pfeiffer,2025-08-08
+34,50,Se,29,3985.27,0.22,2+,4,2121.65,0.1,4+,0,1863.6,0.2,100,,,,,,,,,,,,,,,30-Sep-2009,A.A. Sonzogni and  M. Fadil and  and B. Pfeiffer,2025-08-08
+34,50,Se,30,4082.18,0.22,,4,2121.65,0.1,4+,0,1960.5,0.2,100,,,,,,,,,,,,,,,30-Sep-2009,A.A. Sonzogni and  M. Fadil and  and B. Pfeiffer,2025-08-08
+34,50,Se,32,4116.33,0.17,,22,3541.23,0.1,2+,0,574.9,,77,,,,,,,,,,,,,,,30-Sep-2009,A.A. Sonzogni and  M. Fadil and  and B. Pfeiffer,2025-08-08
+34,50,Se,32,4116.33,0.17,,1,1454.55,0.08,2+,1,2661.74,0.15,100,5,,,,,,,,,,,,,,30-Sep-2009,A.A. Sonzogni and  M. Fadil and  and B. Pfeiffer,2025-08-08
+34,50,Se,34,4282.12,0.11,,22,3541.23,0.1,2+,0,741.23,0.1,100,9,,,,,,,,,,,,,,30-Sep-2009,A.A. Sonzogni and  M. Fadil and  and B. Pfeiffer,2025-08-08
+34,50,Se,34,4282.12,0.11,,16,3297.05,0.12,,1,985.2,0.1,61.3,2.1,,,,,,,,,,,,,,30-Sep-2009,A.A. Sonzogni and  M. Fadil and  and B. Pfeiffer,2025-08-08
+34,50,Se,34,4282.12,0.11,,4,2121.65,0.1,4+,2,2159,0.2,31.7,2.1,,,,,,,,,,,,,,30-Sep-2009,A.A. Sonzogni and  M. Fadil and  and B. Pfeiffer,2025-08-08
+34,50,Se,34,4282.12,0.11,,0,0,,0+,3,4280.9,0.3,27.9,1.7,,,,,,,,,,,,,,30-Sep-2009,A.A. Sonzogni and  M. Fadil and  and B. Pfeiffer,2025-08-08
+34,50,Se,36,4405.8,0.3,(7+),25,3701.47,0.19,(6+),0,704.34,0.24,100,,,,,,,,,,,,,,,30-Sep-2009,A.A. Sonzogni and  M. Fadil and  and B. Pfeiffer,2025-08-08
+34,50,Se,37,4445.19,0.22,(4+),4,2121.65,0.1,4+,0,2323.5,0.2,100,,,,,,,,,,,,,,,30-Sep-2009,A.A. Sonzogni and  M. Fadil and  and B. Pfeiffer,2025-08-08
+34,50,Se,39,4641,,,17,3370.54,0.16,(6+),0,1270,,,,,,,,,,,,,,,,,30-Sep-2009,A.A. Sonzogni and  M. Fadil and  and B. Pfeiffer,2025-08-08
+34,50,Se,43,4898.5,0.4,(6+),21,3537.09,0.18,(5+),0,1361.4,0.4,100,,,,,,,,,,,,,,,30-Sep-2009,A.A. Sonzogni and  M. Fadil and  and B. Pfeiffer,2025-08-08
+34,50,Se,47,5161.17,0.18,,4,2121.65,0.1,4+,0,3039.46,0.15,100,,,,,,,,,,,,,,,30-Sep-2009,A.A. Sonzogni and  M. Fadil and  and B. Pfeiffer,2025-08-08
+34,50,Se,49,5221.96,0.16,,16,3297.05,0.12,,0,1925.5,0.2,73,5,,,,,,,,,,,,,,30-Sep-2009,A.A. Sonzogni and  M. Fadil and  and B. Pfeiffer,2025-08-08
+34,50,Se,49,5221.96,0.16,,8,2699.47,0.12,(2 3 4),1,2522.1,0.15,100,5,,,,,,,,,,,,,,30-Sep-2009,A.A. Sonzogni and  M. Fadil and  and B. Pfeiffer,2025-08-08
+34,50,Se,52,5329.9,,(8+),36,4405.8,0.3,(7+),0,924.4,,,,,,,,,,,,,,,,,30-Sep-2009,A.A. Sonzogni and  M. Fadil and  and B. Pfeiffer,2025-08-08
+34,50,Se,56,5596.16,0.2,3-,16,3297.05,0.12,,0,2299,0.2,90,7,,,,,,,,,,,,,,30-Sep-2009,A.A. Sonzogni and  M. Fadil and  and B. Pfeiffer,2025-08-08
+34,50,Se,56,5596.16,0.2,3-,4,2121.65,0.1,4+,1,3474.6,0.3,100,7,,,,,,,,,,,,,,30-Sep-2009,A.A. Sonzogni and  M. Fadil and  and B. Pfeiffer,2025-08-08
+34,50,Se,58,5637.6,0.3,,1,1454.55,0.08,2+,0,4182.9,0.3,100,,,,,,,,,,,,,,,30-Sep-2009,A.A. Sonzogni and  M. Fadil and  and B. Pfeiffer,2025-08-08
+34,50,Se,59,5661.53,0.23,,8,2699.47,0.12,(2 3 4),0,2962,0.2,100,,,,,,,,,,,,,,,30-Sep-2009,A.A. Sonzogni and  M. Fadil and  and B. Pfeiffer,2025-08-08
+34,50,Se,62,5869.34,0.23,,8,2699.47,0.12,(2 3 4),0,3169.4,0.3,100,6,,,,,,,,,,,,,,30-Sep-2009,A.A. Sonzogni and  M. Fadil and  and B. Pfeiffer,2025-08-08
+34,50,Se,62,5869.34,0.23,,4,2121.65,0.1,4+,1,3748,0.3,94,6,,,,,,,,,,,,,,30-Sep-2009,A.A. Sonzogni and  M. Fadil and  and B. Pfeiffer,2025-08-08
+34,50,Se,63,5890.1,0.3,(3- 1-),1,1454.55,0.08,2+,0,4435.4,0.3,100,,,,,,,,,,,,,,,30-Sep-2009,A.A. Sonzogni and  M. Fadil and  and B. Pfeiffer,2025-08-08
+34,50,Se,66,6019.9,0.19,,16,3297.05,0.12,,0,2722.8,0.15,100,,,,,,,,,,,,,,,30-Sep-2009,A.A. Sonzogni and  M. Fadil and  and B. Pfeiffer,2025-08-08
+34,50,Se,67,6249.6,0.21,,18,3408.73,0.14,,0,2840.8,0.2,53,13,,,,,,,,,,,,,,30-Sep-2009,A.A. Sonzogni and  M. Fadil and  and B. Pfeiffer,2025-08-08
+34,50,Se,67,6249.6,0.21,,4,2121.65,0.1,4+,1,4127.9,0.3,100,7,,,,,,,,,,,,,,30-Sep-2009,A.A. Sonzogni and  M. Fadil and  and B. Pfeiffer,2025-08-08
+34,50,Se,69,6400.4,0.3,4+,1,1454.55,0.08,2+,0,4945.7,0.3,100,,,,,,,,,,,,,,,30-Sep-2009,A.A. Sonzogni and  M. Fadil and  and B. Pfeiffer,2025-08-08
+34,50,Se,70,6414.4,,(9 10),52,5329.9,,(8+),0,1084.5,,,,,,,,,,,,,,,,,30-Sep-2009,A.A. Sonzogni and  M. Fadil and  and B. Pfeiffer,2025-08-08
+34,50,Se,71,6541.5,0.3,,1,1454.55,0.08,2+,0,5086.8,0.3,100,,,,,,,,,,,,,,,30-Sep-2009,A.A. Sonzogni and  M. Fadil and  and B. Pfeiffer,2025-08-08
+34,50,Se,72,6604.6,0.3,,1,1454.55,0.08,2+,0,5149.9,0.3,100,,,,,,,,,,,,,,,30-Sep-2009,A.A. Sonzogni and  M. Fadil and  and B. Pfeiffer,2025-08-08

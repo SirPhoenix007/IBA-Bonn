@@ -1,0 +1,4 @@
+z,n,symbol,start_level_idx,start_level_energy,unc_sle,start_level_jp,end_level_idx,end_level_energy,unc_ele,end_level_jp,gamma_idx,energy,unc_en,relative_intensity,unc_ri,multipolarity,mixing_ratio,unc_mr,b_e1,unc_be1,b_e2,unc_be2,b_m1,unc_bm1,b_m2,unc_bm2,tot_conv_coeff,tce_unc,ensdf_publication_cut-off,ensdf_authors,Extraction_date
+60,100,Nd,1,65.2,0.5,(2+),0,0,,0+,0,65.2,0.5,100,,[E2],,,,,,,,,,,10.7,0.4,1-May-2021,N. NICA,2025-08-08
+60,100,Nd,2,215.1,0.7,(4+),1,65.2,0.5,(2+),0,149.9,0.5,100,,[E2],,,,,,,,,,,0.524,0.01,1-May-2021,N. NICA,2025-08-08
+60,100,Nd,3,1107.9,0.9,(4-),2,215.1,0.7,(4+),0,892.8,0.5,100,,[E1],,,0.0000000002,,,,,,,,0.00116,,1-May-2021,N. NICA,2025-08-08

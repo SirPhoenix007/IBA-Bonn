@@ -1,0 +1,11 @@
+z,n,symbol,start_level_idx,start_level_energy,unc_sle,start_level_jp,end_level_idx,end_level_energy,unc_ele,end_level_jp,gamma_idx,energy,unc_en,relative_intensity,unc_ri,multipolarity,mixing_ratio,unc_mr,b_e1,unc_be1,b_e2,unc_be2,b_m1,unc_bm1,b_m2,unc_bm2,tot_conv_coeff,tce_unc,ensdf_publication_cut-off,ensdf_authors,Extraction_date
+17,15,Cl,1,89.9,0.1,(2)+,0,0,,1+,0,89.9,0.1,100,,,,,,,,,,,,,,,24-Aug-2011,CHRISTIAN OUELLET and  BALRAJ SINGH,2025-08-08
+17,15,Cl,2,461.1,0.1,(0)+,0,0,,1+,0,461.1,0.1,100,,,,,,,,,,,,,,,24-Aug-2011,CHRISTIAN OUELLET and  BALRAJ SINGH,2025-08-08
+17,15,Cl,3,1168.55,0.13,1+,2,461.1,0.1,(0)+,0,707.4,0.2,100,5,,,,,,,,,,,,,,24-Aug-2011,CHRISTIAN OUELLET and  BALRAJ SINGH,2025-08-08
+17,15,Cl,3,1168.55,0.13,1+,1,89.9,0.1,(2)+,1,1078.7,0.2,36.6,1.8,,,,,,,,,,,,,,24-Aug-2011,CHRISTIAN OUELLET and  BALRAJ SINGH,2025-08-08
+17,15,Cl,3,1168.55,0.13,1+,0,0,,1+,2,1168.5,0.2,36.9,1.8,,,,,,,,,,,,,,24-Aug-2011,CHRISTIAN OUELLET and  BALRAJ SINGH,2025-08-08
+17,15,Cl,5,1736.7,0.6,(3+),1,89.9,0.1,(2)+,0,1646,,,,,,,,,,,,,,,,,24-Aug-2011,CHRISTIAN OUELLET and  BALRAJ SINGH,2025-08-08
+17,15,Cl,6,2131.1,0.4,(3)+,1,89.9,0.1,(2)+,0,2043,,,,,,,,,,,,,,,,,24-Aug-2011,CHRISTIAN OUELLET and  BALRAJ SINGH,2025-08-08
+17,15,Cl,30,5046.3,0.3,0+,7,2209.5,0.5,(1+),0,2836,1,15.2,1.9,,,,,,,,,,,,,,24-Aug-2011,CHRISTIAN OUELLET and  BALRAJ SINGH,2025-08-08
+17,15,Cl,30,5046.3,0.3,0+,3,1168.55,0.13,1+,1,3877.5,0.3,100,5,,,,,,,,,,,,,,24-Aug-2011,CHRISTIAN OUELLET and  BALRAJ SINGH,2025-08-08
+17,15,Cl,30,5046.3,0.3,0+,0,0,,1+,2,5046,,6.2,1.3,,,,,,,,,,,,,,24-Aug-2011,CHRISTIAN OUELLET and  BALRAJ SINGH,2025-08-08

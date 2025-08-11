@@ -1,0 +1,7 @@
+z,n,symbol,start_level_idx,start_level_energy,unc_sle,start_level_jp,end_level_idx,end_level_energy,unc_ele,end_level_jp,gamma_idx,energy,unc_en,relative_intensity,unc_ri,multipolarity,mixing_ratio,unc_mr,b_e1,unc_be1,b_e2,unc_be2,b_m1,unc_bm1,b_m2,unc_bm2,tot_conv_coeff,tce_unc,ensdf_publication_cut-off,ensdf_authors,Extraction_date
+73,111,Ta,1,47.9,0.2,(3-),0,0,,(5-),0,47.9,0.2,100,,E2,,,,,,,,,,,94.6,2.4,1-Oct-2009,CORAL M. BAGLIN,2025-08-08
+73,111,Ta,2,89.3,0.3,(2-),1,47.9,0.2,(3-),0,41.4,0.2,100,,M1,,,,,,,,,,,9.71,0.2,1-Oct-2009,CORAL M. BAGLIN,2025-08-08
+73,111,Ta,3,228.4,0.4,1(-),2,89.3,0.3,(2-),0,139.1,0.2,100,,M1+E2,1.9,,,,,,,,,,1.2,0.05,1-Oct-2009,CORAL M. BAGLIN,2025-08-08
+73,111,Ta,4,272.3,0.4,(0-),3,228.4,0.4,1(-),0,43.9,0.2,100,,M1,,,,,,,,,,,8.17,0.16,1-Oct-2009,CORAL M. BAGLIN,2025-08-08
+73,111,Ta,5,453.3,0.5,1(+),4,272.3,0.4,(0-),0,181,0.2,100,,[E1],,,,,,,,,,,0.0785,,1-Oct-2009,CORAL M. BAGLIN,2025-08-08
+73,111,Ta,6,617.2,0.5,1(+),4,272.3,0.4,(0-),0,344.9,0.2,100,,[E1],,,,,,,,,,,0.01585,,1-Oct-2009,CORAL M. BAGLIN,2025-08-08

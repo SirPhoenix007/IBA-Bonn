@@ -1,0 +1,4 @@
+z,n,symbol,start_level_idx,start_level_energy,unc_sle,start_level_jp,end_level_idx,end_level_energy,unc_ele,end_level_jp,gamma_idx,energy,unc_en,relative_intensity,unc_ri,multipolarity,mixing_ratio,unc_mr,b_e1,unc_be1,b_e2,unc_be2,b_m1,unc_bm1,b_m2,unc_bm2,tot_conv_coeff,tce_unc,ensdf_publication_cut-off,ensdf_authors,Extraction_date
+54,56,Xe,1,469.7,0.2,(2+),0,0,,0+,0,469.7,0.2,100,,[E2],,,,,,,,,,,,,1-Aug-2011,G. G~URDAL and F.G. KONDEV,2025-08-08
+54,56,Xe,2,1113.1,0.4,(4+),1,469.7,0.2,(2+),0,643.4,0.3,100,,[E2],,,,,,,,,,,,,1-Aug-2011,G. G~URDAL and F.G. KONDEV,2025-08-08
+54,56,Xe,3,1889.7,0.7,(6+),2,1113.1,0.4,(4+),0,776.6,0.6,100,,[E2],,,,,,,,,,,,,1-Aug-2011,G. G~URDAL and F.G. KONDEV,2025-08-08

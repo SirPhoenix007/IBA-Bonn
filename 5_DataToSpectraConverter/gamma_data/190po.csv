@@ -1,0 +1,8 @@
+z,n,symbol,start_level_idx,start_level_energy,unc_sle,start_level_jp,end_level_idx,end_level_energy,unc_ele,end_level_jp,gamma_idx,energy,unc_en,relative_intensity,unc_ri,multipolarity,mixing_ratio,unc_mr,b_e1,unc_be1,b_e2,unc_be2,b_m1,unc_bm1,b_m2,unc_bm2,tot_conv_coeff,tce_unc,ensdf_publication_cut-off,ensdf_authors,Extraction_date
+84,106,Po,1,234.1,0.9,(2+),0,0,,0+,0,234.1,0.9,100,,,,,,,,,,,,,,,15-Oct-2020,Balraj Singh and {+1} and Jun Chen{+2},2025-08-08
+84,106,Po,2,532.4,0.9,(4+),1,234.1,0.9,(2+),0,298.3,0.1,100,,,,,,,,,,,,,,,15-Oct-2020,Balraj Singh and {+1} and Jun Chen{+2},2025-08-08
+84,106,Po,3,901.8,1,(6+),2,532.4,0.9,(4+),0,369.4,0.2,100,,,,,,,,,,,,,,,15-Oct-2020,Balraj Singh and {+1} and Jun Chen{+2},2025-08-08
+84,106,Po,4,1338.7,1,(8+),3,901.8,1,(6+),0,436.9,0.2,100,,,,,,,,,,,,,,,15-Oct-2020,Balraj Singh and {+1} and Jun Chen{+2},2025-08-08
+84,106,Po,5,1837.2,1.2,(10+),4,1338.7,1,(8+),0,498.5,0.6,,,,,,,,,,,,,,,,15-Oct-2020,Balraj Singh and {+1} and Jun Chen{+2},2025-08-08
+84,106,Po,6,2402.2,1.5,(12+),5,1837.2,1.2,(10+),0,565,1,,,,,,,,,,,,,,,,15-Oct-2020,Balraj Singh and {+1} and Jun Chen{+2},2025-08-08
+84,106,Po,7,3040.2,1.8,(14+),6,2402.2,1.5,(12+),0,638,1,,,,,,,,,,,,,,,,15-Oct-2020,Balraj Singh and {+1} and Jun Chen{+2},2025-08-08

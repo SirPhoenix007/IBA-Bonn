@@ -1,0 +1,12 @@
+z,n,symbol,start_level_idx,start_level_energy,unc_sle,start_level_jp,end_level_idx,end_level_energy,unc_ele,end_level_jp,gamma_idx,energy,unc_en,relative_intensity,unc_ri,multipolarity,mixing_ratio,unc_mr,b_e1,unc_be1,b_e2,unc_be2,b_m1,unc_bm1,b_m2,unc_bm2,tot_conv_coeff,tce_unc,ensdf_publication_cut-off,ensdf_authors,Extraction_date
+69,105,Tm,2,58.5,,,1,0,,0 1 2,0,58.5,0.2,,,,,,,,,,,,,,,,1-Nov-1998,E. BROWNE and  HUO JUNDE,2025-08-08
+69,105,Tm,3,100.4,,,1,0,,0 1 2,0,100.4,0.2,100,1,M1+E2,1.2,,,,,,,,,,,,1-Nov-1998,E. BROWNE and  HUO JUNDE,2025-08-08
+69,105,Tm,4,130.4,,,2,58.5,,,0,71.7,0.2,28,9,(E2),,,,,,,,,,,,,1-Nov-1998,E. BROWNE and  HUO JUNDE,2025-08-08
+69,105,Tm,4,130.4,,,1,0,,0 1 2,1,130.4,0.2,100,10,(M1),,,,,,,,,,,,,1-Nov-1998,E. BROWNE and  HUO JUNDE,2025-08-08
+69,105,Tm,5,252.2,,,3,100.4,,,0,151.9,0.2,1000,,M1+E2,1.2,,,,,,,,,,,,1-Nov-1998,E. BROWNE and  HUO JUNDE,2025-08-08
+69,105,Tm,6,766.9,,,4,130.4,,,0,636.7,0.2,46,18,,,,,,,,,,,,,,1-Nov-1998,E. BROWNE and  HUO JUNDE,2025-08-08
+69,105,Tm,6,766.9,,,2,58.5,,,1,708.4,0.2,79,19,,,,,,,,,,,,,,1-Nov-1998,E. BROWNE and  HUO JUNDE,2025-08-08
+69,105,Tm,6,766.9,,,1,0,,0 1 2,2,766.9,0.2,100,5,,,,,,,,,,,,,,1-Nov-1998,E. BROWNE and  HUO JUNDE,2025-08-08
+69,105,Tm,7,772.9,,,4,130.4,,,0,642.7,0.2,29,2,,,,,,,,,,,,,,1-Nov-1998,E. BROWNE and  HUO JUNDE,2025-08-08
+69,105,Tm,7,772.9,,,2,58.5,,,1,714.4,0.2,56,8,,,,,,,,,,,,,,1-Nov-1998,E. BROWNE and  HUO JUNDE,2025-08-08
+69,105,Tm,7,772.9,,,1,0,,0 1 2,2,772.9,0.2,100,15,,,,,,,,,,,,,,1-Nov-1998,E. BROWNE and  HUO JUNDE,2025-08-08

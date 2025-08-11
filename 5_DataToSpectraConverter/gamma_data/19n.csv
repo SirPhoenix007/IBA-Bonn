@@ -1,0 +1,10 @@
+z,n,symbol,start_level_idx,start_level_energy,unc_sle,start_level_jp,end_level_idx,end_level_energy,unc_ele,end_level_jp,gamma_idx,energy,unc_en,relative_intensity,unc_ri,multipolarity,mixing_ratio,unc_mr,b_e1,unc_be1,b_e2,unc_be2,b_m1,unc_bm1,b_m2,unc_bm2,tot_conv_coeff,tce_unc,ensdf_publication_cut-off,ensdf_authors,Extraction_date
+7,12,N,1,1143,3,(3/2-),0,0,,1/2-,0,1141,3,100,,,,,,,,,,,,,,,06-Nov-2018,G.C. Sheu and  J.H. Kelley,2025-08-08
+7,12,N,2,1676,3,(5/2-),1,1143,3,(3/2-),0,532,2,100,8,,,,,,,,,,,,,,06-Nov-2018,G.C. Sheu and  J.H. Kelley,2025-08-08
+7,12,N,2,1676,3,(5/2-),,,,,1,1681,5,39,8,,,,,,,,,,,,,,06-Nov-2018,G.C. Sheu and  J.H. Kelley,2025-08-08
+7,12,N,3,2132,9,(5/2+ 3/2-),0,0,,1/2-,0,2132,9,100,,,,,,,,,,,,,,,06-Nov-2018,G.C. Sheu and  J.H. Kelley,2025-08-08
+7,12,N,4,2511,5,(1/2+),1,1143,3,(3/2-),0,1368,4,100,13,,,,,,,,,,,,,,06-Nov-2018,G.C. Sheu and  J.H. Kelley,2025-08-08
+7,12,N,4,2511,5,(1/2+),,,,,1,2507,11,25,13,,,,,,,,,,,,,,06-Nov-2018,G.C. Sheu and  J.H. Kelley,2025-08-08
+7,12,N,5,3170,6,(7/2-),2,1676,3,(5/2-),0,1494,6,100,19,,,,,,,,,,,,,,06-Nov-2018,G.C. Sheu and  J.H. Kelley,2025-08-08
+7,12,N,5,3170,6,(7/2-),,,,,1,2016,11,38,19,,,,,,,,,,,,,,06-Nov-2018,G.C. Sheu and  J.H. Kelley,2025-08-08
+7,12,N,7,4023,9,(7/2-),2,1676,3,(5/2-),0,2347,9,100,,,,,,,,,,,,,,,06-Nov-2018,G.C. Sheu and  J.H. Kelley,2025-08-08

@@ -1,0 +1,8 @@
+z,n,symbol,start_level_idx,start_level_energy,unc_sle,start_level_jp,end_level_idx,end_level_energy,unc_ele,end_level_jp,gamma_idx,energy,unc_en,relative_intensity,unc_ri,multipolarity,mixing_ratio,unc_mr,b_e1,unc_be1,b_e2,unc_be2,b_m1,unc_bm1,b_m2,unc_bm2,tot_conv_coeff,tce_unc,ensdf_publication_cut-off,ensdf_authors,Extraction_date
+5,7,B,1,953.14,0.6,2+,0,0,,1+,0,953.1,,100,,M1,,,,,,,0.14,,,,,,1-Jan-2017,J.H. KELLEY and  J.E. Purcell and C.G. SHEU,2025-08-08
+5,7,B,2,1673.65,0.6,2-,1,953.14,0.6,2+,0,720.49,,3.3,0.4,E1,,,0.003,,,,,,,,,,1-Jan-2017,J.H. KELLEY and  J.E. Purcell and C.G. SHEU,2025-08-08
+5,7,B,2,1673.65,0.6,2-,0,0,,1+,1,1673.52,,100,4,E1,,,0.008,,,,,,,,,,1-Jan-2017,J.H. KELLEY and  J.E. Purcell and C.G. SHEU,2025-08-08
+5,7,B,3,2620.8,1.2,1-,2,1673.65,0.6,2-,0,947.11,,18,4,M1,,,,,,,0.11,,,,,,1-Jan-2017,J.H. KELLEY and  J.E. Purcell and C.G. SHEU,2025-08-08
+5,7,B,3,2620.8,1.2,1-,1,953.14,0.6,2+,1,1667.54,,100,4,E1,,,0.0066,,,,,,,,,,1-Jan-2017,J.H. KELLEY and  J.E. Purcell and C.G. SHEU,2025-08-08
+5,7,B,3,2620.8,1.2,1-,0,0,,1+,2,2620.5,,8,1,E1,,,0.00013,,,,,,,,,,1-Jan-2017,J.H. KELLEY and  J.E. Purcell and C.G. SHEU,2025-08-08
+5,7,B,4,2723,11,0+,0,0,,1+,0,2722.7,,100,,,,,,,,,,,,,,,1-Jan-2017,J.H. KELLEY and  J.E. Purcell and C.G. SHEU,2025-08-08

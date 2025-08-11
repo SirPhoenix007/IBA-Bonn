@@ -1,0 +1,19 @@
+z,n,symbol,start_level_idx,start_level_energy,unc_sle,start_level_jp,end_level_idx,end_level_energy,unc_ele,end_level_jp,gamma_idx,energy,unc_en,relative_intensity,unc_ri,multipolarity,mixing_ratio,unc_mr,b_e1,unc_be1,b_e2,unc_be2,b_m1,unc_bm1,b_m2,unc_bm2,tot_conv_coeff,tce_unc,ensdf_publication_cut-off,ensdf_authors,Extraction_date
+4,4,Be,1,3030,10,2+,0,0,,0+,0,3029,,,,E2,,,,,,,,,,,,,31-Mar-2004,D.R. Tilley and  J.H. Kelley and  J.L. Godwin and  D.J Millener et al.,2025-08-08
+4,4,Be,2,11350,150,4+,,,,,0,11350,,,,E4,,,,,,,,,,,,,31-Mar-2004,D.R. Tilley and  J.H. Kelley and  J.L. Godwin and  D.J Millener et al.,2025-08-08
+4,4,Be,3,16626,3,2+,,,,,0,13580,,,,M1,,,,,,,0.053,,,,,,31-Mar-2004,D.R. Tilley and  J.H. Kelley and  J.L. Godwin and  D.J Millener et al.,2025-08-08
+4,4,Be,3,16626,3,2+,0,0,,0+,1,16607,,,,E2,,,,,0.071,,,,,,,,31-Mar-2004,D.R. Tilley and  J.H. Kelley and  J.L. Godwin and  D.J Millener et al.,2025-08-08
+4,4,Be,4,16922,3,2+,1,3030,10,2+,0,13879,,,,M1,,,,,,,0.053,,,,,,31-Mar-2004,D.R. Tilley and  J.H. Kelley and  J.L. Godwin and  D.J Millener et al.,2025-08-08
+4,4,Be,4,16922,3,2+,0,0,,0+,1,16903,,,,E2,,,,,0.078,,,,,,,,31-Mar-2004,D.R. Tilley and  J.H. Kelley and  J.L. Godwin and  D.J Millener et al.,2025-08-08
+4,4,Be,5,17640,1,1+,4,16922,3,2+,0,718,,,,M1,,,,,,,0.17,,,,,,31-Mar-2004,D.R. Tilley and  J.H. Kelley and  J.L. Godwin and  D.J Millener et al.,2025-08-08
+4,4,Be,5,17640,1,1+,3,16626,3,2+,1,1014,,,,M1+E2,-0.014,0.013,,,,,1.5,,,,,,31-Mar-2004,D.R. Tilley and  J.H. Kelley and  J.L. Godwin and  D.J Millener et al.,2025-08-08
+4,4,Be,5,17640,1,1+,,,,,2,14586,,,,M1+E2,0.21,0.04,,,0.23,,0.1,,,,,,31-Mar-2004,D.R. Tilley and  J.H. Kelley and  J.L. Godwin and  D.J Millener et al.,2025-08-08
+4,4,Be,5,17640,1,1+,0,0,,0+,3,17619,,,,M1,,,,,,,0.13,,,,,,31-Mar-2004,D.R. Tilley and  J.H. Kelley and  J.L. Godwin and  D.J Millener et al.,2025-08-08
+4,4,Be,6,18150,4,1+,4,16922,3,2+,0,1228,,,,M1,,,,,,,1.6,,,,,,31-Mar-2004,D.R. Tilley and  J.H. Kelley and  J.L. Godwin and  D.J Millener et al.,2025-08-08
+4,4,Be,6,18150,4,1+,3,16626,3,2+,1,1524,,,,M1,,,,,,,1,,,,,,31-Mar-2004,D.R. Tilley and  J.H. Kelley and  J.L. Godwin and  D.J Millener et al.,2025-08-08
+4,4,Be,6,18150,4,1+,,,,,2,15095,,,,M1,,,,,,,0.059,,,,,,31-Mar-2004,D.R. Tilley and  J.H. Kelley and  J.L. Godwin and  D.J Millener et al.,2025-08-08
+4,4,Be,6,18150,4,1+,0,0,,0+,3,18128,,,,M1,,,,,,,0.015,,,,,,31-Mar-2004,D.R. Tilley and  J.H. Kelley and  J.L. Godwin and  D.J Millener et al.,2025-08-08
+4,4,Be,7,18910,,2-,4,16922,3,2+,0,1988,,,,E1,,,0.046,,,,,,,,,,31-Mar-2004,D.R. Tilley and  J.H. Kelley and  J.L. Godwin and  D.J Millener et al.,2025-08-08
+4,4,Be,7,18910,,2-,3,16626,3,2+,1,2284,,,,E1,,,0.053,,,,,,,,,,31-Mar-2004,D.R. Tilley and  J.H. Kelley and  J.L. Godwin and  D.J Millener et al.,2025-08-08
+4,4,Be,8,19069,10,3+,,,,,0,16013,,,,M1,,,,,,,0.122,,,,,,31-Mar-2004,D.R. Tilley and  J.H. Kelley and  J.L. Godwin and  D.J Millener et al.,2025-08-08
+4,4,Be,24,27494.1,1.8,0+,5,17640,1,1+,0,9847.6,,,,M1,,,,,,,1.1,,,,,,31-Mar-2004,D.R. Tilley and  J.H. Kelley and  J.L. Godwin and  D.J Millener et al.,2025-08-08

@@ -1,0 +1,6 @@
+z,n,symbol,start_level_idx,start_level_energy,unc_sle,start_level_jp,end_level_idx,end_level_energy,unc_ele,end_level_jp,gamma_idx,energy,unc_en,relative_intensity,unc_ri,multipolarity,mixing_ratio,unc_mr,b_e1,unc_be1,b_e2,unc_be2,b_m1,unc_bm1,b_m2,unc_bm2,tot_conv_coeff,tce_unc,ensdf_publication_cut-off,ensdf_authors,Extraction_date
+30,48,Zn,1,730.2,0.4,2+,0,0,,0+,0,730.2,0.4,100,,,,,,,,,,,,,,,30-Jun-2009,AMEENAH R. FARHAN and  BALRAJ SINGH,2025-08-08
+30,48,Zn,2,1620.7,0.6,(4+),1,730.2,0.4,2+,0,890.5,0.4,100,,,,,,,,,,,,,,,30-Jun-2009,AMEENAH R. FARHAN and  BALRAJ SINGH,2025-08-08
+30,48,Zn,3,2529,0.9,(6+),2,1620.7,0.6,(4+),0,908.3,0.5,100,,,,,,,,,,,,,,,30-Jun-2009,AMEENAH R. FARHAN and  BALRAJ SINGH,2025-08-08
+30,48,Zn,4,2673.7,1,(8+),3,2529,0.9,(6+),0,144.7,0.5,100,,(E2),,,,,,,,,,,0.162,0.005,30-Jun-2009,AMEENAH R. FARHAN and  BALRAJ SINGH,2025-08-08
+30,48,Zn,5,3106,,(4+:8+),3,2529,0.9,(6+),0,576,,,,,,,,,,,,,,,,,30-Jun-2009,AMEENAH R. FARHAN and  BALRAJ SINGH,2025-08-08

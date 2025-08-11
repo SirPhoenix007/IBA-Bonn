@@ -1,0 +1,21 @@
+z,n,symbol,start_level_idx,start_level_energy,unc_sle,start_level_jp,end_level_idx,end_level_energy,unc_ele,end_level_jp,gamma_idx,energy,unc_en,relative_intensity,unc_ri,multipolarity,mixing_ratio,unc_mr,b_e1,unc_be1,b_e2,unc_be2,b_m1,unc_bm1,b_m2,unc_bm2,tot_conv_coeff,tce_unc,ensdf_publication_cut-off,ensdf_authors,Extraction_date
+83,112,Bi,2,886.7,0.1,13/2+,0,0,,[9/2-],0,886.7,0.1,100,,M2,,,,,,,,,0.049,,0.0648,,1-Mar-2014,Huang Xiaolong and Kang Mengxiao,2025-08-08
+83,112,Bi,3,1230.39,0.14,15/2+,2,886.7,0.1,13/2+,0,343.7,0.1,100,,M1+E2,,,,,,,,,,,0.2,0.12,1-Mar-2014,Huang Xiaolong and Kang Mengxiao,2025-08-08
+83,112,Bi,4,1537.8,0.4,17/2(+),3,1230.39,0.14,15/2+,0,307.4,0.3,100,,(M1+E2),,,,,,,,,,,0.27,0.17,1-Mar-2014,Huang Xiaolong and Kang Mengxiao,2025-08-08
+83,112,Bi,5,1621.83,0.22,17/2+,3,1230.39,0.14,15/2+,0,391.3,0.2,100,8,M1+E2,,,,,,,,,,,0.14,0.09,1-Mar-2014,Huang Xiaolong and Kang Mengxiao,2025-08-08
+83,112,Bi,5,1621.83,0.22,17/2+,2,886.7,0.1,13/2+,1,734.7,0.6,18,4,(E2),,,,,,,,,,,0.01301,,1-Mar-2014,Huang Xiaolong and Kang Mengxiao,2025-08-08
+83,112,Bi,6,2043.59,0.22,19/2+,5,1621.83,0.22,17/2+,0,421.7,0.1,100,22,M1+E2,,,,,,,,,,,0.12,0.07,1-Mar-2014,Huang Xiaolong and Kang Mengxiao,2025-08-08
+83,112,Bi,6,2043.59,0.22,19/2+,3,1230.39,0.14,15/2+,1,813.6,0.3,15,3,(E2),,,,,,,,,,,0.01054,,1-Mar-2014,Huang Xiaolong and Kang Mengxiao,2025-08-08
+83,112,Bi,7,2194.3,0.3,23/2+,6,2043.59,0.22,19/2+,0,150.7,0.2,100,,E2,,,,,0.6,,,,,,1.269,,1-Mar-2014,Huang Xiaolong and Kang Mengxiao,2025-08-08
+83,112,Bi,8,2309.2,0.5,25/2(-),7,2194.3,0.3,23/2+,0,114.9,0.3,100,,E1,,,,,,,,,,,0.316,,1-Mar-2014,Huang Xiaolong and Kang Mengxiao,2025-08-08
+83,112,Bi,9,2395.5,0.5,(29/2-),8,2309.2,0.5,25/2(-),0,86.3,0.2,100,,E2,,,,,0.172,,,,,,12.61,0.23,1-Mar-2014,Huang Xiaolong and Kang Mengxiao,2025-08-08
+83,112,Bi,10,2465.2,0.24,(21/2+),6,2043.59,0.22,19/2+,0,421.6,0.1,100,13,(M1+E2),,,,,,,,,,,0.12,0.07,1-Mar-2014,Huang Xiaolong and Kang Mengxiao,2025-08-08
+83,112,Bi,10,2465.2,0.24,(21/2+),5,1621.83,0.22,17/2+,1,843.6,0.4,72,21,(E2),,,,,,,,,,,0.0098,,1-Mar-2014,Huang Xiaolong and Kang Mengxiao,2025-08-08
+83,112,Bi,11,2922.6,0.7,(23/2+),10,2465.2,0.24,(21/2+),0,457.4,0.6,100,5,M1+E2,,,,,,,,,,,0.09,0.06,1-Mar-2014,Huang Xiaolong and Kang Mengxiao,2025-08-08
+83,112,Bi,13,261.5,,J+2,12,,,J,0,261.5,0.5,1.04,0.1,,,,,,,,,,,,,,1-Mar-2014,Huang Xiaolong and Kang Mengxiao,2025-08-08
+83,112,Bi,14,562.9,,J+4,13,261.5,,J+2,0,301.4,0.5,0.93,0.1,,,,,,,,,,,,,,1-Mar-2014,Huang Xiaolong and Kang Mengxiao,2025-08-08
+83,112,Bi,15,904.8,,J+6,14,562.9,,J+4,0,341.9,0.5,1.04,0.1,,,,,,,,,,,,,,1-Mar-2014,Huang Xiaolong and Kang Mengxiao,2025-08-08
+83,112,Bi,16,1285.5,,J+8,15,904.8,,J+6,0,380.7,0.5,1,0.1,,,,,,,,,,,,,,1-Mar-2014,Huang Xiaolong and Kang Mengxiao,2025-08-08
+83,112,Bi,17,1706.1,,J+10,16,1285.5,,J+8,0,420.6,0.5,0.96,0.1,,,,,,,,,,,,,,1-Mar-2014,Huang Xiaolong and Kang Mengxiao,2025-08-08
+83,112,Bi,18,2164,,J+12,17,1706.1,,J+10,0,457.9,0.5,0.84,0.1,,,,,,,,,,,,,,1-Mar-2014,Huang Xiaolong and Kang Mengxiao,2025-08-08
+83,112,Bi,19,2659,,J+14,18,2164,,J+12,0,495,1,0.33,0.08,,,,,,,,,,,,,,1-Mar-2014,Huang Xiaolong and Kang Mengxiao,2025-08-08

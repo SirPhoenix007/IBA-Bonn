@@ -1,0 +1,18 @@
+z,n,symbol,start_level_idx,start_level_energy,unc_sle,start_level_jp,end_level_idx,end_level_energy,unc_ele,end_level_jp,gamma_idx,energy,unc_en,relative_intensity,unc_ri,multipolarity,mixing_ratio,unc_mr,b_e1,unc_be1,b_e2,unc_be2,b_m1,unc_bm1,b_m2,unc_bm2,tot_conv_coeff,tce_unc,ensdf_publication_cut-off,ensdf_authors,Extraction_date
+78,94,Pt,1,457.6,0.1,2(+),0,0,,0+,0,457.6,0.1,100,,(E2),,,,,,,,,,,0.0309,,15-Mar-2010,TIBOR KIBEDI AND CORAL M. BAGLIN,2025-08-08
+78,94,Pt,2,1069.98,0.23,(4+),1,457.6,0.1,2(+),0,612.4,0.2,100,,,,,,,,,,,,,,,15-Mar-2010,TIBOR KIBEDI AND CORAL M. BAGLIN,2025-08-08
+78,94,Pt,3,1464.7,0.8,(3-),1,457.6,0.1,2(+),0,1006.7,1,100,,,,,,,,,,,,,,,15-Mar-2010,TIBOR KIBEDI AND CORAL M. BAGLIN,2025-08-08
+78,94,Pt,4,1753.2,0.4,(6+),2,1069.98,0.23,(4+),0,683.2,0.3,100,,(E2),,,,,,,,,,,0.01205,,15-Mar-2010,TIBOR KIBEDI AND CORAL M. BAGLIN,2025-08-08
+78,94,Pt,5,1839.2,0.3,(5-),3,1464.7,0.8,(3-),0,374,1,12,3,,,,,,,,,,,,,,15-Mar-2010,TIBOR KIBEDI AND CORAL M. BAGLIN,2025-08-08
+78,94,Pt,5,1839.2,0.3,(5-),2,1069.98,0.23,(4+),1,769.2,0.2,100,9,,,,,,,,,,,,,,15-Mar-2010,TIBOR KIBEDI AND CORAL M. BAGLIN,2025-08-08
+78,94,Pt,6,1931.8,0.4,,2,1069.98,0.23,(4+),0,861.8,0.3,100,,,,,,,,,,,,,,,15-Mar-2010,TIBOR KIBEDI AND CORAL M. BAGLIN,2025-08-08
+78,94,Pt,7,2081,0.4,(7-),5,1839.2,0.3,(5-),0,241.8,0.21,100,,(E2),,,,,,,,,,,0.192,,15-Mar-2010,TIBOR KIBEDI AND CORAL M. BAGLIN,2025-08-08
+78,94,Pt,8,2164,0.5,,4,1753.2,0.4,(6+),0,410.8,0.2,100,,Q,,,,,,,,,,,,,15-Mar-2010,TIBOR KIBEDI AND CORAL M. BAGLIN,2025-08-08
+78,94,Pt,9,2405.8,0.4,(8+),4,1753.2,0.4,(6+),0,652.6,0.1,100,,,,,,,,,,,,,,,15-Mar-2010,TIBOR KIBEDI AND CORAL M. BAGLIN,2025-08-08
+78,94,Pt,10,2406.3,0.4,,5,1839.2,0.3,(5-),0,567.1,0.2,100,,,,,,,,,,,,,,,15-Mar-2010,TIBOR KIBEDI AND CORAL M. BAGLIN,2025-08-08
+78,94,Pt,11,2728.1,0.5,,8,2164,0.5,,0,564.1,0.2,100,,,,,,,,,,,,,,,15-Mar-2010,TIBOR KIBEDI AND CORAL M. BAGLIN,2025-08-08
+78,94,Pt,12,2742.6,0.4,,10,2406.3,0.4,,0,336.4,0.2,100,6,,,,,,,,,,,,,,15-Mar-2010,TIBOR KIBEDI AND CORAL M. BAGLIN,2025-08-08
+78,94,Pt,12,2742.6,0.4,,7,2081,0.4,(7-),1,661.6,0.4,60,7,,,,,,,,,,,,,,15-Mar-2010,TIBOR KIBEDI AND CORAL M. BAGLIN,2025-08-08
+78,94,Pt,13,2993.8,0.6,(10+),9,2405.8,0.4,(8+),0,588,0.4,100,,,,,,,,,,,,,,,15-Mar-2010,TIBOR KIBEDI AND CORAL M. BAGLIN,2025-08-08
+78,94,Pt,14,3580.5,1.2,(12+),13,2993.8,0.6,(10+),0,586.7,1,100,,,,,,,,,,,,,,,15-Mar-2010,TIBOR KIBEDI AND CORAL M. BAGLIN,2025-08-08
+78,94,Pt,15,4218,1.2,(14+),14,3580.5,1.2,(12+),0,637.5,0.3,100,,,,,,,,,,,,,,,15-Mar-2010,TIBOR KIBEDI AND CORAL M. BAGLIN,2025-08-08

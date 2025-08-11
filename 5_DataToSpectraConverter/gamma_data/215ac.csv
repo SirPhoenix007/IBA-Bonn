@@ -1,0 +1,6 @@
+z,n,symbol,start_level_idx,start_level_energy,unc_sle,start_level_jp,end_level_idx,end_level_energy,unc_ele,end_level_jp,gamma_idx,energy,unc_en,relative_intensity,unc_ri,multipolarity,mixing_ratio,unc_mr,b_e1,unc_be1,b_e2,unc_be2,b_m1,unc_bm1,b_m2,unc_bm2,tot_conv_coeff,tce_unc,ensdf_publication_cut-off,ensdf_authors,Extraction_date
+89,126,Ac,1,1317,0.5,(13/2-),0,0,,9/2-,0,1317,0.5,100,,(E2),,,,,,,,,,,0.00567,,23-SEP-2013,A.K. Jain and  S. Singh and  B. Singh and  N. Kaur and  S. Lakshmai and  B. Maheshwari,2025-08-08
+89,126,Ac,2,1621,0.7,(17/2-),1,1317,0.5,(13/2-),0,304,0.5,100,,(E2),,,,,0.08,,,,,,0.1538,,23-SEP-2013,A.K. Jain and  S. Singh and  B. Singh and  N. Kaur and  S. Lakshmai and  B. Maheshwari,2025-08-08
+89,126,Ac,3,1796,0.9,(21/2-),2,1621,0.7,(17/2-),0,175,0.5,100,,(E2),,,,,0.119,,,,,,1.021,0.019,23-SEP-2013,A.K. Jain and  S. Singh and  B. Singh and  N. Kaur and  S. Lakshmai and  B. Maheshwari,2025-08-08
+89,126,Ac,4,1796,,(23/2-),3,1796,0.9,(21/2-),0,,,,,,,,,,,,,,,,,,23-SEP-2013,A.K. Jain and  S. Singh and  B. Singh and  N. Kaur and  S. Lakshmai and  B. Maheshwari,2025-08-08
+89,126,Ac,5,2438,,(29/2+),4,1796,,(23/2-),0,642,0.5,100,,(E3),,,,,,,,,,,0.0702,,23-SEP-2013,A.K. Jain and  S. Singh and  B. Singh and  N. Kaur and  S. Lakshmai and  B. Maheshwari,2025-08-08

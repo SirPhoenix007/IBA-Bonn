@@ -1,0 +1,12 @@
+z,n,symbol,start_level_idx,start_level_energy,unc_sle,start_level_jp,end_level_idx,end_level_energy,unc_ele,end_level_jp,gamma_idx,energy,unc_en,relative_intensity,unc_ri,multipolarity,mixing_ratio,unc_mr,b_e1,unc_be1,b_e2,unc_be2,b_m1,unc_bm1,b_m2,unc_bm2,tot_conv_coeff,tce_unc,ensdf_publication_cut-off,ensdf_authors,Extraction_date
+18,15,Ar,1,1358.9,1.7,(3/2+),0,0,,1/2+,0,1359,2,100,,[M1+E2],,,,,6.4,,,,,,,,30-Sep-2024,Jun Chen and Balraj Singh,2025-08-08
+18,15,Ar,2,1799.2,1.7,(5/2+),,,,,0,437,3,2.4,0.4,[M1+E2],,,,,,,,,,,,,30-Sep-2024,Jun Chen and Balraj Singh,2025-08-08
+18,15,Ar,2,1799.2,1.7,(5/2+),0,0,,1/2+,1,1799,2,100,15,[E2],,,,,5.8,,,,,,,,30-Sep-2024,Jun Chen and Balraj Singh,2025-08-08
+18,15,Ar,3,2439.2,2.4,(3/2+),2,1799.2,1.7,(5/2+),0,639,2,100,29,,,,,,,,,,,,,,30-Sep-2024,Jun Chen and Balraj Singh,2025-08-08
+18,15,Ar,3,2439.2,2.4,(3/2+),,,,,1,1084,4,100,57,,,,,,,,,,,,,,30-Sep-2024,Jun Chen and Balraj Singh,2025-08-08
+18,15,Ar,4,3155,8,(3/2+),2,1799.2,1.7,(5/2+),0,1356,8,100,,,,,,,,,,,,,,,30-Sep-2024,Jun Chen and Balraj Singh,2025-08-08
+18,15,Ar,5,3362,5,(5/2+),,,,,0,1556,8,100,14,,,,,,,,,,,,,,30-Sep-2024,Jun Chen and Balraj Singh,2025-08-08
+18,15,Ar,5,3362,5,(5/2+),1,1358.9,1.7,(3/2+),1,2005,5,60,40,,,,,,,,,,,,,,30-Sep-2024,Jun Chen and Balraj Singh,2025-08-08
+18,15,Ar,6,3454,4,(7/2+),,,,,0,1651,6,30,20,,,,,,,,,,,,,,30-Sep-2024,Jun Chen and Balraj Singh,2025-08-08
+18,15,Ar,6,3454,4,(7/2+),1,1358.9,1.7,(3/2+),1,2097,5,100,50,,,,,,,,,,,,,,30-Sep-2024,Jun Chen and Balraj Singh,2025-08-08
+18,15,Ar,7,3819,2.6,(5/2+),1,1358.9,1.7,(3/2+),0,2460,2,100,,,,,,,,,,,,,,,30-Sep-2024,Jun Chen and Balraj Singh,2025-08-08

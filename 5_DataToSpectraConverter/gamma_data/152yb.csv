@@ -1,0 +1,7 @@
+z,n,symbol,start_level_idx,start_level_energy,unc_sle,start_level_jp,end_level_idx,end_level_energy,unc_ele,end_level_jp,gamma_idx,energy,unc_en,relative_intensity,unc_ri,multipolarity,mixing_ratio,unc_mr,b_e1,unc_be1,b_e2,unc_be2,b_m1,unc_bm1,b_m2,unc_bm2,tot_conv_coeff,tce_unc,ensdf_publication_cut-off,ensdf_authors,Extraction_date
+70,82,Yb,1,1531.4,0.5,2+,0,0,,0+,0,1531.4,0.5,,,[E2],,,,,,,,,,,,,31-Aug-2013,M. J. MARTIN,2025-08-08
+70,82,Yb,2,1890.1,0.6,(3)-,1,1531.4,0.5,2+,0,358.7,0.3,,,E1,,,,,,,,,,,0.013,,31-Aug-2013,M. J. MARTIN,2025-08-08
+70,82,Yb,3,2202.7,0.7,(5)-,2,1890.1,0.6,(3)-,0,312.6,0.3,,,E2,,,,,,,,,,,0.0653,,31-Aug-2013,M. J. MARTIN,2025-08-08
+70,82,Yb,4,2550.1,0.7,(7)-,3,2202.7,0.7,(5)-,0,347.6,0.3,,,E2,,,,,,,,,,,0.0479,,31-Aug-2013,M. J. MARTIN,2025-08-08
+70,82,Yb,5,2689.9,0.8,(8)+,4,2550.1,0.7,(7)-,0,140,0.3,,,E1,,,,,,,,,,,0.141,,31-Aug-2013,M. J. MARTIN,2025-08-08
+70,82,Yb,6,2744.5,,(10+),5,2689.9,0.8,(8)+,0,54.6,1,,,(E2),,,,,0.02,,,,,,39,4,31-Aug-2013,M. J. MARTIN,2025-08-08

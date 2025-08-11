@@ -1,0 +1,258 @@
+z,n,symbol,start_level_idx,start_level_energy,unc_sle,start_level_jp,end_level_idx,end_level_energy,unc_ele,end_level_jp,gamma_idx,energy,unc_en,relative_intensity,unc_ri,multipolarity,mixing_ratio,unc_mr,b_e1,unc_be1,b_e2,unc_be2,b_m1,unc_bm1,b_m2,unc_bm2,tot_conv_coeff,tce_unc,ensdf_publication_cut-off,ensdf_authors,Extraction_date
+36,40,Kr,1,424.05,0.07,2+,0,0,,0+,0,424,0.1,100,,E2,,,,,79.3,,,,,,0.00535,0.00008,8-Jan-2024,Balraj Singh and  Jun Chen and Ameenah R. Farhan,2025-08-08
+36,40,Kr,2,769.94,0.09,0+,1,424.05,0.07,2+,0,345.9,0.1,100,3,E2,,,,,141,,,,,,0.01045,0.00015,8-Jan-2024,Balraj Singh and  Jun Chen and Ameenah R. Farhan,2025-08-08
+36,40,Kr,2,769.94,0.09,0+,0,0,,0+,1,770,,,,(E0),,,,,,,,,,,,,8-Jan-2024,Balraj Singh and  Jun Chen and Ameenah R. Farhan,2025-08-08
+36,40,Kr,3,1034.75,0.09,4+,1,424.05,0.07,2+,0,610.6,0.1,100,,E2,,,,,128,,,,,,0.00177,0.00003,8-Jan-2024,Balraj Singh and  Jun Chen and Ameenah R. Farhan,2025-08-08
+36,40,Kr,4,1221.72,0.07,2+,1,424.05,0.07,2+,0,797.6,0.1,100,3,M1+E2,0.2,0.1,,,1.9,,0.0222,,,,0.000755,0.000012,8-Jan-2024,Balraj Singh and  Jun Chen and Ameenah R. Farhan,2025-08-08
+36,40,Kr,4,1221.72,0.07,2+,0,0,,0+,1,1221.6,0.1,69,4,E2,,,,,4,,,,,,0.000328,0.000005,8-Jan-2024,Balraj Singh and  Jun Chen and Ameenah R. Farhan,2025-08-08
+36,40,Kr,5,1598.07,0.08,(0)+,4,1221.72,0.07,2+,0,376.4,0.1,8.1,0.4,E2,,,,,58,,,,,,0.00788,0.00011,8-Jan-2024,Balraj Singh and  Jun Chen and Ameenah R. Farhan,2025-08-08
+36,40,Kr,5,1598.07,0.08,(0)+,2,769.94,0.09,0+,1,828,,,,(E0),,,,,,,,,,,,,8-Jan-2024,Balraj Singh and  Jun Chen and Ameenah R. Farhan,2025-08-08
+36,40,Kr,5,1598.07,0.08,(0)+,1,424.05,0.07,2+,2,1174,0.1,100,3,E2,,,,,2.6,,,,,,0.00035,0.000005,8-Jan-2024,Balraj Singh and  Jun Chen and Ameenah R. Farhan,2025-08-08
+36,40,Kr,6,1687.32,0.08,2+,4,1221.72,0.07,2+,0,466,0.3,4.6,1.6,[M1 E2],,,,,,,,,,,0.0032,0.0007,8-Jan-2024,Balraj Singh and  Jun Chen and Ameenah R. Farhan,2025-08-08
+36,40,Kr,6,1687.32,0.08,2+,3,1034.75,0.09,4+,1,652.6,0.1,9.2,0.3,[E2],,,,,43.1,,,,,,0.00147,0.00002,8-Jan-2024,Balraj Singh and  Jun Chen and Ameenah R. Farhan,2025-08-08
+36,40,Kr,6,1687.32,0.08,2+,2,769.94,0.09,0+,2,917.4,0.1,100,6,[E2],,,,,85,,,,,,0.000608,0.000009,8-Jan-2024,Balraj Singh and  Jun Chen and Ameenah R. Farhan,2025-08-08
+36,40,Kr,6,1687.32,0.08,2+,1,424.05,0.07,2+,3,1263.2,0.2,21.2,0.7,M1 E2,,,,,,,,,,,0.000308,0.000007,8-Jan-2024,Balraj Singh and  Jun Chen and Ameenah R. Farhan,2025-08-08
+36,40,Kr,6,1687.32,0.08,2+,0,0,,0+,4,1687.1,0.2,28.8,1,[E2],,,,,1.17,,,,,,0.000327,0.000005,8-Jan-2024,Balraj Singh and  Jun Chen and Ameenah R. Farhan,2025-08-08
+36,40,Kr,7,1733.26,0.1,3+,4,1221.72,0.07,2+,0,511.6,0.2,20,12,[M1 E2],,,,,,,,,,,0.0025,0.0005,8-Jan-2024,Balraj Singh and  Jun Chen and Ameenah R. Farhan,2025-08-08
+36,40,Kr,7,1733.26,0.1,3+,3,1034.75,0.09,4+,1,698.4,0.1,8.7,0.8,M1 E2,,,,,,,,,,,0.00111,0.00011,8-Jan-2024,Balraj Singh and  Jun Chen and Ameenah R. Farhan,2025-08-08
+36,40,Kr,7,1733.26,0.1,3+,1,424.05,0.07,2+,2,1309.3,0.1,100,4,M1+E2,0.38,0.04,,,0.75,,0.0067,,,,0.000292,0.000004,8-Jan-2024,Balraj Singh and  Jun Chen and Ameenah R. Farhan,2025-08-08
+36,40,Kr,8,1859.7,0.4,6+,3,1034.75,0.09,4+,0,824.4,0.7,100,,E2,,,,,108,,,,,,0.000792,0.000011,8-Jan-2024,Balraj Singh and  Jun Chen and Ameenah R. Farhan,2025-08-08
+36,40,Kr,9,1957.4,0.3,4+,4,1221.72,0.07,2+,0,736,0.5,57,6,E2,,,,,46.6,,,,,,0.00106,0.00002,8-Jan-2024,Balraj Singh and  Jun Chen and Ameenah R. Farhan,2025-08-08
+36,40,Kr,9,1957.4,0.3,4+,3,1034.75,0.09,4+,1,922.6,0.5,100,10,M1+E2,-0.84,0.05,,,10.9,,0.0098,,,,0.00057,0.000008,8-Jan-2024,Balraj Singh and  Jun Chen and Ameenah R. Farhan,2025-08-08
+36,40,Kr,9,1957.4,0.3,4+,1,424.05,0.07,2+,2,1532.9,0.5,29,3,[E2],,,,,0.61,,,,,,0.000295,0.000004,8-Jan-2024,Balraj Singh and  Jun Chen and Ameenah R. Farhan,2025-08-08
+36,40,Kr,10,2091.49,0.1,(2)+,6,1687.32,0.08,2+,0,403.9,0.3,20.7,1.1,[M1 E2],,,,,,,,,,,0.0049,0.0014,8-Jan-2024,Balraj Singh and  Jun Chen and Ameenah R. Farhan,2025-08-08
+36,40,Kr,10,2091.49,0.1,(2)+,5,1598.07,0.08,(0)+,1,493.4,0.1,14,5,[E2],,,,,1.3,,,,,,0.00333,0.00005,8-Jan-2024,Balraj Singh and  Jun Chen and Ameenah R. Farhan,2025-08-08
+36,40,Kr,10,2091.49,0.1,(2)+,4,1221.72,0.07,2+,2,870,,,,M1 E2,,,,,,,,,,,0.00066,0.00004,8-Jan-2024,Balraj Singh and  Jun Chen and Ameenah R. Farhan,2025-08-08
+36,40,Kr,10,2091.49,0.1,(2)+,2,769.94,0.09,0+,3,1321.6,0.3,100,3,(E2),,,,,0.096,,,,,,0.0003,0.000004,8-Jan-2024,Balraj Singh and  Jun Chen and Ameenah R. Farhan,2025-08-08
+36,40,Kr,10,2091.49,0.1,(2)+,1,424.05,0.07,2+,4,1667.6,0.3,78.7,0.6,[M1 E2],,,,,,,,,,,0.000308,0.000015,8-Jan-2024,Balraj Singh and  Jun Chen and Ameenah R. Farhan,2025-08-08
+36,40,Kr,11,2104.33,0.09,1-,6,1687.32,0.08,2+,0,417.1,0.1,2,0.2,[E1],,,0.0000042,,,,,,,,0.00153,0.00002,8-Jan-2024,Balraj Singh and  Jun Chen and Ameenah R. Farhan,2025-08-08
+36,40,Kr,11,2104.33,0.09,1-,5,1598.07,0.08,(0)+,1,506,0.9,7,3,[E1],,,0.0000083,,,,,,,,0.000944,0.000014,8-Jan-2024,Balraj Singh and  Jun Chen and Ameenah R. Farhan,2025-08-08
+36,40,Kr,11,2104.33,0.09,1-,4,1221.72,0.07,2+,2,882.4,0.2,22,5,[E1],,,0.0000049,,,,,,,,0.000273,0.000004,8-Jan-2024,Balraj Singh and  Jun Chen and Ameenah R. Farhan,2025-08-08
+36,40,Kr,11,2104.33,0.09,1-,2,769.94,0.09,0+,3,1334.4,0.3,6.3,2.3,[E1],,,0.00000041,,,,,,,,0.000261,0.000004,8-Jan-2024,Balraj Singh and  Jun Chen and Ameenah R. Farhan,2025-08-08
+36,40,Kr,11,2104.33,0.09,1-,1,424.05,0.07,2+,4,1680.3,0.2,100,5,E1,,,0.0000032,,,,,,,,0.000478,0.000007,8-Jan-2024,Balraj Singh and  Jun Chen and Ameenah R. Farhan,2025-08-08
+36,40,Kr,11,2104.33,0.09,1-,0,0,,0+,5,2104.3,0.5,16,0.5,[E1],,,0.00000026,,,,,,,,0.000761,0.000011,8-Jan-2024,Balraj Singh and  Jun Chen and Ameenah R. Farhan,2025-08-08
+36,40,Kr,12,2140.17,0.16,(1 2+),4,1221.72,0.07,2+,0,918.5,0.7,100,33,,,,,,,,,,,,,,8-Jan-2024,Balraj Singh and  Jun Chen and Ameenah R. Farhan,2025-08-08
+36,40,Kr,12,2140.17,0.16,(1 2+),0,0,,0+,1,2140.5,0.2,26,3,,,,,,,,,,,,,,8-Jan-2024,Balraj Singh and  Jun Chen and Ameenah R. Farhan,2025-08-08
+36,40,Kr,13,2192.5,0.12,,1,424.05,0.07,2+,0,1768.4,0.2,100,,,,,,,,,,,,,,,8-Jan-2024,Balraj Singh and  Jun Chen and Ameenah R. Farhan,2025-08-08
+36,40,Kr,14,2227.27,0.09,2-,7,1733.26,0.1,3+,0,493.8,0.7,6.4,1.8,[E1],,,0.0000063,,,,,,,,0.001,0.00001,8-Jan-2024,Balraj Singh and  Jun Chen and Ameenah R. Farhan,2025-08-08
+36,40,Kr,14,2227.27,0.09,2-,6,1687.32,0.08,2+,1,540,0.1,2.2,0.2,[E1],,,0.00000165,,,,,,,,0.000806,0.000011,8-Jan-2024,Balraj Singh and  Jun Chen and Ameenah R. Farhan,2025-08-08
+36,40,Kr,14,2227.27,0.09,2-,4,1221.72,0.07,2+,2,1005.5,0.1,19.1,0.6,[E1],,,0.00000222,,,,,,,,0.0002113,0.000003,8-Jan-2024,Balraj Singh and  Jun Chen and Ameenah R. Farhan,2025-08-08
+36,40,Kr,14,2227.27,0.09,2-,1,424.05,0.07,2+,3,1803.2,0.1,100,3,E1(+M2),0.33,,0.00000182,,,,,,0.79,,0.00054,0.000023,8-Jan-2024,Balraj Singh and  Jun Chen and Ameenah R. Farhan,2025-08-08
+36,40,Kr,15,2257.55,0.09,3-,4,1221.72,0.07,2+,0,1035.5,0.1,11.8,0.9,[E1],,,0.0000042,,,,,,,,0.0001998,0.0000028,8-Jan-2024,Balraj Singh and  Jun Chen and Ameenah R. Farhan,2025-08-08
+36,40,Kr,15,2257.55,0.09,3-,3,1034.75,0.09,4+,1,1222.6,0.6,26,15,[E1],,,0.0000031,,,,,,,,0.0002066,0.0000029,8-Jan-2024,Balraj Singh and  Jun Chen and Ameenah R. Farhan,2025-08-08
+36,40,Kr,15,2257.55,0.09,3-,1,424.05,0.07,2+,2,1833.6,0.1,100,3,E1(+M2),0.12,,0.000006,,,,,,,,0.000577,0.000029,8-Jan-2024,Balraj Singh and  Jun Chen and Ameenah R. Farhan,2025-08-08
+36,40,Kr,16,2332.7,0.16,(1-),1,424.05,0.07,2+,0,1908.5,0.2,100,5,,,,,,,,,,,,,,8-Jan-2024,Balraj Singh and  Jun Chen and Ameenah R. Farhan,2025-08-08
+36,40,Kr,16,2332.7,0.16,(1-),0,0,,0+,1,2333.2,0.4,31,8,,,,,,,,,,,,,,8-Jan-2024,Balraj Singh and  Jun Chen and Ameenah R. Farhan,2025-08-08
+36,40,Kr,17,2452.4,0.4,5+,7,1733.26,0.1,3+,0,719.9,1,50,,E2,,,,,37,,,,,,0.00113,0.00002,8-Jan-2024,Balraj Singh and  Jun Chen and Ameenah R. Farhan,2025-08-08
+36,40,Kr,17,2452.4,0.4,5+,3,1034.75,0.09,4+,1,1417.2,0.5,100,,M1+E2,4,2,,,2.3,,0.00012,,,,0.000288,0.000005,8-Jan-2024,Balraj Singh and  Jun Chen and Ameenah R. Farhan,2025-08-08
+36,40,Kr,18,2571.01,0.08,1-,13,2192.5,0.12,,0,378.5,0.1,0.7,0.03,M1+E2,0.9,,,,0.59,,0.000078,,,,0.0057,0.0011,8-Jan-2024,Balraj Singh and  Jun Chen and Ameenah R. Farhan,2025-08-08
+36,40,Kr,18,2571.01,0.08,1-,11,2104.33,0.09,1-,1,466.9,1.3,0.3,0.1,[M1 E2],,,,,,,,,,,0.0032,0.0007,8-Jan-2024,Balraj Singh and  Jun Chen and Ameenah R. Farhan,2025-08-08
+36,40,Kr,18,2571.01,0.08,1-,10,2091.49,0.1,(2)+,2,479.5,0.1,2.25,0.08,E1(+M2),0.17,,0.0000038,,,,,,,,0.00117,0.0001,8-Jan-2024,Balraj Singh and  Jun Chen and Ameenah R. Farhan,2025-08-08
+36,40,Kr,18,2571.01,0.08,1-,6,1687.32,0.08,2+,3,883.6,0.1,12.5,0.4,E1,,,0.0000034,,,,,,,,0.000272,0.000004,8-Jan-2024,Balraj Singh and  Jun Chen and Ameenah R. Farhan,2025-08-08
+36,40,Kr,18,2571.01,0.08,1-,5,1598.07,0.08,(0)+,4,973,0.1,6.1,0.2,E1,,,0.00000124,,,,,,,,0.0002251,0.0000032,8-Jan-2024,Balraj Singh and  Jun Chen and Ameenah R. Farhan,2025-08-08
+36,40,Kr,18,2571.01,0.08,1-,4,1221.72,0.07,2+,5,1349.3,0.1,2.22,0.07,[E1],,,0.00000017,,,,,,,,0.000268,0.000004,8-Jan-2024,Balraj Singh and  Jun Chen and Ameenah R. Farhan,2025-08-08
+36,40,Kr,18,2571.01,0.08,1-,1,424.05,0.07,2+,6,2147.2,0.3,1.39,0.07,[E1],,,0.0000000263,,,,,,,,0.000788,0.000011,8-Jan-2024,Balraj Singh and  Jun Chen and Ameenah R. Farhan,2025-08-08
+36,40,Kr,18,2571.01,0.08,1-,0,0,,0+,7,2571.1,0.2,100,4,[E1],,,0.0000011,,,,,,,,0.00104,0.00002,8-Jan-2024,Balraj Singh and  Jun Chen and Ameenah R. Farhan,2025-08-08
+36,40,Kr,19,2581.12,0.1,(2+),4,1221.72,0.07,2+,0,1359.4,0.1,100,4,,,,,,,,,,,,,,8-Jan-2024,Balraj Singh and  Jun Chen and Ameenah R. Farhan,2025-08-08
+36,40,Kr,19,2581.12,0.1,(2+),3,1034.75,0.09,4+,1,1546.1,0.3,47,19,,,,,,,,,,,,,,8-Jan-2024,Balraj Singh and  Jun Chen and Ameenah R. Farhan,2025-08-08
+36,40,Kr,21,2622,0.4,4(-),15,2257.55,0.09,3-,0,364,,,,,,,,,,,,,,,,,8-Jan-2024,Balraj Singh and  Jun Chen and Ameenah R. Farhan,2025-08-08
+36,40,Kr,21,2622,0.4,4(-),14,2227.27,0.09,2-,1,395.2,0.6,26,,Q,,,,,,,,,,,,,8-Jan-2024,Balraj Singh and  Jun Chen and Ameenah R. Farhan,2025-08-08
+36,40,Kr,21,2622,0.4,4(-),7,1733.26,0.1,3+,2,888,1,60,,D,,,,,,,,,,,,,8-Jan-2024,Balraj Singh and  Jun Chen and Ameenah R. Farhan,2025-08-08
+36,40,Kr,21,2622,0.4,4(-),3,1034.75,0.09,4+,3,1588,1,100,,D,,,,,,,,,,,,,8-Jan-2024,Balraj Singh and  Jun Chen and Ameenah R. Farhan,2025-08-08
+36,40,Kr,22,2683.7,0.5,(5-),15,2257.55,0.09,3-,0,426,1,6.7,,,,,,,,,,,,,,,8-Jan-2024,Balraj Singh and  Jun Chen and Ameenah R. Farhan,2025-08-08
+36,40,Kr,22,2683.7,0.5,(5-),3,1034.75,0.09,4+,1,1649,1,100,,D+Q,0.04,0.03,,,,,,,,,,,8-Jan-2024,Balraj Singh and  Jun Chen and Ameenah R. Farhan,2025-08-08
+36,40,Kr,23,2700.16,0.13,2+,3,1034.75,0.09,4+,0,1665.6,0.5,25,4,[E2],,,,,0.014,,,,,,0.000321,0.000005,8-Jan-2024,Balraj Singh and  Jun Chen and Ameenah R. Farhan,2025-08-08
+36,40,Kr,23,2700.16,0.13,2+,1,424.05,0.07,2+,1,2276.6,0.4,100,5,[M1 E2],,,,,,,,,,,0.00051,0.000028,8-Jan-2024,Balraj Singh and  Jun Chen and Ameenah R. Farhan,2025-08-08
+36,40,Kr,24,2742.2,0.21,(4-),15,2257.55,0.09,3-,0,483,,,,,,,,,,,,,,,,,8-Jan-2024,Balraj Singh and  Jun Chen and Ameenah R. Farhan,2025-08-08
+36,40,Kr,24,2742.2,0.21,(4-),7,1733.26,0.1,3+,1,1009,0.2,100,,D,,,,,,,,,,,,,8-Jan-2024,Balraj Singh and  Jun Chen and Ameenah R. Farhan,2025-08-08
+36,40,Kr,25,2763.2,0.5,(6+),9,1957.4,0.3,4+,0,805.7,0.5,100,,Q,,,,,,,,,,,,,8-Jan-2024,Balraj Singh and  Jun Chen and Ameenah R. Farhan,2025-08-08
+36,40,Kr,26,2774.94,0.12,0+ 1 2,4,1221.72,0.07,2+,0,1553.2,0.1,56,3,,,,,,,,,,,,,,8-Jan-2024,Balraj Singh and  Jun Chen and Ameenah R. Farhan,2025-08-08
+36,40,Kr,26,2774.94,0.12,0+ 1 2,1,424.05,0.07,2+,1,2350.9,0.4,100,4,,,,,,,,,,,,,,8-Jan-2024,Balraj Singh and  Jun Chen and Ameenah R. Farhan,2025-08-08
+36,40,Kr,27,2816.57,0.18,(1 2+),2,769.94,0.09,0+,0,2046.5,0.2,30,2,,,,,,,,,,,,,,8-Jan-2024,Balraj Singh and  Jun Chen and Ameenah R. Farhan,2025-08-08
+36,40,Kr,27,2816.57,0.18,(1 2+),1,424.05,0.07,2+,1,2392.8,0.4,100,3,,,,,,,,,,,,,,8-Jan-2024,Balraj Singh and  Jun Chen and Ameenah R. Farhan,2025-08-08
+36,40,Kr,27,2816.57,0.18,(1 2+),0,0,,0+,2,2816.6,0.4,56,,,,,,,,,,,,,,,8-Jan-2024,Balraj Singh and  Jun Chen and Ameenah R. Farhan,2025-08-08
+36,40,Kr,28,2845.1,0.5,(4+),21,2622,0.4,4(-),0,223,1,7.7,,,,,,,,,,,,,,,8-Jan-2024,Balraj Singh and  Jun Chen and Ameenah R. Farhan,2025-08-08
+36,40,Kr,28,2845.1,0.5,(4+),7,1733.26,0.1,3+,1,1112,1,100,,D+Q,,,,,,,,,,,,,8-Jan-2024,Balraj Singh and  Jun Chen and Ameenah R. Farhan,2025-08-08
+36,40,Kr,28,2845.1,0.5,(4+),3,1034.75,0.09,4+,2,1811,1,7.7,,D,,,,,,,,,,,,,8-Jan-2024,Balraj Singh and  Jun Chen and Ameenah R. Farhan,2025-08-08
+36,40,Kr,30,2879.4,0.5,8+,8,1859.7,0.4,6+,0,1019.7,0.2,100,,E2,,,,,128,,,,,,0.000473,0.000007,8-Jan-2024,Balraj Singh and  Jun Chen and Ameenah R. Farhan,2025-08-08
+36,40,Kr,31,2926.59,0.12,0- 1- 2-,18,2571.01,0.08,1-,0,355.6,0.1,100,3,M1(+E2),0.12,,,,4.2,,0.0203,,,,0.00484,0.00008,8-Jan-2024,Balraj Singh and  Jun Chen and Ameenah R. Farhan,2025-08-08
+36,40,Kr,31,2926.59,0.12,0- 1- 2-,11,2104.33,0.09,1-,1,822.2,0.2,14,4,M1,,,,,,,0.000231,,,,0.000703,0.00001,8-Jan-2024,Balraj Singh and  Jun Chen and Ameenah R. Farhan,2025-08-08
+36,40,Kr,32,2944.4,0.6,(5-),22,2683.7,0.5,(5-),0,261,1,39,,D,,,,,,,,,,,,,8-Jan-2024,Balraj Singh and  Jun Chen and Ameenah R. Farhan,2025-08-08
+36,40,Kr,32,2944.4,0.6,(5-),9,1957.4,0.3,4+,1,987,,,,,,,,,,,,,,,,,8-Jan-2024,Balraj Singh and  Jun Chen and Ameenah R. Farhan,2025-08-08
+36,40,Kr,32,2944.4,0.6,(5-),8,1859.7,0.4,6+,2,1084,1,100,,D,,,,,,,,,,,,,8-Jan-2024,Balraj Singh and  Jun Chen and Ameenah R. Farhan,2025-08-08
+36,40,Kr,33,2970.1,0.3,(0+ 1 2),1,424.05,0.07,2+,0,2546,0.3,100,,,,,,,,,,,,,,,8-Jan-2024,Balraj Singh and  Jun Chen and Ameenah R. Farhan,2025-08-08
+36,40,Kr,34,3024.42,0.09,(2)-,23,2700.16,0.13,2+,0,324.3,0.1,14.5,0.8,[E1],,,0.000034,,,,,,,,0.00299,0.00004,8-Jan-2024,Balraj Singh and  Jun Chen and Ameenah R. Farhan,2025-08-08
+36,40,Kr,34,3024.42,0.09,(2)-,19,2581.12,0.1,(2+),1,443.3,0.1,5,0.5,[E1],,,0.0000046,,,,,,,,0.00131,0.00002,8-Jan-2024,Balraj Singh and  Jun Chen and Ameenah R. Farhan,2025-08-08
+36,40,Kr,34,3024.42,0.09,(2)-,18,2571.01,0.08,1-,2,453.5,0.2,100,4,M1(+E2),0.3,0.3,,,14,,0.0046,,,,0.00282,0.0003,8-Jan-2024,Balraj Singh and  Jun Chen and Ameenah R. Farhan,2025-08-08
+36,40,Kr,34,3024.42,0.09,(2)-,15,2257.55,0.09,3-,3,766.7,0.1,56.6,1.7,M1 E2,,,,,,,,,,,0.00089,0.00007,8-Jan-2024,Balraj Singh and  Jun Chen and Ameenah R. Farhan,2025-08-08
+36,40,Kr,34,3024.42,0.09,(2)-,11,2104.33,0.09,1-,4,920.2,0.1,16.8,0.8,M1 E2,,,,,,,,,,,0.000578,0.000027,8-Jan-2024,Balraj Singh and  Jun Chen and Ameenah R. Farhan,2025-08-08
+36,40,Kr,34,3024.42,0.09,(2)-,7,1733.26,0.1,3+,5,1291.3,0.3,8.5,1.3,[E1],,,0.00000032,,,,,,,,0.0002397,0.0000034,8-Jan-2024,Balraj Singh and  Jun Chen and Ameenah R. Farhan,2025-08-08
+36,40,Kr,34,3024.42,0.09,(2)-,1,424.05,0.07,2+,6,2600.2,0.4,61,2,[E1],,,0.00000028,,,,,,,,0.00106,0.00002,8-Jan-2024,Balraj Singh and  Jun Chen and Ameenah R. Farhan,2025-08-08
+36,40,Kr,35,3096.1,0.5,5(+),28,2845.1,0.5,(4+),0,252,1,100,,D,,,,,,,,,,,,,8-Jan-2024,Balraj Singh and  Jun Chen and Ameenah R. Farhan,2025-08-08
+36,40,Kr,35,3096.1,0.5,5(+),24,2742.2,0.21,(4-),1,354,1,20,,D,,,,,,,,,,,,,8-Jan-2024,Balraj Singh and  Jun Chen and Ameenah R. Farhan,2025-08-08
+36,40,Kr,35,3096.1,0.5,5(+),22,2683.7,0.5,(5-),2,412,1,53,,D,,,,,,,,,,,,,8-Jan-2024,Balraj Singh and  Jun Chen and Ameenah R. Farhan,2025-08-08
+36,40,Kr,35,3096.1,0.5,5(+),8,1859.7,0.4,6+,3,1236,1,53,,D+Q,,,,,,,,,,,,,8-Jan-2024,Balraj Singh and  Jun Chen and Ameenah R. Farhan,2025-08-08
+36,40,Kr,35,3096.1,0.5,5(+),7,1733.26,0.1,3+,4,1363,1,13,,,,,,,,,,,,,,,8-Jan-2024,Balraj Singh and  Jun Chen and Ameenah R. Farhan,2025-08-08
+36,40,Kr,35,3096.1,0.5,5(+),3,1034.75,0.09,4+,5,2062,1,67,,D,,,,,,,,,,,,,8-Jan-2024,Balraj Singh and  Jun Chen and Ameenah R. Farhan,2025-08-08
+36,40,Kr,36,3175.2,0.5,6(-),24,2742.2,0.21,(4-),0,433,,,,Q,,,,,,,,,,,,,8-Jan-2024,Balraj Singh and  Jun Chen and Ameenah R. Farhan,2025-08-08
+36,40,Kr,36,3175.2,0.5,6(-),22,2683.7,0.5,(5-),1,491,,,,,,,,,,,,,,,,,8-Jan-2024,Balraj Singh and  Jun Chen and Ameenah R. Farhan,2025-08-08
+36,40,Kr,36,3175.2,0.5,6(-),21,2622,0.4,4(-),2,553.1,0.6,90,,Q,,,,,,,,,,,,,8-Jan-2024,Balraj Singh and  Jun Chen and Ameenah R. Farhan,2025-08-08
+36,40,Kr,36,3175.2,0.5,6(-),17,2452.4,0.4,5+,3,723.5,1,100,,D,,,,,,,,,,,,,8-Jan-2024,Balraj Singh and  Jun Chen and Ameenah R. Farhan,2025-08-08
+36,40,Kr,37,3242.1,0.3,(1 2+),1,424.05,0.07,2+,0,2817.3,0.9,100,29,,,,,,,,,,,,,,8-Jan-2024,Balraj Singh and  Jun Chen and Ameenah R. Farhan,2025-08-08
+36,40,Kr,37,3242.1,0.3,(1 2+),0,0,,0+,1,3242.3,0.3,57,9,,,,,,,,,,,,,,8-Jan-2024,Balraj Singh and  Jun Chen and Ameenah R. Farhan,2025-08-08
+36,40,Kr,38,3275.9,0.21,(1+ 2),7,1733.26,0.1,3+,0,1542.6,0.2,35,4,,,,,,,,,,,,,,8-Jan-2024,Balraj Singh and  Jun Chen and Ameenah R. Farhan,2025-08-08
+36,40,Kr,38,3275.9,0.21,(1+ 2),4,1221.72,0.07,2+,1,2054.3,0.5,100,5,,,,,,,,,,,,,,8-Jan-2024,Balraj Singh and  Jun Chen and Ameenah R. Farhan,2025-08-08
+36,40,Kr,39,3288.4,0.5,(7-),25,2763.2,0.5,(6+),0,525,,,,,,,,,,,,,,,,,8-Jan-2024,Balraj Singh and  Jun Chen and Ameenah R. Farhan,2025-08-08
+36,40,Kr,39,3288.4,0.5,(7-),22,2683.7,0.5,(5-),1,604.9,0.5,85,,E2,,,,,93,,,,,,0.00182,0.00003,8-Jan-2024,Balraj Singh and  Jun Chen and Ameenah R. Farhan,2025-08-08
+36,40,Kr,39,3288.4,0.5,(7-),8,1859.7,0.4,6+,2,1428.5,0.5,100,,(E1(+M2)),0,0.04,0.000039,,,,,,0.27,,0.000308,0.000004,8-Jan-2024,Balraj Singh and  Jun Chen and Ameenah R. Farhan,2025-08-08
+36,40,Kr,40,3296.3,0.7,6(-),24,2742.2,0.21,(4-),0,554,1,24,,Q,,,,,,,,,,,,,8-Jan-2024,Balraj Singh and  Jun Chen and Ameenah R. Farhan,2025-08-08
+36,40,Kr,40,3296.3,0.7,6(-),21,2622,0.4,4(-),1,675,1,100,,Q,,,,,,,,,,,,,8-Jan-2024,Balraj Singh and  Jun Chen and Ameenah R. Farhan,2025-08-08
+36,40,Kr,40,3296.3,0.7,6(-),8,1859.7,0.4,6+,2,1436,1,62,,D,,,,,,,,,,,,,8-Jan-2024,Balraj Singh and  Jun Chen and Ameenah R. Farhan,2025-08-08
+36,40,Kr,41,3332.7,0.6,7+,17,2452.4,0.4,5+,0,879.9,0.5,100,,E2,,,,,29,,,,,,0.000673,0.000009,8-Jan-2024,Balraj Singh and  Jun Chen and Ameenah R. Farhan,2025-08-08
+36,40,Kr,41,3332.7,0.6,7+,8,1859.7,0.4,6+,1,1474,1,72,,(M1+E2),,,,,,,,,,,0.00028,0.00001,8-Jan-2024,Balraj Singh and  Jun Chen and Ameenah R. Farhan,2025-08-08
+36,40,Kr,42,3406.2,0.6,(6+),36,3175.2,0.5,6(-),0,231,1,31,,,,,,,,,,,,,,,8-Jan-2024,Balraj Singh and  Jun Chen and Ameenah R. Farhan,2025-08-08
+36,40,Kr,42,3406.2,0.6,(6+),35,3096.1,0.5,5(+),1,311,1,100,,D,,,,,,,,,,,,,8-Jan-2024,Balraj Singh and  Jun Chen and Ameenah R. Farhan,2025-08-08
+36,40,Kr,42,3406.2,0.6,(6+),32,2944.4,0.6,(5-),2,461,1,31,,D,,,,,,,,,,,,,8-Jan-2024,Balraj Singh and  Jun Chen and Ameenah R. Farhan,2025-08-08
+36,40,Kr,42,3406.2,0.6,(6+),28,2845.1,0.5,(4+),3,561,1,56,,Q,,,,,,,,,,,,,8-Jan-2024,Balraj Singh and  Jun Chen and Ameenah R. Farhan,2025-08-08
+36,40,Kr,43,3421.6,0.5,(0+ 1 2),1,424.05,0.07,2+,0,2997.5,0.5,100,,,,,,,,,,,,,,,8-Jan-2024,Balraj Singh and  Jun Chen and Ameenah R. Farhan,2025-08-08
+36,40,Kr,44,3456.1,0.5,(0- 1 2),34,3024.42,0.09,(2)-,0,431.7,0.5,100,,,,,,,,,,,,,,,8-Jan-2024,Balraj Singh and  Jun Chen and Ameenah R. Farhan,2025-08-08
+36,40,Kr,45,3571.2,0.8,(8+),25,2763.2,0.5,(6+),0,808,1,53,,Q,,,,,,,,,,,,,8-Jan-2024,Balraj Singh and  Jun Chen and Ameenah R. Farhan,2025-08-08
+36,40,Kr,45,3571.2,0.8,(8+),8,1859.7,0.4,6+,1,1712,1,100,,Q,,,,,,,,,,,,,8-Jan-2024,Balraj Singh and  Jun Chen and Ameenah R. Farhan,2025-08-08
+36,40,Kr,46,3573.8,0.7,(7-),39,3288.4,0.5,(7-),0,285,1,47,,,,,,,,,,,,,,,8-Jan-2024,Balraj Singh and  Jun Chen and Ameenah R. Farhan,2025-08-08
+36,40,Kr,46,3573.8,0.7,(7-),32,2944.4,0.6,(5-),1,630,1,100,,,,,,,,,,,,,,,8-Jan-2024,Balraj Singh and  Jun Chen and Ameenah R. Farhan,2025-08-08
+36,40,Kr,46,3573.8,0.7,(7-),22,2683.7,0.5,(5-),2,890,,,,,,,,,,,,,,,,,8-Jan-2024,Balraj Singh and  Jun Chen and Ameenah R. Farhan,2025-08-08
+36,40,Kr,47,3602.81,0.13,1-,16,2332.7,0.16,(1-),0,1270.1,0.2,4,0.3,M1 E2,,,,,,,,,,,0.000306,0.000007,8-Jan-2024,Balraj Singh and  Jun Chen and Ameenah R. Farhan,2025-08-08
+36,40,Kr,47,3602.81,0.13,1-,12,2140.17,0.16,(1 2+),1,1463,0.2,4.2,0.9,,,,,,,,,,,,,,8-Jan-2024,Balraj Singh and  Jun Chen and Ameenah R. Farhan,2025-08-08
+36,40,Kr,47,3602.81,0.13,1-,11,2104.33,0.09,1-,2,1498.4,0.3,3.4,0.4,[M1 E2],,,,,,,,,,,0.000282,0.00001,8-Jan-2024,Balraj Singh and  Jun Chen and Ameenah R. Farhan,2025-08-08
+36,40,Kr,47,3602.81,0.13,1-,1,424.05,0.07,2+,3,3178.3,0.2,100,12,[E1],,,0.00000074,,,,,,,,0.00135,0.00002,8-Jan-2024,Balraj Singh and  Jun Chen and Ameenah R. Farhan,2025-08-08
+36,40,Kr,47,3602.81,0.13,1-,0,0,,0+,4,3602.8,1,36,7,E1,,,0.00000016,,,,,,,,0.00154,0.00002,8-Jan-2024,Balraj Singh and  Jun Chen and Ameenah R. Farhan,2025-08-08
+36,40,Kr,48,3636.3,0.3,1 2(+),1,424.05,0.07,2+,0,3214.2,1.4,100,23,,,,,,,,,,,,,,8-Jan-2024,Balraj Singh and  Jun Chen and Ameenah R. Farhan,2025-08-08
+36,40,Kr,48,3636.3,0.3,1 2(+),0,0,,0+,1,3636.1,0.3,44,8,,,,,,,,,,,,,,8-Jan-2024,Balraj Singh and  Jun Chen and Ameenah R. Farhan,2025-08-08
+36,40,Kr,49,3672.24,0.22,(0 1 2),37,3242.1,0.3,(1 2+),0,432,0.9,19,10,,,,,,,,,,,,,,8-Jan-2024,Balraj Singh and  Jun Chen and Ameenah R. Farhan,2025-08-08
+36,40,Kr,49,3672.24,0.22,(0 1 2),11,2104.33,0.09,1-,1,1567.8,0.2,100,6,,,,,,,,,,,,,,8-Jan-2024,Balraj Singh and  Jun Chen and Ameenah R. Farhan,2025-08-08
+36,40,Kr,50,3781.9,0.8,7(+),42,3406.2,0.6,(6+),0,376,1,100,,D,,,,,,,,,,,,,8-Jan-2024,Balraj Singh and  Jun Chen and Ameenah R. Farhan,2025-08-08
+36,40,Kr,50,3781.9,0.8,7(+),35,3096.1,0.5,5(+),1,686,1,60,,Q,,,,,,,,,,,,,8-Jan-2024,Balraj Singh and  Jun Chen and Ameenah R. Farhan,2025-08-08
+36,40,Kr,51,3900.9,0.8,8(-),41,3332.7,0.6,7+,0,568,1,15,,(E1),,,0.000239,,,,,,,,0.000715,0.00001,8-Jan-2024,Balraj Singh and  Jun Chen and Ameenah R. Farhan,2025-08-08
+36,40,Kr,51,3900.9,0.8,8(-),36,3175.2,0.5,6(-),1,726,1,100,,E2,,,,,113,,,,,,0.0011,0.00002,8-Jan-2024,Balraj Singh and  Jun Chen and Ameenah R. Farhan,2025-08-08
+36,40,Kr,52,3978,0.3,1 2(+),1,424.05,0.07,2+,0,3553.6,0.4,100,17,,,,,,,,,,,,,,8-Jan-2024,Balraj Singh and  Jun Chen and Ameenah R. Farhan,2025-08-08
+36,40,Kr,52,3978,0.3,1 2(+),0,0,,0+,1,3978.2,0.4,93,14,,,,,,,,,,,,,,8-Jan-2024,Balraj Singh and  Jun Chen and Ameenah R. Farhan,2025-08-08
+36,40,Kr,53,3986.6,0.3,1 2(+),2,769.94,0.09,0+,0,3216.3,0.4,100,16,,,,,,,,,,,,,,8-Jan-2024,Balraj Singh and  Jun Chen and Ameenah R. Farhan,2025-08-08
+36,40,Kr,53,3986.6,0.3,1 2(+),1,424.05,0.07,2+,1,3562.7,0.4,93,14,,,,,,,,,,,,,,8-Jan-2024,Balraj Singh and  Jun Chen and Ameenah R. Farhan,2025-08-08
+36,40,Kr,54,4026.72,0.17,1 2(+),4,1221.72,0.07,2+,0,2805.5,0.3,32,3,,,,,,,,,,,,,,8-Jan-2024,Balraj Singh and  Jun Chen and Ameenah R. Farhan,2025-08-08
+36,40,Kr,54,4026.72,0.17,1 2(+),2,769.94,0.09,0+,1,3257.4,0.5,27,9,,,,,,,,,,,,,,8-Jan-2024,Balraj Singh and  Jun Chen and Ameenah R. Farhan,2025-08-08
+36,40,Kr,54,4026.72,0.17,1 2(+),1,424.05,0.07,2+,2,3602.2,0.2,100,24,,,,,,,,,,,,,,8-Jan-2024,Balraj Singh and  Jun Chen and Ameenah R. Farhan,2025-08-08
+36,40,Kr,54,4026.72,0.17,1 2(+),0,0,,0+,3,4026.8,0.6,51,9,,,,,,,,,,,,,,8-Jan-2024,Balraj Singh and  Jun Chen and Ameenah R. Farhan,2025-08-08
+36,40,Kr,55,4068.4,1.1,10+,30,2879.4,0.5,8+,0,1189,1,100,,E2,,,,,122,,,,,,0.000342,0.000005,8-Jan-2024,Balraj Singh and  Jun Chen and Ameenah R. Farhan,2025-08-08
+36,40,Kr,56,4072.8,0.6,(9-),39,3288.4,0.5,(7-),0,784.4,0.4,100,,[E2],,,,,178,,,,,,0.000899,0.000013,8-Jan-2024,Balraj Singh and  Jun Chen and Ameenah R. Farhan,2025-08-08
+36,40,Kr,57,4097.75,0.2,1 2(+),2,769.94,0.09,0+,0,3327.6,0.5,13,4,,,,,,,,,,,,,,8-Jan-2024,Balraj Singh and  Jun Chen and Ameenah R. Farhan,2025-08-08
+36,40,Kr,57,4097.75,0.2,1 2(+),1,424.05,0.07,2+,1,3673.6,0.2,100,11,,,,,,,,,,,,,,8-Jan-2024,Balraj Singh and  Jun Chen and Ameenah R. Farhan,2025-08-08
+36,40,Kr,57,4097.75,0.2,1 2(+),0,0,,0+,2,4098.8,1.7,46,8,,,,,,,,,,,,,,8-Jan-2024,Balraj Singh and  Jun Chen and Ameenah R. Farhan,2025-08-08
+36,40,Kr,58,4118.3,1.2,(8-),40,3296.3,0.7,6(-),0,822,1,100,,Q,,,,,,,,,,,,,8-Jan-2024,Balraj Singh and  Jun Chen and Ameenah R. Farhan,2025-08-08
+36,40,Kr,59,4217.8,0.9,(8+),50,3781.9,0.8,7(+),0,436,1,100,,D,,,,,,,,,,,,,8-Jan-2024,Balraj Singh and  Jun Chen and Ameenah R. Farhan,2025-08-08
+36,40,Kr,59,4217.8,0.9,(8+),42,3406.2,0.6,(6+),1,811,1,91,,Q,,,,,,,,,,,,,8-Jan-2024,Balraj Singh and  Jun Chen and Ameenah R. Farhan,2025-08-08
+36,40,Kr,60,4289.42,0.22,(0 1 2)-,47,3602.81,0.13,1-,0,686.5,0.4,14.4,1.1,M1 E2,,,,,,,,,,,0.00116,0.00012,8-Jan-2024,Balraj Singh and  Jun Chen and Ameenah R. Farhan,2025-08-08
+36,40,Kr,60,4289.42,0.22,(0 1 2)-,18,2571.01,0.08,1-,1,1718.6,0.4,100,4,M1 E2,,,,,,,,,,,0.000319,0.000016,8-Jan-2024,Balraj Singh and  Jun Chen and Ameenah R. Farhan,2025-08-08
+36,40,Kr,60,4289.42,0.22,(0 1 2)-,11,2104.33,0.09,1-,2,2185,0.3,55,3,,,,,,,,,,,,,,8-Jan-2024,Balraj Singh and  Jun Chen and Ameenah R. Farhan,2025-08-08
+36,40,Kr,61,4380.1,0.8,(9+),41,3332.7,0.6,7+,0,1047,1,100,,,,,,,,,,,,,,,8-Jan-2024,Balraj Singh and  Jun Chen and Ameenah R. Farhan,2025-08-08
+36,40,Kr,61,4380.1,0.8,(9+),30,2879.4,0.5,8+,1,1501,1,45,,,,,,,,,,,,,,,8-Jan-2024,Balraj Singh and  Jun Chen and Ameenah R. Farhan,2025-08-08
+36,40,Kr,62,4403.7,1.2,(9+),41,3332.7,0.6,7+,0,1071,1,100,,[E2],,,,,58,,,,,,0.000423,0.000006,8-Jan-2024,Balraj Singh and  Jun Chen and Ameenah R. Farhan,2025-08-08
+36,40,Kr,63,4433.8,0.9,(10+),45,3571.2,0.8,(8+),0,863,1,54,,,,,,,,,,,,,,,8-Jan-2024,Balraj Singh and  Jun Chen and Ameenah R. Farhan,2025-08-08
+36,40,Kr,63,4433.8,0.9,(10+),30,2879.4,0.5,8+,1,1554,1,100,,,,,,,,,,,,,,,8-Jan-2024,Balraj Singh and  Jun Chen and Ameenah R. Farhan,2025-08-08
+36,40,Kr,64,4469.8,0.9,(9-),56,4072.8,0.6,(9-),0,397,,,,,,,,,,,,,,,,,8-Jan-2024,Balraj Singh and  Jun Chen and Ameenah R. Farhan,2025-08-08
+36,40,Kr,64,4469.8,0.9,(9-),46,3573.8,0.7,(7-),1,896,1,100,,Q,,,,,,,,,,,,,8-Jan-2024,Balraj Singh and  Jun Chen and Ameenah R. Farhan,2025-08-08
+36,40,Kr,65,4700.5,1,(9+),59,4217.8,0.9,(8+),0,483,1,58,,D,,,,,,,,,,,,,8-Jan-2024,Balraj Singh and  Jun Chen and Ameenah R. Farhan,2025-08-08
+36,40,Kr,65,4700.5,1,(9+),50,3781.9,0.8,7(+),1,919,1,100,,Q,,,,,,,,,,,,,8-Jan-2024,Balraj Singh and  Jun Chen and Ameenah R. Farhan,2025-08-08
+36,40,Kr,66,4806.4,1,(10-),51,3900.9,0.8,8(-),0,905.5,0.5,100,,[E2],,,,,88,,,,,,0.000628,0.000009,8-Jan-2024,Balraj Singh and  Jun Chen and Ameenah R. Farhan,2025-08-08
+36,40,Kr,67,5051.3,0.9,(11-),56,4072.8,0.6,(9-),0,978.5,0.6,100,,E2,,,,,202,,,,,,0.000521,0.000007,8-Jan-2024,Balraj Singh and  Jun Chen and Ameenah R. Farhan,2025-08-08
+36,40,Kr,68,5106.3,1.6,(10-),58,4118.3,1.2,(8-),0,988,1,100,,,,,,,,,,,,,,,8-Jan-2024,Balraj Singh and  Jun Chen and Ameenah R. Farhan,2025-08-08
+36,40,Kr,69,5240.5,1.1,10(+),65,4700.5,1,(9+),0,541,1,42,,D,,,,,,,,,,,,,8-Jan-2024,Balraj Singh and  Jun Chen and Ameenah R. Farhan,2025-08-08
+36,40,Kr,69,5240.5,1.1,10(+),59,4217.8,0.9,(8+),1,1022,1,100,,Q,,,,,,,,,,,,,8-Jan-2024,Balraj Singh and  Jun Chen and Ameenah R. Farhan,2025-08-08
+36,40,Kr,70,5348.4,1.5,12+,55,4068.4,1.1,10+,0,1280,1,100,,[E2],,,,,43,,,,,,0.000309,0.000004,8-Jan-2024,Balraj Singh and  Jun Chen and Ameenah R. Farhan,2025-08-08
+36,40,Kr,71,5528.8,1.4,(11-),64,4469.8,0.9,(9-),0,1059,1,100,,Q,,,,,,,,,,,,,8-Jan-2024,Balraj Singh and  Jun Chen and Ameenah R. Farhan,2025-08-08
+36,40,Kr,72,5566.8,1.4,(12+),63,4433.8,0.9,(10+),0,1133,1,100,,Q,,,,,,,,,,,,,8-Jan-2024,Balraj Singh and  Jun Chen and Ameenah R. Farhan,2025-08-08
+36,40,Kr,73,5589.1,1.3,(11+),61,4380.1,0.8,(9+),0,1209,1,100,,Q,,,,,,,,,,,,,8-Jan-2024,Balraj Singh and  Jun Chen and Ameenah R. Farhan,2025-08-08
+36,40,Kr,74,5795.7,1.2,11(+),69,5240.5,1.1,10(+),0,555,1,38,,D,,,,,,,,,,,,,8-Jan-2024,Balraj Singh and  Jun Chen and Ameenah R. Farhan,2025-08-08
+36,40,Kr,74,5795.7,1.2,11(+),65,4700.5,1,(9+),1,1095,1,100,,Q,,,,,,,,,,,,,8-Jan-2024,Balraj Singh and  Jun Chen and Ameenah R. Farhan,2025-08-08
+36,40,Kr,75,5873.1,1.1,(12-),66,4806.4,1,(10-),0,1066.6,0.4,100,,E2,,,,,124,,,,,,0.000427,0.000006,8-Jan-2024,Balraj Singh and  Jun Chen and Ameenah R. Farhan,2025-08-08
+36,40,Kr,76,6218.3,1.9,(12-),68,5106.3,1.6,(10-),0,1112,1,100,,Q,,,,,,,,,,,,,8-Jan-2024,Balraj Singh and  Jun Chen and Ameenah R. Farhan,2025-08-08
+36,40,Kr,77,6222.3,1.3,(13-),67,5051.3,0.9,(11-),0,1171,1,100,,E2,,,,,149,,,,,,0.000351,0.000005,8-Jan-2024,Balraj Singh and  Jun Chen and Ameenah R. Farhan,2025-08-08
+36,40,Kr,78,6390.2,1.3,(12+),74,5795.7,1.2,11(+),0,596,1,25,,(D),,,,,,,,,,,,,8-Jan-2024,Balraj Singh and  Jun Chen and Ameenah R. Farhan,2025-08-08
+36,40,Kr,78,6390.2,1.3,(12+),69,5240.5,1.1,10(+),1,1150,1,100,,Q,,,,,,,,,,,,,8-Jan-2024,Balraj Singh and  Jun Chen and Ameenah R. Farhan,2025-08-08
+36,40,Kr,79,6605.4,1.8,(12+),70,5348.4,1.5,12+,0,1257,1,100,,D,,,,,,,,,,,,,8-Jan-2024,Balraj Singh and  Jun Chen and Ameenah R. Farhan,2025-08-08
+36,40,Kr,80,6650.4,1.8,14+,70,5348.4,1.5,12+,0,1302,1,100,,Q,,,,,,,,,,,,,8-Jan-2024,Balraj Singh and  Jun Chen and Ameenah R. Farhan,2025-08-08
+36,40,Kr,81,6681.8,1.7,(13-),71,5528.8,1.4,(11-),0,1153,1,100,,Q,,,,,,,,,,,,,8-Jan-2024,Balraj Singh and  Jun Chen and Ameenah R. Farhan,2025-08-08
+36,40,Kr,82,6937.1,1.7,(13+),73,5589.1,1.3,(11+),0,1348,1,100,,Q,,,,,,,,,,,,,8-Jan-2024,Balraj Singh and  Jun Chen and Ameenah R. Farhan,2025-08-08
+36,40,Kr,83,7032.4,1.4,(13+),78,6390.2,1.3,(12+),0,643,1,100,,D,,,,,,,,,,,,,8-Jan-2024,Balraj Singh and  Jun Chen and Ameenah R. Farhan,2025-08-08
+36,40,Kr,83,7032.4,1.4,(13+),74,5795.7,1.2,11(+),1,1235,1,40,,Q,,,,,,,,,,,,,8-Jan-2024,Balraj Singh and  Jun Chen and Ameenah R. Farhan,2025-08-08
+36,40,Kr,84,7034.9,1.7,(14+),72,5566.8,1.4,(12+),0,1468,1,100,,Q,,,,,,,,,,,,,8-Jan-2024,Balraj Singh and  Jun Chen and Ameenah R. Farhan,2025-08-08
+36,40,Kr,85,7110.1,1.5,(14-),75,5873.1,1.1,(12-),0,1237,1,100,,E2,,,,,54,,,,,,0.000322,0.000005,8-Jan-2024,Balraj Singh and  Jun Chen and Ameenah R. Farhan,2025-08-08
+36,40,Kr,86,7435.3,2.1,(14-),76,6218.3,1.9,(12-),0,1217,1,100,,Q,,,,,,,,,,,,,8-Jan-2024,Balraj Singh and  Jun Chen and Ameenah R. Farhan,2025-08-08
+36,40,Kr,87,7554.3,1.5,(14+),83,7032.4,1.4,(13+),0,521,1,38,,D,,,,,,,,,,,,,8-Jan-2024,Balraj Singh and  Jun Chen and Ameenah R. Farhan,2025-08-08
+36,40,Kr,87,7554.3,1.5,(14+),78,6390.2,1.3,(12+),1,1165,1,100,,Q,,,,,,,,,,,,,8-Jan-2024,Balraj Singh and  Jun Chen and Ameenah R. Farhan,2025-08-08
+36,40,Kr,88,7583.3,1.7,(15-),77,6222.3,1.3,(13-),0,1361,1,100,,E2,,,,,45,,,,,,0.000294,0.000004,8-Jan-2024,Balraj Singh and  Jun Chen and Ameenah R. Farhan,2025-08-08
+36,40,Kr,89,7606.4,2.1,(14+),79,6605.4,1.8,(12+),0,1001,1,100,,,,,,,,,,,,,,,8-Jan-2024,Balraj Singh and  Jun Chen and Ameenah R. Farhan,2025-08-08
+36,40,Kr,90,7870.9,2,(15-),81,6681.8,1.7,(13-),0,1189,1,100,,Q,,,,,,,,,,,,,8-Jan-2024,Balraj Singh and  Jun Chen and Ameenah R. Farhan,2025-08-08
+36,40,Kr,91,8000.4,2.1,16+,80,6650.4,1.8,14+,0,1350,1,100,,Q,,,,,,,,,,,,,8-Jan-2024,Balraj Singh and  Jun Chen and Ameenah R. Farhan,2025-08-08
+36,40,Kr,92,8432.1,1.9,(15+),82,6937.1,1.7,(13+),0,1495,1,100,,Q,,,,,,,,,,,,,8-Jan-2024,Balraj Singh and  Jun Chen and Ameenah R. Farhan,2025-08-08
+36,40,Kr,93,8521.1,1.8,(16-),85,7110.1,1.5,(14-),0,1411,1,100,,E2,,,,,,,,,,,0.000289,0.000004,8-Jan-2024,Balraj Singh and  Jun Chen and Ameenah R. Farhan,2025-08-08
+36,40,Kr,94,8666.9,2,(16+),84,7034.9,1.7,(14+),0,1632,1,100,,Q,,,,,,,,,,,,,8-Jan-2024,Balraj Singh and  Jun Chen and Ameenah R. Farhan,2025-08-08
+36,40,Kr,95,8717.4,2.4,(16-),86,7435.3,2.1,(14-),0,1282,1,100,,Q,,,,,,,,,,,,,8-Jan-2024,Balraj Singh and  Jun Chen and Ameenah R. Farhan,2025-08-08
+36,40,Kr,96,8798.5,2.3,(16+),89,7606.4,2.1,(14+),0,1192,1,100,,Q,,,,,,,,,,,,,8-Jan-2024,Balraj Singh and  Jun Chen and Ameenah R. Farhan,2025-08-08
+36,40,Kr,97,8829.3,1.8,(16+),87,7554.3,1.5,(14+),0,1275,1,100,,Q,,,,,,,,,,,,,8-Jan-2024,Balraj Singh and  Jun Chen and Ameenah R. Farhan,2025-08-08
+36,40,Kr,98,9117.4,2,(17-),88,7583.3,1.7,(15-),0,1534,1,100,,E2,,,,,,,,,,,0.000295,0.000004,8-Jan-2024,Balraj Singh and  Jun Chen and Ameenah R. Farhan,2025-08-08
+36,40,Kr,99,9217.9,2.2,(17-),90,7870.9,2,(15-),0,1347,1,100,,Q,,,,,,,,,,,,,8-Jan-2024,Balraj Singh and  Jun Chen and Ameenah R. Farhan,2025-08-08
+36,40,Kr,100,9400.5,2.3,18+,91,8000.4,2.1,16+,0,1400,1,100,,E2,,,,,,,,,,,0.000289,0.000004,8-Jan-2024,Balraj Singh and  Jun Chen and Ameenah R. Farhan,2025-08-08
+36,40,Kr,101,10050.1,2.2,(17+),92,8432.1,1.9,(15+),0,1618,1,100,,Q,,,,,,,,,,,,,8-Jan-2024,Balraj Singh and  Jun Chen and Ameenah R. Farhan,2025-08-08
+36,40,Kr,102,10059.1,2.1,(18-),93,8521.1,1.8,(16-),0,1538,1,100,,E2,,,,,,,,,,,0.000296,0.000004,8-Jan-2024,Balraj Singh and  Jun Chen and Ameenah R. Farhan,2025-08-08
+36,40,Kr,103,10135,3,(18-),95,8717.4,2.4,(16-),0,1418,1,100,,Q,,,,,,,,,,,,,8-Jan-2024,Balraj Singh and  Jun Chen and Ameenah R. Farhan,2025-08-08
+36,40,Kr,104,10139.5,2.5,(18+),96,8798.5,2.3,(16+),0,1341,1,100,,Q,,,,,,,,,,,,,8-Jan-2024,Balraj Singh and  Jun Chen and Ameenah R. Farhan,2025-08-08
+36,40,Kr,105,10470.9,2.2,(18+),94,8666.9,2,(16+),0,1804,1,100,,,,,,,,,,,,,,,8-Jan-2024,Balraj Singh and  Jun Chen and Ameenah R. Farhan,2025-08-08
+36,40,Kr,106,10640.4,2.2,(19-),98,9117.4,2,(17-),0,1523,1,100,,E2,,,,,,,,,,,0.000294,0.000004,8-Jan-2024,Balraj Singh and  Jun Chen and Ameenah R. Farhan,2025-08-08
+36,40,Kr,107,10773.9,2.4,(19-),99,9217.9,2.2,(17-),0,1556,1,100,,(Q),,,,,,,,,,,,,8-Jan-2024,Balraj Singh and  Jun Chen and Ameenah R. Farhan,2025-08-08
+36,40,Kr,108,10936.5,2.5,20+,100,9400.5,2.3,18+,0,1536,1,100,,E2,,,,,,,,,,,0.000295,0.000004,8-Jan-2024,Balraj Singh and  Jun Chen and Ameenah R. Farhan,2025-08-08
+36,40,Kr,109,11655.1,2.3,(20-),102,10059.1,2.1,(18-),0,1596,1,100,,E2,,,,,,,,,,,0.000306,0.000004,8-Jan-2024,Balraj Singh and  Jun Chen and Ameenah R. Farhan,2025-08-08
+36,40,Kr,110,11664,3,(20+),104,10139.5,2.5,(18+),0,1525,1,100,,Q,,,,,,,,,,,,,8-Jan-2024,Balraj Singh and  Jun Chen and Ameenah R. Farhan,2025-08-08
+36,40,Kr,111,11719,3,(20-),103,10135,3,(18-),0,1584,1,100,,Q,,,,,,,,,,,,,8-Jan-2024,Balraj Singh and  Jun Chen and Ameenah R. Farhan,2025-08-08
+36,40,Kr,112,11785.1,2.4,(19+),101,10050.1,2.2,(17+),0,1735,1,100,,,,,,,,,,,,,,,8-Jan-2024,Balraj Singh and  Jun Chen and Ameenah R. Farhan,2025-08-08
+36,40,Kr,113,12254.4,2.4,(21-),106,10640.4,2.2,(19-),0,1614,1,100,,E2,,,,,,,,,,,0.00031,0.000004,8-Jan-2024,Balraj Singh and  Jun Chen and Ameenah R. Farhan,2025-08-08
+36,40,Kr,114,12397.9,2.4,(20+),105,10470.9,2.2,(18+),0,1927,1,100,,,,,,,,,,,,,,,8-Jan-2024,Balraj Singh and  Jun Chen and Ameenah R. Farhan,2025-08-08
+36,40,Kr,115,12493,3,(21-),107,10773.9,2.4,(19-),0,1719,1,100,,,,,,,,,,,,,,,8-Jan-2024,Balraj Singh and  Jun Chen and Ameenah R. Farhan,2025-08-08
+36,40,Kr,116,12695,3,22+,108,10936.5,2.5,20+,0,1759,1,100,,E2,,,,,,,,,,,0.000346,0.000005,8-Jan-2024,Balraj Singh and  Jun Chen and Ameenah R. Farhan,2025-08-08
+36,40,Kr,117,13352.1,2.5,(22-),109,11655.1,2.3,(20-),0,1697,1,100,,E2,,,,,,,,,,,0.000329,0.000005,8-Jan-2024,Balraj Singh and  Jun Chen and Ameenah R. Farhan,2025-08-08
+36,40,Kr,118,13388,3,(22+),110,11664,3,(20+),0,1723,1,100,,Q,,,,,,,,,,,,,8-Jan-2024,Balraj Singh and  Jun Chen and Ameenah R. Farhan,2025-08-08
+36,40,Kr,119,13500,3,(22-),111,11719,3,(20-),0,1781,1,100,,,,,,,,,,,,,,,8-Jan-2024,Balraj Singh and  Jun Chen and Ameenah R. Farhan,2025-08-08
+36,40,Kr,120,13613,3,(21+),112,11785.1,2.4,(19+),0,1828,1,100,,,,,,,,,,,,,,,8-Jan-2024,Balraj Singh and  Jun Chen and Ameenah R. Farhan,2025-08-08
+36,40,Kr,121,14026,3,(23-),113,12254.4,2.4,(21-),0,1772,1,100,,E2,,,,,,,,,,,0.00035,0.000005,8-Jan-2024,Balraj Singh and  Jun Chen and Ameenah R. Farhan,2025-08-08
+36,40,Kr,122,14440,3,(23-),115,12493,3,(21-),0,1947,1,100,,,,,,,,,,,,,,,8-Jan-2024,Balraj Singh and  Jun Chen and Ameenah R. Farhan,2025-08-08
+36,40,Kr,123,14751,3,24+,116,12695,3,22+,0,2055,1,100,,,,,,,,,,,,,,,8-Jan-2024,Balraj Singh and  Jun Chen and Ameenah R. Farhan,2025-08-08
+36,40,Kr,124,15225,3,(24-),117,13352.1,2.5,(22-),0,1873,1,100,,E2,,,,,,,,,,,0.000382,0.000005,8-Jan-2024,Balraj Singh and  Jun Chen and Ameenah R. Farhan,2025-08-08
+36,40,Kr,125,15346,3,(24+),118,13388,3,(22+),0,1958,1,100,,Q,,,,,,,,,,,,,8-Jan-2024,Balraj Singh and  Jun Chen and Ameenah R. Farhan,2025-08-08
+36,40,Kr,126,15503,3,(24-),119,13500,3,(22-),0,2003,1,100,,,,,,,,,,,,,,,8-Jan-2024,Balraj Singh and  Jun Chen and Ameenah R. Farhan,2025-08-08
+36,40,Kr,127,16009,3,(25-),121,14026,3,(23-),0,1983,1,100,,E2,,,,,,,,,,,0.000421,0.000006,8-Jan-2024,Balraj Singh and  Jun Chen and Ameenah R. Farhan,2025-08-08
+36,40,Kr,128,16650,3,(25-),122,14440,3,(23-),0,2210,1,100,,,,,,,,,,,,,,,8-Jan-2024,Balraj Singh and  Jun Chen and Ameenah R. Farhan,2025-08-08
+36,40,Kr,129,17157,3,26+,123,14751,3,24+,0,2406,1,100,,E2,,,,,,,,,,,0.000591,0.000008,8-Jan-2024,Balraj Singh and  Jun Chen and Ameenah R. Farhan,2025-08-08
+36,40,Kr,130,17327,3,(26-),124,15225,3,(24-),0,2102,1,100,,E2,,,,,,,,,,,0.000467,0.000007,8-Jan-2024,Balraj Singh and  Jun Chen and Ameenah R. Farhan,2025-08-08
+36,40,Kr,131,17550,4,(26+),125,15346,3,(24+),0,2204,1,100,,Q,,,,,,,,,,,,,8-Jan-2024,Balraj Singh and  Jun Chen and Ameenah R. Farhan,2025-08-08
+36,40,Kr,132,17859,4,(26-),126,15503,3,(24-),0,2356,1,100,,,,,,,,,,,,,,,8-Jan-2024,Balraj Singh and  Jun Chen and Ameenah R. Farhan,2025-08-08
+36,40,Kr,133,18256,3,(27-),127,16009,3,(25-),0,2247,1,100,,E2,,,,,,,,,,,0.000525,0.000007,8-Jan-2024,Balraj Singh and  Jun Chen and Ameenah R. Farhan,2025-08-08
+36,40,Kr,134,19172,4,(27-),128,16650,3,(25-),0,2522,1,100,,,,,,,,,,,,,,,8-Jan-2024,Balraj Singh and  Jun Chen and Ameenah R. Farhan,2025-08-08
+36,40,Kr,135,19741,3,(28-),130,17327,3,(26-),0,2414,1,100,,E2,,,,,,,,,,,0.000595,0.000008,8-Jan-2024,Balraj Singh and  Jun Chen and Ameenah R. Farhan,2025-08-08
+36,40,Kr,136,19950,4,28+,129,17157,3,26+,0,2793,1,100,,E2,,,,,,,,,,,0.000752,0.000011,8-Jan-2024,Balraj Singh and  Jun Chen and Ameenah R. Farhan,2025-08-08
+36,40,Kr,137,20045,4,(28+),131,17550,4,(26+),0,2495,1,100,,,,,,,,,,,,,,,8-Jan-2024,Balraj Singh and  Jun Chen and Ameenah R. Farhan,2025-08-08
+36,40,Kr,138,20538,4,(28-),132,17859,4,(26-),0,2678,1,100,,,,,,,,,,,,,,,8-Jan-2024,Balraj Singh and  Jun Chen and Ameenah R. Farhan,2025-08-08
+36,40,Kr,139,20815,4,(29-),133,18256,3,(27-),0,2558,1,100,,E2,,,,,,,,,,,0.000655,0.000009,8-Jan-2024,Balraj Singh and  Jun Chen and Ameenah R. Farhan,2025-08-08
+36,40,Kr,140,22583,4,(30-),135,19741,3,(28-),0,2842,1,100,,,,,,,,,,,,,,,8-Jan-2024,Balraj Singh and  Jun Chen and Ameenah R. Farhan,2025-08-08
+36,40,Kr,141,22790,4,(30+),137,20045,4,(28+),0,2745,1,100,,,,,,,,,,,,,,,8-Jan-2024,Balraj Singh and  Jun Chen and Ameenah R. Farhan,2025-08-08
+36,40,Kr,142,23157,4,(30+),136,19950,4,28+,0,3207,1,100,,,,,,,,,,,,,,,8-Jan-2024,Balraj Singh and  Jun Chen and Ameenah R. Farhan,2025-08-08
+36,40,Kr,143,23742,4,(31-),139,20815,4,(29-),0,2927,1,100,,,,,,,,,,,,,,,8-Jan-2024,Balraj Singh and  Jun Chen and Ameenah R. Farhan,2025-08-08
+36,40,Kr,144,25868,4,(32-),140,22583,4,(30-),0,3285,1,100,,,,,,,,,,,,,,,8-Jan-2024,Balraj Singh and  Jun Chen and Ameenah R. Farhan,2025-08-08
+36,40,Kr,145,27083,4,(33-),143,23742,4,(31-),0,3341,1,100,,,,,,,,,,,,,,,8-Jan-2024,Balraj Singh and  Jun Chen and Ameenah R. Farhan,2025-08-08
+36,40,Kr,147,966,1,(13+),146,,,(11+),0,966,1,100,,,,,,,,,,,,,,,8-Jan-2024,Balraj Singh and  Jun Chen and Ameenah R. Farhan,2025-08-08
+36,40,Kr,148,2097,1.5,(15+),147,966,1,(13+),0,1131,1,100,,Q,,,,,,,,,,,,,8-Jan-2024,Balraj Singh and  Jun Chen and Ameenah R. Farhan,2025-08-08
+36,40,Kr,149,3390,1.8,(17+),148,2097,1.5,(15+),0,1293,1,100,,Q,,,,,,,,,,,,,8-Jan-2024,Balraj Singh and  Jun Chen and Ameenah R. Farhan,2025-08-08
+36,40,Kr,150,4847,2,(19+),149,3390,1.8,(17+),0,1457,1,100,,Q,,,,,,,,,,,,,8-Jan-2024,Balraj Singh and  Jun Chen and Ameenah R. Farhan,2025-08-08
+36,40,Kr,151,6472.1,2.3,(21+),150,4847,2,(19+),0,1625,1,100,,Q,,,,,,,,,,,,,8-Jan-2024,Balraj Singh and  Jun Chen and Ameenah R. Farhan,2025-08-08
+36,40,Kr,152,8309.1,2.5,(23+),151,6472.1,2.3,(21+),0,1837,1,100,,Q,,,,,,,,,,,,,8-Jan-2024,Balraj Singh and  Jun Chen and Ameenah R. Farhan,2025-08-08
+36,40,Kr,153,10382,3,(25+),152,8309.1,2.5,(23+),0,2073,1,100,,Q,,,,,,,,,,,,,8-Jan-2024,Balraj Singh and  Jun Chen and Ameenah R. Farhan,2025-08-08
+36,40,Kr,154,12696,3,(27+),153,10382,3,(25+),0,2314,1,100,,,,,,,,,,,,,,,8-Jan-2024,Balraj Singh and  Jun Chen and Ameenah R. Farhan,2025-08-08
+36,40,Kr,155,15234,3,(29+),154,12696,3,(27+),0,2538,1,100,,,,,,,,,,,,,,,8-Jan-2024,Balraj Singh and  Jun Chen and Ameenah R. Farhan,2025-08-08

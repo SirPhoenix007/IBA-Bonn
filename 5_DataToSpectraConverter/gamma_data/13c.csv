@@ -1,0 +1,20 @@
+z,n,symbol,start_level_idx,start_level_energy,unc_sle,start_level_jp,end_level_idx,end_level_energy,unc_ele,end_level_jp,gamma_idx,energy,unc_en,relative_intensity,unc_ri,multipolarity,mixing_ratio,unc_mr,b_e1,unc_be1,b_e2,unc_be2,b_m1,unc_bm1,b_m2,unc_bm2,tot_conv_coeff,tce_unc,ensdf_publication_cut-off,ensdf_authors,Extraction_date
+6,7,C,1,3089.451,0.019,1/2+,0,0,,1/2-,0,3089.049,0.02,100,,[E1],,,0.0427,,,,,,,,0.00128,0.00002,1-Aug-2024,J.H. Kelley and  C.G. Sheu and J. E. Purcell,2025-08-08
+6,7,C,2,3684.496,0.022,3/2-,1,3089.451,0.019,1/2+,0,595.22,0.08,0.75,0.03,[E1],,,0.0382,,,,,,,,,,1-Aug-2024,J.H. Kelley and  C.G. Sheu and J. E. Purcell,2025-08-08
+6,7,C,2,3684.496,0.022,3/2-,0,0,,1/2-,1,3684.01,0.06,100,0.03,[M1+E2],-0.094,0.009,,,3.5,,0.384,,,,0.00091,0.000013,1-Aug-2024,J.H. Kelley and  C.G. Sheu and J. E. Purcell,2025-08-08
+6,7,C,3,3853.796,0.021,5/2+,2,3684.496,0.022,3/2-,0,169.3,0.004,58.1,1,[E1],,,0.01065,,,,,,,,0.000147,0.000002,1-Aug-2024,J.H. Kelley and  C.G. Sheu and J. E. Purcell,2025-08-08
+6,7,C,3,3853.796,0.021,5/2+,1,3089.451,0.019,1/2+,1,764.316,0.01,1.92,0.06,[E2],,,,,1.67,,,,,,,,1-Aug-2024,J.H. Kelley and  C.G. Sheu and J. E. Purcell,2025-08-08
+6,7,C,3,3853.796,0.021,5/2+,0,0,,1/2-,2,3854,1,100,1,[E3+M2],0.12,0.03,,,,,,,0.473,,0.000729,0.00001,1-Aug-2024,J.H. Kelley and  C.G. Sheu and J. E. Purcell,2025-08-08
+6,7,C,4,4946.33,0.05,1/2+,2,3684.496,0.022,3/2-,0,1261.74,0.04,47.96,0.65,,,,,,,,,,,,,,1-Aug-2024,J.H. Kelley and  C.G. Sheu and J. E. Purcell,2025-08-08
+6,7,C,4,4946.33,0.05,1/2+,1,3089.451,0.019,1/2+,1,1856.89,0.19,0.24,0.02,,,,,,,,,,,,,,1-Aug-2024,J.H. Kelley and  C.G. Sheu and J. E. Purcell,2025-08-08
+6,7,C,4,4946.33,0.05,1/2+,0,0,,1/2-,2,4945.32,0.06,100,1.4,,,,,,,,,,,,,,1-Aug-2024,J.H. Kelley and  C.G. Sheu and J. E. Purcell,2025-08-08
+6,7,C,6,7492,10,(7/2+),0,0,,1/2-,0,7490,,,,[E3],,,,,,,,,,,,,1-Aug-2024,J.H. Kelley and  C.G. Sheu and J. E. Purcell,2025-08-08
+6,7,C,7,7547,3,5/2-,0,0,,1/2-,0,7545,,,,[E2+M3],0.009,0.006,,,3.2,,,,,,,,1-Aug-2024,J.H. Kelley and  C.G. Sheu and J. E. Purcell,2025-08-08
+6,7,C,10,8866,9,1/2-,0,0,,1/2-,0,8863,,,,[M1],,,,,,,0.374,,,,,,1-Aug-2024,J.H. Kelley and  C.G. Sheu and J. E. Purcell,2025-08-08
+6,7,C,44,15108.7,0.9,3/2-,7,7547,3,5/2-,0,7559,,3.9,,[M1],,,,,,,0.101,,,,,,1-Aug-2024,J.H. Kelley and  C.G. Sheu and J. E. Purcell,2025-08-08
+6,7,C,44,15108.7,0.9,3/2-,2,3684.496,0.022,3/2-,1,11419,,78,10,[M1],,,,,,,0.589,,,,,,1-Aug-2024,J.H. Kelley and  C.G. Sheu and J. E. Purcell,2025-08-08
+6,7,C,44,15108.7,0.9,3/2-,1,3089.451,0.019,1/2+,2,12013,,17.8,3.2,[E1],,,0.0063,,,,,,,,,,1-Aug-2024,J.H. Kelley and  C.G. Sheu and J. E. Purcell,2025-08-08
+6,7,C,44,15108.7,0.9,3/2-,0,0,,1/2-,3,15099,,100,6.5,[M1+E2],0.161,0.017,,,0.51,,0.317,,,,,,1-Aug-2024,J.H. Kelley and  C.G. Sheu and J. E. Purcell,2025-08-08
+6,7,C,73,20520,70,(5/2-),0,0,,1/2-,0,20503,,,,,,,,,,,,,,,,,1-Aug-2024,J.H. Kelley and  C.G. Sheu and J. E. Purcell,2025-08-08
+6,7,C,75,21050,60,,,,,,0,21037,,,,,,,,,,,,,,,,,1-Aug-2024,J.H. Kelley and  C.G. Sheu and J. E. Purcell,2025-08-08
+6,7,C,81,22200,100,LE5/2,0,0,,1/2-,0,22180,,,,,,,,,,,,,,,,,1-Aug-2024,J.H. Kelley and  C.G. Sheu and J. E. Purcell,2025-08-08

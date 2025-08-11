@@ -1,0 +1,5 @@
+z,n,symbol,start_level_idx,start_level_energy,unc_sle,start_level_jp,end_level_idx,end_level_energy,unc_ele,end_level_jp,gamma_idx,energy,unc_en,relative_intensity,unc_ri,multipolarity,mixing_ratio,unc_mr,b_e1,unc_be1,b_e2,unc_be2,b_m1,unc_bm1,b_m2,unc_bm2,tot_conv_coeff,tce_unc,ensdf_publication_cut-off,ensdf_authors,Extraction_date
+47,72,Ag,2,130,,(7/2+ 9/2+ 11/2+),1,0,,(1/2-),0,129.9,0.3,100,,,,,,,,,,,,,,,1-Dec-2008,D. M. SYMOCHKO and  E. BROWNE and  J. K. TULI,2025-08-08
+47,72,Ag,3,256,,(1/2 3/2-),0,0,,(7/2+),0,256.6,0.3,100,,,,,,,,,,,,,,,1-Dec-2008,D. M. SYMOCHKO and  E. BROWNE and  J. K. TULI,2025-08-08
+47,72,Ag,4,326,,(1/2 3/2-),3,256,,(1/2 3/2-),0,69.9,0.3,23,,M1,,,,,,,,,,,1.17,,1-Dec-2008,D. M. SYMOCHKO and  E. BROWNE and  J. K. TULI,2025-08-08
+47,72,Ag,4,326,,(1/2 3/2-),1,0,,(1/2-),1,326.1,0.3,100,,,,,,,,,,,,,,,1-Dec-2008,D. M. SYMOCHKO and  E. BROWNE and  J. K. TULI,2025-08-08

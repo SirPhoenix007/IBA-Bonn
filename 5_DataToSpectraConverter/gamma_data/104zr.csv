@@ -1,0 +1,8 @@
+z,n,symbol,start_level_idx,start_level_energy,unc_sle,start_level_jp,end_level_idx,end_level_energy,unc_ele,end_level_jp,gamma_idx,energy,unc_en,relative_intensity,unc_ri,multipolarity,mixing_ratio,unc_mr,b_e1,unc_be1,b_e2,unc_be2,b_m1,unc_bm1,b_m2,unc_bm2,tot_conv_coeff,tce_unc,ensdf_publication_cut-off,ensdf_authors,Extraction_date
+40,64,Zr,1,139.3,0.3,(2+),0,0,,0+,0,139.9,0.3,,,[E2],,,,,180,,,,,,,,30-Mar-2007,JEAN BLACHOT,2025-08-08
+40,64,Zr,2,452.1,0.4,(4+),1,139.3,0.3,(2+),0,312.2,0.3,,,[E2],,,,,,,,,,,,,30-Mar-2007,JEAN BLACHOT,2025-08-08
+40,64,Zr,3,925.8,0.5,(6+),2,452.1,0.4,(4+),0,473.7,0.3,,,[E2],,,,,,,,,,,,,30-Mar-2007,JEAN BLACHOT,2025-08-08
+40,64,Zr,4,1550.2,0.6,(8+),3,925.8,0.5,(6+),0,624.4,0.3,100,,[E2],,,,,,,,,,,,,30-Mar-2007,JEAN BLACHOT,2025-08-08
+40,64,Zr,5,2315.3,0.6,(10+),4,1550.2,0.6,(8+),0,765.1,0.3,100,,[E2],,,,,,,,,,,,,30-Mar-2007,JEAN BLACHOT,2025-08-08
+40,64,Zr,6,3209.7,0.7,(12+),5,2315.3,0.6,(10+),0,894.4,0.3,100,,[E2],,,,,,,,,,,,,30-Mar-2007,JEAN BLACHOT,2025-08-08
+40,64,Zr,7,4223.9,0.8,(14+),6,3209.7,0.7,(12+),0,1014.2,0.3,100,,[E2],,,,,,,,,,,,,30-Mar-2007,JEAN BLACHOT,2025-08-08

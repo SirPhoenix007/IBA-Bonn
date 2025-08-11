@@ -1,0 +1,6 @@
+z,n,symbol,start_level_idx,start_level_energy,unc_sle,start_level_jp,end_level_idx,end_level_energy,unc_ele,end_level_jp,gamma_idx,energy,unc_en,relative_intensity,unc_ri,multipolarity,mixing_ratio,unc_mr,b_e1,unc_be1,b_e2,unc_be2,b_m1,unc_bm1,b_m2,unc_bm2,tot_conv_coeff,tce_unc,ensdf_publication_cut-off,ensdf_authors,Extraction_date
+26,39,Fe,1,364,,(3/2+),0,0,,(1/2-),0,364,,,,,,,,,,,,,,,,,1-Aug-2009,E. BROWNE and  J. K. TULI,2025-08-08
+26,39,Fe,2,397,,(5/2-),1,364,,(3/2+),0,33,,,,E1,,,,,,,,,,,,,1-Aug-2009,E. BROWNE and  J. K. TULI,2025-08-08
+26,39,Fe,3,402,5,(9/2+),2,397,,(5/2-),0,5,,,,[M2],,,,,,,,,,,,,1-Aug-2009,E. BROWNE and  J. K. TULI,2025-08-08
+26,39,Fe,4,1173.6,,(13/2+),3,402,5,(9/2+),0,771.6,0.7,100,20,,,,,,,,,,,,,,1-Aug-2009,E. BROWNE and  J. K. TULI,2025-08-08
+26,39,Fe,5,2291.9,,,4,1173.6,,(13/2+),0,1118.2,1,100,31,,,,,,,,,,,,,,1-Aug-2009,E. BROWNE and  J. K. TULI,2025-08-08

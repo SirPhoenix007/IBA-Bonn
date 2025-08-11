@@ -1,0 +1,8 @@
+z,n,symbol,start_level_idx,start_level_energy,unc_sle,start_level_jp,end_level_idx,end_level_energy,unc_ele,end_level_jp,gamma_idx,energy,unc_en,relative_intensity,unc_ri,multipolarity,mixing_ratio,unc_mr,b_e1,unc_be1,b_e2,unc_be2,b_m1,unc_bm1,b_m2,unc_bm2,tot_conv_coeff,tce_unc,ensdf_publication_cut-off,ensdf_authors,Extraction_date
+50,53,Sn,1,168,0.1,(7/2+),0,0,,(5/2+),0,168,0.1,100,,D,,,,,,,,,,,,,1-Mar-2009,D. DE FRENNE,2025-08-08
+50,53,Sn,2,1197.2,0.4,,1,168,0.1,(7/2+),0,1029,1,100,,,,,,,,,,,,,,,1-Mar-2009,D. DE FRENNE,2025-08-08
+50,53,Sn,3,1486.2,0.3,(11/2+),2,1197.2,0.4,,0,289,0.2,70,,,,,,,,,,,,,,,1-Mar-2009,D. DE FRENNE,2025-08-08
+50,53,Sn,3,1486.2,0.3,(11/2+),1,168,0.1,(7/2+),1,1318.2,0.3,100,18,(Q),,,,,,,,,,,,,1-Mar-2009,D. DE FRENNE,2025-08-08
+50,53,Sn,4,1775.4,0.4,,3,1486.2,0.3,(11/2+),0,289,0.2,85,,,,,,,,,,,,,,,1-Mar-2009,D. DE FRENNE,2025-08-08
+50,53,Sn,4,1775.4,0.4,,2,1197.2,0.4,,1,578.2,0.2,100,17,,,,,,,,,,,,,,1-Mar-2009,D. DE FRENNE,2025-08-08
+50,53,Sn,5,1784.6,0.4,(13/2+),3,1486.2,0.3,(11/2+),0,298.4,0.1,100,,D,,,,,,,,,,,,,1-Mar-2009,D. DE FRENNE,2025-08-08

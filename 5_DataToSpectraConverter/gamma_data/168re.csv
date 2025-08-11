@@ -1,0 +1,5 @@
+z,n,symbol,start_level_idx,start_level_energy,unc_sle,start_level_jp,end_level_idx,end_level_energy,unc_ele,end_level_jp,gamma_idx,energy,unc_en,relative_intensity,unc_ri,multipolarity,mixing_ratio,unc_mr,b_e1,unc_be1,b_e2,unc_be2,b_m1,unc_bm1,b_m2,unc_bm2,tot_conv_coeff,tce_unc,ensdf_publication_cut-off,ensdf_authors,Extraction_date
+75,93,Re,1,89.7,0.4,,0,0,,(7+),0,89.7,0.4,100,,,,,,,,,,,,,,,15-Jun-2010,CORAL M. BAGLIN,2025-08-08
+75,93,Re,2,162.1,0.2,(8+),0,0,,(7+),0,162.1,0.2,100,,M1+E2,0.99,0.16,,,,,,,,,0.99,0.06,15-Jun-2010,CORAL M. BAGLIN,2025-08-08
+75,93,Re,3,226,0.6,,1,89.7,0.4,,0,136.3,0.4,,,,,,,,,,,,,,,,15-Jun-2010,CORAL M. BAGLIN,2025-08-08
+75,93,Re,4,349.2,0.6,(3),3,226,0.6,,0,123.2,0.2,100,,(E1),,,,,,,,,,,0.224,,15-Jun-2010,CORAL M. BAGLIN,2025-08-08

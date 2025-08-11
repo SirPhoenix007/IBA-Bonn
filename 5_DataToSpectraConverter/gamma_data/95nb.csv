@@ -1,0 +1,16 @@
+z,n,symbol,start_level_idx,start_level_energy,unc_sle,start_level_jp,end_level_idx,end_level_energy,unc_ele,end_level_jp,gamma_idx,energy,unc_en,relative_intensity,unc_ri,multipolarity,mixing_ratio,unc_mr,b_e1,unc_be1,b_e2,unc_be2,b_m1,unc_bm1,b_m2,unc_bm2,tot_conv_coeff,tce_unc,ensdf_publication_cut-off,ensdf_authors,Extraction_date
+41,54,Nb,1,235.69,0.02,1/2-,0,0,,9/2+,0,235.69,0.02,100,,M4,,,,,,,,,,,2.78,,30-Jun-2009,S. K. Basu and  G. Mukherjee and  A. A. Sonzogni,2025-08-08
+41,54,Nb,2,724.195,0.004,7/2+,0,0,,9/2+,0,724.192,0.004,100,,M1+E2,-0.11,0.02,,,,,,,,,0.001496,0.000021,30-Jun-2009,S. K. Basu and  G. Mukherjee and  A. A. Sonzogni,2025-08-08
+41,54,Nb,4,756.728,0.012,7/2+,0,0,,9/2+,0,756.725,0.012,100,,M1+E2,0.14,0.05,,,,,,,,,0.001356,0.000019,30-Jun-2009,S. K. Basu and  G. Mukherjee and  A. A. Sonzogni,2025-08-08
+41,54,Nb,7,824.7,0.2,(13/2+),0,0,,9/2+,0,824.7,0.2,100,,,,,,,,,,,,,,,30-Jun-2009,S. K. Basu and  G. Mukherjee and  A. A. Sonzogni,2025-08-08
+41,54,Nb,26,1649.4,0.3,(17/2+),7,824.7,0.2,(13/2+),0,824.7,0.2,100,,,,,,,,,,,,,,,30-Jun-2009,S. K. Basu and  G. Mukherjee and  A. A. Sonzogni,2025-08-08
+41,54,Nb,46,2328.4,0.3,(21/2+),26,1649.4,0.3,(17/2+),0,679,0.2,100,,,,,,,,,,,,,,,30-Jun-2009,S. K. Basu and  G. Mukherjee and  A. A. Sonzogni,2025-08-08
+41,54,Nb,54,2522,0.4,(21/2+),26,1649.4,0.3,(17/2+),0,872.6,0.3,100,,,,,,,,,,,,,,,30-Jun-2009,S. K. Basu and  G. Mukherjee and  A. A. Sonzogni,2025-08-08
+41,54,Nb,74,3198.3,0.4,(25/2+),54,2522,0.4,(21/2+),0,676.2,0.3,17,7,,,,,,,,,,,,,,30-Jun-2009,S. K. Basu and  G. Mukherjee and  A. A. Sonzogni,2025-08-08
+41,54,Nb,74,3198.3,0.4,(25/2+),46,2328.4,0.3,(21/2+),1,869.9,0.2,100,11,,,,,,,,,,,,,,30-Jun-2009,S. K. Basu and  G. Mukherjee and  A. A. Sonzogni,2025-08-08
+41,54,Nb,86,4070.9,0.5,(29/2+),74,3198.3,0.4,(25/2+),0,872.6,0.3,100,,,,,,,,,,,,,,,30-Jun-2009,S. K. Basu and  G. Mukherjee and  A. A. Sonzogni,2025-08-08
+41,54,Nb,92,5140,0.5,(33/2+),86,4070.9,0.5,(29/2+),0,1069.1,0.2,100,,,,,,,,,,,,,,,30-Jun-2009,S. K. Basu and  G. Mukherjee and  A. A. Sonzogni,2025-08-08
+41,54,Nb,95,5643.4,0.6,,92,5140,0.5,(33/2+),0,503.4,0.2,100,,,,,,,,,,,,,,,30-Jun-2009,S. K. Basu and  G. Mukherjee and  A. A. Sonzogni,2025-08-08
+41,54,Nb,97,6487.7,0.6,,95,5643.4,0.6,,0,844.3,0.3,100,,,,,,,,,,,,,,,30-Jun-2009,S. K. Basu and  G. Mukherjee and  A. A. Sonzogni,2025-08-08
+41,54,Nb,98,7493.3,0.7,,97,6487.7,0.6,,0,1005.6,0.3,100,,,,,,,,,,,,,,,30-Jun-2009,S. K. Basu and  G. Mukherjee and  A. A. Sonzogni,2025-08-08
+41,54,Nb,99,8695.2,0.7,,98,7493.3,0.7,,0,1201.9,0.2,100,,,,,,,,,,,,,,,30-Jun-2009,S. K. Basu and  G. Mukherjee and  A. A. Sonzogni,2025-08-08

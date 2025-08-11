@@ -1,0 +1,9 @@
+z,n,symbol,start_level_idx,start_level_energy,unc_sle,start_level_jp,end_level_idx,end_level_energy,unc_ele,end_level_jp,gamma_idx,energy,unc_en,relative_intensity,unc_ri,multipolarity,mixing_ratio,unc_mr,b_e1,unc_be1,b_e2,unc_be2,b_m1,unc_bm1,b_m2,unc_bm2,tot_conv_coeff,tce_unc,ensdf_publication_cut-off,ensdf_authors,Extraction_date
+75,90,Re,2,385,1,(13/2-),1,48,26,(11/2-),0,337,,,,,,,,,,,,,,,,,31-Oct-2022,Balraj Singh and Jun Chen,2025-08-08
+75,90,Re,3,587,1,(15/2-),2,385,1,(13/2-),0,202,,,,,,,,,,,,,,,,,31-Oct-2022,Balraj Singh and Jun Chen,2025-08-08
+75,90,Re,3,587,1,(15/2-),1,48,26,(11/2-),1,539,,,,,,,,,,,,,,,,,31-Oct-2022,Balraj Singh and Jun Chen,2025-08-08
+75,90,Re,4,1012,1,(17/2-),3,587,1,(15/2-),0,425,,,,,,,,,,,,,,,,,31-Oct-2022,Balraj Singh and Jun Chen,2025-08-08
+75,90,Re,4,1012,1,(17/2-),2,385,1,(13/2-),1,627,,,,,,,,,,,,,,,,,31-Oct-2022,Balraj Singh and Jun Chen,2025-08-08
+75,90,Re,5,1259,1,(19/2-),4,1012,1,(17/2-),0,247,,,,,,,,,,,,,,,,,31-Oct-2022,Balraj Singh and Jun Chen,2025-08-08
+75,90,Re,5,1259,1,(19/2-),3,587,1,(15/2-),1,672,,,,,,,,,,,,,,,,,31-Oct-2022,Balraj Singh and Jun Chen,2025-08-08
+75,90,Re,6,2019,2,(23/2-),5,1259,1,(19/2-),0,760,,,,,,,,,,,,,,,,,31-Oct-2022,Balraj Singh and Jun Chen,2025-08-08

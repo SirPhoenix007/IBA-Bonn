@@ -1,0 +1,7 @@
+z,n,symbol,start_level_idx,start_level_energy,unc_sle,start_level_jp,end_level_idx,end_level_energy,unc_ele,end_level_jp,gamma_idx,energy,unc_en,relative_intensity,unc_ri,multipolarity,mixing_ratio,unc_mr,b_e1,unc_be1,b_e2,unc_be2,b_m1,unc_bm1,b_m2,unc_bm2,tot_conv_coeff,tce_unc,ensdf_publication_cut-off,ensdf_authors,Extraction_date
+62,102,Sm,1,69,1,(2+),0,0,,0+,0,69,1,100,,[E2],,,,,,,,,,,9.4,0.6,30-Nov-2017,BALRAJ SINGH AND JUN CHEN{+#},2025-08-08
+62,102,Sm,2,224.9,1.1,(4+),1,69,1,(2+),0,155.9,0.4,100,,(E2),,,,,,,,,,,0.332,0.006,30-Nov-2017,BALRAJ SINGH AND JUN CHEN{+#},2025-08-08
+62,102,Sm,3,467.2,1.1,(6+),2,224.9,1.1,(4+),0,242.2,0.3,100,,(E2),,,,,,,,,,,0.0723,,30-Nov-2017,BALRAJ SINGH AND JUN CHEN{+#},2025-08-08
+62,102,Sm,4,1136.1,1.1,(5+),3,467.2,1.1,(6+),0,668.8,0.4,49,18,,,,,,,,,,,,,,30-Nov-2017,BALRAJ SINGH AND JUN CHEN{+#},2025-08-08
+62,102,Sm,4,1136.1,1.1,(5+),2,224.9,1.1,(4+),1,911.3,0.3,100,28,,,,,,,,,,,,,,30-Nov-2017,BALRAJ SINGH AND JUN CHEN{+#},2025-08-08
+62,102,Sm,5,1485.5,1.2,(6-),4,1136.1,1.1,(5+),0,349.4,0.2,100,,(E1),,,0.0000000088,,,,,,,,0.00576,,30-Nov-2017,BALRAJ SINGH AND JUN CHEN{+#},2025-08-08

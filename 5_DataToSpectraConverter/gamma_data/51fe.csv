@@ -1,0 +1,22 @@
+z,n,symbol,start_level_idx,start_level_energy,unc_sle,start_level_jp,end_level_idx,end_level_energy,unc_ele,end_level_jp,gamma_idx,energy,unc_en,relative_intensity,unc_ri,multipolarity,mixing_ratio,unc_mr,b_e1,unc_be1,b_e2,unc_be2,b_m1,unc_bm1,b_m2,unc_bm2,tot_conv_coeff,tce_unc,ensdf_publication_cut-off,ensdf_authors,Extraction_date
+26,25,Fe,1,253.5,0.5,(7/2-),0,0,,5/2-,0,253.5,0.5,100,,D,,,,,,,,,,,,,1-Mar-2016,Wang Jimin and Huang Xiaolong,2025-08-08
+26,25,Fe,2,1146.5,1.1,(9/2-),1,253.5,0.5,(7/2-),0,893,2,100,5,D,,,,,,,,,,,,,1-Mar-2016,Wang Jimin and Huang Xiaolong,2025-08-08
+26,25,Fe,2,1146.5,1.1,(9/2-),0,0,,5/2-,1,1146,3,11.9,2.4,,,,,,,,,,,,,,1-Mar-2016,Wang Jimin and Huang Xiaolong,2025-08-08
+26,25,Fe,4,1516.5,1,(11/2-),2,1146.5,1.1,(9/2-),0,370,0.5,44,3,D,,,,,,,,,,,,,1-Mar-2016,Wang Jimin and Huang Xiaolong,2025-08-08
+26,25,Fe,4,1516.5,1,(11/2-),1,253.5,0.5,(7/2-),1,1263,1,100,5,Q,,,,,,,,,,,,,1-Mar-2016,Wang Jimin and Huang Xiaolong,2025-08-08
+26,25,Fe,8,2953.4,2.4,(13/2-),4,1516.5,1,(11/2-),0,1437,4,100,5,D,,,,,,,,,,,,,1-Mar-2016,Wang Jimin and Huang Xiaolong,2025-08-08
+26,25,Fe,8,2953.4,2.4,(13/2-),2,1146.5,1.1,(9/2-),1,1807,5,65,5,Q,,,,,,,,,,,,,1-Mar-2016,Wang Jimin and Huang Xiaolong,2025-08-08
+26,25,Fe,11,3275.7,2.4,(15/2-),8,2953.4,2.4,(13/2-),0,322.3,0.9,11.1,1.9,D,,,,,,,,,,,,,1-Mar-2016,Wang Jimin and Huang Xiaolong,2025-08-08
+26,25,Fe,11,3275.7,2.4,(15/2-),4,1516.5,1,(11/2-),1,1759,3,100,6,Q,,,,,,,,,,,,,1-Mar-2016,Wang Jimin and Huang Xiaolong,2025-08-08
+26,25,Fe,13,3589.7,2.4,(17/2-),11,3275.7,2.4,(15/2-),0,314,0.5,91,5,D,,,,,,,,,,,,,1-Mar-2016,Wang Jimin and Huang Xiaolong,2025-08-08
+26,25,Fe,13,3589.7,2.4,(17/2-),8,2953.4,2.4,(13/2-),1,636.3,0.7,100,5,Q,,,,,,,,,,,,,1-Mar-2016,Wang Jimin and Huang Xiaolong,2025-08-08
+26,25,Fe,15,4097.9,2.5,(19/2-),13,3589.7,2.4,(17/2-),0,508.2,0.3,100,,D,,,,,,,,,,,,,1-Mar-2016,Wang Jimin and Huang Xiaolong,2025-08-08
+26,25,Fe,17,5608,3,(21/2-),15,4097.9,2.5,(19/2-),0,1510,0.8,100,,D,,,,,,,,,,,,,1-Mar-2016,Wang Jimin and Huang Xiaolong,2025-08-08
+26,25,Fe,18,6492,3,(23/2-),17,5608,3,(21/2-),0,883.9,0.5,100,4,D,,,,,,,,,,,,,1-Mar-2016,Wang Jimin and Huang Xiaolong,2025-08-08
+26,25,Fe,18,6492,3,(23/2-),15,4097.9,2.5,(19/2-),1,2394,1,24,3,,,,,,,,,,,,,,1-Mar-2016,Wang Jimin and Huang Xiaolong,2025-08-08
+26,25,Fe,19,7269,3,(27/2-),18,6492,3,(23/2-),0,777.2,0.4,100,,E2,,,,,3.68,,,,,,,,1-Mar-2016,Wang Jimin and Huang Xiaolong,2025-08-08
+26,25,Fe,20,7933,3,(25/2-),19,7269,3,(27/2-),0,664,2,44,22,,,,,,,,,,,,,,1-Mar-2016,Wang Jimin and Huang Xiaolong,2025-08-08
+26,25,Fe,20,7933,3,(25/2-),18,6492,3,(23/2-),1,1441,3,100,56,,,,,,,,,,,,,,1-Mar-2016,Wang Jimin and Huang Xiaolong,2025-08-08
+26,25,Fe,21,11468,7,(29/2-),19,7269,3,(27/2-),0,4199,6,100,,(M1+E2),0.2,,,,,,,,,,,,1-Mar-2016,Wang Jimin and Huang Xiaolong,2025-08-08
+26,25,Fe,22,11712,14,(29/2-),19,7269,3,(27/2-),0,4443,13,100,,,,,,,,,,,,,,,1-Mar-2016,Wang Jimin and Huang Xiaolong,2025-08-08
+26,25,Fe,23,12650,11,(31/2-),19,7269,3,(27/2-),0,5381,10,100,,,,,,,,,,,,,,,1-Mar-2016,Wang Jimin and Huang Xiaolong,2025-08-08

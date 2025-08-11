@@ -1,0 +1,13 @@
+z,n,symbol,start_level_idx,start_level_energy,unc_sle,start_level_jp,end_level_idx,end_level_energy,unc_ele,end_level_jp,gamma_idx,energy,unc_en,relative_intensity,unc_ri,multipolarity,mixing_ratio,unc_mr,b_e1,unc_be1,b_e2,unc_be2,b_m1,unc_bm1,b_m2,unc_bm2,tot_conv_coeff,tce_unc,ensdf_publication_cut-off,ensdf_authors,Extraction_date
+79,96,Au,2,887.5,,(13/2-),1,0,,(11/2-),0,887.5,,100,,,,,,,,,,,,,,,1-Jun-2004,M. SHAMSUZZOHA BASUNIA,2025-08-08
+79,96,Au,3,976.7,,(13/2+),2,887.5,,(13/2-),0,89.4,,,,E1,,,,,,,,,,,,,1-Jun-2004,M. SHAMSUZZOHA BASUNIA,2025-08-08
+79,96,Au,3,976.7,,(13/2+),1,0,,(11/2-),1,976.7,,100,,,,,,,,,,,,,,,1-Jun-2004,M. SHAMSUZZOHA BASUNIA,2025-08-08
+79,96,Au,4,1270.9,,(17/2+),3,976.7,,(13/2+),0,294.2,,100,,,,,,,,,,,,,,,1-Jun-2004,M. SHAMSUZZOHA BASUNIA,2025-08-08
+79,96,Au,5,1593.8,,(21/2+),4,1270.9,,(17/2+),0,322.9,,100,,,,,,,,,,,,,,,1-Jun-2004,M. SHAMSUZZOHA BASUNIA,2025-08-08
+79,96,Au,6,1973.9,,(25/2+),5,1593.8,,(21/2+),0,380.1,,100,,,,,,,,,,,,,,,1-Jun-2004,M. SHAMSUZZOHA BASUNIA,2025-08-08
+79,96,Au,7,2422.1,,(29/2+),6,1973.9,,(25/2+),0,448.2,,100,,,,,,,,,,,,,,,1-Jun-2004,M. SHAMSUZZOHA BASUNIA,2025-08-08
+79,96,Au,8,2935.8,,(33/2+),7,2422.1,,(29/2+),0,513.7,,100,,,,,,,,,,,,,,,1-Jun-2004,M. SHAMSUZZOHA BASUNIA,2025-08-08
+79,96,Au,9,3509.8,,(37/2+),8,2935.8,,(33/2+),0,574,,100,,,,,,,,,,,,,,,1-Jun-2004,M. SHAMSUZZOHA BASUNIA,2025-08-08
+79,96,Au,10,4134.4,,(41/2+),9,3509.8,,(37/2+),0,624.6,,100,,,,,,,,,,,,,,,1-Jun-2004,M. SHAMSUZZOHA BASUNIA,2025-08-08
+79,96,Au,11,4778.1,,(45/2+),10,4134.4,,(41/2+),0,643.7,,100,,,,,,,,,,,,,,,1-Jun-2004,M. SHAMSUZZOHA BASUNIA,2025-08-08
+79,96,Au,12,5430.1,,(49/2+),11,4778.1,,(45/2+),0,652,,100,,,,,,,,,,,,,,,1-Jun-2004,M. SHAMSUZZOHA BASUNIA,2025-08-08

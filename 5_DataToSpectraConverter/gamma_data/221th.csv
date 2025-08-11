@@ -1,0 +1,23 @@
+z,n,symbol,start_level_idx,start_level_energy,unc_sle,start_level_jp,end_level_idx,end_level_energy,unc_ele,end_level_jp,gamma_idx,energy,unc_en,relative_intensity,unc_ri,multipolarity,mixing_ratio,unc_mr,b_e1,unc_be1,b_e2,unc_be2,b_m1,unc_bm1,b_m2,unc_bm2,tot_conv_coeff,tce_unc,ensdf_publication_cut-off,ensdf_authors,Extraction_date
+90,131,Th,2,250.9,0.3,(11/2+),0,0,,(7/2+),0,250.9,0.3,100,,E2,,,,,,,,,,,0.304,,15-Jan-2007,Ashok Jain and  Sukhjeet Singh and  Suresh Kumar and  Jagdish Tuli,2025-08-08
+90,131,Th,3,488,0.5,(13/2-),2,250.9,0.3,(11/2+),0,237.1,0.3,100,,E1,,,,,,,,,,,0.064,,15-Jan-2007,Ashok Jain and  Sukhjeet Singh and  Suresh Kumar and  Jagdish Tuli,2025-08-08
+90,131,Th,4,572.8,0.5,(15/2+),3,488,0.5,(13/2-),0,84.8,0.3,58,7,E1,,,,,,,,,,,0.184,,15-Jan-2007,Ashok Jain and  Sukhjeet Singh and  Suresh Kumar and  Jagdish Tuli,2025-08-08
+90,131,Th,4,572.8,0.5,(15/2+),2,250.9,0.3,(11/2+),1,321.9,0.3,100,5,E2,,,,,,,,,,,0.139,,15-Jan-2007,Ashok Jain and  Sukhjeet Singh and  Suresh Kumar and  Jagdish Tuli,2025-08-08
+90,131,Th,5,746.9,0.6,(17/2-),4,572.8,0.5,(15/2+),0,174.1,0.3,100,4,E1,,,,,,,,,,,0.132,,15-Jan-2007,Ashok Jain and  Sukhjeet Singh and  Suresh Kumar and  Jagdish Tuli,2025-08-08
+90,131,Th,5,746.9,0.6,(17/2-),3,488,0.5,(13/2-),1,258.9,0.3,7.3,1.1,[E2],,,,,,,,,,,0.274,,15-Jan-2007,Ashok Jain and  Sukhjeet Singh and  Suresh Kumar and  Jagdish Tuli,2025-08-08
+90,131,Th,6,946.5,0.6,(19/2+),5,746.9,0.6,(17/2-),0,199.6,0.3,100,6,E1,,,,,,,,,,,0.0957,,15-Jan-2007,Ashok Jain and  Sukhjeet Singh and  Suresh Kumar and  Jagdish Tuli,2025-08-08
+90,131,Th,6,946.5,0.6,(19/2+),4,572.8,0.5,(15/2+),1,373.6,0.5,27,9,E2,,,,,,,,,,,0.0911,,15-Jan-2007,Ashok Jain and  Sukhjeet Singh and  Suresh Kumar and  Jagdish Tuli,2025-08-08
+90,131,Th,7,1078.6,0.7,(21/2-),6,946.5,0.6,(19/2+),0,132.1,0.3,100,3,E1,,,,,,,,,,,0.257,,15-Jan-2007,Ashok Jain and  Sukhjeet Singh and  Suresh Kumar and  Jagdish Tuli,2025-08-08
+90,131,Th,7,1078.6,0.7,(21/2-),5,746.9,0.6,(17/2-),1,332.1,0.3,36,6,[E2],,,,,,,,,,,0.127,,15-Jan-2007,Ashok Jain and  Sukhjeet Singh and  Suresh Kumar and  Jagdish Tuli,2025-08-08
+90,131,Th,8,1356,0.8,(23/2+),7,1078.6,0.7,(21/2-),0,277.4,0.3,100,6,E1,,,,,,,,,,,0.0447,,15-Jan-2007,Ashok Jain and  Sukhjeet Singh and  Suresh Kumar and  Jagdish Tuli,2025-08-08
+90,131,Th,8,1356,0.8,(23/2+),6,946.5,0.6,(19/2+),1,409.5,0.3,9,4,[E2],,,,,,,,,,,0.0713,,15-Jan-2007,Ashok Jain and  Sukhjeet Singh and  Suresh Kumar and  Jagdish Tuli,2025-08-08
+90,131,Th,9,1472,0.9,(25/2-),8,1356,0.8,(23/2+),0,116,0.3,100,7,E1,,,,,,,,,,,0.352,,15-Jan-2007,Ashok Jain and  Sukhjeet Singh and  Suresh Kumar and  Jagdish Tuli,2025-08-08
+90,131,Th,9,1472,0.9,(25/2-),7,1078.6,0.7,(21/2-),1,393.3,0.3,87,7,E2,,,,,,,,,,,0.0793,,15-Jan-2007,Ashok Jain and  Sukhjeet Singh and  Suresh Kumar and  Jagdish Tuli,2025-08-08
+90,131,Th,10,1776.4,0.9,(27/2+),9,1472,0.9,(25/2-),0,304.4,0.3,100,9,E1,,,,,,,,,,,0.0363,,15-Jan-2007,Ashok Jain and  Sukhjeet Singh and  Suresh Kumar and  Jagdish Tuli,2025-08-08
+90,131,Th,10,1776.4,0.9,(27/2+),8,1356,0.8,(23/2+),1,420.3,1,13.64,,[E2],,,,,,,,,,,0.0666,,15-Jan-2007,Ashok Jain and  Sukhjeet Singh and  Suresh Kumar and  Jagdish Tuli,2025-08-08
+90,131,Th,11,1935.4,1,(29/2-),10,1776.4,0.9,(27/2+),0,159,0.3,93,15,E1,,,,,,,,,,,0.165,,15-Jan-2007,Ashok Jain and  Sukhjeet Singh and  Suresh Kumar and  Jagdish Tuli,2025-08-08
+90,131,Th,11,1935.4,1,(29/2-),9,1472,0.9,(25/2-),1,463.5,0.5,100,15,E2,,,,,,,,,,,0.0521,,15-Jan-2007,Ashok Jain and  Sukhjeet Singh and  Suresh Kumar and  Jagdish Tuli,2025-08-08
+90,131,Th,12,2251.5,1.1,(31/2+),11,1935.4,1,(29/2-),0,316.1,0.3,100,17,E1,,,,,,,,,,,0.0334,,15-Jan-2007,Ashok Jain and  Sukhjeet Singh and  Suresh Kumar and  Jagdish Tuli,2025-08-08
+90,131,Th,12,2251.5,1.1,(31/2+),10,1776.4,0.9,(27/2+),1,475,1.1,16.67,,[E2],,,,,,,,,,,0.0491,,15-Jan-2007,Ashok Jain and  Sukhjeet Singh and  Suresh Kumar and  Jagdish Tuli,2025-08-08
+90,131,Th,13,2421.5,1.1,(33/2-),12,2251.5,1.1,(31/2+),0,170.4,0.3,26,4,[E1],,,,,,,,,,,0.1396,,15-Jan-2007,Ashok Jain and  Sukhjeet Singh and  Suresh Kumar and  Jagdish Tuli,2025-08-08
+90,131,Th,13,2421.5,1.1,(33/2-),11,1935.4,1,(29/2-),1,485.7,0.3,100,12,[E2],,,,,,,,,,,0.0465,,15-Jan-2007,Ashok Jain and  Sukhjeet Singh and  Suresh Kumar and  Jagdish Tuli,2025-08-08

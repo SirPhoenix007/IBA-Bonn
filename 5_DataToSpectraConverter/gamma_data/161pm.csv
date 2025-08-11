@@ -1,0 +1,8 @@
+z,n,symbol,start_level_idx,start_level_energy,unc_sle,start_level_jp,end_level_idx,end_level_energy,unc_ele,end_level_jp,gamma_idx,energy,unc_en,relative_intensity,unc_ri,multipolarity,mixing_ratio,unc_mr,b_e1,unc_be1,b_e2,unc_be2,b_m1,unc_bm1,b_m2,unc_bm2,tot_conv_coeff,tce_unc,ensdf_publication_cut-off,ensdf_authors,Extraction_date
+61,100,Pm,1,61.5,0.5,(7/2-),0,0,,(5/2-),0,61.5,0.5,,,,,,,,,,,,,,,,20-Feb-2017,FILIP G. KONDEV,2025-08-08
+61,100,Pm,2,141.7,0.7,(9/2-),1,61.5,0.5,(7/2-),0,80.2,0.5,,,,,,,,,,,,,,,,20-Feb-2017,FILIP G. KONDEV,2025-08-08
+61,100,Pm,3,238.4,0.8,(11/2-),2,141.7,0.7,(9/2-),0,96.7,0.5,,,,,,,,,,,,,,,,20-Feb-2017,FILIP G. KONDEV,2025-08-08
+61,100,Pm,3,238.4,0.8,(11/2-),1,61.5,0.5,(7/2-),1,177,1,,,,,,,,,,,,,,,,20-Feb-2017,FILIP G. KONDEV,2025-08-08
+61,100,Pm,4,356.7,0.9,(13/2-),3,238.4,0.8,(11/2-),0,118.2,0.5,,,,,,,,,,,,,,,,20-Feb-2017,FILIP G. KONDEV,2025-08-08
+61,100,Pm,5,965.9,0.9,(13/2+),4,356.7,0.9,(13/2-),0,609.2,0.5,,,,,,,,,,,,,,,,20-Feb-2017,FILIP G. KONDEV,2025-08-08
+61,100,Pm,5,965.9,0.9,(13/2+),3,238.4,0.8,(11/2-),1,727.5,0.5,,,,,,,,,,,,,,,,20-Feb-2017,FILIP G. KONDEV,2025-08-08

@@ -1,0 +1,5 @@
+z,n,symbol,start_level_idx,start_level_energy,unc_sle,start_level_jp,end_level_idx,end_level_energy,unc_ele,end_level_jp,gamma_idx,energy,unc_en,relative_intensity,unc_ri,multipolarity,mixing_ratio,unc_mr,b_e1,unc_be1,b_e2,unc_be2,b_m1,unc_bm1,b_m2,unc_bm2,tot_conv_coeff,tce_unc,ensdf_publication_cut-off,ensdf_authors,Extraction_date
+32,51,Ge,1,247.2,0.3,1/2+,0,0,,(5/2)+,0,247.2,0.3,100,,,,,,,,,,,,,,,31-Dec-2014,E.A. MCCUTCHAN,2025-08-08
+32,51,Ge,2,1045.52,0.2,,1,247.2,0.3,1/2+,0,798.6,1,17,8,,,,,,,,,,,,,,31-Dec-2014,E.A. MCCUTCHAN,2025-08-08
+32,51,Ge,2,1045.52,0.2,,0,0,,(5/2)+,1,1045.5,0.2,100,15,,,,,,,,,,,,,,31-Dec-2014,E.A. MCCUTCHAN,2025-08-08
+32,51,Ge,3,1237.97,0.13,,0,0,,(5/2)+,0,1237.96,0.13,100,,,,,,,,,,,,,,,31-Dec-2014,E.A. MCCUTCHAN,2025-08-08

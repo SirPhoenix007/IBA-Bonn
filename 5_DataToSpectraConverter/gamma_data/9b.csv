@@ -1,0 +1,7 @@
+z,n,symbol,start_level_idx,start_level_energy,unc_sle,start_level_jp,end_level_idx,end_level_energy,unc_ele,end_level_jp,gamma_idx,energy,unc_en,relative_intensity,unc_ri,multipolarity,mixing_ratio,unc_mr,b_e1,unc_be1,b_e2,unc_be2,b_m1,unc_bm1,b_m2,unc_bm2,tot_conv_coeff,tce_unc,ensdf_publication_cut-off,ensdf_authors,Extraction_date
+5,4,B,10,14655,2.5,3/2-,4,2780,160,1/2-,0,11870,160,16,9.3,M1,,,,,,,0.033,,,,,,31-Mar-2004,J.H. KELLEY and  C.G. SHEU and  J.L. GODWIN and  ET AL.,2025-08-08
+5,4,B,10,14655,2.5,3/2-,2,2345,11,5/2-,1,12301,11,100,11,M1,,,,,,,0.186,,,,,,31-Mar-2004,J.H. KELLEY and  C.G. SHEU and  J.L. GODWIN and  ET AL.,2025-08-08
+5,4,B,10,14655,2.5,3/2-,1,1500,,,2,13145,,4.1,,E1,,,0.00045,,,,,,,,,,31-Mar-2004,J.H. KELLEY and  C.G. SHEU and  J.L. GODWIN and  ET AL.,2025-08-08
+5,4,B,10,14655,2.5,3/2-,0,0,,3/2-,3,14642.2,2.5,95.9,8.8,M1,,,,,,,0.105,,,,,,31-Mar-2004,J.H. KELLEY and  C.G. SHEU and  J.L. GODWIN and  ET AL.,2025-08-08
+5,4,B,16,17076,4,,2,2345,11,5/2-,0,14718,11,,,,,,,,,,,,,,,,31-Mar-2004,J.H. KELLEY and  C.G. SHEU and  J.L. GODWIN and  ET AL.,2025-08-08
+5,4,B,16,17076,4,,0,0,,3/2-,1,17059,4,,,,,,,,,,,,,,,,31-Mar-2004,J.H. KELLEY and  C.G. SHEU and  J.L. GODWIN and  ET AL.,2025-08-08

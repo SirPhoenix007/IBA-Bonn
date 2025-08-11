@@ -9,4 +9,4 @@ make_sd; 7; command=make_sd; attach=ldetector; name=PIXE; particle=gamma; attrib
 particle_source; 4; command=particle_source; particle=alpha; mono_e=true; shape=beam; energy=30.0; sigma=0.0; x_pos=0; y_pos=0.0; z_pos=-50.0; x_facing=0; y_facing=0; z_facing=1; sigma_r=1; atomic_number=0; atomic_mass=0; charge=0; excitation=0; 
 prerun_macro; 2; command=prerun_macro; content=/custom/ana/setOutFolder test_geo_output; 
 prerun_macro; 2; command=prerun_macro; content=/custom/ana/setRunName BonnPIXE2_Blade15_Front; 
-no_macro_f; 1; command=no_macro_f; event_count=300000000000.0; thread_count=10; 
+no_macro_f; 1; command=no_macro_f; event_count=100000000.0; thread_count=12; 

@@ -1,0 +1,21 @@
+z,n,symbol,start_level_idx,start_level_energy,unc_sle,start_level_jp,end_level_idx,end_level_energy,unc_ele,end_level_jp,gamma_idx,energy,unc_en,relative_intensity,unc_ri,multipolarity,mixing_ratio,unc_mr,b_e1,unc_be1,b_e2,unc_be2,b_m1,unc_bm1,b_m2,unc_bm2,tot_conv_coeff,tce_unc,ensdf_publication_cut-off,ensdf_authors,Extraction_date
+98,154,Cf,1,45.72,0.05,2+,0,0,,0+,0,45.72,0.05,100,,E2,,,,,349,,,,,,920,50,1-Jan-2021,A.M. MATTERA and  S. ZHU and  A.B. HAYES and  E.A. MCCUTCHAN,2025-08-08
+98,154,Cf,2,151.73,0.06,4+,1,45.72,0.05,2+,0,106.02,0.05,100,,E2,,,,,,,,,,,16.97,0.25,1-Jan-2021,A.M. MATTERA and  S. ZHU and  A.B. HAYES and  E.A. MCCUTCHAN,2025-08-08
+98,154,Cf,3,316.23,0.12,6+,2,151.73,0.06,4+,0,164.5,0.1,100,,E2,,,,,,,,,,,2.49,0.11,1-Jan-2021,A.M. MATTERA and  S. ZHU and  A.B. HAYES and  E.A. MCCUTCHAN,2025-08-08
+98,154,Cf,4,536.6,0.3,8+,3,316.23,0.12,6+,0,220.4,0.3,100,,E2,,,,,,,,,,,0.791,0.032,1-Jan-2021,A.M. MATTERA and  S. ZHU and  A.B. HAYES and  E.A. MCCUTCHAN,2025-08-08
+98,154,Cf,5,804.82,0.07,(2+),1,45.72,0.05,2+,0,759.1,0.1,100,8,[E2],,,,,,,,,,,0.0265,0.0007,1-Jan-2021,A.M. MATTERA and  S. ZHU and  A.B. HAYES and  E.A. MCCUTCHAN,2025-08-08
+98,154,Cf,5,804.82,0.07,(2+),0,0,,0+,1,804.8,0.1,77,5,[E2],,,,,,,,,,,0.0236,0.0006,1-Jan-2021,A.M. MATTERA and  S. ZHU and  A.B. HAYES and  E.A. MCCUTCHAN,2025-08-08
+98,154,Cf,6,809.2,0.6,10+,4,536.6,0.3,8+,0,272.6,0.5,100,,E2,,,,,,,,,,,0.373,0.014,1-Jan-2021,A.M. MATTERA and  S. ZHU and  A.B. HAYES and  E.A. MCCUTCHAN,2025-08-08
+98,154,Cf,7,830.81,0.07,(2-),1,45.72,0.05,2+,0,785.1,0.1,100,,[E1],,,,,,,,,,,0.00719,0.00016,1-Jan-2021,A.M. MATTERA and  S. ZHU and  A.B. HAYES and  E.A. MCCUTCHAN,2025-08-08
+98,154,Cf,8,845.72,0.09,(3+),2,151.73,0.06,4+,0,694,0.1,30.9,2.1,,,,,,,,,,,,,,1-Jan-2021,A.M. MATTERA and  S. ZHU and  A.B. HAYES and  E.A. MCCUTCHAN,2025-08-08
+98,154,Cf,8,845.72,0.09,(3+),1,45.72,0.05,2+,1,800,0.1,100,7,,,,,,,,,,,,,,1-Jan-2021,A.M. MATTERA and  S. ZHU and  A.B. HAYES and  E.A. MCCUTCHAN,2025-08-08
+98,154,Cf,9,867.52,0.07,(3-),2,151.73,0.06,4+,0,715.8,0.1,100,6,[E1],,,,,,,,,,,0.00847,0.00019,1-Jan-2021,A.M. MATTERA and  S. ZHU and  A.B. HAYES and  E.A. MCCUTCHAN,2025-08-08
+98,154,Cf,9,867.52,0.07,(3-),1,45.72,0.05,2+,1,821.8,0.1,40,3,[E1],,,,,,,,,,,0.00664,0.00015,1-Jan-2021,A.M. MATTERA and  S. ZHU and  A.B. HAYES and  E.A. MCCUTCHAN,2025-08-08
+98,154,Cf,10,900.33,0.25,(4+),2,151.73,0.06,4+,0,748.6,0.3,100,17,[E2],,,,,,,,,,,0.0273,0.0007,1-Jan-2021,A.M. MATTERA and  S. ZHU and  A.B. HAYES and  E.A. MCCUTCHAN,2025-08-08
+98,154,Cf,10,900.33,0.25,(4+),1,45.72,0.05,2+,1,854.6,0.4,45,10,[E2],,,,,,,,,,,0.0209,0.0005,1-Jan-2021,A.M. MATTERA and  S. ZHU and  A.B. HAYES and  E.A. MCCUTCHAN,2025-08-08
+98,154,Cf,11,917.03,0.12,(4-),2,151.73,0.06,4+,0,765.3,0.1,100,,[E1],,,,,,,,,,,0.00752,0.00017,1-Jan-2021,A.M. MATTERA and  S. ZHU and  A.B. HAYES and  E.A. MCCUTCHAN,2025-08-08
+98,154,Cf,12,969.83,0.06,(3+),9,867.52,0.07,(3-),0,102.32,0.05,13.6,0.9,[E1],,,,,,,,,,,0.1394,0.002,1-Jan-2021,A.M. MATTERA and  S. ZHU and  A.B. HAYES and  E.A. MCCUTCHAN,2025-08-08
+98,154,Cf,12,969.83,0.06,(3+),7,830.81,0.07,(2-),1,139.03,0.05,100,8,E1,,,,,,,,,,,0.2502,0.0035,1-Jan-2021,A.M. MATTERA and  S. ZHU and  A.B. HAYES and  E.A. MCCUTCHAN,2025-08-08
+98,154,Cf,12,969.83,0.06,(3+),5,804.82,0.07,(2+),2,165,0.1,1.04,0.11,M1,,,,,,,,,,,9.89,,1-Jan-2021,A.M. MATTERA and  S. ZHU and  A.B. HAYES and  E.A. MCCUTCHAN,2025-08-08
+98,154,Cf,12,969.83,0.06,(3+),2,151.73,0.06,4+,3,818.1,0.1,5.4,0.4,,,,,,,,,,,,,,1-Jan-2021,A.M. MATTERA and  S. ZHU and  A.B. HAYES and  E.A. MCCUTCHAN,2025-08-08
+98,154,Cf,12,969.83,0.06,(3+),1,45.72,0.05,2+,4,924.1,0.1,17.4,1.1,,,,,,,,,,,,,,1-Jan-2021,A.M. MATTERA and  S. ZHU and  A.B. HAYES and  E.A. MCCUTCHAN,2025-08-08

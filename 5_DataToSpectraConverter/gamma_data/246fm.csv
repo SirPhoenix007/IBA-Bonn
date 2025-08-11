@@ -1,0 +1,9 @@
+z,n,symbol,start_level_idx,start_level_energy,unc_sle,start_level_jp,end_level_idx,end_level_energy,unc_ele,end_level_jp,gamma_idx,energy,unc_en,relative_intensity,unc_ri,multipolarity,mixing_ratio,unc_mr,b_e1,unc_be1,b_e2,unc_be2,b_m1,unc_bm1,b_m2,unc_bm2,tot_conv_coeff,tce_unc,ensdf_publication_cut-off,ensdf_authors,Extraction_date
+100,146,Fm,2,47,1,(2+),0,0,,0+,0,47,,,,,,,,,,,,,,,,,31-Jul-2022,C.D. Nesaraja,2025-08-08
+100,146,Fm,3,155,2,(4+),2,47,1,(2+),0,108,,,,,,,,,,,,,,,,,31-Jul-2022,C.D. Nesaraja,2025-08-08
+100,146,Fm,4,322,1,(6+),3,155,2,(4+),0,167,1,100,,,,,,,,,,,,,,,31-Jul-2022,C.D. Nesaraja,2025-08-08
+100,146,Fm,5,546,1,(8+),4,322,1,(6+),0,224,1,100,,,,,,,,,,,,,,,31-Jul-2022,C.D. Nesaraja,2025-08-08
+100,146,Fm,6,824,2,(10+),5,546,1,(8+),0,278,1,100,,,,,,,,,,,,,,,31-Jul-2022,C.D. Nesaraja,2025-08-08
+100,146,Fm,7,1151,2,(12+),6,824,2,(10+),0,327,1,100,,,,,,,,,,,,,,,31-Jul-2022,C.D. Nesaraja,2025-08-08
+100,146,Fm,8,1523,3,(14+),7,1151,2,(12+),0,372,2,100,,,,,,,,,,,,,,,31-Jul-2022,C.D. Nesaraja,2025-08-08
+100,146,Fm,9,1937,4,(16+),8,1523,3,(14+),0,414,2,100,,,,,,,,,,,,,,,31-Jul-2022,C.D. Nesaraja,2025-08-08

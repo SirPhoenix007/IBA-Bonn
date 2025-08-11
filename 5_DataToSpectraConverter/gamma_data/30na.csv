@@ -1,0 +1,22 @@
+z,n,symbol,start_level_idx,start_level_energy,unc_sle,start_level_jp,end_level_idx,end_level_energy,unc_ele,end_level_jp,gamma_idx,energy,unc_en,relative_intensity,unc_ri,multipolarity,mixing_ratio,unc_mr,b_e1,unc_be1,b_e2,unc_be2,b_m1,unc_bm1,b_m2,unc_bm2,tot_conv_coeff,tce_unc,ensdf_publication_cut-off,ensdf_authors,Extraction_date
+11,19,Na,1,150.62,0.2,1+,0,0,,2+,0,150.6,0.2,100,,[M1+E2],,,,,,,-1,,,,,,31-May-2024,M. S. Basunia and  A. Chakraborty,2025-08-08
+11,19,Na,2,337.9,1.4,,1,150.62,0.2,1+,0,187,2,,,,,,,,,,,,,,,,31-May-2024,M. S. Basunia and  A. Chakraborty,2025-08-08
+11,19,Na,2,337.9,1.4,,0,0,,2+,1,338,2,,,,,,,,,,,,,,,,31-May-2024,M. S. Basunia and  A. Chakraborty,2025-08-08
+11,19,Na,3,360,13,,0,0,,2+,0,360,13,100,,,,,,,,,,,,,,,31-May-2024,M. S. Basunia and  A. Chakraborty,2025-08-08
+11,19,Na,4,424,1.8,(3+),0,0,,2+,0,424,2,100,,,,,,,,,,,,,,,31-May-2024,M. S. Basunia and  A. Chakraborty,2025-08-08
+11,19,Na,5,509.9,2.4,,2,337.9,1.4,,0,172,2,,,,,,,,,,,,,,,,31-May-2024,M. S. Basunia and  A. Chakraborty,2025-08-08
+11,19,Na,6,516.1,0.5,(2+),1,150.62,0.2,1+,0,365.5,0.5,100,,,,,,,,,,,,,,,31-May-2024,M. S. Basunia and  A. Chakraborty,2025-08-08
+11,19,Na,7,758,4,,5,509.9,2.4,,0,248,2,,,,,,,,,,,,,,,,31-May-2024,M. S. Basunia and  A. Chakraborty,2025-08-08
+11,19,Na,8,925,2.1,(4+),4,424,1.8,(3+),0,501,2,67,7,,,,,,,,,,,,,,31-May-2024,M. S. Basunia and  A. Chakraborty,2025-08-08
+11,19,Na,8,925,2.1,(4+),0,0,,2+,1,925,3,100,7,,,,,,,,,,,,,,31-May-2024,M. S. Basunia and  A. Chakraborty,2025-08-08
+11,19,Na,9,926,0.6,1+,6,516.1,0.5,(2+),0,410,0.5,100,16,,,,,,,,,,,,,,31-May-2024,M. S. Basunia and  A. Chakraborty,2025-08-08
+11,19,Na,9,926,0.6,1+,1,150.62,0.2,1+,1,775,1,22,8,,,,,,,,,,,,,,31-May-2024,M. S. Basunia and  A. Chakraborty,2025-08-08
+11,19,Na,10,1032,1.6,,6,516.1,0.5,(2+),0,516,2,,,,,,,,,,,,,,,,31-May-2024,M. S. Basunia and  A. Chakraborty,2025-08-08
+11,19,Na,10,1032,1.6,,2,337.9,1.4,,1,694,3,,,,,,,,,,,,,,,,31-May-2024,M. S. Basunia and  A. Chakraborty,2025-08-08
+11,19,Na,10,1032,1.6,,0,0,,2+,2,1032,3,,,,,,,,,,,,,,,,31-May-2024,M. S. Basunia and  A. Chakraborty,2025-08-08
+11,19,Na,11,1263.1,2.2,,6,516.1,0.5,(2+),0,747,3,,,,,,,,,,,,,,,,31-May-2024,M. S. Basunia and  A. Chakraborty,2025-08-08
+11,19,Na,11,1263.1,2.2,,0,0,,2+,1,1263,3,,,,,,,,,,,,,,,,31-May-2024,M. S. Basunia and  A. Chakraborty,2025-08-08
+11,19,Na,12,1527,5,,7,758,4,,0,769,3,,,,,,,,,,,,,,,,31-May-2024,M. S. Basunia and  A. Chakraborty,2025-08-08
+11,19,Na,13,2113.6,0.6,1+,6,516.1,0.5,(2+),0,1597,1,100,20,,,,,,,,,,,,,,31-May-2024,M. S. Basunia and  A. Chakraborty,2025-08-08
+11,19,Na,13,2113.6,0.6,1+,1,150.62,0.2,1+,1,1963,1,100,20,,,,,,,,,,,,,,31-May-2024,M. S. Basunia and  A. Chakraborty,2025-08-08
+11,19,Na,13,2113.6,0.6,1+,0,0,,2+,2,2114,1,80,20,,,,,,,,,,,,,,31-May-2024,M. S. Basunia and  A. Chakraborty,2025-08-08

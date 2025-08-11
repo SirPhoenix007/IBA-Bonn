@@ -1,0 +1,13 @@
+z,n,symbol,start_level_idx,start_level_energy,unc_sle,start_level_jp,end_level_idx,end_level_energy,unc_ele,end_level_jp,gamma_idx,energy,unc_en,relative_intensity,unc_ri,multipolarity,mixing_ratio,unc_mr,b_e1,unc_be1,b_e2,unc_be2,b_m1,unc_bm1,b_m2,unc_bm2,tot_conv_coeff,tce_unc,ensdf_publication_cut-off,ensdf_authors,Extraction_date
+11,18,Na,1,72,,(5/2+),0,0,,3/2+,0,72,,100,,,,,,,,,,,,,,,1-Jan-2012,M. Shamsuzzoha Basunia,2025-08-08
+11,18,Na,2,1249,,,1,72,,(5/2+),0,1176.5,1,42,8,,,,,,,,,,,,,,1-Jan-2012,M. Shamsuzzoha Basunia,2025-08-08
+11,18,Na,2,1249,,,0,0,,3/2+,1,1249,,100,8,,,,,,,,,,,,,,1-Jan-2012,M. Shamsuzzoha Basunia,2025-08-08
+11,18,Na,3,1588,,,2,1249,,,0,339,,,,,,,,,,,,,,,,,1-Jan-2012,M. Shamsuzzoha Basunia,2025-08-08
+11,18,Na,3,1588,,,1,72,,(5/2+),1,1516,,100,12,,,,,,,,,,,,,,1-Jan-2012,M. Shamsuzzoha Basunia,2025-08-08
+11,18,Na,3,1588,,,0,0,,3/2+,2,1588,,69,12,,,,,,,,,,,,,,1-Jan-2012,M. Shamsuzzoha Basunia,2025-08-08
+11,18,Na,4,3059,,,0,0,,3/2+,0,3059,,100,,,,,,,,,,,,,,,1-Jan-2012,M. Shamsuzzoha Basunia,2025-08-08
+11,18,Na,5,3723,,,0,0,,3/2+,0,3723,,100,,,,,,,,,,,,,,,1-Jan-2012,M. Shamsuzzoha Basunia,2025-08-08
+11,18,Na,6,4166,,,3,1588,,,0,2578,,100,20,,,,,,,,,,,,,,1-Jan-2012,M. Shamsuzzoha Basunia,2025-08-08
+11,18,Na,6,4166,,,2,1249,,,1,2918.2,1.5,70,10,,,,,,,,,,,,,,1-Jan-2012,M. Shamsuzzoha Basunia,2025-08-08
+11,18,Na,6,4166,,,1,72,,(5/2+),2,4094,,24,8,,,,,,,,,,,,,,1-Jan-2012,M. Shamsuzzoha Basunia,2025-08-08
+11,18,Na,6,4166,,,0,0,,3/2+,3,4166,,58,12,,,,,,,,,,,,,,1-Jan-2012,M. Shamsuzzoha Basunia,2025-08-08

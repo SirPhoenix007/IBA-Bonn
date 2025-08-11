@@ -1,0 +1,26 @@
+z,n,symbol,start_level_idx,start_level_energy,unc_sle,start_level_jp,end_level_idx,end_level_energy,unc_ele,end_level_jp,gamma_idx,energy,unc_en,relative_intensity,unc_ri,multipolarity,mixing_ratio,unc_mr,b_e1,unc_be1,b_e2,unc_be2,b_m1,unc_bm1,b_m2,unc_bm2,tot_conv_coeff,tce_unc,ensdf_publication_cut-off,ensdf_authors,Extraction_date
+87,131,Fr,8,272.9,,(11-),1,0,,(9-),0,272.9,,100,,,,,,,,,,,,,,,30-Oct-2019,Balraj Singh and  M.S. Basunia and  Murray Martin et al. and ,2025-08-08
+87,131,Fr,10,450,,(10-),8,272.9,,(11-),0,177.1,,100,,(M1),,,,,,,,,,,,,30-Oct-2019,Balraj Singh and  M.S. Basunia and  Murray Martin et al. and ,2025-08-08
+87,131,Fr,12,586.8,,(12+),8,272.9,,(11-),0,314,,100,,,,,,,,,,,,,,,30-Oct-2019,Balraj Singh and  M.S. Basunia and  Murray Martin et al. and ,2025-08-08
+87,131,Fr,13,596,,(13-),8,272.9,,(11-),0,323,,100,,,,,,,,,,,,,,,30-Oct-2019,Balraj Singh and  M.S. Basunia and  Murray Martin et al. and ,2025-08-08
+87,131,Fr,14,776.6,,(12-),10,450,,(10-),0,326.6,,100,,,,,,,,,,,,,,,30-Oct-2019,Balraj Singh and  M.S. Basunia and  Murray Martin et al. and ,2025-08-08
+87,131,Fr,15,862.7,,(14+),13,596,,(13-),0,266.5,,100,,,,,,,,,,,,,,,30-Oct-2019,Balraj Singh and  M.S. Basunia and  Murray Martin et al. and ,2025-08-08
+87,131,Fr,15,862.7,,(14+),12,586.8,,(12+),1,275.9,,10,1,,,,,,,,,,,,,,30-Oct-2019,Balraj Singh and  M.S. Basunia and  Murray Martin et al. and ,2025-08-08
+87,131,Fr,16,940,,(13+),14,776.6,,(12-),0,163.5,,100,,,,,,,,,,,,,,,30-Oct-2019,Balraj Singh and  M.S. Basunia and  Murray Martin et al. and ,2025-08-08
+87,131,Fr,17,973.1,,(15-),15,862.7,,(14+),0,110.3,,20,2,(E1),,,,,,,,,,,,,30-Oct-2019,Balraj Singh and  M.S. Basunia and  Murray Martin et al. and ,2025-08-08
+87,131,Fr,17,973.1,,(15-),13,596,,(13-),1,377.2,,100,,,,,,,,,,,,,,,30-Oct-2019,Balraj Singh and  M.S. Basunia and  Murray Martin et al. and ,2025-08-08
+87,131,Fr,18,1143.8,,(14-),16,940,,(13+),0,203.8,,30,3,,,,,,,,,,,,,,30-Oct-2019,Balraj Singh and  M.S. Basunia and  Murray Martin et al. and ,2025-08-08
+87,131,Fr,18,1143.8,,(14-),14,776.6,,(12-),1,367.1,,100,,,,,,,,,,,,,,,30-Oct-2019,Balraj Singh and  M.S. Basunia and  Murray Martin et al. and ,2025-08-08
+87,131,Fr,19,1192.1,,(16+),17,973.1,,(15-),0,219,,100,,,,,,,,,,,,,,,30-Oct-2019,Balraj Singh and  M.S. Basunia and  Murray Martin et al. and ,2025-08-08
+87,131,Fr,19,1192.1,,(16+),15,862.7,,(14+),1,329.4,,20,2,,,,,,,,,,,,,,30-Oct-2019,Balraj Singh and  M.S. Basunia and  Murray Martin et al. and ,2025-08-08
+87,131,Fr,20,1421.7,,(17-),19,1192.1,,(16+),0,229.5,,100,,,,,,,,,,,,,,,30-Oct-2019,Balraj Singh and  M.S. Basunia and  Murray Martin et al. and ,2025-08-08
+87,131,Fr,20,1421.7,,(17-),17,973.1,,(15-),1,448.7,,100,,,,,,,,,,,,,,,30-Oct-2019,Balraj Singh and  M.S. Basunia and  Murray Martin et al. and ,2025-08-08
+87,131,Fr,21,1572.4,,(18+),20,1421.7,,(17-),0,150.6,,45,4.5,(E1),,,,,,,,,,,,,30-Oct-2019,Balraj Singh and  M.S. Basunia and  Murray Martin et al. and ,2025-08-08
+87,131,Fr,21,1572.4,,(18+),19,1192.1,,(16+),1,380.5,,100,,,,,,,,,,,,,,,30-Oct-2019,Balraj Singh and  M.S. Basunia and  Murray Martin et al. and ,2025-08-08
+87,131,Fr,22,1582.9,,(16-),18,1143.8,,(14-),0,439.1,,100,,,,,,,,,,,,,,,30-Oct-2019,Balraj Singh and  M.S. Basunia and  Murray Martin et al. and ,2025-08-08
+87,131,Fr,23,1921.7,,(19-),20,1421.7,,(17-),0,500,,100,,,,,,,,,,,,,,,30-Oct-2019,Balraj Singh and  M.S. Basunia and  Murray Martin et al. and ,2025-08-08
+87,131,Fr,24,2035.1,,(20+),21,1572.4,,(18+),0,462.7,,100,,,,,,,,,,,,,,,30-Oct-2019,Balraj Singh and  M.S. Basunia and  Murray Martin et al. and ,2025-08-08
+87,131,Fr,25,2065.1,,(18-),22,1582.9,,(16-),0,482.2,,100,,,,,,,,,,,,,,,30-Oct-2019,Balraj Singh and  M.S. Basunia and  Murray Martin et al. and ,2025-08-08
+87,131,Fr,26,2477.9,,(21-),23,1921.7,,(19-),0,556.2,,100,,,,,,,,,,,,,,,30-Oct-2019,Balraj Singh and  M.S. Basunia and  Murray Martin et al. and ,2025-08-08
+87,131,Fr,27,2527.5,,(22+),24,2035.1,,(20+),0,492.4,,100,,,,,,,,,,,,,,,30-Oct-2019,Balraj Singh and  M.S. Basunia and  Murray Martin et al. and ,2025-08-08
+87,131,Fr,28,3045.1,,(24+),27,2527.5,,(22+),0,517.5,,100,,,,,,,,,,,,,,,30-Oct-2019,Balraj Singh and  M.S. Basunia and  Murray Martin et al. and ,2025-08-08

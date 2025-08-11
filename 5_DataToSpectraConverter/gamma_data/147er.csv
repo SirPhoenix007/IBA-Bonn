@@ -1,0 +1,15 @@
+z,n,symbol,start_level_idx,start_level_energy,unc_sle,start_level_jp,end_level_idx,end_level_energy,unc_ele,end_level_jp,gamma_idx,energy,unc_en,relative_intensity,unc_ri,multipolarity,mixing_ratio,unc_mr,b_e1,unc_be1,b_e2,unc_be2,b_m1,unc_bm1,b_m2,unc_bm2,tot_conv_coeff,tce_unc,ensdf_publication_cut-off,ensdf_authors,Extraction_date
+68,79,Er,1,80.9,,(3/2+),0,0,,(1/2+),0,80.9,,100,,,,,,,,,,,,,,,9-Mar-2022,N. Nica and B. Singh,2025-08-08
+68,79,Er,3,543,,(15/2-),2,0,,(11/2-),0,543,,100,,(E2),,,,,,,,,,,0.01334,,9-Mar-2022,N. Nica and B. Singh,2025-08-08
+68,79,Er,4,1455,,(19/2-),3,543,,(15/2-),0,912,,100,,(E2),,,,,,,,,,,0.00407,,9-Mar-2022,N. Nica and B. Singh,2025-08-08
+68,79,Er,5,1668,,,3,543,,(15/2-),0,1125,,100,,,,,,,,,,,,,,,9-Mar-2022,N. Nica and B. Singh,2025-08-08
+68,79,Er,6,2179,,,5,1668,,,0,511,,100,,,,,,,,,,,,,,,9-Mar-2022,N. Nica and B. Singh,2025-08-08
+68,79,Er,7,2430,,(23/2-),4,1455,,(19/2-),0,975,,100,,(E2),,,,,,,,,,,0.00354,,9-Mar-2022,N. Nica and B. Singh,2025-08-08
+68,79,Er,8,2549,,,6,2179,,,0,370,,100,,,,,,,,,,,,,,,9-Mar-2022,N. Nica and B. Singh,2025-08-08
+68,79,Er,9,2606,,,7,2430,,(23/2-),0,176,,100,,,,,,,,,,,,,,,9-Mar-2022,N. Nica and B. Singh,2025-08-08
+68,79,Er,10,2793,,,8,2549,,,0,244,,100,,,,,,,,,,,,,,,9-Mar-2022,N. Nica and B. Singh,2025-08-08
+68,79,Er,11,3197,,,9,2606,,,0,591,,100,,,,,,,,,,,,,,,9-Mar-2022,N. Nica and B. Singh,2025-08-08
+68,79,Er,12,3361,,,10,2793,,,0,568,,100,,,,,,,,,,,,,,,9-Mar-2022,N. Nica and B. Singh,2025-08-08
+68,79,Er,13,3468,,,12,3361,,,0,107,,100,,,,,,,,,,,,,,,9-Mar-2022,N. Nica and B. Singh,2025-08-08
+68,79,Er,14,4323,,,13,3468,,,0,855,,100,,,,,,,,,,,,,,,9-Mar-2022,N. Nica and B. Singh,2025-08-08
+68,79,Er,15,5008,,,14,4323,,,0,685,,100,,,,,,,,,,,,,,,9-Mar-2022,N. Nica and B. Singh,2025-08-08

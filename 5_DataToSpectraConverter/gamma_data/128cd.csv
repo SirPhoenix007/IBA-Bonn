@@ -1,0 +1,14 @@
+z,n,symbol,start_level_idx,start_level_energy,unc_sle,start_level_jp,end_level_idx,end_level_energy,unc_ele,end_level_jp,gamma_idx,energy,unc_en,relative_intensity,unc_ri,multipolarity,mixing_ratio,unc_mr,b_e1,unc_be1,b_e2,unc_be2,b_m1,unc_bm1,b_m2,unc_bm2,tot_conv_coeff,tce_unc,ensdf_publication_cut-off,ensdf_authors,Extraction_date
+48,80,Cd,1,645.8,0.2,(2+),0,0,,0+,0,645.8,0.2,100,,,,,,,,,,,,,,,28-Feb-2015,ZOLTAN ELEKES AND JANOS TIMAR,2025-08-08
+48,80,Cd,2,1430.39,0.22,(4+),1,645.8,0.2,(2+),0,784.6,0.1,100,,,,,,,,,,,,,,,28-Feb-2015,ZOLTAN ELEKES AND JANOS TIMAR,2025-08-08
+48,80,Cd,3,1870.5,0.3,(5-),2,1430.39,0.22,(4+),0,440.3,0.3,100,5,,,,,,,,,,,,,,28-Feb-2015,ZOLTAN ELEKES AND JANOS TIMAR,2025-08-08
+48,80,Cd,3,1870.5,0.3,(5-),1,645.8,0.2,(2+),1,1224,0.6,13.1,1.2,,,,,,,,,,,,,,28-Feb-2015,ZOLTAN ELEKES AND JANOS TIMAR,2025-08-08
+48,80,Cd,4,2097.1,0.5,,2,1430.39,0.22,(4+),0,666.7,0.5,100,,,,,,,,,,,,,,,28-Feb-2015,ZOLTAN ELEKES AND JANOS TIMAR,2025-08-08
+48,80,Cd,5,2108.3,0.4,(7-),3,1870.5,0.3,(5-),0,237.9,0.5,100,,,,,,,,,,,,,,,28-Feb-2015,ZOLTAN ELEKES AND JANOS TIMAR,2025-08-08
+48,80,Cd,6,2195.4,0.4,(6+),2,1430.39,0.22,(4+),0,765,0.3,100,,,,,,,,,,,,,,,28-Feb-2015,ZOLTAN ELEKES AND JANOS TIMAR,2025-08-08
+48,80,Cd,7,2645.9,0.4,(8+),6,2195.4,0.4,(6+),0,450.4,0.3,3.8,0.6,,,,,,,,,,,,,,28-Feb-2015,ZOLTAN ELEKES AND JANOS TIMAR,2025-08-08
+48,80,Cd,7,2645.9,0.4,(8+),5,2108.3,0.4,(7-),1,537.6,0.2,100,6,,,,,,,,,,,,,,28-Feb-2015,ZOLTAN ELEKES AND JANOS TIMAR,2025-08-08
+48,80,Cd,8,2714.6,0.4,(10+),7,2645.9,0.4,(8+),0,68.7,0.1,100,,E2,,,,,,,,,,,5.69,,28-Feb-2015,ZOLTAN ELEKES AND JANOS TIMAR,2025-08-08
+48,80,Cd,9,2892.6,0.5,,0,0,,0+,0,2892.6,0.5,100,,,,,,,,,,,,,,,28-Feb-2015,ZOLTAN ELEKES AND JANOS TIMAR,2025-08-08
+48,80,Cd,10,3083.1,0.7,,4,2097.1,0.5,,0,986,0.5,100,,,,,,,,,,,,,,,28-Feb-2015,ZOLTAN ELEKES AND JANOS TIMAR,2025-08-08
+48,80,Cd,11,3290.9,0.5,,0,0,,0+,0,3290.9,0.5,100,,,,,,,,,,,,,,,28-Feb-2015,ZOLTAN ELEKES AND JANOS TIMAR,2025-08-08

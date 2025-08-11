@@ -1,0 +1,13 @@
+z,n,symbol,start_level_idx,start_level_energy,unc_sle,start_level_jp,end_level_idx,end_level_energy,unc_ele,end_level_jp,gamma_idx,energy,unc_en,relative_intensity,unc_ri,multipolarity,mixing_ratio,unc_mr,b_e1,unc_be1,b_e2,unc_be2,b_m1,unc_bm1,b_m2,unc_bm2,tot_conv_coeff,tce_unc,ensdf_publication_cut-off,ensdf_authors,Extraction_date
+53,56,I,2,593.9,0.2,(11/2+),1,,,(7/2+),0,593.9,0.2,100,,E2,,,,,23,,,,,,0.00536,,31-May-2016,S. KUMAR(a) and  J. CHEN(b) AND F.G. KONDEV,2025-08-08
+53,56,I,3,1142.1,0.3,(11/2-),2,593.9,0.2,(11/2+),0,548.2,0.2,100,,(E1),,,,,,,,,,,0.00226,,31-May-2016,S. KUMAR(a) and  J. CHEN(b) AND F.G. KONDEV,2025-08-08
+53,56,I,4,1312,0.3,(15/2+),2,593.9,0.2,(11/2+),0,718.1,0.2,100,,E2,,,,,,,,,,,0.0033,,31-May-2016,S. KUMAR(a) and  J. CHEN(b) AND F.G. KONDEV,2025-08-08
+53,56,I,5,1650.3,0.5,(13/2-),2,593.9,0.2,(11/2+),0,1056.4,0.4,100,,(E1),,,,,,,,,,,0.000584,,31-May-2016,S. KUMAR(a) and  J. CHEN(b) AND F.G. KONDEV,2025-08-08
+53,56,I,6,1680,0.3,(15/2-),4,1312,0.3,(15/2+),0,368.1,0.3,19,,,,,,,,,,,,,,,31-May-2016,S. KUMAR(a) and  J. CHEN(b) AND F.G. KONDEV,2025-08-08
+53,56,I,6,1680,0.3,(15/2-),3,1142.1,0.3,(11/2-),1,537.8,0.2,100,,E2,,,,,,,,,,,0.007,,31-May-2016,S. KUMAR(a) and  J. CHEN(b) AND F.G. KONDEV,2025-08-08
+53,56,I,7,2146.9,0.5,(17/2-),5,1650.3,0.5,(13/2-),0,496.6,0.2,100,,E2,,,,,,,,,,,0.00873,,31-May-2016,S. KUMAR(a) and  J. CHEN(b) AND F.G. KONDEV,2025-08-08
+53,56,I,8,2193.7,0.4,(19/2+),4,1312,0.3,(15/2+),0,881.7,0.3,100,,E2,,,,,,,,,,,0.00203,,31-May-2016,S. KUMAR(a) and  J. CHEN(b) AND F.G. KONDEV,2025-08-08
+53,56,I,9,2346.1,0.4,(19/2-),6,1680,0.3,(15/2-),0,666.1,0.2,100,,E2,,,,,,,,,,,0.00399,,31-May-2016,S. KUMAR(a) and  J. CHEN(b) AND F.G. KONDEV,2025-08-08
+53,56,I,10,2790.6,0.6,(21/2-),7,2146.9,0.5,(17/2-),0,643.7,0.2,100,,E2,,,,,,,,,,,0.00435,,31-May-2016,S. KUMAR(a) and  J. CHEN(b) AND F.G. KONDEV,2025-08-08
+53,56,I,11,3083.8,0.5,(23/2-),9,2346.1,0.4,(19/2-),0,737.7,0.3,100,,E2,,,,,,,,,,,0.00309,,31-May-2016,S. KUMAR(a) and  J. CHEN(b) AND F.G. KONDEV,2025-08-08
+53,56,I,12,3112.6,0.6,(23/2+),8,2193.7,0.4,(19/2+),0,918.9,0.4,100,,,,,,,,,,,,,,,31-May-2016,S. KUMAR(a) and  J. CHEN(b) AND F.G. KONDEV,2025-08-08

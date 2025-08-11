@@ -1,0 +1,9 @@
+z,n,symbol,start_level_idx,start_level_energy,unc_sle,start_level_jp,end_level_idx,end_level_energy,unc_ele,end_level_jp,gamma_idx,energy,unc_en,relative_intensity,unc_ri,multipolarity,mixing_ratio,unc_mr,b_e1,unc_be1,b_e2,unc_be2,b_m1,unc_bm1,b_m2,unc_bm2,tot_conv_coeff,tce_unc,ensdf_publication_cut-off,ensdf_authors,Extraction_date
+23,31,V,1,108,1,(5)+,0,0,,3+,0,108,,100,,E2,,,,,3.5,,,,,,,,20-Jun-2014,YANG DONG and  HUO JUNDE,2025-08-08
+23,31,V,2,244.65,0.11,(4),0,0,,3+,0,244.65,0.11,100,,D,,,,,,,,,,,,,20-Jun-2014,YANG DONG and  HUO JUNDE,2025-08-08
+23,31,V,11,900,100,1+,0,0,,3+,0,900,100,,,,,,,,,,,,,,,,20-Jun-2014,YANG DONG and  HUO JUNDE,2025-08-08
+23,31,V,15,1214.61,0.19,(5),2,244.65,0.11,(4),0,969.92,0.15,100,,D,,,,,,,,,,,,,20-Jun-2014,YANG DONG and  HUO JUNDE,2025-08-08
+23,31,V,19,1828.9,0.3,(6),15,1214.61,0.19,(5),0,614.9,0.6,90,,D,,,,,,,,,,,,,20-Jun-2014,YANG DONG and  HUO JUNDE,2025-08-08
+23,31,V,19,1828.9,0.3,(6),2,244.65,0.11,(4),1,1584.5,0.4,100,,,,,,,,,,,,,,,20-Jun-2014,YANG DONG and  HUO JUNDE,2025-08-08
+23,31,V,24,2297.9,0.3,(7),19,1828.9,0.3,(6),0,469.11,0.2,100,,D,,,,,,,,,,,,,20-Jun-2014,YANG DONG and  HUO JUNDE,2025-08-08
+23,31,V,24,2297.9,0.3,(7),15,1214.61,0.19,(5),1,1083,0.3,73,,,,,,,,,,,,,,,20-Jun-2014,YANG DONG and  HUO JUNDE,2025-08-08

@@ -1,0 +1,8 @@
+z,n,symbol,start_level_idx,start_level_energy,unc_sle,start_level_jp,end_level_idx,end_level_energy,unc_ele,end_level_jp,gamma_idx,energy,unc_en,relative_intensity,unc_ri,multipolarity,mixing_ratio,unc_mr,b_e1,unc_be1,b_e2,unc_be2,b_m1,unc_bm1,b_m2,unc_bm2,tot_conv_coeff,tce_unc,ensdf_publication_cut-off,ensdf_authors,Extraction_date
+48,77,Cd,2,719.7,0.2,(15/2-),1,,,(11/2-),0,719.7,0.2,100,,,,,,,,,,,,,,,1-Jan-2010,J. KATAKURA,2025-08-08
+48,77,Cd,3,1463,0.3,(19/2-),2,719.7,0.2,(15/2-),0,743.3,0.2,100,,,,,,,,,,,,,,,1-Jan-2010,J. KATAKURA,2025-08-08
+48,77,Cd,4,2249.2,0.5,(23/2-),3,1463,0.3,(19/2-),0,786.2,0.3,100,,,,,,,,,,,,,,,1-Jan-2010,J. KATAKURA,2025-08-08
+48,77,Cd,5,3116.9,0.5,(27/2-),4,2249.2,0.5,(23/2-),0,867.7,0.2,100,,,,,,,,,,,,,,,1-Jan-2010,J. KATAKURA,2025-08-08
+48,77,Cd,6,3171.7,0.5,,4,2249.2,0.5,(23/2-),0,922.5,0.1,100,,,,,,,,,,,,,,,1-Jan-2010,J. KATAKURA,2025-08-08
+48,77,Cd,7,3580.4,0.7,,6,3171.7,0.5,,0,408.7,0.5,100,,,,,,,,,,,,,,,1-Jan-2010,J. KATAKURA,2025-08-08
+48,77,Cd,8,3606.5,0.7,,5,3116.9,0.5,(27/2-),0,489.6,0.5,100,,,,,,,,,,,,,,,1-Jan-2010,J. KATAKURA,2025-08-08

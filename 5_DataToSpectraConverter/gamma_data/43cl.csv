@@ -1,0 +1,6 @@
+z,n,symbol,start_level_idx,start_level_energy,unc_sle,start_level_jp,end_level_idx,end_level_energy,unc_ele,end_level_jp,gamma_idx,energy,unc_en,relative_intensity,unc_ri,multipolarity,mixing_ratio,unc_mr,b_e1,unc_be1,b_e2,unc_be2,b_m1,unc_bm1,b_m2,unc_bm2,tot_conv_coeff,tce_unc,ensdf_publication_cut-off,ensdf_authors,Extraction_date
+17,26,Cl,1,328,2,(3/2+),0,0,,(1/2+),0,328,2,100,,D,,,,,,,,,,,,,31-Mar-2015,BALRAJ SINGH AND JUN CHEN{+#},2025-08-08
+17,26,Cl,2,884,4,(1/2 3/2),0,0,,(1/2+),0,884,4,100,,D,,,,,,,,,,,,,31-Mar-2015,BALRAJ SINGH AND JUN CHEN{+#},2025-08-08
+17,26,Cl,3,943,5,(5/2+),1,328,2,(3/2+),0,615,5,100,,D,,,,,,,,,,,,,31-Mar-2015,BALRAJ SINGH AND JUN CHEN{+#},2025-08-08
+17,26,Cl,4,1668,6,(7/2+),1,328,2,(3/2+),0,1340,6,100,,(Q),,,,,,,,,,,,,31-Mar-2015,BALRAJ SINGH AND JUN CHEN{+#},2025-08-08
+17,26,Cl,5,1924,7,,4,1668,6,(7/2+),0,256,4,100,,,,,,,,,,,,,,,31-Mar-2015,BALRAJ SINGH AND JUN CHEN{+#},2025-08-08

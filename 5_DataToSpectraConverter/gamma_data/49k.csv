@@ -1,0 +1,7 @@
+z,n,symbol,start_level_idx,start_level_energy,unc_sle,start_level_jp,end_level_idx,end_level_energy,unc_ele,end_level_jp,gamma_idx,energy,unc_en,relative_intensity,unc_ri,multipolarity,mixing_ratio,unc_mr,b_e1,unc_be1,b_e2,unc_be2,b_m1,unc_bm1,b_m2,unc_bm2,tot_conv_coeff,tce_unc,ensdf_publication_cut-off,ensdf_authors,Extraction_date
+19,30,K,1,91.7,0.3,(1/2+ 3/2+),0,0,,(1/2+ 3/2+),0,91.7,0.3,100,,,,,,,,,,,,,,,28-FEB-2011,BALRAJ SINGH,2025-08-08
+19,30,K,2,862.8,0.3,(5/2+),1,91.7,0.3,(1/2+ 3/2+),0,771.1,0.2,100,,,,,,,,,,,,,,,28-FEB-2011,BALRAJ SINGH,2025-08-08
+19,30,K,2,862.8,0.3,(5/2+),0,0,,(1/2+ 3/2+),1,862.6,0.8,7,7,,,,,,,,,,,,,,28-FEB-2011,BALRAJ SINGH,2025-08-08
+19,30,K,3,1102.9,0.8,(5/2+),1,91.7,0.3,(1/2+ 3/2+),0,1011.2,0.8,100,,,,,,,,,,,,,,,28-FEB-2011,BALRAJ SINGH,2025-08-08
+19,30,K,4,1438.3,0.4,(7/2+),2,862.8,0.3,(5/2+),0,575.5,0.2,100,,,,,,,,,,,,,,,28-FEB-2011,BALRAJ SINGH,2025-08-08
+19,30,K,5,2104.2,0.5,(7/2-),2,862.8,0.3,(5/2+),0,1241.4,0.4,100,,,,,,,,,,,,,,,28-FEB-2011,BALRAJ SINGH,2025-08-08

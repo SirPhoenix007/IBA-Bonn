@@ -1,0 +1,10 @@
+z,n,symbol,start_level_idx,start_level_energy,unc_sle,start_level_jp,end_level_idx,end_level_energy,unc_ele,end_level_jp,gamma_idx,energy,unc_en,relative_intensity,unc_ri,multipolarity,mixing_ratio,unc_mr,b_e1,unc_be1,b_e2,unc_be2,b_m1,unc_bm1,b_m2,unc_bm2,tot_conv_coeff,tce_unc,ensdf_publication_cut-off,ensdf_authors,Extraction_date
+25,37,Mn,2,113.8,0.3,(4),1,0,,(4+),0,113.8,0.3,100,,,,,,,,,,,,,,,15-Apr-2012,ALAN L. NICHOLS and  BALRAJ SINGH and  JAGDISH K. TULI,2025-08-08
+25,37,Mn,3,222.4,0.5,(5),2,113.8,0.3,(4),0,108.6,0.3,100,,,,,,,,,,,,,,,15-Apr-2012,ALAN L. NICHOLS and  BALRAJ SINGH and  JAGDISH K. TULI,2025-08-08
+25,37,Mn,4,285,1.7,(0+ 2+),0,0,,(1+),0,285,2,100,,,,,,,,,,,,,,,15-Apr-2012,ALAN L. NICHOLS and  BALRAJ SINGH and  JAGDISH K. TULI,2025-08-08
+25,37,Mn,5,418.2,0.5,(6),3,222.4,0.5,(5),0,195.8,0.2,100,,,,,,,,,,,,,,,15-Apr-2012,ALAN L. NICHOLS and  BALRAJ SINGH and  JAGDISH K. TULI,2025-08-08
+25,37,Mn,6,640,1.7,(1+),4,285,1.7,(0+ 2+),0,355,2,100,,,,,,,,,,,,,,,15-Apr-2012,ALAN L. NICHOLS and  BALRAJ SINGH and  JAGDISH K. TULI,2025-08-08
+25,37,Mn,6,640,1.7,(1+),0,0,,(1+),1,640,2,68,,,,,,,,,,,,,,,15-Apr-2012,ALAN L. NICHOLS and  BALRAJ SINGH and  JAGDISH K. TULI,2025-08-08
+25,37,Mn,7,642.8,0.6,(7),5,418.2,0.5,(6),0,224.6,0.3,100,,,,,,,,,,,,,,,15-Apr-2012,ALAN L. NICHOLS and  BALRAJ SINGH and  JAGDISH K. TULI,2025-08-08
+25,37,Mn,8,1183.7,1.2,(8),7,642.8,0.6,(7),0,540.9,1,100,,,,,,,,,,,,,,,15-Apr-2012,ALAN L. NICHOLS and  BALRAJ SINGH and  JAGDISH K. TULI,2025-08-08
+25,37,Mn,9,1500,3,,4,285,1.7,(0+ 2+),0,1215,2,100,,,,,,,,,,,,,,,15-Apr-2012,ALAN L. NICHOLS and  BALRAJ SINGH and  JAGDISH K. TULI,2025-08-08

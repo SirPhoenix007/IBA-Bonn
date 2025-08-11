@@ -1,0 +1,13 @@
+z,n,symbol,start_level_idx,start_level_energy,unc_sle,start_level_jp,end_level_idx,end_level_energy,unc_ele,end_level_jp,gamma_idx,energy,unc_en,relative_intensity,unc_ri,multipolarity,mixing_ratio,unc_mr,b_e1,unc_be1,b_e2,unc_be2,b_m1,unc_bm1,b_m2,unc_bm2,tot_conv_coeff,tce_unc,ensdf_publication_cut-off,ensdf_authors,Extraction_date
+38,38,Sr,1,262.3,0.2,2+,0,0,,0+,0,262.3,0.2,100,,E2,,,,,120,,,,,,0.0307,,8-Jan-2024,Balraj Singh and  Jun Chen and Ameenah R. Farhan,2025-08-08
+38,38,Sr,2,746.7,0.3,(4+),1,262.3,0.2,2+,0,484.4,0.2,100,,(E2),,,,,,,,,,,,,8-Jan-2024,Balraj Singh and  Jun Chen and Ameenah R. Farhan,2025-08-08
+38,38,Sr,3,1446.3,0.4,(6+),2,746.7,0.3,(4+),0,699.6,0.2,100,,(E2),,,,,,,,,,,,,8-Jan-2024,Balraj Singh and  Jun Chen and Ameenah R. Farhan,2025-08-08
+38,38,Sr,4,2340.5,0.4,(8+),3,1446.3,0.4,(6+),0,894.2,0.2,100,,(E2),,,,,,,,,,,,,8-Jan-2024,Balraj Singh and  Jun Chen and Ameenah R. Farhan,2025-08-08
+38,38,Sr,5,3409.5,1.1,(10+),4,2340.5,0.4,(8+),0,1069,1,100,,,,,,,,,,,,,,,8-Jan-2024,Balraj Singh and  Jun Chen and Ameenah R. Farhan,2025-08-08
+38,38,Sr,6,4629.5,1.5,(12+),5,3409.5,1.1,(10+),0,1220,1,100,,,,,,,,,,,,,,,8-Jan-2024,Balraj Singh and  Jun Chen and Ameenah R. Farhan,2025-08-08
+38,38,Sr,7,5978.5,1.8,(14+),6,4629.5,1.5,(12+),0,1349,1,100,,,,,,,,,,,,,,,8-Jan-2024,Balraj Singh and  Jun Chen and Ameenah R. Farhan,2025-08-08
+38,38,Sr,8,7426.6,2.1,(16+),7,5978.5,1.8,(14+),0,1448,1,100,,,,,,,,,,,,,,,8-Jan-2024,Balraj Singh and  Jun Chen and Ameenah R. Farhan,2025-08-08
+38,38,Sr,9,8943.6,2.3,(18+),8,7426.6,2.1,(16+),0,1517,1,100,,,,,,,,,,,,,,,8-Jan-2024,Balraj Singh and  Jun Chen and Ameenah R. Farhan,2025-08-08
+38,38,Sr,10,10536.6,2.5,(20+),9,8943.6,2.3,(18+),0,1593,1,100,,,,,,,,,,,,,,,8-Jan-2024,Balraj Singh and  Jun Chen and Ameenah R. Farhan,2025-08-08
+38,38,Sr,11,12276.6,2.7,(22+),10,10536.6,2.5,(20+),0,1740,1,100,,,,,,,,,,,,,,,8-Jan-2024,Balraj Singh and  Jun Chen and Ameenah R. Farhan,2025-08-08
+38,38,Sr,12,14229.6,2.9,(24+),11,12276.6,2.7,(22+),0,1953,1,100,,,,,,,,,,,,,,,8-Jan-2024,Balraj Singh and  Jun Chen and Ameenah R. Farhan,2025-08-08

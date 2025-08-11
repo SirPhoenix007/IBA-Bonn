@@ -1,0 +1,6 @@
+z,n,symbol,start_level_idx,start_level_energy,unc_sle,start_level_jp,end_level_idx,end_level_energy,unc_ele,end_level_jp,gamma_idx,energy,unc_en,relative_intensity,unc_ri,multipolarity,mixing_ratio,unc_mr,b_e1,unc_be1,b_e2,unc_be2,b_m1,unc_bm1,b_m2,unc_bm2,tot_conv_coeff,tce_unc,ensdf_publication_cut-off,ensdf_authors,Extraction_date
+20,32,Ca,1,2563,1,2+,0,0,,0+,0,2563,1,100,,,,,,,,,,,,,,,10-Jul-2015,YANG DONG and  HUO JUNDE,2025-08-08
+20,32,Ca,2,3150,2,,0,0,,0+,0,3150,2,100,,,,,,,,,,,,,,,10-Jul-2015,YANG DONG and  HUO JUNDE,2025-08-08
+20,32,Ca,3,3990,2,(3-),1,2563,1,2+,0,1427,1,100,,,,,,,,,,,,,,,10-Jul-2015,YANG DONG and  HUO JUNDE,2025-08-08
+20,32,Ca,8,5951,2,,3,3990,2,(3-),0,1961,1,100,13,,,,,,,,,,,,,,10-Jul-2015,YANG DONG and  HUO JUNDE,2025-08-08
+20,32,Ca,8,5951,2,,1,2563,1,2+,1,3388,2,27,4,,,,,,,,,,,,,,10-Jul-2015,YANG DONG and  HUO JUNDE,2025-08-08

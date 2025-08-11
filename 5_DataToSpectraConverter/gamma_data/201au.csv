@@ -1,0 +1,6 @@
+z,n,symbol,start_level_idx,start_level_energy,unc_sle,start_level_jp,end_level_idx,end_level_energy,unc_ele,end_level_jp,gamma_idx,energy,unc_en,relative_intensity,unc_ri,multipolarity,mixing_ratio,unc_mr,b_e1,unc_be1,b_e2,unc_be2,b_m1,unc_bm1,b_m2,unc_bm2,tot_conv_coeff,tce_unc,ensdf_publication_cut-off,ensdf_authors,Extraction_date
+79,122,Au,3,553,1,(7/2+),0,0,,3/2+,0,553,1,100,,,,,,,,,,,,,,,20-Sep-2022,F.G. KONDEV,2025-08-08
+79,122,Au,4,594,5,11/2-,3,553,1,(7/2+),0,41,5,100,,[M2],,,,,,,,,0.021,,1100,900,20-Sep-2022,F.G. KONDEV,2025-08-08
+79,122,Au,10,1232,6,(15/2-),4,594,5,11/2-,0,638,0.5,100,,,,,,,,,,,,,,,20-Sep-2022,F.G. KONDEV,2025-08-08
+79,122,Au,15,1610,6,(19/2+),10,1232,6,(15/2-),0,378.2,0.5,100,,(M2),,,,,,,,,0.013,,0.601,0.009,20-Sep-2022,F.G. KONDEV,2025-08-08
+79,122,Au,18,1760,20,,0,0,,3/2+,0,1760,20,100,,,,,,,,,,,,,,,20-Sep-2022,F.G. KONDEV,2025-08-08

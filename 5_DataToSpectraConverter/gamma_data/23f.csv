@@ -1,0 +1,17 @@
+z,n,symbol,start_level_idx,start_level_energy,unc_sle,start_level_jp,end_level_idx,end_level_energy,unc_ele,end_level_jp,gamma_idx,energy,unc_en,relative_intensity,unc_ri,multipolarity,mixing_ratio,unc_mr,b_e1,unc_be1,b_e2,unc_be2,b_m1,unc_bm1,b_m2,unc_bm2,tot_conv_coeff,tce_unc,ensdf_publication_cut-off,ensdf_authors,Extraction_date
+9,14,F,1,2246,8,(1/2)+,0,0,,(5/2+),0,2246,8,100,,,,,,,,,,,,,,,1-Jun-2020,M.S. Basunia{+#} and  A. Chakraborty{+##},2025-08-08
+9,14,F,2,2920,3,,,,,,0,2925,10,100,,,,,,,,,,,,,,,1-Jun-2020,M.S. Basunia{+#} and  A. Chakraborty{+##},2025-08-08
+9,14,F,3,3373,11,,,,,,0,3369,13,100,,,,,,,,,,,,,,,1-Jun-2020,M.S. Basunia{+#} and  A. Chakraborty{+##},2025-08-08
+9,14,F,4,3831,5,,2,2920,3,,0,912,4,100,,,,,,,,,,,,,,,1-Jun-2020,M.S. Basunia{+#} and  A. Chakraborty{+##},2025-08-08
+9,14,F,5,3865,15,(1/2+ 3/2+),1,2246,8,(1/2)+,0,1621,6,56,10,,,,,,,,,,,,,,1-Jun-2020,M.S. Basunia{+#} and  A. Chakraborty{+##},2025-08-08
+9,14,F,5,3865,15,(1/2+ 3/2+),0,0,,(5/2+),1,3867,15,100,16,,,,,,,,,,,,,,1-Jun-2020,M.S. Basunia{+#} and  A. Chakraborty{+##},2025-08-08
+9,14,F,6,3964,28,,,,,,0,1696,28,100,,,,,,,,,,,,,,,1-Jun-2020,M.S. Basunia{+#} and  A. Chakraborty{+##},2025-08-08
+9,14,F,7,4061,11,(3/2+),,,,,0,4065,16,100,,,,,,,,,,,,,,,1-Jun-2020,M.S. Basunia{+#} and  A. Chakraborty{+##},2025-08-08
+9,14,F,8,4610,12,(1/2+ 3/2+),3,3373,11,,0,1237,4,100,,,,,,,,,,,,,,,1-Jun-2020,M.S. Basunia{+#} and  A. Chakraborty{+##},2025-08-08
+9,14,F,9,4732,69,,0,0,,(5/2+),0,4732,69,100,,,,,,,,,,,,,,,1-Jun-2020,M.S. Basunia{+#} and  A. Chakraborty{+##},2025-08-08
+9,14,F,10,4923,13,,2,2920,3,,0,2003,19,100,,,,,,,,,,,,,,,1-Jun-2020,M.S. Basunia{+#} and  A. Chakraborty{+##},2025-08-08
+9,14,F,12,5547,8,(1/2+ 3/2+),4,3831,5,,0,1716,6,100,,,,,,,,,,,,,,,1-Jun-2020,M.S. Basunia{+#} and  A. Chakraborty{+##},2025-08-08
+9,14,F,13,5593,15,(1/2+ 3/2+),2,2920,3,,0,2673,14,100,,,,,,,,,,,,,,,1-Jun-2020,M.S. Basunia{+#} and  A. Chakraborty{+##},2025-08-08
+9,14,F,15,6365,60,,2,2920,3,,0,3445,60,100,,,,,,,,,,,,,,,1-Jun-2020,M.S. Basunia{+#} and  A. Chakraborty{+##},2025-08-08
+9,14,F,16,6629,25,,10,4923,13,,0,1706,25,100,,,,,,,,,,,,,,,1-Jun-2020,M.S. Basunia{+#} and  A. Chakraborty{+##},2025-08-08
+9,14,F,17,6905,41,,2,2920,3,,0,3985,51,100,,,,,,,,,,,,,,,1-Jun-2020,M.S. Basunia{+#} and  A. Chakraborty{+##},2025-08-08

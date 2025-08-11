@@ -1,0 +1,16 @@
+z,n,symbol,start_level_idx,start_level_energy,unc_sle,start_level_jp,end_level_idx,end_level_energy,unc_ele,end_level_jp,gamma_idx,energy,unc_en,relative_intensity,unc_ri,multipolarity,mixing_ratio,unc_mr,b_e1,unc_be1,b_e2,unc_be2,b_m1,unc_bm1,b_m2,unc_bm2,tot_conv_coeff,tce_unc,ensdf_publication_cut-off,ensdf_authors,Extraction_date
+85,129,At,2,78,1,(0-),0,0,,1-,0,78,,,,,,,,,,,,,,,,,1-May-2021,Shaofei Zhu and E. A. McCutchan,2025-08-08
+85,129,At,3,145.1,0.5,(2)-,0,0,,1-,0,145.1,0.5,100,,M1,,,,,,,,,,,4.19,0.07,1-May-2021,Shaofei Zhu and E. A. McCutchan,2025-08-08
+85,129,At,4,187,0.9,(3-),0,0,,1-,0,187,1,100,,,,,,,,,,,,,,,1-May-2021,Shaofei Zhu and E. A. McCutchan,2025-08-08
+85,129,At,5,228.1,1.2,(4-),3,145.1,0.5,(2)-,0,83,1,100,,,,,,,,,,,,,,,1-May-2021,Shaofei Zhu and E. A. McCutchan,2025-08-08
+85,129,At,7,277.9,1,(7-),6,231,7,9-,0,46,1,100,,,,,,,,,,,,,,,1-May-2021,Shaofei Zhu and E. A. McCutchan,2025-08-08
+85,129,At,8,302.1,1.5,(6-),5,228.1,1.2,(4-),0,74,1,100,,,,,,,,,,,,,,,1-May-2021,Shaofei Zhu and E. A. McCutchan,2025-08-08
+85,129,At,9,304,1.2,(1- 2-),4,187,0.9,(3-),0,117,1,100,,,,,,,,,,,,,,,1-May-2021,Shaofei Zhu and E. A. McCutchan,2025-08-08
+85,129,At,9,304,1.2,(1- 2-),2,78,1,(0-),1,226,2,75,,,,,,,,,,,,,,,1-May-2021,Shaofei Zhu and E. A. McCutchan,2025-08-08
+85,129,At,9,304,1.2,(1- 2-),0,0,,1-,2,304,4,100,,,,,,,,,,,,,,,1-May-2021,Shaofei Zhu and E. A. McCutchan,2025-08-08
+85,129,At,10,334,1.4,,4,187,0.9,(3-),0,147,1,100,,,,,,,,,,,,,,,1-May-2021,Shaofei Zhu and E. A. McCutchan,2025-08-08
+85,129,At,11,343,1,(8)-,6,231,7,9-,0,111,1,100,,M1,,,,,,,,,,,8.98,0.27,1-May-2021,Shaofei Zhu and E. A. McCutchan,2025-08-08
+85,129,At,15,504.1,2.3,,5,228.1,1.2,(4-),0,276,2,100,,,,,,,,,,,,,,,1-May-2021,Shaofei Zhu and E. A. McCutchan,2025-08-08
+85,129,At,16,565.1,2.3,,5,228.1,1.2,(4-),0,337,2,100,,,,,,,,,,,,,,,1-May-2021,Shaofei Zhu and E. A. McCutchan,2025-08-08
+85,129,At,18,728.4,1.5,(8-),7,277.9,1,(7-),0,451,2,100,,,,,,,,,,,,,,,1-May-2021,Shaofei Zhu and E. A. McCutchan,2025-08-08
+85,129,At,18,728.4,1.5,(8-),6,231,7,9-,1,496,2,50,,,,,,,,,,,,,,,1-May-2021,Shaofei Zhu and E. A. McCutchan,2025-08-08

@@ -1,0 +1,17 @@
+z,n,symbol,start_level_idx,start_level_energy,unc_sle,start_level_jp,end_level_idx,end_level_energy,unc_ele,end_level_jp,gamma_idx,energy,unc_en,relative_intensity,unc_ri,multipolarity,mixing_ratio,unc_mr,b_e1,unc_be1,b_e2,unc_be2,b_m1,unc_bm1,b_m2,unc_bm2,tot_conv_coeff,tce_unc,ensdf_publication_cut-off,ensdf_authors,Extraction_date
+93,147,Np,2,44.17,0.06,(1+),1,0,,(1+),0,44.1,0.07,100,,M1(+E2),0.07,0.07,,,,,,,,,59,10,31-Jul-2008,BALRAJ SINGH and  E. BROWNE,2025-08-08
+93,147,Np,3,61.4,0.1,,2,44.17,0.06,(1+),0,17.2,,,,,,,,,,,,,,,,,31-Jul-2008,BALRAJ SINGH and  E. BROWNE,2025-08-08
+93,147,Np,4,82.6,0.1,,1,0,,(1+),0,82.6,0.1,100,,,,,,,,,,,,,,,31-Jul-2008,BALRAJ SINGH and  E. BROWNE,2025-08-08
+93,147,Np,5,110.7,0.1,,3,61.4,0.1,,0,49.1,0.2,4.5,1.2,,,,,,,,,,,,,,31-Jul-2008,BALRAJ SINGH and  E. BROWNE,2025-08-08
+93,147,Np,5,110.7,0.1,,2,44.17,0.06,(1+),1,66.5,0.1,100,10,,,,,,,,,,,,,,31-Jul-2008,BALRAJ SINGH and  E. BROWNE,2025-08-08
+93,147,Np,6,111.6,0.2,,3,61.4,0.1,,0,50.3,0.2,100,,,,,,,,,,,,,,,31-Jul-2008,BALRAJ SINGH and  E. BROWNE,2025-08-08
+93,147,Np,7,189.7,0.1,(0- 1),6,111.6,0.2,,0,78.1,0.2,1.7,0.4,,,,,,,,,,,,,,31-Jul-2008,BALRAJ SINGH and  E. BROWNE,2025-08-08
+93,147,Np,7,189.7,0.1,(0- 1),3,61.4,0.1,,1,128.3,0.1,36.5,0.8,,,,,,,,,,,,,,31-Jul-2008,BALRAJ SINGH and  E. BROWNE,2025-08-08
+93,147,Np,7,189.7,0.1,(0- 1),2,44.17,0.06,(1+),2,145.4,0.1,34,0.8,,,,,,,,,,,,,,31-Jul-2008,BALRAJ SINGH and  E. BROWNE,2025-08-08
+93,147,Np,7,189.7,0.1,(0- 1),1,0,,(1+),3,189.7,0.1,100,4,,,,,,,,,,,,,,31-Jul-2008,BALRAJ SINGH and  E. BROWNE,2025-08-08
+93,147,Np,8,280,0.1,(0- 1),5,110.7,0.1,,0,169.2,0.1,100,7,,,,,,,,,,,,,,31-Jul-2008,BALRAJ SINGH and  E. BROWNE,2025-08-08
+93,147,Np,8,280,0.1,(0- 1),1,0,,(1+),1,280.1,0.1,13.9,0.9,,,,,,,,,,,,,,31-Jul-2008,BALRAJ SINGH and  E. BROWNE,2025-08-08
+93,147,Np,9,294.8,0.3,(0- 1),4,82.6,0.1,,0,212.3,0.5,78,15,,,,,,,,,,,,,,31-Jul-2008,BALRAJ SINGH and  E. BROWNE,2025-08-08
+93,147,Np,9,294.8,0.3,(0- 1),1,0,,(1+),1,294.8,0.3,100,21,,,,,,,,,,,,,,31-Jul-2008,BALRAJ SINGH and  E. BROWNE,2025-08-08
+93,147,Np,10,299.8,0.2,(0- 1),2,44.17,0.06,(1+),0,255.6,0.2,30.8,2.3,,,,,,,,,,,,,,31-Jul-2008,BALRAJ SINGH and  E. BROWNE,2025-08-08
+93,147,Np,10,299.8,0.2,(0- 1),1,0,,(1+),1,299.8,0.2,100,8,,,,,,,,,,,,,,31-Jul-2008,BALRAJ SINGH and  E. BROWNE,2025-08-08
