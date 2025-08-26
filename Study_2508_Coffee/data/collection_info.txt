@@ -1,0 +1,13 @@
+RCVT_gemahlen.csv 	-> Abbild 8 		- 2 Mio.
+RCVT_grBohne.csv 	-> Punkt 2 10 Mio 	- 10 Mio.
+RCVT_grBohne_A.csv 	-> Abbild 2 		- 2 Mio.
+RCVT_klBohne.csv 	-> Punkt 1 10 Mio 	- 10 Mio.
+RCVT_klBohne_A.csv 	-> Abbild 1 		- 2 Mio.
+Holm_Kol_Bohne.csv 	-> Punkt 5 10 Mio 	- 10 Mio.
+Holm_Kol_Bohne_A.csv 	-> Abbild 6 		- 2 Mio.
+Holm_Kol_Gemahlen_A.csv -> Abbild 7 		- 2 Mio.
+Viet_Rob_Bohne.csv 	-> Punkt 3 10 Mio 	- 10 Mio.
+Viet_Rob_Bohne_O.csv 	-> Punkt 4 Ob. 10 Mio 	- 10 Mio.
+Viet_Rob_Bohne_A.csv 	-> Abbild 4	 	- 2 Mio.
+Viet_Rob_Bohne_OA.csv 	-> Abbild 5	 	- 2 Mio.
+Viet_Rob_Gemahlen_A.csv	-> Abbild 3	 	- 2 Mio.
