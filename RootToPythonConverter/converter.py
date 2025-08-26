@@ -3,16 +3,17 @@ import sys
 import os
 import uuid
 import numpy as np
+from getmac import get_mac_address as gma
 
 from root_to_json import *
 from json_to_np import *
 
-mac = hex(uuid.getnode())
+mac = gma()
 print(f"MAC address: {mac}")
 
-mac_dict = {'0xb6ab0b4445f9': ['C://Users//schum//Documents//Filing Cabinet//1_RootFilesGeant4', 'C://Users//schum//Documents//Filing Cabinet//2_jsonFiles'], # Office
-            '0x145afc4fe836': ['C://Users//schum//Documents//root_files_temp_storage', 'C://Users//schum//Documents//json_files_temp_storage'], # Laptop
-            '0x1a7dda7115': ['B://IBA//root', 'B://IBA//json']} # Home PC
+mac_dict = {'f4:b5:20:5e:ba:f2': ['C://Users//schum//Documents//Filing Cabinet//1_RootFilesGeant4', 'C://Users//schum//Documents//Filing Cabinet//2_jsonFiles'], # Office
+            '14:5a:fc:4f:e8:35': ['D://root_files_temp_storage', 'D://json_files_temp_storage'], # Laptop
+            '0x1a7dda7115'  : ['B://IBA//root', 'B://IBA//json']} # Home PC
 # Each mac adresse leads to a pair of paths, the first being the folder, 
 # where the root files are, the second, where the json files are supposed to be stored
 root_path = mac_dict[mac][0]

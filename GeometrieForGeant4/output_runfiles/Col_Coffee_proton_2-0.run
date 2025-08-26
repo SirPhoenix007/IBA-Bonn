@@ -1,0 +1,10 @@
+make_custom_material; 2; command=make_custom_material; name=Columbian_Coffee; density=0.35; carbon=0.8134653098503312; oxygen=0.11136763620536305; nitrogen=0.04357794738535303; potassium=0.024134053507062127; phosphorus=0.005707074681006397; magnesium=0.0013655147273402741; calcium=0.00030377971687730384; sodium=7.868392666658035e-05; 
+place; 4; command=place; object=cube; name=target; material=Columbian_Coffee; pos_x=0.0; pos_y=0.0; pos_z=0.0; rot_x=0.0; rot_y=0.0; rot_z=0.0; size_x=10.0; size_y=10.0; size_z=0.1; 
+place; 4; command=place; object=sphere; name=source_marker; material=vacuum; pos_x=0.0; pos_y=0.0; pos_z=-50.0; rot_x=0.0; rot_y=0.0; rot_z=0.0; radius=2.0; alpha=0.5; red=0; green=100; 
+place; 4; command=place; object=sphere; name=detector; material=vacuum; pos_x=0.0; pos_y=0.0; pos_z=0.0; rot_x=0.0; rot_y=0.0; rot_z=0.0; radius=100; inner_radius=95.0; alpha=0.1; red=255; green=0; 
+make_sd; 7; command=make_sd; attach=ldetector; name=RBS; particle=primary; attrib_0=ekin; attrib_1=theta; attrib_2=phi; attrib_count=3; 
+make_sd; 7; command=make_sd; attach=ldetector; name=PIXE; particle=gamma; attrib_0=ekin; attrib_1=theta; attrib_2=phi; attrib_count=3; 
+particle_source; 4; command=particle_source; particle=proton; mono_e=true; shape=beam; energy=2.0; sigma=0.0; x_pos=0; y_pos=0.0; z_pos=-50.0; x_facing=0; y_facing=0; z_facing=1; sigma_r=1; atomic_number=0; atomic_mass=0; charge=0; excitation=0; 
+prerun_macro; 2; command=prerun_macro; content=/custom/ana/setOutFolder Col_Coffee_proton_2-0; 
+prerun_macro; 2; command=prerun_macro; content=/custom/ana/setRunName Col_Coffee_proton_2-0_; 
+no_macro_f; 1; command=no_macro_f; event_count=100000000.0; thread_count=12; 
