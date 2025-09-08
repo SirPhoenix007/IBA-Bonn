@@ -1,3 +1,13 @@
-PARAMETER; VALUE; UNIT_COMMENT
-energy; 1000; keV
-number; 1e8; -
+PARAMETER;VALUE;COMMENT
+dummy;42;this is not used
+file_1;.//Study_2508_Coffee//data//Holm_Kol_Bohne.csv;Holm Bean
+file_2;.//Study_2508_Coffee/data//Holm_Kol_Bohne_A.csv;Holm Bean Area
+file_3;.//Study_2508_Coffee//data//Holm_Kol_Gemahlen_A.csv;Holm Ground Area
+file_4;;-
+file_5;;-
+file_6;;-
+file_7;;-
+file_8;;-
+color scheme;c_complementary;-
+plot title 1; X-ray spectrum for Columbian Coffee;-
+

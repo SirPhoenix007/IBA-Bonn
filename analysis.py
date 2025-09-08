@@ -57,7 +57,10 @@ def dual_print(*args, **kwargs):
 from DataToHistoConverter.csv_to_npHisto import *
 from RootToPythonConverter.json_to_np import *
 from RootToPythonConverter.colors import load_colors
-from SpectrumFunctions import *
+import SpectrumFunctions as sf
+# from SpectrumFunctions.spectra_class1 import *
+# from SpectrumFunctions.load_data import *
+# from SpectrumFunctions.spectra_class1 import *
 #-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-#
 #Photon Line Information
 gamma_photon_line_energies_path = 'PhotonData//ENDSF_gamma_energy.json' #short dict to find lines via their energy
@@ -89,7 +92,22 @@ print('---------------------------------------')
 #-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-#
 def load_parameter(parameter_file):
     parameterFrame = pd.read_csv(parameter_file, header=0, delimiter=';')
+    parameterDict = parameterFrame.to_dict(orient='records')
+    print(f'LOADED PARAMETERS FROM {parameter_file}')
+    print('---------------------------------------')
     print(parameterFrame)
+    
+    files, names = sf.file_merger.parameter_to_list(parameterDict)
+    
+    #SPECTRUM CLASS 1
+    pmt = {}
+    pmt['col_s']    = parameterDict[9]['VALUE'] # color scheme
+    pmt['files']    = files # files as list
+    pmt['names']    = names # spec. names as list
+    pmt['plt_tlt']  = parameterDict[10]['VALUE'] # plot title
+    
+    sf.spectra_class1.spectrum_cl1(pmt)
+    
     return 'done'
 
 if __name__ == "__main__":
