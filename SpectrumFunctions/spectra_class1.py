@@ -15,6 +15,7 @@ import pandas as pd
 import seaborn as sb
 #-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-#
 import matplotlib.pyplot as plt
+from pathlib import Path
 from scipy.signal import find_peaks
 from scipy.optimize import curve_fit
 from getmac import get_mac_address as gma
@@ -68,19 +69,30 @@ color_schemes = load_colors()
 # time.strftime("Kernel started: %a, %d %b %Y %H:%M:%S", time.localtime())
 
 def spectrum_cl1(parameters_cl1:dict):
+    
     '''
     INPUTS:\n
     parameter_cl1: dictionary
     '''
+    timestamp = time.strftime("%Y%m%d_%H%M%S", time.localtime())
+    
     #PARSING OF PARAMETERS FOR PLOT
     color_scheme    = parameters_cl1['col_s']
     files           = parameters_cl1['files']
     dictnames       = parameters_cl1['names']
     plot_title      = parameters_cl1['plt_tlt']
+    save_fig        = parameters_cl1['savefig']
+    fig_name        = parameters_cl1['fig_name']
+    
+    DPI = 300
     
     colors = color_schemes[color_scheme]
-    plt.figure(figsize=(7,4), dpi=300)
-    timestamp = time.strftime("%Y%m%d_%H%M%S", time.localtime())
+    plt.figure(figsize=(7,4), dpi=DPI)
+    
+    print('---------------------------------------')
+    print('RUNNING NOW: Spectrum Class 1')
+    print('---------------------------------------')
+    
     for file in range(len(files)):
         print(files[file])
         df = sf.load_data.Load_Data(file_name=files[file])
@@ -102,4 +114,15 @@ def spectrum_cl1(parameters_cl1:dict):
     plt.ylabel('Counts')
     
     plt.title(plot_title)
+    plt.tight_layout()
+    if (save_fig == 'True'):
+        temp_file_path = files[file].split('//')[:-1]
+        file_path = ''
+        for i in range(len(temp_file_path)):
+            file_path += f'{temp_file_path[i]}//'
+        save_name = 'plot_' + fig_name + '_' + timestamp
+        plt.savefig(file_path + save_name + '.pdf', dpi=DPI, transparent=False)
+        plt.savefig(file_path + save_name + '.png', dpi=DPI, transparent=False)
+    
     plt.show()
+    

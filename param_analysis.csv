@@ -9,5 +9,6 @@ file_6;;-
 file_7;;-
 file_8;;-
 color scheme;c_complementary;-
-plot title 1; X-ray spectrum for Columbian Coffee;-
-
+plot title 1;X-ray spectrum for Columbian Coffee;-
+save plot 1;True;-
+fig name 1;HolmCoffee_PureSpectra;-

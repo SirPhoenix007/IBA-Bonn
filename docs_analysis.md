@@ -11,9 +11,9 @@ Inputs:
 
 - param_analysis.csv
   - this provides the program all its necessary parameters to function properly
-  - parameters
+  - parameters (*parameter name* - description of what the VALUE should be)
     - *dummy* - a placeholder and should not be removed
-    - *file_1...8* - the paths to the data, that should be used. Not needed line should not be removed, but just kept empty
+    - *file_1...8* - the paths to the data, that should be used. Not needed line should not be removed, but just kept empty. In COMMENT a brief name of that data set should be given for the legend of the plot
     - *color scheme* - defines the color scheme for the spectra and should only include on of the following strings: c_rainbow, c_complementary, c_violetorange.
     - *plot title 1* - the title for the first spectrum
 

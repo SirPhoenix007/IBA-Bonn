@@ -105,17 +105,19 @@ def load_parameter(parameter_file):
     pmt['files']    = files # files as list
     pmt['names']    = names # spec. names as list
     pmt['plt_tlt']  = parameterDict[10]['VALUE'] # plot title
+    pmt['savefig']  = parameterDict[11]['VALUE'] # whether to save a pdf/png of plot
+    pmt['fig_name'] = parameterDict[12]['VALUE'] # name to use for saving
     
     sf.spectra_class1.spectrum_cl1(pmt)
     
     return 'done'
 
 if __name__ == "__main__":
-    start_routine = time.perf_counter_ns()
+    start_routine = time.process_time_ns()
     load_parameter(sys.argv[1])
     
     print('---------------------------------------')
-    end_routine = time.perf_counter_ns()
+    end_routine = time.process_time_ns()
     elapsed_routine = (end_routine - start_routine)/1e9
     print(f'INFO: ROUTINE COMPLETE ({elapsed_routine:.4f} ns)')
     print('---------------------------------------')
