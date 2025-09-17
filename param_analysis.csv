@@ -12,3 +12,8 @@ color scheme;c_complementary;-
 plot title 1;X-ray spectrum for Columbian Coffee;-
 save plot 1;True;-
 fig name 1;HolmCoffee_PureSpectra;-
+plot title 2;X-ray spectrum for Columbian Coffee with auto-identified peaks;-
+save plot 2;True;-
+fig name 2;HolmCoffee_SpectraPeaks;-
+peak_height;1000;-
+prominence;300;-

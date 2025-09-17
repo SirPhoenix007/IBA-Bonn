@@ -90,7 +90,7 @@ elapsed_setup = (end_setup - start_setup)/1e6
 print(f'INFO: SETUP COMPLETE ({elapsed_setup:.2f} ms)')
 print('---------------------------------------')
 #-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-#
-def load_parameter(parameter_file):
+def analysis(parameter_file):
     parameterFrame = pd.read_csv(parameter_file, header=0, delimiter=';')
     parameterDict = parameterFrame.to_dict(orient='records')
     print(f'LOADED PARAMETERS FROM {parameter_file}')
@@ -98,23 +98,53 @@ def load_parameter(parameter_file):
     print(parameterFrame)
     
     files, names = sf.file_merger.parameter_to_list(parameterDict)
-    
+    #-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-#
     #SPECTRUM CLASS 1
-    pmt = {}
-    pmt['col_s']    = parameterDict[9]['VALUE'] # color scheme
-    pmt['files']    = files # files as list
-    pmt['names']    = names # spec. names as list
-    pmt['plt_tlt']  = parameterDict[10]['VALUE'] # plot title
-    pmt['savefig']  = parameterDict[11]['VALUE'] # whether to save a pdf/png of plot
-    pmt['fig_name'] = parameterDict[12]['VALUE'] # name to use for saving
+    pmt1 = {}
+    pmt1['col_s']    = parameterDict[9]['VALUE'] # color scheme
+    pmt1['files']    = files # files as list
+    pmt1['names']    = names # spec. names as list
+    pmt1['plt_tlt']  = parameterDict[10]['VALUE'] # plot title
+    pmt1['savefig']  = parameterDict[11]['VALUE'] # whether to save a pdf/png of plot
+    pmt1['fig_name'] = parameterDict[12]['VALUE'] # name to use for saving
     
-    sf.spectra_class1.spectrum_cl1(pmt)
+    sf.spectra_class1.spectrum_cl1(pmt1)
+    
+    #-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-#
+    #SPECTRUM CLASS 2
+    pmt2 = {}
+    pmt2['col_s']    = parameterDict[9]['VALUE'] # color scheme
+    pmt2['files']    = files # files as list
+    pmt2['names']    = names # spec. names as list
+    pmt2['plt_tlt']  = parameterDict[13]['VALUE'] # plot title
+    pmt2['savefig']  = parameterDict[14]['VALUE'] # whether to save a pdf/png of plot
+    pmt2['fig_name'] = parameterDict[15]['VALUE'] # name to use for saving
+    pmt2['pk_high']  = parameterDict[16]['VALUE'] # peak height parameter
+    pmt2['pk_prom']  = parameterDict[17]['VALUE'] # peak prominence parameter
+    
+    sf.spectra_class2.spectrum_cl2(pmt2)
+    
+    #-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-#
+    #SPECTRUM CLASS 3
+    pmt3 = {}
+    pmt3['col_s']    = parameterDict[9]['VALUE'] # color scheme
+    pmt3['files']    = files # files as list
+    pmt3['names']    = names # spec. names as list
+    pmt3['plt_tlt']  = parameterDict[18]['VALUE'] # plot title
+    pmt3['savefig']  = parameterDict[19]['VALUE'] # whether to save a pdf/png of plot
+    pmt3['fig_name'] = parameterDict[20]['VALUE'] # name to use for saving
+    pmt3['pk_high']  = parameterDict[16]['VALUE'] # peak height parameter
+    pmt3['pk_prom']  = parameterDict[17]['VALUE'] # peak prominence parameter
+    pmt3['en_width'] = parameterDict[21]['VALUE'] # width of window to look for x-ray lines
+    
+    for f in len(files):
+        sf.spectra_class3.spectrum_cl3(pmt3, f)
     
     return 'done'
 
 if __name__ == "__main__":
     start_routine = time.process_time_ns()
-    load_parameter(sys.argv[1])
+    analysis(sys.argv[1])
     
     print('---------------------------------------')
     end_routine = time.process_time_ns()
