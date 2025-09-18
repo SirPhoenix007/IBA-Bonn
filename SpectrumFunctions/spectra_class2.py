@@ -116,7 +116,7 @@ def spectrum_cl2(parameters_cl2:dict):
     plt.xlabel('Energy in eV')
     
     plt.yscale('log')
-    plt.ylim(100,2*10**6)
+    plt.ylim(100,2*10**5)
     plt.ylabel('Counts')
     
     plt.title(plot_title)

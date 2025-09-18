@@ -1,0 +1,23 @@
+PARAMETER;VALUE;COMMENT
+dummy;42;this is not used
+file_1;.//Study_2508_Coffee//data//RCVT_grBohne_A.csv;rvct large Bean Area
+file_2;.//Study_2508_Coffee/data//RCVT_klBohne_A.csv;rvct small Bean Area
+file_3;.//Study_2508_Coffee//data//RCVT_gemahlen.csv;rvct ground Bean
+file_4;;-
+file_5;;-
+file_6;;-
+file_7;;-
+file_8;;-
+color scheme;c_complementary;-
+plot title 1;X-ray spectrum for Indian/Yemeni Coffee;-
+save plot 1;True;-
+fig name 1;RVCTCoffee_PureSpectra;-
+plot title 2;X-ray spectrum for Indian/Yemeni Coffee with auto-identified peaks;-
+save plot 2;True;-
+fig name 2;RVCTCoffee_SpectraPeaks;-
+peak_height;200;-
+prominence;200;-
+plot title 3;X-ray spectrum for Indian/Yemeni Coffee with included search areas;-
+save plot 3;True;-
+fig name 3;RVCTCoffee_SpectraRanges;-
+window width;20;eV

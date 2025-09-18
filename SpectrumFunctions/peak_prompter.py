@@ -114,14 +114,15 @@ def peak_text_prompter(peaks, energy_centers, energy_width, output_file_name, in
     for p in peaks:
         energy_bins[p] = [enc[p], enc[p] - enw, enc[p] + enw]
         
-        E_low = round(enc[p][1]*10**6,4)
-        E_high = round(enc[p][2]*10**6,4)
+        E_low = round(energy_bins[p][1],4)
+        E_high = round(energy_bins[p][2],4)
         matching = xray_line_searcher(E_low, E_high)
         # print(matching[0])
         # print(energy_bins[p])
-        dual_print(ofn,f'Bin {p}'.ljust(8) + '| ' + f'{round(energy_bins[p][1]*10**6,1)} - {round(energy_bins[p][2]*10**6,1)}'.ljust(18) + '| ' + '-'.ljust(33,'-'))
+        dual_print(ofn,f'Bin {p}'.ljust(8) + '| ' + f'{round(energy_bins[p][1],1)} - {round(energy_bins[p][2],1)}'.ljust(18) + '| ' + '-'.ljust(33,'-'))
         
         for line in matching:
             dual_print(ofn,''.ljust(28) + '| ' + str(line['element']).ljust(4) + '| ' + str(line['transition']).ljust(6) + '| ' + str(line['energy_eV']).ljust(12) + '| ' + str(round(line['intensity'],3)).ljust(6))
-        
+    
+    # print(energy_bins)
     return energy_bins

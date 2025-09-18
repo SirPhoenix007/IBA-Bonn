@@ -13,6 +13,7 @@ import numpy as np
 import pandas as pd
 # import pyxray as xy
 import seaborn as sb
+import matplotlib as mpl
 #-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-#
 import matplotlib.pyplot as plt
 from pathlib import Path
@@ -90,27 +91,36 @@ def spectrum_cl3(parameters_cl3:dict, f:int):
     
     DPI = 300
     
-    outfile = ''
+    outfile = f'XrayLines_{dictnames[f]}_{timestamp}.txt'
     
     colors = color_schemes[color_scheme]
-    plt.figure(figsize=(7,4), dpi=DPI)
+    fig, ax = plt.subplots(figsize=(7,4), dpi=DPI)
     
     print('---------------------------------------')
     print('RUNNING NOW: Spectrum Class 3')
     print('---------------------------------------')
     
-    print(files[f])
+    # print(files[f])
+    # print(dictnames[f])
     df = sf.load_data.Load_Data(file_name=files[f])
     x = df['Energy [eV]']
     y = df['Counts']
-    plt.plot(x, y,
+    ax.plot(x, y,
                 lw=0.75, ls='-',
                 color=colors[f], label= dictnames[f],
                 zorder=2)
     peaks, properties = find_peaks(y, height=peak_height, prominence=peak_prom)
-    energy_bins = sf.peak_prompter.peak_text_prompter(peaks=peaks, energy_centers=x, energy_width=energy_w, output_file_name=outfile, info)
+    energy_bins = sf.peak_prompter.peak_text_prompter(peaks=peaks, energy_centers=x, energy_width=energy_w, output_file_name=outfile, info=files[f])
     
-    plt.grid()
+    for eb in (peaks):
+        patch = mpl.patches.Rectangle(xy=(energy_bins[eb][1],100), 
+                                      width=2*energy_w, height=y[eb], 
+                                      color='black', alpha=0.35, ec=None,
+                                      zorder=3)
+        ax.add_patch(patch)
+        plt.text(x=energy_bins[eb][1], y=1.1*y[eb], s=f'bin {eb}', rotation=30, color='black', fontsize=6)
+        
+    plt.grid(alpha=0.5)
     plt.legend(fontsize=6)
     
     plt.xscale('linear')
@@ -118,7 +128,7 @@ def spectrum_cl3(parameters_cl3:dict, f:int):
     plt.xlabel('Energy in eV')
     
     plt.yscale('log')
-    plt.ylim(100,2*10**6)
+    plt.ylim(100,3*10**5)
     plt.ylabel('Counts')
     
     plt.title(plot_title)

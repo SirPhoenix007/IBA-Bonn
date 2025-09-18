@@ -17,3 +17,7 @@ save plot 2;True;-
 fig name 2;HolmCoffee_SpectraPeaks;-
 peak_height;1000;-
 prominence;300;-
+plot title 3;X-ray spectrum for Columbian Coffee with included search areas;-
+save plot 3;True;-
+fig name 3;HolmCoffee_SpectraRanges;-
+window width;20;eV

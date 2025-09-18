@@ -1,0 +1,23 @@
+PARAMETER;VALUE;COMMENT
+dummy;42;this is not used
+file_1;.//Study_2508_Coffee//data//Viet_Rob_Bohne.csv;Robusta Bean (VN)
+file_2;.//Study_2508_Coffee/data//Viet_Rob_Bohne_A.csv;Robusta Bean Area (VN)
+file_3;.//Study_2508_Coffee//data//Viet_Rob_Bohne_OA.csv;Robusta Bean Surface Area (VN)
+file_4;.//Study_2508_Coffee//data//Viet_Rob_Gemahlen_A.csv;Robusta Ground Bean Area (VN)
+file_5;;-
+file_6;;-
+file_7;;-
+file_8;;-
+color scheme;c_complementary;-
+plot title 1;X-ray spectrum for Vietnamese Coffee;-
+save plot 1;True;-
+fig name 1;VietCoffee_PureSpectra;-
+plot title 2;X-ray spectrum for Vietnamese Coffee with auto-identified peaks;-
+save plot 2;True;-
+fig name 2;VietCoffee_SpectraPeaks;-
+peak_height;200;-
+prominence;250;-
+plot title 3;X-ray spectrum for Vietnamese Coffee with included search areas;-
+save plot 3;True;-
+fig name 3;VietCoffee_SpectraRanges;-
+window width;20;eV
