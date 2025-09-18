@@ -113,7 +113,7 @@ def spectrum_cl3(parameters_cl3:dict, f:int):
     energy_bins = sf.peak_prompter.peak_text_prompter(peaks=peaks, energy_centers=x, energy_width=energy_w, output_file_name=outfile, info=files[f])
     
     for eb in (peaks):
-        patch = mpl.patches.Rectangle(xy=(energy_bins[eb][1],100), 
+        patch = mpl.patches.Rectangle(xy=(energy_bins[eb][1],1), 
                                       width=2*energy_w, height=y[eb], 
                                       color='black', alpha=0.35, ec=None,
                                       zorder=3)
@@ -124,11 +124,11 @@ def spectrum_cl3(parameters_cl3:dict, f:int):
     plt.legend(fontsize=6)
     
     plt.xscale('linear')
-    plt.xlim(0,4000)
+    plt.xlim(0,10000)
     plt.xlabel('Energy in eV')
     
     plt.yscale('log')
-    plt.ylim(100,3*10**5)
+    plt.ylim(10,3*10**6)
     plt.ylabel('Counts')
     
     plt.title(plot_title)
