@@ -138,7 +138,8 @@ def analysis(parameter_file):
     pmt3['en_width'] = parameterDict[21]['VALUE'] # width of window to look for x-ray lines
     
     for f in range(len(files)):
-        sf.spectra_class3.spectrum_cl3(pmt3, f)
+        peaks = sf.spectra_class3.spectrum_cl3(pmt3, f)
+        
     
     return 'done'
 
