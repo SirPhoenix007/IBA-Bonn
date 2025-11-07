@@ -137,9 +137,14 @@ def analysis(parameter_file):
     pmt3['pk_prom']  = parameterDict[17]['VALUE'] # peak prominence parameter
     pmt3['en_width'] = parameterDict[21]['VALUE'] # width of window to look for x-ray lines
     
+    
+    files_peaks = {}
     for f in range(len(files)):
         peaks = sf.spectra_class3.spectrum_cl3(pmt3, f)
-        
+        files_peaks[f] = peaks
+    
+    elements = ['carbon', 'oxygen', 'potassium']
+    
     
     return 'done'
 

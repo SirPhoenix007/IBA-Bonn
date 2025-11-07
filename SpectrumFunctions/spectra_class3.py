@@ -144,3 +144,4 @@ def spectrum_cl3(parameters_cl3:dict, f:int):
     
     plt.show()
     
+    return peaks
