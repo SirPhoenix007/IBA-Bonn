@@ -8,3 +8,4 @@ ID,Type,Diameter,Thickness,Ring_diameter,V_bias,I_leak,DepletionDepth,DeltaV_bia
 '22-493E',2,31.92,12.37,,,,
 '22-229E',2,32.06,12.34,,,,
 '22-401I',2,31.93,12.36,,,,
+'CB-52148',4,,,,10,2e-9,
