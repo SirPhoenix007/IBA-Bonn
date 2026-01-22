@@ -3,12 +3,13 @@
 import time
 start_setup = time.process_time_ns()
 print('---------------------------------------')
-print(time.strftime("analysis.py started: %a, %d %b %Y %H:%M:%S", time.localtime()))
+print(time.strftime("RBS_IVcurve.py started: %a, %d %b %Y %H:%M:%S", time.localtime()))
 #-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-#
 import os
 import sys
 import json
 import uuid
+import h5py
 import xraydb
 import plotly
 #-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-#
@@ -22,6 +23,8 @@ from scipy.signal import find_peaks
 from scipy.optimize import curve_fit
 from getmac import get_mac_address as gma
 
+#-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-#
+from colors import load_colors
 #-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-#
 
 from matplotlib import rc
@@ -53,20 +56,6 @@ def dual_print(*args, **kwargs):
         print(*args, **kwargs, file=out)
         
 #-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-#
-#Functions Access
-from DataToHistoConverter.csv_to_npHisto import *
-from RootToPythonConverter.json_to_np import *
-from RootToPythonConverter.colors import load_colors
-import SpectrumFunctions as sf
-# from SpectrumFunctions.spectra_class1 import *
-# from SpectrumFunctions.load_data import *
-# from SpectrumFunctions.spectra_class1 import *
-#-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-#
-#Photon Line Information
-gamma_photon_line_energies_path = 'PhotonData//ENDSF_gamma_energy.json' #short dict to find lines via their energy
-gamma_photon_line_fulldata_path = 'PhotonData//ENDSF_gamma_full.json' #long dict with same keys as above but with full information
-xray_photon_lines_path          = 'PhotonData//xraylines.json'
-#-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-#
 
 mac = gma()
 print('---------------------------------------')
@@ -90,31 +79,21 @@ elapsed_setup = (end_setup - start_setup)/1e6
 print(f'INFO: SETUP COMPLETE ({elapsed_setup:.2f} ms)')
 print('---------------------------------------')
 #-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-#
+def DepDepth(rho, volt):
+    return 0.5 * np.sqrt(rho*volt)
+#-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-#
 
-# Source - https://stackoverflow.com/a
-# Posted by Martin Thoma, modified by community. See post 'Timeline' for change history
-# Retrieved 2026-01-22, License - CC BY-SA 4.0
-
-import h5py
-filename = "file.hdf5"
+filename = ".//PIIPS//52148//IVcurve_PIIPS_52148___degC__2026-01-21_15-40-02.h5"
 
 with h5py.File(filename, "r") as f:
-    # Print all root level object names (aka keys) 
-    # these can be group or dataset names 
-    print("Keys: %s" % f.keys())
-    # get first object name/key; may or may NOT be a group
-    a_group_key = list(f.keys())[0]
+    iv = f["IV_data"][:]
+    voltage = iv["voltage"]
+    current = iv["current"] 
 
-    # get the object type for a_group_key: usually group or dataset
-    print(type(f[a_group_key])) 
+print(voltage)
+print(current)
 
-    # If a_group_key is a group name, 
-    # this gets the object names in the group and returns as a list
-    data = list(f[a_group_key])
-
-    # If a_group_key is a dataset name, 
-    # this gets the dataset values and returns as a list
-    data = list(f[a_group_key])
-    # preferred methods to get dataset values:
-    ds_obj = f[a_group_key]      # returns as a h5py dataset object
-    ds_arr = f[a_group_key][()]  # returns as a numpy array
+plt.figure(figsize=(4,4), dpi=300)
+plt.scatter(voltage,current)
+# plt.plot(voltage, DepDepth(rho=4200,volt=voltage)*1e-8)
+plt.show()
