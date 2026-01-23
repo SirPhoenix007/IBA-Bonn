@@ -80,20 +80,37 @@ print(f'INFO: SETUP COMPLETE ({elapsed_setup:.2f} ms)')
 print('---------------------------------------')
 #-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-#
 def DepDepth(rho, volt):
-    return 0.5 * np.sqrt(rho*volt)
+    return np.sqrt(rho*volt)
 #-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-#
 
-filename = ".//PIIPS//52148//IVcurve_PIIPS_52148___degC__2026-01-21_15-40-02.h5"
+#TODO: list all files with short summary
 
-with h5py.File(filename, "r") as f:
-    iv = f["IV_data"][:]
-    voltage = iv["voltage"]
-    current = iv["current"] 
+filename = ".//PIIPS//52148//IVcurve_PIIPS_52148___degC__2026-01-21_15-30-58.h5"
 
-print(voltage)
-print(current)
+def h5_plotter(filename):
+    with h5py.File(filename, "r") as f:
+        iv = f["IV_data"][:]
+        voltage = iv["voltage"]
+        current = iv["current"] 
 
-plt.figure(figsize=(4,4), dpi=300)
-plt.scatter(voltage,current)
-# plt.plot(voltage, DepDepth(rho=4200,volt=voltage)*1e-8)
-plt.show()
+    print(voltage)
+    print(current)
+
+    plt.figure(figsize=(4,4), dpi=300)
+    plt.plot(voltage,current,lw=0.75,ls=':',marker='x',ms=2.75, color='#6624EE',label='test')
+    # plt.plot(voltage, DepDepth(rho=4200,volt=voltage)*1e-8)
+    plt.legend(loc='best')
+    plt.tight_layout()
+    plt.show()
+    return end_routine
+
+
+if __name__ == "__main__":
+    start_routine = time.process_time_ns()
+    end_routine = h5_plotter(filename)
+    
+    print('---------------------------------------')
+    end_routine = time.process_time_ns()
+    elapsed_routine = (end_routine - start_routine)/1e9
+    print(f'INFO: ROUTINE COMPLETE ({elapsed_routine:.4f} ns)')
+    print('---------------------------------------')
