@@ -61,15 +61,15 @@ mac = gma()
 print('---------------------------------------')
 print(f"Current MAC address: {mac}")
 print('---------------------------------------')
-mac_dict = {'f4:b5:20:5e:ba:f2': ['C://Users//schum//Documents//Filing Cabinet//1_RootFilesGeant4', 'C://Users//schum//Documents//Filing Cabinet//2_jsonFiles'], # Office
-            '14:5a:fc:4f:e8:35': ['D://root_files_temp_storage', 'D://json_files_temp_storage'], # Laptop
-            '0x1a7dda7115'  : ['B://IBA//root', 'B://IBA//json']} # Home PC
-'''
-Each mac adresse leads to a pair of paths, the first being the folder, 
-where the root files are, the second, where the json files are supposed to be stored
-'''
-root_path = mac_dict[mac][0]
-json_path = mac_dict[mac][1]
+# mac_dict = {'f4:b5:20:5e:ba:f2': ['C://Users//schum//Documents//Filing Cabinet//1_RootFilesGeant4', 'C://Users//schum//Documents//Filing Cabinet//2_jsonFiles'], # Office
+#             '14:5a:fc:4f:e8:35': ['D://root_files_temp_storage', 'D://json_files_temp_storage'], # Laptop
+#             '0x1a7dda7115'  : ['B://IBA//root', 'B://IBA//json']} # Home PC
+# '''
+# Each mac adresse leads to a pair of paths, the first being the folder, 
+# where the root files are, the second, where the json files are supposed to be stored
+# '''
+# root_path = mac_dict[mac][0]
+# json_path = mac_dict[mac][1]
 
 color_schemes = load_colors()
 
@@ -80,20 +80,45 @@ print(f'INFO: SETUP COMPLETE ({elapsed_setup:.2f} ms)')
 print('---------------------------------------')
 #-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-#
 def DepDepth(rho, volt):
-    return 0.5 * np.sqrt(rho*volt)
+    return np.sqrt(rho*volt)
 #-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-#
 
-filename = ".//PIIPS//52148//IVcurve_PIIPS_52148___degC__2026-01-21_15-40-02.h5"
+#TODO: list all files with short summary
 
-with h5py.File(filename, "r") as f:
-    iv = f["IV_data"][:]
-    voltage = iv["voltage"]
-    current = iv["current"] 
+filename1 = ".//PIIPS//57432//IVcurve_PIIPS_57432___dark_v2_noOscidegC__2026-01-23_13-53-37.h5"
+filename2 = ".//PIIPS//57432//IVcurve_PIIPS_57432___dark_v2_noOscidegC__2026-01-23_13-49-18.h5"
 
-print(voltage)
-print(current)
+def h5_plotter(filename1, filename2):
+    with h5py.File(filename1, "r") as f:
+        iv = f["IV_data"][:]
+        voltage1 = iv["voltage"]
+        current1 = iv["current"] 
 
-plt.figure(figsize=(4,4), dpi=300)
-plt.scatter(voltage,current)
-# plt.plot(voltage, DepDepth(rho=4200,volt=voltage)*1e-8)
-plt.show()
+    with h5py.File(filename2, "r") as f:
+        iv = f["IV_data"][:]
+        voltage2 = iv["voltage"]
+        current2 = iv["current"] 
+    # print(voltage)
+    # print(current)
+
+    plt.figure(figsize=(4,4), dpi=300)
+    plt.plot(voltage1,current1,lw=0.75,ls=':',marker='x',ms=2.75, color='#6624EE',label='test')
+    plt.plot(voltage2,current2,lw=0.75,ls=':',marker='x',ms=2.75, color="#940518",label='test')
+    # plt.plot(voltage, DepDepth(rho=4200,volt=voltage)*1e-8)
+    plt.xlim(0,400)
+    plt.ylim(0,1e-8)
+    plt.grid(which='both')
+    plt.legend(loc='best')
+    plt.tight_layout()
+    plt.show()
+
+
+if __name__ == "__main__":
+    start_routine = time.process_time_ns()
+    h5_plotter(filename1, filename2)
+    
+    print('---------------------------------------')
+    end_routine = time.process_time_ns()
+    elapsed_routine = (end_routine - start_routine)/1e9
+    print(f'INFO: ROUTINE COMPLETE ({elapsed_routine:.4f} ns)')
+    print('---------------------------------------')
