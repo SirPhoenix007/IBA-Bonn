@@ -18,10 +18,12 @@ import pandas as pd
 # import pyxray as xy
 import seaborn as sb
 #-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-#
+from lmfit import Model
 import matplotlib.pyplot as plt
 from scipy.signal import find_peaks
 from scipy.optimize import curve_fit
 from getmac import get_mac_address as gma
+from matplotlib.offsetbox import OffsetImage, AnnotationBbox, TextArea, VPacker
 
 #-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-#
 from colors import load_colors
@@ -81,41 +83,96 @@ print('---------------------------------------')
 #-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-#
 def DepDepth(rho, volt):
     return np.sqrt(rho*volt)
+
+def sqrt_func(x,a,b,c,d):
+    return a*np.sqrt(b*x + c) + d
+
+sqrtModel = Model(sqrt_func)
+print(f'parameter names: {sqrtModel.param_names}')
+print(f'independent variables: {sqrtModel.independent_vars}')
 #-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-#
 
-#TODO: list all files with short summary
 
-filename1 = ".//PIIPS//57432//IVcurve_PIIPS_57432___dark_v2_noOscidegC__2026-01-23_13-53-37.h5"
-filename2 = ".//PIIPS//57432//IVcurve_PIIPS_57432___dark_v2_noOscidegC__2026-01-23_13-49-18.h5"
 
-def h5_plotter(filename1, filename2):
-    with h5py.File(filename1, "r") as f:
+
+
+# filename1 = ".//PIIPS//57432//IVcurve_PIIPS_57432___dark_v2_noOscidegC__2026-01-23_13-53-37.h5"
+# filename2 = ".//PIIPS//57432//IVcurve_PIIPS_57432___dark_v2_noOscidegC__2026-01-23_13-49-18.h5"
+#-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-#
+#TODO: collect all h5 of one detector
+files_52148 = [
+    ".//PIIPS//52148//IVcurve_PIIPS_52148___dark_v2_noOscidegC__2026-01-23_11-06-17.h5",
+    ".//PIIPS//52148//IVcurve_PIIPS_52148___dark_v2_noOscidegC__2026-01-23_11-10-49.h5",
+    ".//PIIPS//52148//IVcurve_PIIPS_52148___dark_v2_noOscidegC__2026-01-23_11-17-50.h5",
+    ".//PIIPS//52148//IVcurve_PIIPS_52148___dark_v2_noOscidegC__2026-01-23_11-20-14.h5",
+    ".//PIIPS//52148//IVcurve_PIIPS_52148___dark_v2_noOscidegC__2026-01-23_11-25-30.h5",
+    ".//PIIPS//52148//IVcurve_PIIPS_52148___dark_v2_noOscidegC__2026-01-23_11-35-07.h5"
+]
+#-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-#
+
+def h5_data_extraction(h5File):
+    with h5py.File(h5File, "r") as f:
         iv = f["IV_data"][:]
-        voltage1 = iv["voltage"]
-        current1 = iv["current"] 
+        voltage = iv["voltage"]
+        current = iv["current"]
+    return voltage, current
 
-    with h5py.File(filename2, "r") as f:
-        iv = f["IV_data"][:]
-        voltage2 = iv["voltage"]
-        current2 = iv["current"] 
-    # print(voltage)
-    # print(current)
+def h5_data_compactor(h5FileList):
+    measurement_dict = {}
+    for file in h5FileList:
+        print(file)
+        parts = file.split('//')
+        det_type = parts[1]
+        det_id = parts[2]
+        det_type2 = parts[3].split('__')[1][1:-4]
+        date = parts[3].split('__')[2][:-3]
+        v,c = h5_data_extraction(file)
+        c_min, c_max = np.min(c), np.max(c)
+        measurement_dict[date] = {'det_type':det_type, 'det_type2':det_type2, 'det_id':det_id, 'voltage':v, 'current':c, 'c_bounds': (c_min,c_max)}
+        # print(measurement_dict)
+    return measurement_dict
+        
 
-    plt.figure(figsize=(4,4), dpi=300)
-    plt.plot(voltage1,current1,lw=0.75,ls=':',marker='x',ms=2.75, color='#6624EE',label='test')
-    plt.plot(voltage2,current2,lw=0.75,ls=':',marker='x',ms=2.75, color="#940518",label='test')
-    # plt.plot(voltage, DepDepth(rho=4200,volt=voltage)*1e-8)
-    plt.xlim(0,400)
-    plt.ylim(0,1e-8)
+def h5_plotter(h5dict):
+    fig, ax = plt.subplots(figsize=(4,3), dpi=300)
+    c_index = 0
+    for k in list(h5dict.keys()):
+        measurement = h5dict[k]
+        
+        ax.plot(measurement['voltage'],measurement['current']*10**6,lw=0.75,ls=':',marker='x',ms=2.75, color=color_schemes['c_complementary'][c_index],label=k)
+        c_index += 1
+
+    #----------------- Detector Image includer -----------------#
+    img = plt.imread("PIIPS_3D_f.png")
+    annotation = TextArea(f"PIIPS Detector \n ID: {measurement['det_id']}", textprops=dict(color="black", fontsize=5, multialignment='center'))
+    imagebox = OffsetImage(img, zoom=0.05)
+    stacked = VPacker(children=[imagebox, annotation],
+                 align="center",
+                 pad=0,
+                 sep=5)
+    
+    ab = AnnotationBbox(stacked, (50.,2.5), frameon=True)
+
+    ax.add_artist(ab)
+    #----------------- Detector Image includer -----------------#
+    
+    plt.xlabel(r'Bias Voltage / V')
+    plt.ylabel(r'Leakage Current / $\mu$A')
+    
+    plt.xlim(0,500)
+    # plt.ylim(1.8e-6,4e-6)
+    plt.ylim(1.5,4)
     plt.grid(which='both')
-    plt.legend(loc='best')
+    plt.legend(loc=2, fontsize=6)
     plt.tight_layout()
     plt.show()
 
 
 if __name__ == "__main__":
     start_routine = time.process_time_ns()
-    h5_plotter(filename1, filename2)
+    
+    h5dict = h5_data_compactor(files_52148)
+    h5_plotter(h5dict)
     
     print('---------------------------------------')
     end_routine = time.process_time_ns()
