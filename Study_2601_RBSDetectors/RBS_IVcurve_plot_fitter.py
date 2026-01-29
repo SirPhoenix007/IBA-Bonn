@@ -10,12 +10,14 @@ import sys
 import json
 import uuid
 import h5py
+import math
 import xraydb
 import plotly
 #-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-#
 import numpy as np
 import pandas as pd
 # import pyxray as xy
+import odrpack as odr
 import seaborn as sb
 #-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-#
 from lmfit import Model
@@ -84,8 +86,9 @@ print('---------------------------------------')
 def DepDepth(rho, volt):
     return np.sqrt(rho*volt)
 
-def sqrt_func(x,a,b,c):
-    return a*np.sqrt(np.abs((x - b))) + c
+def sqrt_func(x,a,b,c,d):
+    # return a*np.sqrt(np.abs(x-b)) + c
+    return a*np.sqrt(np.abs(x-b)) + c*x + d
 
 sqrtModel = Model(sqrt_func)
 print('---------------------------------------')
@@ -96,20 +99,28 @@ print('---------------------------------------')
 def evaluator(sqrtModel, param_list:list, space:list, x:list, y:list):
     params = sqrtModel.make_params(a=dict(value=param_list[0], min=0),
                                    b=dict(value=param_list[1], min=0),
-                                   c=dict(value=param_list[2], min=0))
+                                   c=dict(value=param_list[2], min=0),
+                                   d=dict(value=param_list[2], min=0))
     print(params)
     x_eval = np.linspace(space[0], space[1], space[2])
     result = sqrtModel.fit(y, params, x=x)
     print(result.fit_report())
     parameter_results = {'a': [result.summary()['params'][0][1],result.summary()['params'][0][7]],
                          'b': [result.summary()['params'][1][1],result.summary()['params'][1][7]],
-                         'c': [result.summary()['params'][2][1],result.summary()['params'][2][7]]}
+                         'c': [result.summary()['params'][2][1],result.summary()['params'][2][7]],
+                         'd': [result.summary()['params'][3][1],result.summary()['params'][3][7]],}
     print(parameter_results)
     return result
         
 #-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-#
-
-
+def file_collector(dettype:str,id:str):
+    file_collection = []
+    top_level_path = f'.//{dettype}//{id}'
+    for file in os.listdir(top_level_path):
+        if (file[-3:] == '.h5'):
+            full_path = top_level_path + '//' + file
+            file_collection.append(full_path)
+    return file_collection
 
 
 
@@ -164,7 +175,7 @@ def h5_data_extraction(h5File):
 def h5_data_compactor(h5FileList):
     measurement_dict = {}
     for file in h5FileList:
-        print(file)
+        # print(file)
         parts = file.split('//')
         det_type = parts[1]
         det_id = parts[2]
@@ -176,57 +187,72 @@ def h5_data_compactor(h5FileList):
         # print(measurement_dict)
     return measurement_dict
         
-
-def h5_plotter(h5dict):
-    DPI = 300
-    plot_type = 'Zero-To-Breakdown'
-    fig, ax = plt.subplots(figsize=(6,3), dpi=DPI)
-    c_index = 0
-    x_min, x_max, y_min, y_max = 1e6,0,1e6,0
-    
-    #----------------- Measurement Plotter -----------------#
+def h5_measurement_combiner(h5dict):
+    measure_total_voltage, measure_total_current = [],[]
     for k in list(h5dict.keys()):
         measurement = h5dict[k]
-        scaling = 1e6
+        for j in range(len(measurement['voltage'])):
+            measure_total_voltage.append(float(measurement['voltage'][j]))
+            measure_total_current.append(float(measurement['current'][j]))
+    return np.array(measure_total_voltage), np.array(measure_total_current)
+
+def h5_plotter(h5dict, m_volt, m_curr):
+    DPI = 300
+    plot_type = 'FullData_andFit'
+    fig, ax = plt.subplots(figsize=(6,3), dpi=DPI)
+    c_index = 0
+    x_min, x_max, y_min, y_max = np.min(m_volt), np.max(m_volt), np.min(m_curr), np.max(m_curr)
+    scaling = 10**(-(math.floor(math.log(np.max(m_curr), 10)))-1)
+    print(scaling)
+    measurement = h5dict[list(h5dict.keys())[0]]
+    
+    #----------------- Measurement Plotter -----------------#
+    # for k in list(h5dict.keys()):
+    #     measurement = h5dict[k]
+    #     scaling = math.floor(math.log(number, 10))
         
-        if (x_min > np.min(measurement['voltage'])):
-            x_min = np.min(measurement['voltage'])
+    #     if (x_min > np.min(measurement['voltage'])):
+    #         x_min = np.min(measurement['voltage'])
             
-        if (x_max < np.max(measurement['voltage'])):
-            x_max = np.max(measurement['voltage'])
+    #     if (x_max < np.max(measurement['voltage'])):
+    #         x_max = np.max(measurement['voltage'])
             
-        if (y_min > np.min(measurement['current'])):
-            y_min = np.min(measurement['current'])
+    #     if (y_min > np.min(measurement['current'])):
+    #         y_min = np.min(measurement['current'])
         
-        if (y_max < np.max(measurement['current'])):
-            y_max = np.max(measurement['current'])
-            
-        # p_list =[0.5,np.min(measurement['voltage']),float(np.min(measurement['current']))*scaling]
-        # print(p_list)
-        # s_list = [np.min(measurement['voltage'])*0.95, np.max(measurement['voltage'])*1.1, 1000]
+    #     if (y_max < np.max(measurement['current'])):
+    #         y_max = np.max(measurement['current'])
         
-        ax.errorbar(x=measurement['voltage'],
-                    y=measurement['current']*scaling,
-                    yerr=0.05,
-                    capsize=1,
-                    capthick=0.4,
-                    elinewidth=0.2,
-                    ms=3,
-                    fmt='x',
-                    color=color_schemes['c_complementary'][c_index],
-                    label=k)
-        
-        # result = evaluator(sqrtModel=sqrtModel, param_list=p_list, space=s_list, x=measurement['voltage'], y=scaled_measurement)
-        
-        # ax.plot(measurement['voltage'],
-        #         result.best_fit,lw=0.75,
-        #         ls='-',
-        #         color=color_schemes['c_complementary'][c_index],
-        #         alpha=0.9,
-        #         zorder=2,
-        #         label=k)
-        
-        c_index += 1
+    p_list =[0.5,np.min(m_volt),float(np.min(m_curr))*scaling,0.1]
+    print(p_list)
+    s_list = [np.min(m_volt)*0.75, np.max(m_volt)*1.1, 5000]
+    
+    #---------- Measurements ----------#
+    ax.errorbar(x=m_volt,
+                y=m_curr*scaling,
+                yerr=0.1*(np.max(m_curr) - np.min(m_curr))/2 * scaling,
+                capsize=1,
+                capthick=0.4,
+                elinewidth=0.2,
+                ms=3,
+                fmt='x',
+                color=color_schemes['c_complementary'][c_index],
+                label='measurement')
+    #---------- Measurements ----------#
+    
+    #---------- Fitting Procedure ----------#
+    result = evaluator(sqrtModel=sqrtModel, param_list=p_list, space=s_list, x=m_volt, y=m_curr*scaling)
+    
+    ax.plot(m_volt,
+            result.best_fit,lw=0.75,
+            ls='-',
+            color='black',
+            alpha=0.9,
+            zorder=2,
+            label='fit')
+    #---------- Fitting Procedure ----------#
+    
+    c_index += 1
     #----------------- Measurement Plotter -----------------#
     
     #----------------- Detector Image includer -----------------#
@@ -239,7 +265,7 @@ def h5_plotter(h5dict):
                  pad=0,
                  sep=5)
     
-    ab = AnnotationBbox(stacked, (10.,0.8), frameon=True)
+    ab = AnnotationBbox(stacked, (360.,0.5), frameon=True)
 
     ax.add_artist(ab)
     #----------------- Detector Image includer -----------------#
@@ -254,15 +280,15 @@ def h5_plotter(h5dict):
     
     plt.xlim(x_min*0.5, x_max*1.05)
     # plt.xlim(x_min*0.9, 375)
-    # plt.ylim((y_min*scaling)*0.5, (y_max*scaling)*1.04)
+    plt.ylim((y_min*scaling)*0.5, (y_max*scaling)*1.04)
     # plt.ylim((y_min*scaling)*0.5, (y_max*scaling)*1.35)
-    plt.ylim(0.007,4)
+    # plt.ylim(0.007,4)
     
     # plt.xlim(0,500)
     # plt.ylim(1.8e-6,4e-6)
     # plt.ylim(1.5,4)
     
-    plt.yscale('log')
+    plt.yscale('linear')
     
     plt.grid(which='both')
     plt.legend(loc='lower right', fontsize=6)
@@ -281,12 +307,17 @@ def h5_plotter(h5dict):
 if __name__ == "__main__":
     start_routine = time.process_time_ns()
     
+    
+    fc = file_collector(dettype='SSB',id='17-440D')
+    h5dict = h5_data_compactor(fc)
+    m_volt, m_curr = h5_measurement_combiner(h5dict)
+    print(m_curr)
     # h5dict = h5_data_compactor(files_52148)
     # h5dict = h5_data_compactor(files_57341)
     # h5dict = h5_data_compactor(files_57342)
     # h5dict = h5_data_compactor(files_33_268B)
-    h5dict = h5_data_compactor(files_29_286)
-    h5_plotter(h5dict)
+    # h5dict = h5_data_compactor(files_29_286)
+    h5_plotter(h5dict, m_volt, m_curr)
     
     print('---------------------------------------')
     end_routine = time.process_time_ns()
