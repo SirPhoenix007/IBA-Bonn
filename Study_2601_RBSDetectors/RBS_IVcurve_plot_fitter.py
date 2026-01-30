@@ -20,7 +20,6 @@ import pandas as pd
 import odrpack as odr
 import seaborn as sb
 #-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-#
-from lmfit import Model
 import matplotlib.pyplot as plt
 from scipy.signal import find_peaks
 from scipy.optimize import curve_fit
@@ -86,31 +85,27 @@ print('---------------------------------------')
 def DepDepth(rho, volt):
     return np.sqrt(rho*volt)
 
-def sqrt_func(x,a,b,c,d):
+def sqrt_func(x,param):
     # return a*np.sqrt(np.abs(x-b)) + c
-    return a*np.sqrt(np.abs(x-b)) + c*x + d
+    return param[0]*np.sqrt(param[1]*x) + param[2]*x + param[3]
 
-sqrtModel = Model(sqrt_func)
-print('---------------------------------------')
-print(f'parameter names: {sqrtModel.param_names}')
-print(f'independent variables: {sqrtModel.independent_vars}')
-print('---------------------------------------')
-
-def evaluator(sqrtModel, param_list:list, space:list, x:list, y:list):
-    params = sqrtModel.make_params(a=dict(value=param_list[0], min=0),
-                                   b=dict(value=param_list[1], min=0),
-                                   c=dict(value=param_list[2], min=0),
-                                   d=dict(value=param_list[2], min=0))
+def evaluator(sqrt_func, param_list:list, boundary_list:list, x:list, y:list, xerr:list, yerr:list):
+    params = np.array(param_list)
+    bounds_lower, bounds_upper = boundary_list[0], boundary_list[1]
     print(params)
-    x_eval = np.linspace(space[0], space[1], space[2])
-    result = sqrtModel.fit(y, params, x=x)
-    print(result.fit_report())
-    parameter_results = {'a': [result.summary()['params'][0][1],result.summary()['params'][0][7]],
-                         'b': [result.summary()['params'][1][1],result.summary()['params'][1][7]],
-                         'c': [result.summary()['params'][2][1],result.summary()['params'][2][7]],
-                         'd': [result.summary()['params'][3][1],result.summary()['params'][3][7]],}
-    print(parameter_results)
-    return result
+    print(bounds_lower, bounds_upper)
+        
+    weight_x = 1/(np.array(xerr)**2)
+    weight_y = 1/(np.array(yerr)**2)
+    
+    result = odr.odr_fit(sqrt_func, x, y,
+                         params, bounds=(bounds_lower, bounds_upper), 
+                         weight_x=weight_x, weight_y=weight_y)
+    
+    print(result.stopreason)
+    print(result.beta)
+    
+    return result.beta
         
 #-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-#
 def file_collector(dettype:str,id:str):
@@ -196,13 +191,13 @@ def h5_measurement_combiner(h5dict):
             measure_total_current.append(float(measurement['current'][j]))
     return np.array(measure_total_voltage), np.array(measure_total_current)
 
-def h5_plotter(h5dict, m_volt, m_curr):
+def h5_plotter(h5dict, m_volt, m_curr, x_err_value, y_err_value):
     DPI = 300
     plot_type = 'FullData_andFit'
     fig, ax = plt.subplots(figsize=(6,3), dpi=DPI)
     c_index = 0
     x_min, x_max, y_min, y_max = np.min(m_volt), np.max(m_volt), np.min(m_curr), np.max(m_curr)
-    scaling = 10**(-(math.floor(math.log(np.max(m_curr), 10)))-1)
+    scaling = 10**(-(math.floor(math.log(np.max(m_curr), 10))))
     print(scaling)
     measurement = h5dict[list(h5dict.keys())[0]]
     
@@ -223,14 +218,10 @@ def h5_plotter(h5dict, m_volt, m_curr):
     #     if (y_max < np.max(measurement['current'])):
     #         y_max = np.max(measurement['current'])
         
-    p_list =[0.5,np.min(m_volt),float(np.min(m_curr))*scaling,0.1]
-    print(p_list)
-    s_list = [np.min(m_volt)*0.75, np.max(m_volt)*1.1, 5000]
-    
     #---------- Measurements ----------#
     ax.errorbar(x=m_volt,
                 y=m_curr*scaling,
-                yerr=0.1*(np.max(m_curr) - np.min(m_curr))/2 * scaling,
+                yerr=y_err_value,
                 capsize=1,
                 capthick=0.4,
                 elinewidth=0.2,
@@ -241,15 +232,26 @@ def h5_plotter(h5dict, m_volt, m_curr):
     #---------- Measurements ----------#
     
     #---------- Fitting Procedure ----------#
-    result = evaluator(sqrtModel=sqrtModel, param_list=p_list, space=s_list, x=m_volt, y=m_curr*scaling)
+    p_list =[0.5,np.min(m_volt),float(np.min(m_curr))*scaling,0.1]
+    b_lower, b_upper = np.array([0,0,0,0]), np.array([100,100,100,100])
     
-    ax.plot(m_volt,
-            result.best_fit,lw=0.75,
+    fit_params = evaluator(sqrt_func=sqrt_func, param_list=p_list, boundary_list=(b_lower,b_upper),
+                       x=m_volt, y=m_curr*scaling,
+                       xerr=np.array([x_err_value]*len(m_volt)), yerr=np.array([y_err_value]*len(m_curr)))
+    
+    x_lin = np.linspace(np.min(m_volt),np.max(m_volt),5000)
+    
+    ax.plot(x_lin,
+            sqrt_func(x_lin, fit_params),
+            lw=0.75,
             ls='-',
             color='black',
             alpha=0.9,
             zorder=2,
-            label='fit')
+            label=r'$f_{\mathrm{fit}}(U_{\mathrm{B}}) = \alpha_1\sqrt{\alpha_2 U_{\mathrm{B}}} + \beta_1 U_{\mathrm{B}} + \beta_2$')
+    
+    ax.plot([],[],alpha=0, label=fr'$\alpha_1 = {fit_params[0]:.3f}$ / $\alpha_2 = {fit_params[1]:.3f}$')
+    ax.plot([],[],alpha=0, label=fr'$\beta_1 = {fit_params[2]:.3f}$ / $\beta_2 = {fit_params[3]:.3f}$')
     #---------- Fitting Procedure ----------#
     
     c_index += 1
@@ -265,7 +267,7 @@ def h5_plotter(h5dict, m_volt, m_curr):
                  pad=0,
                  sep=5)
     
-    ab = AnnotationBbox(stacked, (360.,0.5), frameon=True)
+    ab = AnnotationBbox(stacked, (60.,0.1), frameon=True)
 
     ax.add_artist(ab)
     #----------------- Detector Image includer -----------------#
@@ -280,7 +282,7 @@ def h5_plotter(h5dict, m_volt, m_curr):
     
     plt.xlim(x_min*0.5, x_max*1.05)
     # plt.xlim(x_min*0.9, 375)
-    plt.ylim((y_min*scaling)*0.5, (y_max*scaling)*1.04)
+    plt.ylim((y_min*scaling)*0.95, (y_max*scaling)*1.04)
     # plt.ylim((y_min*scaling)*0.5, (y_max*scaling)*1.35)
     # plt.ylim(0.007,4)
     
@@ -317,7 +319,7 @@ if __name__ == "__main__":
     # h5dict = h5_data_compactor(files_57342)
     # h5dict = h5_data_compactor(files_33_268B)
     # h5dict = h5_data_compactor(files_29_286)
-    h5_plotter(h5dict, m_volt, m_curr)
+    h5_plotter(h5dict, m_volt, m_curr, 0.3, 5e-4)
     
     print('---------------------------------------')
     end_routine = time.process_time_ns()
