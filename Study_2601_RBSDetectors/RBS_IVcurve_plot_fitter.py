@@ -82,12 +82,15 @@ elapsed_setup = (end_setup - start_setup)/1e6
 print(f'INFO: SETUP COMPLETE ({elapsed_setup:.2f} ms)')
 print('---------------------------------------')
 #-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-#
+
+#-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-#
 def DepDepth(rho, volt):
     return np.sqrt(rho*volt)
 
 def sqrt_func(x,param):
-    # return a*np.sqrt(np.abs(x-b)) + c
+    # return param[0]*np.sqrt(param[1]*x)
     return param[0]*np.sqrt(param[1]*x) + param[2]*x + param[3]
+    # return param[0]*np.sqrt(param[1]*x - param[4]) + param[2]*x + param[3]
 
 def evaluator(sqrt_func, param_list:list, boundary_list:list, x:list, y:list, xerr:list, yerr:list):
     params = np.array(param_list)
@@ -108,6 +111,46 @@ def evaluator(sqrt_func, param_list:list, boundary_list:list, x:list, y:list, xe
     return result.beta
         
 #-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-#
+# filename1 = ".//PIIPS//57432//IVcurve_PIIPS_57432___dark_v2_noOscidegC__2026-01-23_13-53-37.h5"
+# filename2 = ".//PIIPS//57432//IVcurve_PIIPS_57432___dark_v2_noOscidegC__2026-01-23_13-49-18.h5"
+#-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-#
+#TODO: collect all h5 of one detector
+# files_52148 = [
+#     ".//PIIPS//52148//IVcurve_PIIPS_52148___degC__2026-01-21_15-40-02.h5", #0-30
+#     ".//PIIPS//52148//IVcurve_PIIPS_52148___dark_v2degC__2026-01-23_10-58-03.h5", #0-50
+#     ".//PIIPS//52148//IVcurve_PIIPS_52148___dark_v2_noOscidegC__2026-01-23_11-06-17.h5", #50-200
+#     ".//PIIPS//52148//IVcurve_PIIPS_52148___dark_v2_noOscidegC__2026-01-23_11-10-49.h5", #160-300
+#     ".//PIIPS//52148//IVcurve_PIIPS_52148___dark_v2_noOscidegC__2026-01-23_11-25-30.h5" #300-460
+# ]
+
+# files_57341 = [
+#     ".//PIIPS//57431//IVcurve_PIIPS_57431___dark_v2_noOscidegC__2026-01-26_15-49-19.h5",
+#     ".//PIIPS//57431//IVcurve_PIIPS_57431___dark_v2_noOscidegC__2026-01-23_13-27-00.h5"
+# ]
+
+# files_57342 = [
+#     ".//PIIPS//57432//IVcurve_PIIPS_57432___dark_v2_noOscidegC__2026-01-23_13-49-18.h5",
+#     ".//PIIPS//57432//IVcurve_PIIPS_57432___dark_v2_noOscidegC__2026-01-23_13-53-37.h5"
+# ]
+
+# files_33_268B = [
+#     ".//SSB//33-268B//IVcurve_SSB_33-268B___TC-021-300-300degC__2026-01-26_16-49-00.h5",
+#     ".//SSB//33-268B//IVcurve_SSB_33-268B___TC-021-300-300degC__2026-01-26_16-53-01.h5",
+#     ".//SSB//33-268B//IVcurve_SSB_33-268B___TC-021-300-300degC__2026-01-26_16-58-47.h5"
+# ]
+
+# files_29_286 = [
+#     ".//SSB//29-286//IVcurve_SSB_29-286___MH-21-450-100degC__2026-01-26_16-26-04.h5",
+#     ".//SSB//29-286//IVcurve_SSB_29-286___MH-21-450-100degC__2026-01-26_16-22-37.h5"
+# ]
+
+# files_29_286_single = [
+#     ".//SSB//29-286//IVcurve_SSB_29-286___MH-21-450-100degC__2026-01-26_16-26-04.h5"
+# ]
+
+
+# files_52148_short = [".//PIIPS//52148//IVcurve_PIIPS_52148___dark_v2_noOscidegC__2026-01-23_11-10-49.h5"]
+#-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-#
 def file_collector(dettype:str,id:str):
     file_collection = []
     top_level_path = f'.//{dettype}//{id}'
@@ -117,48 +160,6 @@ def file_collector(dettype:str,id:str):
             file_collection.append(full_path)
     return file_collection
 
-
-
-# filename1 = ".//PIIPS//57432//IVcurve_PIIPS_57432___dark_v2_noOscidegC__2026-01-23_13-53-37.h5"
-# filename2 = ".//PIIPS//57432//IVcurve_PIIPS_57432___dark_v2_noOscidegC__2026-01-23_13-49-18.h5"
-#-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-#
-#TODO: collect all h5 of one detector
-files_52148 = [
-    ".//PIIPS//52148//IVcurve_PIIPS_52148___degC__2026-01-21_15-40-02.h5", #0-30
-    ".//PIIPS//52148//IVcurve_PIIPS_52148___dark_v2degC__2026-01-23_10-58-03.h5", #0-50
-    ".//PIIPS//52148//IVcurve_PIIPS_52148___dark_v2_noOscidegC__2026-01-23_11-06-17.h5", #50-200
-    ".//PIIPS//52148//IVcurve_PIIPS_52148___dark_v2_noOscidegC__2026-01-23_11-10-49.h5", #160-300
-    ".//PIIPS//52148//IVcurve_PIIPS_52148___dark_v2_noOscidegC__2026-01-23_11-25-30.h5" #300-460
-]
-
-files_57341 = [
-    ".//PIIPS//57431//IVcurve_PIIPS_57431___dark_v2_noOscidegC__2026-01-26_15-49-19.h5",
-    ".//PIIPS//57431//IVcurve_PIIPS_57431___dark_v2_noOscidegC__2026-01-23_13-27-00.h5"
-]
-
-files_57342 = [
-    ".//PIIPS//57432//IVcurve_PIIPS_57432___dark_v2_noOscidegC__2026-01-23_13-49-18.h5",
-    ".//PIIPS//57432//IVcurve_PIIPS_57432___dark_v2_noOscidegC__2026-01-23_13-53-37.h5"
-]
-
-files_33_268B = [
-    ".//SSB//33-268B//IVcurve_SSB_33-268B___TC-021-300-300degC__2026-01-26_16-49-00.h5",
-    ".//SSB//33-268B//IVcurve_SSB_33-268B___TC-021-300-300degC__2026-01-26_16-53-01.h5",
-    ".//SSB//33-268B//IVcurve_SSB_33-268B___TC-021-300-300degC__2026-01-26_16-58-47.h5"
-]
-
-files_29_286 = [
-    ".//SSB//29-286//IVcurve_SSB_29-286___MH-21-450-100degC__2026-01-26_16-26-04.h5",
-    ".//SSB//29-286//IVcurve_SSB_29-286___MH-21-450-100degC__2026-01-26_16-22-37.h5"
-]
-
-files_29_286_single = [
-    ".//SSB//29-286//IVcurve_SSB_29-286___MH-21-450-100degC__2026-01-26_16-26-04.h5"
-]
-
-
-# files_52148_short = [".//PIIPS//52148//IVcurve_PIIPS_52148___dark_v2_noOscidegC__2026-01-23_11-10-49.h5"]
-#-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-#
 
 def h5_data_extraction(h5File):
     with h5py.File(h5File, "r") as f:
@@ -191,15 +192,14 @@ def h5_measurement_combiner(h5dict):
             measure_total_current.append(float(measurement['current'][j]))
     return np.array(measure_total_voltage), np.array(measure_total_current)
 
-def h5_plotter(h5dict, m_volt, m_curr, x_err_value, y_err_value):
+def h5_plotter(measurement, m_volt, m_curr, x_err_value, y_err_value, scaling, file_suffix):
     DPI = 300
     plot_type = 'FullData_andFit'
     fig, ax = plt.subplots(figsize=(6,3), dpi=DPI)
     c_index = 0
     x_min, x_max, y_min, y_max = np.min(m_volt), np.max(m_volt), np.min(m_curr), np.max(m_curr)
-    scaling = 10**(-(math.floor(math.log(np.max(m_curr), 10))))
+    # scaling = 10**(-(math.floor(math.log(np.max(m_curr), 10))))
     print(scaling)
-    measurement = h5dict[list(h5dict.keys())[0]]
     
     #----------------- Measurement Plotter -----------------#
     # for k in list(h5dict.keys()):
@@ -218,7 +218,7 @@ def h5_plotter(h5dict, m_volt, m_curr, x_err_value, y_err_value):
     #     if (y_max < np.max(measurement['current'])):
     #         y_max = np.max(measurement['current'])
         
-    #---------- Measurements ----------#
+    #---------- Measurements ----------# in prefixed ampere (micro/nano)
     ax.errorbar(x=m_volt,
                 y=m_curr*scaling,
                 yerr=y_err_value,
@@ -232,14 +232,17 @@ def h5_plotter(h5dict, m_volt, m_curr, x_err_value, y_err_value):
     #---------- Measurements ----------#
     
     #---------- Fitting Procedure ----------#
-    p_list =[0.5,np.min(m_volt),float(np.min(m_curr))*scaling,0.1]
-    b_lower, b_upper = np.array([0,0,0,0]), np.array([100,100,100,100])
+    p_list =[0.5,10,float(np.min(m_curr))*scaling,0.1]
+
+    b_lower, b_upper = np.array([-10,-10,-10,-10]), np.array([1000,1000,1000,1000])
+
     
     fit_params = evaluator(sqrt_func=sqrt_func, param_list=p_list, boundary_list=(b_lower,b_upper),
                        x=m_volt, y=m_curr*scaling,
-                       xerr=np.array([x_err_value]*len(m_volt)), yerr=np.array([y_err_value]*len(m_curr)))
+                       xerr=np.array([x_err_value]*len(m_volt)), yerr=np.array([y_err_value]*len(m_curr))) #in prefixed ampere (micro/nano)
     
-    x_lin = np.linspace(np.min(m_volt),np.max(m_volt),5000)
+    # x_lin = np.linspace(np.min(m_volt),np.max(m_volt),5000)
+    x_lin = np.linspace(0,np.max(m_volt),5000)
     
     ax.plot(x_lin,
             sqrt_func(x_lin, fit_params),
@@ -250,12 +253,29 @@ def h5_plotter(h5dict, m_volt, m_curr, x_err_value, y_err_value):
             zorder=2,
             label=r'$f_{\mathrm{fit}}(U_{\mathrm{B}}) = \alpha_1\sqrt{\alpha_2 U_{\mathrm{B}}} + \beta_1 U_{\mathrm{B}} + \beta_2$')
     
-    ax.plot([],[],alpha=0, label=fr'$\alpha_1 = {fit_params[0]:.3f}$ / $\alpha_2 = {fit_params[1]:.3f}$')
-    ax.plot([],[],alpha=0, label=fr'$\beta_1 = {fit_params[2]:.3f}$ / $\beta_2 = {fit_params[3]:.3f}$')
+    # ax.plot([],[],alpha=0, label=fr'$\alpha_1 = {fit_params[0]*1e3:.3f}$'+ r'$\cdot 10^{-3}$ / $\alpha_2 = {fit_params[1]:.3f}$')
+    # ax.plot([],[],alpha=0, label=fr'$\beta_1 = {fit_params[2]*1e3:.3f}\cdot 10^{-3}$ / $\beta_2 = {fit_params[3]:.3f}$')
     #---------- Fitting Procedure ----------#
     
     c_index += 1
     #----------------- Measurement Plotter -----------------#
+    
+    #----------------- Fit Parameter includer -----------------#
+    Fit_Anno = TextArea('Fit parameters' + '\n' + fr'$\alpha_1 = {fit_params[0]*1e3:.3f}$' + r'$\cdot 10^{-3}$' + '\n' + fr'$\alpha_2 = {fit_params[1]:.3f}$' + 
+                        '\n' +
+                        fr'$\beta_1 = {fit_params[2]*1e3:.3f}$' + r'$\cdot 10^{-3}$' + '\n' + fr'$\beta_2 = {fit_params[3]:.3f}$', textprops=dict(fontsize=5))
+    # Fit_Anno = TextArea(fr'$\alpha_1 = {fit_params[0]*1e3:.3f}$' + r'$\cdot 10^{-3}$' + '/' + fr'$\alpha_2 = {fit_params[1]:.3f}$')
+    Fit_stacked = VPacker(children=[Fit_Anno],
+                 align="left",
+                 pad=0,
+                 sep=5,)
+    
+    ypos = np.min(m_curr)*scaling + (np.max(m_curr)*scaling - np.min(m_curr)*scaling)/4
+    
+    Fit_ab = AnnotationBbox(offsetbox=Fit_stacked, xy=(0.92,0.25), xycoords='axes fraction', frameon=True)
+
+    ax.add_artist(Fit_ab)
+    #----------------- Fit Parameter includer -----------------#
     
     #----------------- Detector Image includer -----------------#
     # img = plt.imread("PIIPS_3D_f.png")
@@ -267,7 +287,7 @@ def h5_plotter(h5dict, m_volt, m_curr, x_err_value, y_err_value):
                  pad=0,
                  sep=5)
     
-    ab = AnnotationBbox(stacked, (60.,0.1), frameon=True)
+    ab = AnnotationBbox(offsetbox=stacked, xy=(0.08,0.75), xycoords='axes fraction', frameon=True)
 
     ax.add_artist(ab)
     #----------------- Detector Image includer -----------------#
@@ -280,8 +300,8 @@ def h5_plotter(h5dict, m_volt, m_curr, x_err_value, y_err_value):
     if (x_min < 5 and x_max >= 100):
         x_min = -20
     
-    plt.xlim(x_min*0.5, x_max*1.05)
-    # plt.xlim(x_min*0.9, 375)
+    # plt.xlim(x_min*0.5, x_max*1.05)
+    plt.xlim(0, x_max*1.05)
     plt.ylim((y_min*scaling)*0.95, (y_max*scaling)*1.04)
     # plt.ylim((y_min*scaling)*0.5, (y_max*scaling)*1.35)
     # plt.ylim(0.007,4)
@@ -293,11 +313,11 @@ def h5_plotter(h5dict, m_volt, m_curr, x_err_value, y_err_value):
     plt.yscale('linear')
     
     plt.grid(which='both')
-    plt.legend(loc='lower right', fontsize=6)
+    plt.legend(loc='lower right', fontsize=5)
     plt.tight_layout()
     
     
-    save_name_PIIPS = f'{measurement['det_type']}_' + plot_type + '_' + f'{measurement['det_id']}'
+    save_name_PIIPS = f'{measurement['det_type']}_' + plot_type + '_' + f'{measurement['det_id']}' + '_' + f'{file_suffix}'
     plt.savefig('.//plots//' + save_name_PIIPS + '.pdf', dpi=DPI, transparent=False)
     plt.savefig('.//plots//' + save_name_PIIPS + '.png', dpi=DPI, transparent=False)
     
@@ -310,16 +330,17 @@ if __name__ == "__main__":
     start_routine = time.process_time_ns()
     
     
-    fc = file_collector(dettype='SSB',id='17-440D')
+    # fc = file_collector(dettype='SSB',id='17-440D')
+    fc = file_collector(dettype='SSB',id='17-839F')
     h5dict = h5_data_compactor(fc)
-    m_volt, m_curr = h5_measurement_combiner(h5dict)
-    print(m_curr)
-    # h5dict = h5_data_compactor(files_52148)
-    # h5dict = h5_data_compactor(files_57341)
-    # h5dict = h5_data_compactor(files_57342)
-    # h5dict = h5_data_compactor(files_33_268B)
-    # h5dict = h5_data_compactor(files_29_286)
-    h5_plotter(h5dict, m_volt, m_curr, 0.3, 5e-4)
+    # m_volt, m_curr = h5_measurement_combiner(h5dict)
+    for k in list(h5dict.keys()):
+        measurement = h5dict[k]
+        file_suffix = k
+        m_volt = measurement['voltage'][1:]
+        m_curr = measurement['current'][1:]
+        print(m_curr)
+        h5_plotter(measurement, m_volt, m_curr, 0.3, 5e-4, 1e6, file_suffix)
     
     print('---------------------------------------')
     end_routine = time.process_time_ns()
