@@ -21,6 +21,8 @@ import odrpack as odr
 import seaborn as sb
 #-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-#
 import matplotlib.pyplot as plt
+from matplotlib import ticker
+from matplotlib.gridspec import GridSpec
 from scipy.signal import find_peaks
 from scipy.optimize import curve_fit
 from getmac import get_mac_address as gma
@@ -44,10 +46,18 @@ plt.rcParams.update({
 # rc('text', usetex=True)
 # plt.rcParams.update({'font.size': 8})
 
+# plt.rcParams.update({
+#     "pgf.texsystem": "pdflatex",
+#     "pgf.preamble": "\n".join([
+#           r"\usepackage{mathtools}",
+#           r'\usepackage{amsmath}',
+#      ]),
+# })
+
 plt.rcParams.update({
     "pgf.texsystem": "pdflatex",
     "pgf.preamble": "\n".join([
-          r"\usepackage{mathtools}",
+          r'\usepackage{amsmath}',
      ]),
 })
 
@@ -195,7 +205,9 @@ def h5_measurement_combiner(h5dict):
 def h5_plotter(measurement, m_volt, m_curr, x_err_value, y_err_value, scaling, file_suffix):
     DPI = 300
     plot_type = 'FullData_andFit'
-    fig, ax = plt.subplots(figsize=(6,3), dpi=DPI)
+    fig = plt.figure(figsize=(5,4), dpi=DPI, layout='constrained')
+    gs = GridSpec(3, 4, figure=fig)
+    
     c_index = 0
     x_min, x_max, y_min, y_max = np.min(m_volt), np.max(m_volt), np.min(m_curr), np.max(m_curr)
     # scaling = 10**(-(math.floor(math.log(np.max(m_curr), 10))))
@@ -217,9 +229,15 @@ def h5_plotter(measurement, m_volt, m_curr, x_err_value, y_err_value, scaling, f
         
     #     if (y_max < np.max(measurement['current'])):
     #         y_max = np.max(measurement['current'])
-        
+    
+    #----------------- Axes Preparer -----------------#
+    ax1 = fig.add_subplot(gs[0:-1 , :-2]) # I-V plot
+    ax2 = fig.add_subplot(gs[0:-1 , 2:], sharey=ax1) # I-sqrt(V) plot
+    ax3 = fig.add_subplot(gs[2 , :]) # additional info
+    #----------------- Axes Preparer -----------------#
+    
     #---------- Measurements ----------# in prefixed ampere (micro/nano)
-    ax.errorbar(x=m_volt,
+    ax1.errorbar(x=m_volt,
                 y=m_curr*scaling,
                 yerr=y_err_value,
                 capsize=1,
@@ -229,6 +247,18 @@ def h5_plotter(measurement, m_volt, m_curr, x_err_value, y_err_value, scaling, f
                 fmt='x',
                 color=color_schemes['c_complementary'][c_index],
                 label='measurement')
+    
+    ax2.errorbar(x=np.sqrt(m_volt),
+                y=m_curr*scaling,
+                yerr=y_err_value,
+                capsize=1,
+                capthick=0.4,
+                elinewidth=0.2,
+                ms=3,
+                fmt='x',
+                color=color_schemes['c_complementary'][c_index],
+                label='measurement')
+    
     #---------- Measurements ----------#
     
     #---------- Fitting Procedure ----------#
@@ -241,17 +271,33 @@ def h5_plotter(measurement, m_volt, m_curr, x_err_value, y_err_value, scaling, f
                        x=m_volt, y=m_curr*scaling,
                        xerr=np.array([x_err_value]*len(m_volt)), yerr=np.array([y_err_value]*len(m_curr))) #in prefixed ampere (micro/nano)
     
+    fit_params_pureSqrt = [fit_params[0],fit_params[1],0,0]
+    print(fit_params_pureSqrt)
+    
     # x_lin = np.linspace(np.min(m_volt),np.max(m_volt),5000)
     x_lin = np.linspace(0,np.max(m_volt),5000)
     
-    ax.plot(x_lin,
+    ax1.plot(x_lin,
             sqrt_func(x_lin, fit_params),
             lw=0.75,
             ls='-',
             color='black',
             alpha=0.9,
             zorder=2,
-            label=r'$f_{\mathrm{fit}}(U_{\mathrm{B}}) = \alpha_1\sqrt{\alpha_2 U_{\mathrm{B}}} + \beta_1 U_{\mathrm{B}} + \beta_2$')
+            label='fit'
+            )
+    
+    ax2.plot(np.sqrt(x_lin),
+            sqrt_func(x_lin, fit_params),
+            lw=0.75,
+            ls='-',
+            color='black',
+            alpha=0.9,
+            zorder=2,
+            label='fit'
+            )
+    
+    #label=r'$f_{\mathrm{fit}}(U_{\mathrm{B}}) = \alpha_1\sqrt{\alpha_2 U_{\mathrm{B}}} + \beta_1 U_{\mathrm{B}} + \beta_2$'
     
     # ax.plot([],[],alpha=0, label=fr'$\alpha_1 = {fit_params[0]*1e3:.3f}$'+ r'$\cdot 10^{-3}$ / $\alpha_2 = {fit_params[1]:.3f}$')
     # ax.plot([],[],alpha=0, label=fr'$\beta_1 = {fit_params[2]*1e3:.3f}\cdot 10^{-3}$ / $\beta_2 = {fit_params[3]:.3f}$')
@@ -259,23 +305,6 @@ def h5_plotter(measurement, m_volt, m_curr, x_err_value, y_err_value, scaling, f
     
     c_index += 1
     #----------------- Measurement Plotter -----------------#
-    
-    #----------------- Fit Parameter includer -----------------#
-    Fit_Anno = TextArea('Fit parameters' + '\n' + fr'$\alpha_1 = {fit_params[0]*1e3:.3f}$' + r'$\cdot 10^{-3}$' + '\n' + fr'$\alpha_2 = {fit_params[1]:.3f}$' + 
-                        '\n' +
-                        fr'$\beta_1 = {fit_params[2]*1e3:.3f}$' + r'$\cdot 10^{-3}$' + '\n' + fr'$\beta_2 = {fit_params[3]:.3f}$', textprops=dict(fontsize=5))
-    # Fit_Anno = TextArea(fr'$\alpha_1 = {fit_params[0]*1e3:.3f}$' + r'$\cdot 10^{-3}$' + '/' + fr'$\alpha_2 = {fit_params[1]:.3f}$')
-    Fit_stacked = VPacker(children=[Fit_Anno],
-                 align="left",
-                 pad=0,
-                 sep=5,)
-    
-    ypos = np.min(m_curr)*scaling + (np.max(m_curr)*scaling - np.min(m_curr)*scaling)/4
-    
-    Fit_ab = AnnotationBbox(offsetbox=Fit_stacked, xy=(0.92,0.25), xycoords='axes fraction', frameon=True)
-
-    ax.add_artist(Fit_ab)
-    #----------------- Fit Parameter includer -----------------#
     
     #----------------- Detector Image includer -----------------#
     # img = plt.imread("PIIPS_3D_f.png")
@@ -287,22 +316,70 @@ def h5_plotter(measurement, m_volt, m_curr, x_err_value, y_err_value, scaling, f
                  pad=0,
                  sep=5)
     
-    ab = AnnotationBbox(offsetbox=stacked, xy=(0.08,0.75), xycoords='axes fraction', frameon=True)
+    ab = AnnotationBbox(offsetbox=stacked, xy=(0.04,0.5), xycoords='axes fraction', frameon=True)
 
-    ax.add_artist(ab)
+    ax3.add_artist(ab)
     #----------------- Detector Image includer -----------------#
-       
+    
+    
+    #----------------- Formulae includer -----------------#
+    Formulae_Anno = TextArea(r'$\displaystyle I_{\mathrm{bias}} = \nu\frac{\sqrt{\rho U_{\mathrm{B}}}}{\tau_0}$' + '\n\n' + 
+                             r'$\displaystyle I_{\mathrm{bias}}^{\mathrm{Sze}} = \sqrt{\frac{D_p}{\tau_p}} \frac{n_i^2}{N_D} + \nu\frac{\sqrt{\rho U_{\mathrm{B}}}}{\tau_p}$' + '\n\n' + 
+                             r'$\displaystyle f_{\mathrm{fit}}(U_{\mathrm{B}}) = \alpha_1\sqrt{\alpha_2 U_{\mathrm{B}}} + \beta_1 U_{\mathrm{B}} + \beta_2$',
+                             textprops=dict(fontsize=5, horizontalalignment='center', linespacing=1.5))
+    # Fit_Anno = TextArea(fr'$\alpha_1 = {fit_params[0]*1e3:.3f}$' + r'$\cdot 10^{-3}$' + '/' + fr'$\alpha_2 = {fit_params[1]:.3f}$')
+    Formulae_stacked = VPacker(children=[Formulae_Anno],
+                 align="center",
+                 pad=0,
+                 sep=5,)
+    
+    Formulae_ab = AnnotationBbox(offsetbox=Formulae_stacked, xy=(0.19,0.5), xycoords='axes fraction', frameon=True)
+
+    ax3.add_artist(Formulae_ab)
+    #----------------- Formulae includer -----------------#
+    
+    
+    #----------------- Fit Parameter includer -----------------#
+    Fit_Anno = TextArea('Fit parameters' + '\n' + fr'$\alpha_1 = {fit_params[0]*1e3:.3f}$' + r'$\cdot 10^{-3}$' + '\n' + fr'$\alpha_2 = {fit_params[1]:.3f}$' + 
+                        '\n' +
+                        fr'$\beta_1 = {fit_params[2]*1e3:.3f}$' + r'$\cdot 10^{-3}$' + '\n' + fr'$\beta_2 = {fit_params[3]:.3f}$', textprops=dict(fontsize=5))
+    # Fit_Anno = TextArea(fr'$\alpha_1 = {fit_params[0]*1e3:.3f}$' + r'$\cdot 10^{-3}$' + '/' + fr'$\alpha_2 = {fit_params[1]:.3f}$')
+    Fit_stacked = VPacker(children=[Fit_Anno],
+                 align="left",
+                 pad=0,
+                 sep=5,)
+    
+    Fit_ab = AnnotationBbox(offsetbox=Fit_stacked, xy=(0.36,0.5), xycoords='axes fraction', frameon=True)
+
+    ax3.add_artist(Fit_ab)
+    #----------------- Fit Parameter includer -----------------#
+    
+           
     #----------------- Plot Finalization -----------------#
-    plt.xlabel(r'Bias Voltage / V')
-    plt.ylabel(r'Leakage Current / $\mu$A')
+    ax1.annotate('a)',
+                 xy=(0.,1.), xycoords='axes fraction',
+                 xytext=(+1, -1), textcoords='offset fontsize', fontsize=5)
+    ax2.annotate('b)',
+                 xy=(0.,1.), xycoords='axes fraction',
+                 xytext=(+1, -1), textcoords='offset fontsize', fontsize=5)
+    ax3.annotate('c)',
+                 xy=(0.,1.), xycoords='axes fraction',
+                 xytext=(+1, 0), textcoords='offset fontsize', fontsize=5)
+    
+    ax1.set_xlabel(r'Bias Voltage / V')
+    ax2.set_xlabel(r'Bias Voltage / $\sqrt{\mathrm{V}}$')
+    ax1.set_ylabel(r'Leakage Current / $\mu$A')
     # plt.ylabel(r'Leakage Current / nA')
     
     if (x_min < 5 and x_max >= 100):
         x_min = -20
     
     # plt.xlim(x_min*0.5, x_max*1.05)
-    plt.xlim(0, x_max*1.05)
-    plt.ylim((y_min*scaling)*0.95, (y_max*scaling)*1.04)
+    ax1.set_xlim(0, x_max*1.05)
+    ax2.set_xlim(0, np.sqrt(x_max)*1.05)
+    
+    ax1.set_ylim((y_min*scaling)*0.99, (y_max*scaling)*1.02)
+    
     # plt.ylim((y_min*scaling)*0.5, (y_max*scaling)*1.35)
     # plt.ylim(0.007,4)
     
@@ -312,9 +389,15 @@ def h5_plotter(measurement, m_volt, m_curr, x_err_value, y_err_value, scaling, f
     
     plt.yscale('linear')
     
-    plt.grid(which='both')
-    plt.legend(loc='lower right', fontsize=5)
-    plt.tight_layout()
+    ax1.grid(which='both')
+    ax2.grid(which='both')
+    ax1.legend(loc='lower right', fontsize=5)
+    ax2.legend(loc='lower right', fontsize=5)
+    # plt.tight_layout()
+    
+    # ax3.xaxis.set_major_formatter(ticker.NullLocator())
+    # ax3.xaxis.set_major_formatter(ticker.NullFormatter())
+    ax3.axis("off")
     
     
     save_name_PIIPS = f'{measurement['det_type']}_' + plot_type + '_' + f'{measurement['det_id']}' + '_' + f'{file_suffix}'
