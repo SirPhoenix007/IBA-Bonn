@@ -87,30 +87,8 @@ def DepDepth(rho, volt):
 def sqrt_func(x,a,b,c):
     return a*np.sqrt(np.abs((x - b))) + c
 
-sqrtModel = Model(sqrt_func)
-print('---------------------------------------')
-print(f'parameter names: {sqrtModel.param_names}')
-print(f'independent variables: {sqrtModel.independent_vars}')
-print('---------------------------------------')
-
-def evaluator(sqrtModel, param_list:list, space:list, x:list, y:list):
-    params = sqrtModel.make_params(a=dict(value=param_list[0], min=0),
-                                   b=dict(value=param_list[1], min=0),
-                                   c=dict(value=param_list[2], min=0))
-    print(params)
-    x_eval = np.linspace(space[0], space[1], space[2])
-    result = sqrtModel.fit(y, params, x=x)
-    print(result.fit_report())
-    parameter_results = {'a': [result.summary()['params'][0][1],result.summary()['params'][0][7]],
-                         'b': [result.summary()['params'][1][1],result.summary()['params'][1][7]],
-                         'c': [result.summary()['params'][2][1],result.summary()['params'][2][7]]}
-    print(parameter_results)
-    return result
-        
+       
 #-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-#
-
-
-
 
 
 # filename1 = ".//PIIPS//57432//IVcurve_PIIPS_57432___dark_v2_noOscidegC__2026-01-23_13-53-37.h5"
@@ -153,6 +131,15 @@ files_29_286_single = [
 
 # files_52148_short = [".//PIIPS//52148//IVcurve_PIIPS_52148___dark_v2_noOscidegC__2026-01-23_11-10-49.h5"]
 #-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-#
+def file_collector(dettype:str,id:str):
+    file_collection = []
+    top_level_path = f'.//{dettype}//{id}'
+    for file in os.listdir(top_level_path):
+        if (file[-3:] == '.h5'):
+            full_path = top_level_path + '//' + file
+            file_collection.append(full_path)
+    return file_collection
+
 
 def h5_data_extraction(h5File):
     with h5py.File(h5File, "r") as f:
@@ -175,7 +162,15 @@ def h5_data_compactor(h5FileList):
         measurement_dict[date] = {'det_type':det_type, 'det_type2':det_type2, 'det_id':det_id, 'voltage':v, 'current':c, 'c_bounds': (c_min,c_max)}
         # print(measurement_dict)
     return measurement_dict
-        
+
+def h5_measurement_combiner(h5dict):
+    measure_total_voltage, measure_total_current = [],[]
+    for k in list(h5dict.keys()):
+        measurement = h5dict[k]
+        for j in range(len(measurement['voltage'])):
+            measure_total_voltage.append(float(measurement['voltage'][j]))
+            measure_total_current.append(float(measurement['current'][j]))
+    return np.array(measure_total_voltage), np.array(measure_total_current)
 
 def h5_plotter(h5dict):
     DPI = 300
@@ -285,8 +280,16 @@ if __name__ == "__main__":
     # h5dict = h5_data_compactor(files_57341)
     # h5dict = h5_data_compactor(files_57342)
     # h5dict = h5_data_compactor(files_33_268B)
-    h5dict = h5_data_compactor(files_29_286)
-    h5_plotter(h5dict)
+    fc = file_collector(dettype='PIIPS',id='23732')
+    h5dict = h5_data_compactor(fc)
+    # m_volt, m_curr = h5_measurement_combiner(h5dict)
+    for k in list(h5dict.keys()):
+        measurement = h5dict[k]
+        file_suffix = k
+        m_volt = measurement['voltage'][1:]
+        m_curr = measurement['current'][1:]
+        print(m_curr)
+        h5_plotter(measurement, m_volt, m_curr, 0.3, 5e-4, 1e6, file_suffix)
     
     print('---------------------------------------')
     end_routine = time.process_time_ns()
