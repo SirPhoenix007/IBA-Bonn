@@ -137,7 +137,7 @@ def h5_plotter(measurement, m_volt, m_curr, x_err_value, y_err_value, scaling, f
     b_lower, b_upper = np.array([-10,-10,-10,-10]), np.array([1000,1000,1000,1000])
 
     
-    fit_params = evaluator(sqrt_func=sqrt_func, param_list=p_list, boundary_list=(b_lower,b_upper),
+    fit_params = evaluator(func=sqrt_func, param_list=p_list, boundary_list=(b_lower,b_upper),
                        x=m_volt, y=m_curr*scaling,
                        xerr=np.array([x_err_value]*len(m_volt)), yerr=np.array([y_err_value]*len(m_curr))) #in prefixed ampere (micro/nano)
     
@@ -294,7 +294,7 @@ if __name__ == "__main__":
     
     
     # fc = file_collector(dettype='SSB',id='17-440D')
-    fc = file_collector(dettype='PIIPS',id='23732')
+    fc = file_collector(dettype='SSB',id='33-268B')
     h5dict = h5_data_compactor(fc)
     # m_volt, m_curr = h5_measurement_combiner(h5dict)
     for k in list(h5dict.keys()):
