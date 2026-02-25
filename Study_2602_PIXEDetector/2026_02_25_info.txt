@@ -1,0 +1,14 @@
+112903 - Cu, Cap on, 60s, MCA bins 4096, MCA bytes per bin 3
+113023 - Cu, Cap off, 60s, MCA bins 4096, MCA bytes per bin 3
+113146 - Cu, Cap off, 240s, MCA bins 4096, MCA bytes per bin 3
+113605 - Rb, Cap off, 240s, MCA bins 4096, MCA bytes per bin 3
+114048 - Mo, Cap off, 240s, MCA bins 4096, MCA bytes per bin 3
+114530 - Mo, Cap off, 240s, MCA bins 8192, MCA bytes per bin 3
+115003 - Ag, Cap off, 240s, MCA bins 8192, MCA bytes per bin 3
+115423 - Ba, Cap off, 240s, MCA bins 8192, MCA bytes per bin 3
+115846 - Tb, Cap off, 240s, MCA bins 8192, MCA bytes per bin 3
+120449 - Tb, Cap off, 240s, MCA bins 2048, MCA bytes per bin 3
+121101 - Tb, Cap off, 120s, MCA bins 2048, MCA bytes per bin 2
+121332 - Ag, Cap off, 120s, MCA bins 2048, MCA bytes per bin 2
+121545 - Ag, Cap off, 120s, MCA bins 8192, MCA bytes per bin 2
+121825 - Ag, Cap off, 120s, MCA bins 8192, MCA bytes per bin 1
