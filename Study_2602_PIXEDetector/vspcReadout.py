@@ -85,5 +85,27 @@ def read_json_formatted_file(filepath, encoding="utf-8"):
     except json.JSONDecodeError as e:
         raise ValueError(f"File content is not valid JSON: {e}") from e
     
-data = read_json_formatted_file('.//test_001//20260224-144110.vspc')
-print(data["MeasurementInfo"])
+# data = read_json_formatted_file('.//test_001//20260224-144110.vspc')
+# print(data["MeasurementInfo"])
+
+def pixe_single_spectrum_plot(filename:str):
+    data = read_json_formatted_file(filename)
+    energyPerBin = data['Calibration']['BinSize_keV/Bin'] # keV/bin
+    bin_data = data['RawData'][:-1]
+    print(bin_data)
+    bins = np.arange(0,len(bin_data),1)*energyPerBin
+    
+    scatter_color = color_schemes['c_dark']
+    
+    fig, ax = plt.subplots(figsize=(6,3), dpi=300)
+    # ax.set_facecolor(color_schemes['c_back'])
+    ax.plot(bins, bin_data, lw=0.75, color=scatter_color[0], zorder=2)
+    
+    plt.grid(which="both")
+    plt.tight_layout()
+    plt.show()
+
+
+pixe_single_spectrum_plot('2026_02_26/20260226-151044.vspc')
+pixe_single_spectrum_plot('2026_02_26/20260226-160913.vspc')
+#bkgr color plots: ax.set_facecolor(color_schemes['c_back'])
