@@ -1,0 +1,802 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+	<head>
+		<title>VICOScope Help</title>
+	</head>
+	<body>
+		<h1 style="color: #000000;">
+			<span style="color: #491f53;">VICOScope</span> Help Documentation</h1>
+			<p>General help for VICOScope.</p>
+		<div id="Project_Explorer">
+			<h2>Project Explorer</h2>
+			<p>The project explorer is the main window for managing all projects within VICOScope. Although it is not possible to operate several devices in parallel, you can still operate all connected devices sequentially via the explorer.</p>
+			<p>How to create a new project?
+			<ul style="margin-left: -20px;">
+				<li>To create a new project you can either use a mouse right-click>>[New Project] within an empty space inside the explorer or use the menu bar: [File]>>[New]>>[Project].</li>
+				<li>The "New VICOProject Wizard" is starting:</li>
+				<ul style="margin-left: -20px;">
+					<li>A meaningful name for the project can be assigned within "Project Name".</li>
+					<li>After clicking on [Browse], the storage location of the project including all future spectrum data can be defined.</li>
+					<li>In order to assign a device to the project, you must first scan for connected devices (if the desired device is not already displayed.).</li>
+					<li>Clicking on [Scan] opens the "Device Selection" window:</li>
+					<ul style="margin-left: -20px;">
+						<li>Select or deselect the desired interface and define "Network/Prefix" for UDP and "IP Range" for TCP, if required. The default settings (all checkboxes enabled; UDP: Network = 192.168.0.0, Prefix = 24; TCP: IP Range = 192.168.0.2 - 192.168.0.2) can be retained when the device is put into operation for the first time.</li>
+						<li>The device search is started by clicking on [Start].</li>
+						<li>Depending on the selected settings, the search process can take several seconds.</li>
+						<li>Selecting a device and clicking on [OK] will assign the device to the project. Note: It is also possible to create an "offline" project without choosing a device.</li>
+						<li>After clicking on [Create], the wizard is finished and the new project is displayed in the explorer.</li>
+					</ul>
+				</ul>
+			</ul>
+			</p>
+			<p>The explorer is grouped into three levels, which are now explained individually:
+			<ul style="margin-left: -20px;">
+				<li>Project</li>
+				<ul style="margin-left: -20px;">
+					<li>Via mouse right-click>>[Open Directory] the location of the project file, including all spectrum data, is shown in the file explorer of the operating system.</li>
+					<li>The currently active project, for which the digital pulse processor (DPP) parameters are also displayed within the configuration view, is shown in bold. An inactive project can be activated with a mouse double left-click or via mouse right-click>>[Set to Active].</li>
+					<li>If a device is assigned, the serial number is displayed in square brackets after the project name. If this is not the case, "offline" is shown in square brackets.</li>
+					<li>The device of the project can be changed via mouse right-click>>[Device] if several devices are connected. In addition, the device selection can be run through again by mouse right-click>>[Device]>>[Scan].</li>
+					<li>The diagnosis window can be opened with a mouse right-click>>[Diagnosis]. It provides an overview of various static and dynamic device information.</li>
+					<ul style="margin-left: -20px;">
+						<li>The [Refresh] button updates all information once.</li>
+						<li>The switch can be used to activate an auto-refresh mode, which updates all information once a second.</li>
+						<li>The [Export] button can be used to save the displayed information as a JSON file. This might be helpful in support cases.</li>
+						<li>The detector temperature can also be changed within the diagnosis window. A new target temperature must be entered under "SDD Temp/°C" and confirmed with [Apply]. The new target temperature is immediately used for control. After a refresh, the new set temperature is displayed.</li>
+					</ul>
+					<li>The project and the associated folder on the host system can be renamed via mouse right-click>>[Rename].</li>
+					<li>The project can be closed by mouse right-click>>[Close], or even completely deleted from the host system after confirmation.</li>
+				</ul>
+				<li>Configuration</li>
+				<ul style="margin-left: -20px;">
+					<li>All spectra measured with the same DPP configuration are grouped. Each group has a suffix number as a unique identifier that is displayed after an underscore.</li>
+					<li>Double-clicking on a configuration of any project automatically loads the associated DPP parameters. The next recorded spectrum is then saved in this configuration group within the active project.</li>
+				</ul>
+				<li>Spectrum</li>
+				<ul style="margin-left: -20px;">
+					<li>Each spectrum is saved within the project folder as a *.vspc file with the time stamp as the default name in the format "YYYYMMDD-HHMMSS.vspc".</li>
+					<li>In addition to the spectrum raw data and the DPP parameters, the file also contains further information on the measurement within the JSON structure. This includes, for example, run statistics, ROIs, version information of the firmware, hardware article and serial numbers as well as the start and end times of the measurement.</li>
+					<li>The visibility can be switched off and on again for one or more selected spectra. Each visible spectrum is given a filled circle in the explorer in the color of the displayed spectrum.</li>
+					<li>If a spectrum has been calibrated, this is shown in the circle to the left of the spectrum name. A "2" corresponds to a two-point calibration, a "1" stands for a one-point calibration and an uncalibrated spectrum does not get a number.</li>
+					<li>The spectrum and the associated file on the host system can be renamed via mouse right-click>>[Rename].</li>
+					<li>The spectrum can be deleted completely from the host system by mouse right-click>>[Delete], or pressing the delete key on the keyboard.</li>
+				</ul>
+			</ul>
+			</p>
+		</div>
+		<div id="Interface_Watch">
+			<h2>Interface Watch</h2>
+			<p>The interface watch view offers the possibility of following all VICOLib functions executed by VICOScope. The maximum number of rows is limited to 1000.</p>
+			<p>Each line contains a time stamp according to ISO 8601 in the format YYYY-MM-DDTHH:MM:SS.SSS and the VICOLib function name used. A hover box is displayed shortly after moving the pointer over a specific line. In addition to the status (e.g. success or detailed error), the arguments used for the VICOLib function call are also noted. An error is indicated using a red background.</p>
+			<p>With the help of the [Clear] button, all lines are deleted and the interface watch is emptied.</p>
+		</div>
+		<div id="Spectrum">
+			<h2>Spectrum</h2>
+			<p>A step function is used as a representation for the spectrum. The x-axis shows the energy in kiloelectron volts (Energy/keV). The events per channel are shown without unit of measurement on the y-axis (Events). If the spectrum is not calibrated, each channel has a width of 5eV. The center of the first channel is thus at 0eV and ranges from -2.5eV to +2.5eV. As soon as the spectrum is calibrated the channel width is adjusted according to the gain (see Analyze for more information). Up to 32 different colors are used to represent the spectra.</p>
+			<p>By clicking on [Start], the spectrum recording within the active project is started. The start button immediately changes to [Pause] to allow the spectra acquisition to be paused. Using [Resume], which is shown now, the recording can be continued. [Stop], which was initially greyed out, can now be used to stop the spectra recording. If the stop condition defined in the configuration view is reached, the recording is automatically stopped.</p>
+			<p>The switch can be used to toggle between a logarithmic and a linear representation.</p>
+			<p>The current cursor position within the chart is indicated in the upper right corner. It is displayed in the form of an ordered pair: (Energy/keV, Events).</p>
+			<p>As soon as an ROI has been selected within the analyze view and is no longer displayed transparently, you can move the ROI borders to the left and right within the chart with a mouse left-click (press and hold).</p>
+			<p>Interaction overview to adjust the spectrum within the chart:</p>
+			<br>
+			<table border="1" cellspacing="0" cellpadding="2">
+				<thead>
+					<tr>
+						<td><b>#</b><br></td>
+						<td><b>Spectrum view behavior&nbsp;&nbsp;</b><br></td>
+						<td><b>Mouse/Keyboard interaction</b><br></td>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>1<br></td>
+						<td>Reset fit to view<br></td>
+						<td>Mouse double left-click<br></td>
+					</tr>
+					<tr>
+						<td>2<br></td>
+						<td>Move freely<br></td>
+						<td>Mouse drag and drop within chart<br></td>
+					</tr>
+					<tr>
+						<td>3<br></td>
+						<td>Scroll up<br></td>
+						<td>Mouse wheel up within chart<br></td>
+					</tr>
+					<tr>
+						<td>4<br></td>
+						<td>Scroll down<br></td>
+						<td>Mouse wheel down within chart<br></td>
+					</tr>
+					<tr>
+						<td>5<br></td>
+						<td>Scroll right<br></td>
+						<td>Shift + mouse wheel up within chart<br></td>
+					</tr>
+					<tr>
+						<td>6<br></td>
+						<td>Scroll left<br></td>
+						<td>Shift + mouse wheel down within chart<br></td>
+					</tr>
+					<tr>
+						<td>7<br></td>
+						<td>Zoom in<br></td>
+						<td>Ctrl + mouse wheel up within chart<br></td>
+					</tr>
+					<tr>
+						<td>8<br></td>
+						<td>Zoom out<br></td>
+						<td>Ctrl + mouse wheel down within chart<br></td>
+					</tr>
+					<tr>
+						<td>9<br></td>
+						<td>Zoom to rectangle<br></td>
+						<td>Ctrl + mouse left-click (press and hold)<br></td>
+					</tr>
+					<tr>
+						<td>10&nbsp;&nbsp;&nbsp;<br></td>
+						<td>Stretch x-axis<br></td>
+						<td>Mouse wheel up on x-axis<br></td>
+					</tr>
+					<tr>
+						<td>11&nbsp;&nbsp;&nbsp;<br></td>
+						<td>Compress x-axis<br></td>
+						<td>Mouse wheel down on x-axis<br></td>
+					</tr>
+					<tr>
+						<td>12&nbsp;&nbsp;&nbsp;<br></td>
+						<td>Stretch y-axis<br></td>
+						<td>Mouse wheel up on y-axis<br></td>
+					</tr>
+					<tr>
+						<td>13&nbsp;&nbsp;&nbsp;<br></td>
+						<td>Compress y-axis<br></td>
+						<td>Mouse wheel down on y-axis<br></td>
+					</tr>
+					<tr>
+						<td>14&nbsp;&nbsp;&nbsp;<br></td>
+						<td>Add new ROI<br></td>
+						<td>Shift + mouse left-click (press and hold)<br></td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+		<div id="Oscilloscope">
+			<h2>Oscilloscope</h2>
+			<p>The oscilloscope view is used to acquire and display waveforms of internal digital pulse processor (DPP) signals for diagnostic purposes. Using the drop-down menu in the upper left the user can choose one of the following internal signals which can be acquired:
+			<ul style="margin-left: -20px;">
+				<li><b>ADC-Data</b>: Raw signal data of the ADC.</li>
+				<li><b>Fastfilter</b>: Filter output of the fastfilter.</li>
+				<li><b>Mediumfilter</b>: Filter output of the mediumfilter.</li>
+				<li><b>Slowfilter</b>: Filter output of the slowfilter.</li>
+				<li><b>Baseline-average</b>: Moving average of baseline mean value.</li>
+				<li><b>Baseline-sample</b>: Latest acquired baseline values.</li>
+			</ul>
+			<p>Furthermore, the user can set up the trigger condition and the sampling rate using the DPP parameters "Event Trigger Source", "Event Trigger Value", "Event Scope Sampling Interval", and "Event Scope Trigger Timeout" in the Configuration view.</p>
+			<p>Using the [Get Scope] button the user can initiate the acquisition of the selected waveform using the current parameter settings. The DPP now will wait for the trigger condition to occur and then read out the selected waveform. In case the trigger condition is met during the configured timeout time, the acquired waveform will be displayed. Otherwise, an error message will be shown.</p>
+			<p>On the x-axis of the plot the time in µs is shown. Depending on the chosen sampling rate VICOScope will automatically calculate the correct time values on the x-axis. The trigger moment is always at half of the waveform length (50% pre-trigger and 50% post-trigger). The y-axis shows digital signal values. Except for the ADC-data their absolute values have no practical use. For ADC-data however, the digital values are ADC codes where 0 corresponds to an analog voltage of -1V and 65535 corresponds to an analog voltage of +1V at the preamplifier input.</p>
+			<p>Using the [Export] button the user can save the displayed waveform into a JSON file. This is useful in case further analysis of the data with external tools is needed.</p>
+			<p>The plot of the displayed waveform supports the same user interactions as the Spectrum view (e.g., reset fit to view, scroll, zoom, ...).</p>
+		</div>
+		<div id="Analyze">
+			<h2>Analyze</h2>
+			<p>Within the analyze view up to 16 regions of interest (ROI) can be defined. There are two ways to create a new ROI. Either within the analyze view using a mouse right-click>>[Add ROI] or with a mouse/keyboard action within the spectrum view. To delete a ROI, you can either mark the desired row inside the analyze view and press the delete key on the keyboard or remove the ROI via mouse right-click>>[Delete ROI] within a row.</p>
+			<p>The following list describes each column of the displayed ROI table.</p>
+			<p><i>Note: In the following, bin and channel are used interchangeably.</i></p>
+			<ul style="margin-left: -20px;">
+				<li><b>Color</b>: Fill color of the ROI.
+				<ul style="margin-left: -20px;">
+					<li>If the ROI is selected, the color is displayed without transparency.</li>
+					<li>If not, the color will be rendered with a slight transparency.</li>
+				</ul>
+				<li><b>Lower/keV</b>: Low-energy end of the ROI in kiloelectron volts. Using mouse right-click>>[Auto-Adjust ROI] the lower value is automatically set to the lowest energy within the currently set ROI, which contains at least a quarter of the peak events. If the number of events at the low-energy end of the ROI is already equal to or more than a quarter of the peak events, the value is not changed.</li>
+				<li><b>Upper/keV</b>: High-energy end of the ROI in kiloelectron volts. Using mouse right-click>>[Auto-Adjust ROI] the upper value is automatically set to the highest energy within the currently set ROI, which contains at least a quarter of the peak events. If the number of events at the high-energy end of the ROI is already equal to or more than a quarter of the peak events, the value is not changed.</li>
+				<li><b>Events sum</b>: Sum of all events within the ROI.</li>
+				<li><b>Events max</b>: Maximum height of all events within the ROI.</li>
+				<li><b>Peak/keV</b>: Peak position in kiloelectron volts of the bin with the most events within the ROI. The exact energy including decimal places is calculated using the expected value of the bins:</li>
+				<ul style="margin-left: -20px;">
+					<li>First, the sum of the square of all events per channel is formed:</br><img style="vertical-align:middle" height="19" src="Pictures/Equation_010.png" width="121"/></li>
+					<li>Afterwards the sum of the weighted average over all energies within the ROI channels is used to calculate the position of the peak:</br><img style="vertical-align:middle" height="26" src="Pictures/Equation_020.png" width="215"/></li>
+					<li><i>Note:</i>
+					<ul style="margin-left: -20px;">
+						<li><i>The bin size or the channel width of an uncalibrated raw spectrum is defined as 5eV/bin or 5eV/channel.</i></li>
+						<li><i>Once the spectrum is calibrated, the bin size is multiplied by the gain. In addition, in the case of a two-point calibration, the peak is shifted by the offset (see Calibration/keV for more information).</i></li>
+						<li><i>The energy of 0keV is defined for the first channel.</i></li>
+						<li><i>The energy of the subsequent channels is a multiple of the bin size.</i></li>
+					</ul>
+					</li>
+				</ul>
+				<li><b>FWHM/keV</b>: Full width at half maximum of the peak is calculated as defined in ISO 15632:</li>
+				<ul style="margin-left: -20px;">
+					<li>Events max is the number of events of the peak within the ROI and corresponds to the peak intensity.</li>
+					<li>The two channels or energies at the low- and high-energy side of the peak with the events just above and just below half of the peak intensity must be calculated.</li>
+					<li>A linear interpolation between each pair is used to find those fractions of the channel or energy width that correspond exactly with the half maximum.</li>
+					<li>The linear equation through one pair, e.g. (x<sub>1</sub>, y<sub>1</sub>) or (x<sub>2</sub>, y<sub>2</sub>), on each peak side is used:</br><img style="vertical-align:middle" height="19" src="Pictures/Equation_030.png" width="182"/></li>
+					<li>For the slope both pairs, e.g. (x<sub>1</sub>, y<sub>1</sub>) and (x<sub>2</sub>, y<sub>2</sub>) or (x<sub>3</sub>, y<sub>3</sub>) and (x<sub>4</sub>, y<sub>4</sub>), on each side must be used:</br><img style="vertical-align:middle" height="24" src="Pictures/Equation_040.png" width="130"/> or <img style="vertical-align:middle" height="24" src="Pictures/Equation_050.png" width="130"/></li>
+					<li>In order to get the fraction of the channel or energy, the equation must be rearranged:</br><img style="vertical-align:middle" height="22" src="Pictures/Equation_060.png" width="177"/> or <img style="vertical-align:middle" height="22" src="Pictures/Equation_070.png" width="177"/></li>
+					<li>Both channels or energies, on the low- and high-energy side must be calculated:</li>
+					<ul style="margin-left: -20px;">
+						<li><img style="vertical-align:middle" height="22" src="Pictures/Equation_080.png" width="307"/> and <img style="vertical-align:middle" height="22" src="Pictures/Equation_090.png" width="308"/></li>
+						<li><img style="vertical-align:middle" height="22" src="Pictures/Equation_100.png" width="299"/> and <img style="vertical-align:middle" height="22" src="Pictures/Equation_110.png" width="299"/></li>
+						
+					</ul>
+					<li>The uncalibrated FWHM is calculated as the interval, in channels or energies, between the two half-maximum positions (including fractional parts):</li>
+					<ul style="margin-left: -20px;">
+						<li><img style="vertical-align:middle" height="17" src="Pictures/Equation_120.png" width="287"/></li>
+						<li><img style="vertical-align:middle" height="17" src="Pictures/Equation_130.png" width="268"/></li>
+					</ul>
+					<li>The conversion to the calibrated FWHM in electron volts is done as follows (see scaling factor and gain within Calibration/keV):</li>
+					<ul style="margin-left: -20px;">
+						<li><img style="vertical-align:middle" height="21" src="Pictures/Equation_140.png" width="507"/></li>
+						<li><img style="vertical-align:middle" height="17" src="Pictures/Equation_150.png" width="402"/></li>
+					</ul></li>
+				</ul>
+				<li><b>Calibration/keV</b>: Optional energy in kiloelectron volts to calibrate the spectrum using a ROI peak.
+				<p>The bin size or the channel width of an uncalibrated raw spectrum is defined as 5eV/bin or 5eV/channel. As soon as a spectrum is calibrated this value must be multiplied with the gain (see below for more details).</p></li>
+				<p>It's possible to use one (one-point) or two peaks (two-point) for calibration:</p>
+				<p>  </p>
+				<ul style="margin-left: -20px;">
+					<li>One-point calibration:
+					<ul style="margin-left: -20px;">
+						<li>Using mouse right-click>>[Calibrate (one-point)], with only one row selected, the spectrum is calibrated (only available if an energy is specified in the calibration column for the selected ROI).</li>
+						<li>The scaling factor and gain is calculated as follows:
+						<ul style="margin-left: -20px;">
+							<li><img style="vertical-align:middle" height="22" src="Pictures/Equation_160.png" width="219"/></li>
+							<li><img style="vertical-align:middle" height="27" src="Pictures/Equation_170.png" width="163"/></li>
+						</ul>
+						<li>The digital pulse processor (DPP) parameter Digital Energy Gain, within the configuration view, is adjusted as follows:<br><img style="vertical-align:middle" height="15" src="Pictures/Equation_180.png" width="440"/></li>
+					</ul></li>
+					<li>Two-point calibration:</li>
+					<ul style="margin-left: -20px;">
+						<li>Using mouse right-click [Calibrate (two-point)], with two rows selected, the spectrum is calibrated (only available if an energy is specified in the calibration column for both selected ROIs).</li>
+						<li>The scaling factor and gain is calculated as follows:</li>
+						<ul style="margin-left: -20px;">
+							<li><img style="vertical-align:middle" height="23" src="Pictures/Equation_190.png" width="294"/></li>
+							<li><img style="vertical-align:middle" height="27" src="Pictures/Equation_200.png" width="286"/></li>
+						</ul>
+						<li>The DPP parameter Digital Energy Gain, within the configuration view, is adjusted as follows:<br><img style="vertical-align:middle" height="15" src="Pictures/Equation_210.png" width="440"/></li>
+						<li>The spectrum is shifted to the left or right by the offset.</li>
+						<ul style="margin-left: -20px;">
+							<li><img style="vertical-align:middle" height="21" src="Pictures/Equation_220.png" width="463"/></li>
+							<li><img style="vertical-align:middle" height="19" src="Pictures/Equation_230.png" width="452"/></li>
+						</ul>
+						<li>The DPP parameter Digital Energy Offset, within the configuration view, is adjusted as follows (please refer to the configuration view for more information):</li>
+						<ul style="margin-left: -20px;">
+							<li><img style="vertical-align:middle" height="25" src="Pictures/Equation_240.png" width="518"/></li>
+							<li><img style="vertical-align:middle" height="24" src="Pictures/Equation_250.png" width="594"/></li>
+						</ul>
+					</ul>
+				</ul>
+			</ul>
+		</div>
+		<div id="Measurement_Series">
+			<h2>Measurement Series</h2>
+			<p>With the help of the measurement series view, predefined measurement configurations, e.g. with different digital pulse processor (DPP) parameters, can be recorded automatically. This is a convenient way to optimize different parameters for a specific application.</p>
+			<ul style="margin-left: -20px;">
+				<li>Predefined measurement series configuration files in JSON format must be used. An example with all necessary information is shown below.</li>
+				<ul style="margin-left: -20px;">
+					<li>Parameters printed in <i>italic</i> are mandatory in order to be able to start a measurements series.</li>
+					<li>If a mandatory parameter is missing or misspelled, an error message is displayed.</i>
+				</ul>
+				<li>It's possible to browse to the configuration file via [Set Configuration]. The path will be shown as configuration path.</li>
+				<li>The description can be used for documentation purposes. The content of the input field is saved in the output file.</li>
+				<li>The measurement series is started, all current ROIs are deleted and one ROI with the defined calibration energy is added by clicking on [Start]. The running configuration can be stopped via [Stop].</li>
+				<li>The current status is displayed above the estimated end time and the remaining time.</li>
+				<li>In the table at the bottom end a few important measurement results are shown.</li>
+				<li>A complete JSON output file (*.vms), which is updated periodically during the measurement, is saved within the project folder. It contains calculated analysis values, calibration information (e.g. ROI), run statistics, parameter settings and spectrum raw data.</li>
+			</ul>
+			<br>
+			<table border="1" cellspacing="0" cellpadding="2">
+				<thead>
+					<tr>
+						<td><b>JSON configuration file example</b><br></td>
+						<td colspan="2"><b>Description</b><br></td>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td><tt>{</tt><br></td>
+						<td colspan="2"><br></td>
+					</tr>
+					<tr>
+						<td><tt>&nbsp;"Default": {</tt><br></td>
+						<td colspan="2">Default section with parameters which will be applied for each spectrum, unless otherwise defined in the measurements section.<br></td>
+					</tr>
+					<tr>
+						<td><tt><i>&nbsp;&nbsp;"NumberOfCycles": 5,</i></tt><br></td>
+						<td colspan="2"><i>Number of spectroscopic measurements per defined measurement.</i><br></td>
+					</tr>
+					<tr>
+						<td><tt><i>&nbsp;&nbsp;"TemperatureSDDSet_°C": -35.0,</i></tt><br></td>
+						<td colspan="2"><i>Setpoint in degrees Celsius for the SDD temperature.</i><br></td>
+					</tr>
+					<tr>
+						<td><tt><i>&nbsp;&nbsp;"TemperatureSDDTolerance_°C/s": 0.2,</i></tt><br></td>
+						<td colspan="2"><i>Temperature change tolerance (+/-) in degrees Celsius per second to decide whether the target temperature has been reached in a stable manner.</i><br></td>
+					</tr>
+					<tr>
+						<td><tt><i>&nbsp;&nbsp;"TemperatureSDDTolerance_s": 5,</i></tt><br></td>
+						<td colspan="2"><i>The temperature is stable and the measurement is started when the temperature is within the tolerance specified above for the duration of the time in seconds specified here.</i><br></td>
+					</tr>
+					<tr>
+						<td><tt><i>&nbsp;&nbsp;"InputCountRateSet_cps": 50000,</i></tt><br></td>
+						<td colspan="2"><i>Setpoint for the input count rate in counts per second.</i><br></td>
+					</tr>
+					<tr>
+						<td><tt><i>&nbsp;&nbsp;"InputCountRateTolerance_cps": 20000,</i></tt><br></td>
+						<td colspan="2"><i>Absolute input count rate tolerance (+/-) in counts per second to decide whether the target input count rate has been reached in a stable manner. If an absolute and percentage tolerance is given, the narrower one counts.</i><br></td>
+					</tr>
+					<tr>
+						<td><tt><i>&nbsp;&nbsp;"InputCountRateTolerance_%": 5,</i></tt><br></td>
+						<td colspan="2"><i>Percentage input count rate tolerance (+/-) in percent to decide whether the target input count rate has been reached in a stable manner. If an absolute and percentage tolerance is given, the narrower one counts.</i><br></td>
+					</tr>
+					<tr>
+						<td><tt><i>&nbsp;&nbsp;"InputCountRateTolerance_s": 5,</i></tt><br></td>
+						<td colspan="2"><i>The input count rate is stable and the measurement is started when the input count rate is within the tolerance(s) specified above for the duration of the time in seconds specified here.</i><br></td>
+					</tr>
+					<tr>
+						<td><tt>&nbsp;&nbsp;"MaximumCountsInPeak": 50000,</tt><br></td>
+						<td colspan="2">One of two possible stop conditions for the measurement. If the highest peak in the spectrum reaches the given value in counts, the measurement is stopped. If both stop conditions are specified, the spectrum will be stopped as soon as one of the two conditions is met.<br></td>
+					</tr>
+					<tr>
+						<td><tt><i>&nbsp;&nbsp;"MaximumRealTimePerCycle_s": 120,</i></tt><br></td>
+						<td colspan="2"><i>One of two possible stop conditions for the measurement. If the real time sums up to the given value in seconds, the measurement is stopped. If both stop conditions are specified, the spectrum will be stopped as soon as one of the two conditions is met.</i><br></td>
+					</tr>
+					<tr>
+						<td><tt>&nbsp;&nbsp;"CalibrationEnergy_keV": 5.895,</tt><br></td>
+						<td colspan="2"><p>The spectrum is calibrated so that the highest peak is at this specified energy. Please choose the energy accordingly to your highest intensity element to get accurate results.</p>
+						<p><i>Note: A one-point calibration is used. See analyze view for more information.</i></p><br></td>
+					</tr>
+					<tr>
+						<td><tt>&nbsp;&nbsp;"Interval1Lower_keV": 0.9,</tt><br></td>
+						<td>Lower end energy of the first interval to calculate a peak to interval ratio.<br></td>
+						<td rowspan="4">Each peak to interval ratio is calculated as follows:
+						<ul style="margin-left: -20px;">
+							<li>First, the channels required for the calculation must be determined. The rounding is done according to IEEE 754 "to nearest, ties to even" (round half to even):<br><img style="vertical-align:middle" height="44" src="Pictures/Equation_260.png" width="501"/></li>
+							<li>Afterwards the mean of the events within the specified limits is calculated:<br><img style="vertical-align:middle" height="38" src="Pictures/Equation_270.png" width="320"/></li>
+							<li>Finally, the peak to interval ratio can be determined using the highest peak intensity within the spectrum:<br><img style="vertical-align:middle" height="22" src="Pictures/Equation_280.png" width="230"/></li>
+						</ul><br></td>
+					</tr>
+					<tr>
+						<td><tt>&nbsp;&nbsp;"Interval1Upper_keV": 1.1,</tt><br></td>
+						<td>Upper end energy of the first interval to calculate a peak to interval ratio.<br></td>
+					</tr>
+					<tr>
+						<td><tt>&nbsp;&nbsp;"Interval2Lower_keV": 5.26,</tt><br></td>
+						<td>Lower end energy of the second interval to calculate a peak to interval ratio.<br></td>
+					</tr>
+					<tr>
+						<td><tt>&nbsp;&nbsp;"Interval2Upper_keV": 5.32,</tt><br></td>
+						<td>Upper end energy of the second interval to calculate a peak to interval ratio.<br></td>
+					</tr>
+					<tr>
+						<td><tt>&nbsp;&nbsp;"MCANumberOfBins": 8192,</tt><br></td>
+						<td rowspan="17" colspan="2">
+							<p>Optional digital pulse processor (DPP) parameters which are mainly relevant for pulse processing. Please refer to the configuration view for more information.</p>
+							<p>The DPP is using the value within the current working copy for spectrum acquisition, if a parameter is not pre-defined here.</p>
+						<br></td>
+					</tr>
+					<tr>
+						<td><tt>&nbsp;&nbsp;"MCABytesPerBin": 3,</tt><br></td>
+					</tr>
+					<tr>
+						<td><tt>&nbsp;&nbsp;"FastfilterPeakingTime_ns": 50,</tt><br></td>
+					</tr>
+					<tr>
+						<td><tt>&nbsp;&nbsp;"FastfilterTriggerThreshold": 90,</tt><br></td>
+					</tr>
+					<tr>
+						<td><tt>&nbsp;&nbsp;"FastfilterMaximumWidth_ns": 3125,</tt><br></td>
+					</tr>
+					<tr>
+						<td><tt>&nbsp;&nbsp;"MediumfilterTriggerThreshold": 280,</tt><br></td>
+					</tr>
+					<tr>
+						<td><tt>&nbsp;&nbsp;"MediumfilterMaximumWidth_ns": 3125,</tt><br></td>
+					</tr>
+					<tr>
+						<td><tt>&nbsp;&nbsp;"MediumfilterPulseDetectionEnabled": false,</tt><br></td>
+					</tr>
+					<tr>
+						<td><tt>&nbsp;&nbsp;"SlowfilterPeakingTime_ns": 1000,</tt><br></td>
+					</tr>
+					<tr>
+						<td><tt>&nbsp;&nbsp;"SlowfilterGapTime_ns": 300,</tt><br></td>
+					</tr>
+					<tr>
+						<td><tt>&nbsp;&nbsp;"ResetInhibitTime_ns": 100,</tt><br></td>
+					</tr>
+					<tr>
+						<td><tt>&nbsp;&nbsp;"BaselineAverageLength": 8,</tt><br></td>
+					</tr>
+					<tr>
+						<td><tt>&nbsp;&nbsp;"BaselineTrim": 2,</tt><br></td>
+					</tr>
+					<tr>
+						<td><tt>&nbsp;&nbsp;"BaselineCorrectionEnable": true,</tt><br></td>
+					</tr>
+					<tr>
+						<td><tt>&nbsp;&nbsp;"DynamicResetEnable": false,</tt><br></td>
+					</tr>
+					<tr>
+						<td><tt>&nbsp;&nbsp;"DynamicResetThreshold": 57000,</tt><br></td>
+					</tr>
+					<tr>
+						<td><tt>&nbsp;&nbsp;"DynamicResetDuration_ns": 200</tt><br></td>
+					</tr>
+					<tr>
+						<td><tt>&nbsp;},</tt><br></td>
+						<td colspan="2"><br></td>
+					</tr>
+					<tr>
+						<td><tt>&nbsp;"Measurements": [</tt><br></td>
+						<td colspan="2">Measurement section for user defined parameter sets. Two examples below.<br></td>
+					</tr>
+					<tr>
+						<td><tt>&nbsp;&nbsp;{</tt><br></td>
+						<td colspan="2"><br></td>
+					</tr>
+					<tr>
+						<td><tt>&nbsp;&nbsp;&nbsp;"MeasurementName": "Example1",</tt><br></td>
+						<td colspan="2"><p>Name of the first measurement.</p><p><i>Note: Distinguishable names must be used for each measurement. Otherwise, previous measurements are overwritten.</i></p><br></td>
+					</tr>
+					<tr>
+						<td><tt>&nbsp;&nbsp;&nbsp;"TemperatureSDDSet_°C": -25.0,</tt><br></td>
+						<td colspan="2">Parameter declaration deviating from the default section.<br></td>
+					</tr>
+					<tr>
+						<td><tt>&nbsp;&nbsp;&nbsp;"SlowfilterPeakingTime_ns": 400</tt><br></td>
+						<td colspan="2">Parameter declaration deviating from the default section.<br></td>
+					</tr>
+					<tr>
+						<td><tt>&nbsp;&nbsp;},</tt><br></td>
+						<td colspan="2"><br></td>
+					</tr>
+					<tr>
+						<td><tt>&nbsp;&nbsp;{</tt><br></td>
+						<td colspan="2"><br></td>
+					</tr>
+					<tr>
+						<td><tt>&nbsp;&nbsp;&nbsp;"MeasurementName": "Example2",</tt><br></td>
+						<td colspan="2">Name of the second measurement.<br></td>
+					</tr>
+					<tr>
+						<td><tt>&nbsp;&nbsp;&nbsp;"FastfilterTriggerThreshold": 120,</tt><br></td>
+						<td colspan="2">Parameter declaration deviating from the default section.<br></td>
+					</tr>
+					<tr>
+						<td><tt>&nbsp;&nbsp;&nbsp;"SlowfilterPeakingTime_ns": 100</tt><br></td>
+						<td colspan="2">Parameter declaration deviating from the default section.<br></td>
+					</tr>
+					<tr>
+						<td><tt>&nbsp;&nbsp;}</tt><br></td>
+						<td colspan="2"><br></td>
+					</tr>
+					<tr>
+						<td><tt>&nbsp;]</tt><br></td>
+						<td colspan="2"><br></td>
+					</tr>
+					<tr>
+						<td><tt>}</tt><br></td>
+						<td colspan="2"><br></td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+		<div id="Run_Statistics">
+			<h2>Run Statistics</h2>
+			<p>The statistics of the currently active spectrum are visible in the run statistics view.</p>
+			<ul style="margin-left: -20px;">
+				<li><b>Realtime/s</b>: Time in seconds that has elapsed since the spectrum run started.</li>
+				<li><b>Livetime/s</b>: Time in seconds in which the pulse detection was active during the spectrum run (pulse detection filter below trigger threshold and no reset detected).</li>
+				<li><b>IC</b>: The total amount of events detected by the fastfilter is called input counts (IC).</li>
+				<li><b>OC</b>: The total amount of successfully evaluated events is called output counts (OC).</li>
+				<li><b>ICR/cps</b>: The input count rate (ICR) is an estimation of the X-ray photon rate in counts per second and calculated as input counts divided by livetime.</li>
+				<li><b>OCR/cps</b>: The output count rate (OCR) indicates the rate of successfully evaluated events in counts per second and is calculated as output counts divided by the realtime.</li>
+				<li><b>Deadtime/%</b>: The dead time ratio indicates the percentage of detected events that could not be evaluated (e.g., due to pile up or reset) and is calculated as 1 – OCR/ICR.</li>
+			</ul>
+		</div>
+		<div id="Configuration">
+			<h2>Configuration</h2>
+			<p>The configuration view contains all digital pulse processor (DPP) parameters available to the end user. They are divided into four groups: I. Run Control, II. Pulse Processing, III. Hardware and Diagnostic, IV. Communication. Some of the parameters are only visible after toggling the switch from <b>Essential</b> to <b>Advanced</b>. This VICOScope help view features an individual description for each parameter, which is shown after clicking in the parameter row.</p>
+			<p>In order to set up the DPP in a suitable way for a certain application, each parameter value in the configuration view can be adjusted. Depending on the data type of the parameter the user can ether:</p>
+			<ul style="margin-left: -20px;">
+				<li>Select or de-select a checkbox for Boolean-type parameters.
+				<li>Choose an entry using a drop-down menu for Enum-type parameters.
+				<li>Type in a value for numerical-type parameters.
+			</ul>
+			<p>Since not every value is applicable for numerical-type parameters VICOScope might change the value entered by the user. VICOScope will find an applicable value which is as close as possible to the entered non-applicable value. In order to indicate that the user has entered a non-applicable value, the parameter will be highlighted with orange background color. As the value in the input box is changed to an applicable value in this case, a mouseover dialog informs the user which non-applicable was entered.</p>
+			
+			<p>With the buttons [Save] and [Load] data transfer with the non-volatile parameter data memory of the DPP can be controlled:</p>
+			<ul style="margin-left: -20px;">
+				<li><b>Save</b>: After changing a parameter within the configuration view, the new value is used for the next spectrum acquisition and is stored as the working copy in volatile memory inside the FPGA. Only after clicking on [Save], the value is saved non-volatile and will be used even after a power cycle.</li>
+				<li><b>Load</b>: Non-overwritable default parameters that were written for the end user by KETEK upon delivery can be loaded via [Load]>>Default. The last saved parameters can be loaded via [Load]>>Saved. Unsaved changes must be discarded.</li>
+			</ul>
+			<p>The user can find out for each parameter which value is currently stored within the non-volatile memory, by moving the pointer over the parameter entry. The displayed hover box shows the currently used parameter value, the parameter value stored in the default parameter set and the parameter value stored in the user parameter set. Furthermore, parameters are highlighted with yellow background color if the used parameter value does not match the saved value and parameters are highlighted with bold font, if the used parameter value does not match the default value.</p>
+			<p><i>Note: In the following, bin and channel are used interchangeably.</i></p>
+		</div>
+		<div id="Configuration_Parameters">
+			<table class="Configuration" border="1" cellspacing="0" cellpadding="2">
+				<thead>
+					<tr>
+						<td><b>Parameter Name</b></td>
+						<td><b>Parameter Description</b></td>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>Stop Condition Type</td>
+						<td id="Stop_Condition_Type">The stop condition can be used to automatically stop MCA data acquisition when a certain criterion is met. This parameter configures the type of automatic stop criterion:
+							<ul style="margin-left: -20px;">
+								<li>None: Disables automatic stop of MCA data acquisition.</li>
+								<li>StopAtFixedInputCounts: MCA data acquisition is stopped when a fixed number of input counts is reached.</li>
+								<li>StopAtFixedLivetime: MCA data acquisition is stopped when a fixed livetime is reached.</li>
+								<li>StopAtFixedOutputCounts: MCA data acquisition is stopped when a fixed number of output counts is reached.</li>
+								<li>StopAtFixedRealtime: MCA data acquisition is stopped when a fixed realtime is reached.</li>
+							</ul>
+						</td>
+					</tr>
+					<tr>
+						<td>Stop Condition Value</td>
+						<td id="Stop_Condition_Value">The stop condition can be used to automatically stop MCA data acquisition when a certain criterion is met. This parameter configures the value of automatic stop criterion:
+							<ul style="margin-left: -20px;">
+								<li>If parameter "Stop Condition Type" is set to None: This parameter has no influence since automatic stop of MCA data acquisition is disabled.</li>
+								<li>If parameter "Stop Condition Type" is set to StopAtFixedLivetime or StopAtFixedRealtime: This parameter sets the livetime or realtime at which the MCA data acquisition is stopped.</li>
+								<li>If parameter "Stop Condition Type" is set to StopAtFixedInputCounts or StopAtFixedOutputCounts: This parameter sets the input or output counts at which the MCA data acquisition is stopped.</li>
+							</ul>
+						</td>
+					</tr>
+					<tr>
+						<td>MCA Number Of Bins </td>
+						<td id="MCA_Number_Of_Bins">Adjust the number of bins used in the multichannel analysis (MCA).
+							<p>This parameter determines the size of the spectrum by setting the number of bins/channels used in the MCA. At a higher number of bins, the spectrum is more fine-grained and a wider energy range can be fitted into the MCA. However, data size and statistical errors increase with a higher number of bins.</p>
+						</td>
+					</tr>
+					<tr>
+						<td>MCA Bytes Per Bin</td>
+						<td id="MCA_Bytes_Per_Bin">Adjust the number of bytes in each bin of the multichannel analysis (MCA).
+							<p>This parameter determines the data depth used in each bin/channel of the MCA. A higher data depth allows the representation of larger values (e.g., 2^(3*8)-1 = 16777215 for 3 bytes per bin) before the bin overflows. However, data size increases with a higher number of bytes per bins.</p>
+						</td>
+					</tr>
+					<tr>
+						<td>Slowfilter Peaking Time</td>
+						<td id="Slowfilter_Peaking_Time">Adjust the peaking time of the slowfilter.
+							<p>Since the slowfilter is used for the determination of X-ray energies, this parameter has a major influence on energy resolution and signal throughput. Typically, a longer slowfilter peaking time improves the energy resolution at the cost of increased dead time.</p>
+						</td>
+					</tr>
+					<tr>
+						<td>Slowfilter Gap Time </td>
+						<td id="Slowfilter_Gap_Time">Adjust the gap time/flattop time of the slowfilter.
+							<p>The gap time of the slowfilter is used to minimize ballistic deficit effects in the X-ray energy determination caused by the finite rise time of X-ray events. Long gap times offer an effective reduction of ballistic deficit effects (e.g., degradation of energy resolution, low-energy tail of peaks). However, long gap time increase the length of the slowfilter and therefore cause an increased dead time.</p>
+						</td>
+					</tr>
+					<tr>
+						<td>Mediumfilter Trigger Threshold</td>
+						<td id="Mediumfilter_Trigger_Threshold">Adjust the trigger threshold for pulse detection with the mediumfilter.
+							<p>In case mediumfilter pulse detection is enabled, X-ray events are detected when the mediumfilter output exceeds this trigger threshold. Therefore, the mediumfilter trigger threshold should be chosen as low as possible in order to detect low-energy X-rays. However, at very low values the mediumfilter output will exceed the trigger threshold not only for X-ray events, but also for random noise. In this case a significant zero energy noise peak rises in the spectrum and dead time is increased.</p>
+						</td>
+					</tr>
+					<tr>
+						<td>Mediumfilter Pulse Detection Enable</td>
+						<td id="Mediumfilter_Pulse_Detection_Enable">Enable or disable utilization of the mediumfilter for pulse detection.
+							<p>If this parameter is enabled the mediumfilter will be used instead of the fastfilter for the detection of X-ray events. Typically, the mediumfilter has a higher length compared to the fastfilter and therefore the detection of low energy X-rays can be improved. However, pile up rejection worsens in this case.</p>
+						</td>
+					</tr>
+					<tr>
+						<td>Mediumfilter Maximum Width </td>
+						<td id="Mediumfilter_Maximum_Width">Adjust the maximum width of the mediumfilter.
+							<p>The maximum width is a secondary pile up criterion using the duration/width of the mediumfilter output above the mediumfilter trigger threshold. A detected X-ray is rejected in case this duration is higher than the defined maximum width and when using the mediumfilter for pulse detection.</p>
+							<p>Choose a maximum width at least twice the mediumfilter peaking time expected the rise time of X-ray events. In order to disable this secondary pile up criterion choose a maximum width way above twice the mediumfilter peaking time plus maximum X-ray rise time. This parameter only has an influence if mediumfilter pulse detection is enabled.</p>
+						</td>
+					</tr>
+					<tr>
+						<td>Fastfilter Peaking Time</td>
+						<td id="Fastfilter_Peaking_Time">Adjust the peaking time of the fastfilter.
+							<p>Since the fastfilter is normally used for pulse detection, short peaking times can be used to improve pile up rejection. However, detection efficiency of low energy X-rays might suffer at short fastfilter peaking times.</p>
+						</td>
+					</tr>
+					<tr>
+						<td>Fastfilter Trigger Threshold</td>
+						<td id="Fastfilter_Trigger_Threshold">Adjust the trigger threshold for pulse detection with the fastfilter.
+							<p>X-ray events are detected when the fastfilter output exceeds this trigger threshold. Therefore, the fastfilter trigger threshold should be chosen as low as possible in order to detect low-energy X-rays. However, at very low values the fastfilter output will exceed the trigger threshold not only for X-ray events, but also for random noise. In this case a significant zero energy noise peak rises in the spectrum and dead time is increased.</p>
+						</td>
+					</tr>
+					<tr>
+						<td>Fastfilter Maximum Width</td>
+						<td id="Fastfilter_Maximum_Width">Adjust the maximum width of the fastfilter.
+							<p>The maximum width is a secondary pile up criterion using the duration/width of the fastfilter output above the fastfilter trigger threshold. A detected X-ray is rejected in case this duration is higher than the defined maximum width.</p>
+							<p>Choose a maximum width at least twice the fastfilter peaking time expected the rise time of X-ray events. In order to disable this secondary pile up criterion choose a maximum width way above twice the fastfilter peaking time plus maximum X-ray rise time.</p>	
+						</td>
+					</tr>
+					<tr>
+						<td>Reset Inhibit Time</td>
+						<td id="Reset_Inhibit_Time">Adjust the time duration for which the pulse processing is disabled after each detector reset.
+							<p>Whenever a highly negative slope is detected in the detector signal the pulse processing is disabled in order to prevent a degradation of the spectrum due to detector resets. When the slope of the detection signal becomes positive again, pulse processing additionally stays disabled for the duration of the chosen reset inhibit time.</p>
+							<p>Therefore, reset inhibit time should exceed the time needed by the detector to settle into normal operation after the reset slope becomes positive again. However, long reset inhibit times lead to higher dead times, most significantly at high input count rates and high X-ray energies.</p>
+						</td>
+					</tr>
+					<tr>
+						<td>Baseline Average Length</td>
+						<td id="Baseline_Average_Length">Adjust the number baseline samples used to calculate the running average of baseline value.
+							<p>The baseline is the output of the slowfilter during the absence of X-ray events. A running average of the baseline is calculated using baseline samples acquired from the mediumfilter output in between X-ray events.</p>
+							<p>Higher baseline average lengths reduce the noise introduced by baseline correction and might improve the energy resolution. However, the reaction time to changes in the baseline (e.g., due to change in detector temperature) worsens at high baseline average lengths. In most cases a high baseline average is the best choice.</p>
+						</td>
+					</tr>
+					<tr>
+						<td>Baseline Trim</td>
+						<td id="Baseline_Trim">Adjust the baseline trim setting which determines the length of the mediumfilter.
+							<p>Long mediumfilter provide less noisy baseline samples and reduce the need of baseline averaging. However, long mediumfilter can acquire baseline samples less frequently than a short mediumfilter because they take longer to return to the baseline after an X-ray event. In most cases an intermediate mediumfilter is the best choice.</p>
+						</td>
+					</tr>
+					<tr>
+						<td>Baseline Correction Enable</td>
+						<td id="Baseline_Correction_Enable">Enable or disable utilization of baseline correction.
+							<p>The baseline is the output of the slowfilter during the absence of X-ray events. Main cause of a non-zero baseline is the presence of detector leakage current. When the baseline correction is enabled the current baseline average value is subtracted from each determined X-ray energy in order to eliminate the offset caused by detector leakage current. In most cases the utilization of the baseline correction is beneficial.</p>
+						</td>
+					</tr>
+					<tr>
+						<td>Digital Energy Gain</td>
+						<td id="Digital_Energy_Gain">Adjust the digital gain for energy values.
+							<p>Every determined energy value will be multiplied with this gain. Therefore, large values will "stretch" and small values will "compress" the energy spectrum in the MCA data. Examples: 
+							<ul style="margin-left: -20px;">
+								<li> A digital energy gain value of 5461 can be used for an MCA bin width of approximately 5eV/bin.</li>
+								<li> A digital energy gain value of 4096 can be used for an MCA bin width of approximately 6.67eV/bin.</li>
+								<li> A digital energy gain value of 2730 can be used for an MCA bin width of approximately 10eV/bin.</li>
+								<li> A digital energy gain value of 1365 can be used for an MCA bin width of approximately 20eV/bin.</li>
+								<li> A digital energy gain value of 10922 can be used for an MCA bin width of approximately 2.5eV/bin.</li>
+							</ul></p>
+							<p>Please note that the exact value of eV/bin for a certain digital energy gain depends on the specific analog gain of the detector and preamplifier and might slightly differ due to component variations.</p>  
+							<p>Together with the parameter "MCA Number of Bins" the digital energy gain also defines the maximum energy that fits into the MCA. Example: When using a MCA with 8192 bins and a digital energy gain of 5461, the maximum energy in the MCA is approximately 5eV/bin * 8192 bins = 40960eV.</p>
+						</td>
+					</tr>
+					<tr>
+						<td>Digital Energy Offset</td>
+						<td id="Digital_Energy_Offset">Adjust the digital offset for energy values.
+							<p>This offset it added to every determined energy value. A value of 32768 equals to zero offset, a value of 0 equals to the maximum negative offset of 256 bins and a value of 65535 equals to the maximum positive offset of 256 bins. This parameter can be used to implement a 2-point energy calibration of the MCA on the device. Otherwise, a value of 32768 (zero offset) is the best choice in most cases.</p>
+						</td>
+					</tr>
+					<tr>
+						<td>Dynamic Reset Enable</td>
+						<td id="Dynamic_Reset_Enable">Enable or disable utilization of dynamic reset.
+							<p>When enabled the DPP triggers the detector reset when the detector signal reaches the voltage set by the parameter "Dynamic Reset Threshold" and no X-ray event is currently processed. In most cases the detection efficient for high energy X-rays can be improved by enabling the dynamic reset.</p>
+						</td>
+					</tr>
+					<tr>
+						<td>Dynamic Reset Threshold</td>
+						<td id="Dynamic_Reset_Threshold">Adjust the threshold for the dynamic reset.
+							<p>When the dynamic reset is enabled by the parameter "Dynamic Reset Enable" the DPP triggers the detector reset when the detector signal reaches the voltage set by this parameter. The threshold voltage is set as ADC Code. The minimum code 0 corresponds to a signal voltage of -1V and the maximum code 65535 corresponds to a signal voltage of +1V. Therefore, each code represents about 30µV.</p>
+							<p>A good practice to choose an appropriate threshold for the dynamic reset is to first determine the highest X-ray energy present in a certain application (e.g., excitation energy of 40keV). As a second step calculate the corresponding voltage of this energy using the KETEK default gain of 5mV/keV (e.g., 40keV correspond to 200mV) and convert to ADC codes of 30µV each (e.g., 200mV correspond to about 6667 ADC codes). Subtract the calculated amount of ADC codes from 65535 and choose a threshold for the dynamic reset about 2000 ADC codes lower than the result (e.g., subtraction of 6667 from 65565 gives 58898 and a good dynamic reset threshold would be about 57000). Using this method, a threshold for the dynamic reset can be found which still allows the detection of the highest X-ray energy prior to the detector reset.</p>
+							<p>Also, the dynamic reset threshold can be optimized empirically for a certain application. In this case variate the dynamic reset threshold until the value is found at which the maximum output count rate is achieved. In most cases a suitable value is found in the range of 50000 to 60000.</p>
+						</td>
+					</tr>
+					<tr>
+						<td>Dynamic Reset Duration</td>
+						<td id="Dynamic_Reset_Duration">Adjust the duration of the dynamic reset output pulse from the DPP to the preamplifier.
+							<p>The duration of the reset pulse must be sufficiently long to be recognized by the preamplifier. In most cases a value of 200ns is a good choice.</p>
+						</td>
+					</tr>
+					<tr>
+						<td>Analog Hardware Power Down</td>
+						<td id="Analog_Hardware_Powerdown">Enable or disable power down of DPP analog hardware.
+							<p>In order to reduce power consumption in times no measurement is active the analog hardware of the DPP (e.g., ADC and operational amplifiers) can be set in power down. If this parameter is enabled the analog hardware is not powered.</p>
+						</td>
+					</tr>
+					<tr>
+						<td>Event Trigger Source</td>
+						<td id="Event_Trigger_Source">Choose the trigger source used when reading out signal traces with the oscilloscope feature:
+							<ul style="margin-left: -20px;">
+								<li>ADCOutOfRange: Trigger when an ADC overrange occurs (overvoltage or undervoltage at ADC signal input).</li>
+								<li>ActiveResetInitiate: Trigger when a dynamic reset is initiated by the DPP.</li>
+								<li>FastfilterPileup: Trigger when a pileup is rejected in the fastfilter using the maximum width criterion defined by the parameter "Fastfilter Maximum Width".</li>
+								<li>FastfilterResetDetected: Trigger when a reset is detected in the fastfilter.</li>
+								<li>FastfilterTrigger: Trigger when an input count is detected in the fastfilter.</li>
+								<li>InstantTrigger: Trigger is activated instantly without any condition.</li>
+								<li>MediumfilterPileup: Trigger when a pileup is rejected in the mediumfilter using the maximum width criterion defined by the parameter "Mediumfilter Maximum Width".</li>
+								<li>MediumfilterResetDetected: Trigger when a reset is detected in the mediumfilter.</li>
+								<li>MediumfilterTrigger: Trigger when an input count is detected in the mediumfilter.</li>
+								<li>NewBaselineSample: Trigger when a new baseline sample is acquired.</li>
+								<li>NewOutputCountAnyEnergy: Trigger when a new output count of any energy is added to the MCA.</li>
+								<li>NewOutputCountSpecificEnergy: Trigger when a new output count of a specific energy is added to the MCA. The specific MCA bin has to be defined using the parameter "Event Trigger Value".</li>
+								<li>SpecificADCValue: Trigger when an specific output value of the ADC is reached. The specific ADC code has to be defined using the parameter "Event Trigger Value".</li>
+								</ul>
+						</td>
+					</tr>
+					<tr>
+						<td>Event Trigger Value</td>
+						<td id="Event_Trigger_Value">Adjust the trigger value used when reading out signal traces with the oscilloscope feature.
+							<p>This parameter is used to define the specific ADC value or specific MCA bin in case the parameter "Event Trigger Source" is set to SpecificADCValue or NewOutputCountSpecificEnergy. If any other value is used in parameter "Event Trigger Source" this parameter has no influence.</p>
+						</td>
+					</tr>
+					<tr>
+						<td>Event Scope Sampling Interval</td>
+						<td id="Event_Scope_Samping_Interval">Adjust the sampling frequency used when reading out signal traces with the oscilloscope feature.
+							<p>The signal traces have a fixed length of 8192 data points. By adjusting the sampling frequency using this parameter the number of signal samples obtained in one second can be chosen. Therefore, a suitable time base for the desired signal can be set up.</p>
+							<p>The value of this parameter represents the factor of down-sampling regarding the 80MHz system clock. Examples:
+								<ul style="margin-left: -20px;">
+									<li>Setting this parameter to a value of 1 results in a sampling frequency of 80MHz/1=80MHz for the signal trace. The 8192 data points represent a time frame of 8192/80MHz=102.4µs.</li>
+									<li>Setting this parameter to a value of 2 results in a sampling frequency of 80MHz/2=40MHz for the signal trace. The 8192 data points represent a time frame of 8192/40MHz=204.8µs.</li>
+									<li>Setting this parameter to a value of 10 results in a sampling frequency of 80MHz/10=8MHz for the signal trace. The 8192 data points represent a time frame of 8192/8MHz=1.024ms.</li>
+									<li>Setting this parameter to a value of 100 results in a sampling frequency of 80MHz/100=800kHz for the signal trace. The 8192 data points represent a time frame of 8192/80kHz=10.24ms.</li>
+									<li>...
+								</ul></p>
+							<p>Please note that data collection for signal traces can take a considerable amount of time when using very low sampling frequencies.</p>
+						</td>
+					</tr>
+					<tr>
+						<td>Event Scope Trigger Timeout</td>
+						<td id="Event_Scope_Trigger_Timeout">Adjust the maximum waiting time for a successful trigger when reading out signal traces with the oscilloscope feature.
+							<p>In case the trigger condition set up by the parameters "Event Trigger Source" and "Event Trigger Value" was not met during this time, a timeout error will be returned. Choosing a high timeout value is useful in cases where the trigger condition rarely occurs and a long maximum waiting time for the response (e.g., 16 seconds) is acceptable for the user.</p>
+						</td>
+					</tr>
+					<tr>
+						<td>SPI Power Down</td>
+						<td id="SPI_Powerdown">Enable or disable power down of SPI interface.
+							<p>In case no SPI communication is needed (e.g., ethernet interface of is used) the SPI interface can be set in power down. If this parameter is enabled the device is not accessible via SPI. SPI power down has practically no impact on power consumption. However, unintentional SPI communication can be prevented by setting the interface to power down.</p>
+						</td>
+					</tr>
+					<tr>
+						<td>USB Power Down</td>
+						<td id="USB_Powerdown">Enable or disable power down of USB hardware.
+							<p>In order to reduce power consumption when no USB communication is needed (e.g., ethernet interface of is used) the USB interface can be set in power down. If this parameter is enabled the USB hardware is not powered.</p>
+						</td>
+					</tr>
+					<tr>
+						<td>Ethernet Power Down</td>
+						<td id="Ethernet_Powerdown">Enable or disable power down of ethernet hardware.
+							<p>In order to reduce power consumption when no ethernet communication is needed (e.g., USB interface of is used) the ethernet interface can be set in power down. If this parameter is enabled the ethernet hardware is not powered.</p>
+						</td>
+					</tr>
+					<tr>
+						<td>Ethernet Apply</td>
+						<td id="Ethernet_Apply">The [Apply] button will be activated after changing one of the parameters "Ethernet Protocol", "Ethernet Speed", "Ethernet IP Address, "Ethernet subnet mask" or "Ethernet gateway IP address". In this case use the [Apply] button for the changes of these parameters to become effective or use the "Cancel" button in order to discard the changes of these parameter.
+							<p>Please note that after using the [Apply] button any ethernet connection with the device will be gone since the ethernet interface is reconfigured. Therefore, a new scan is needed after using the [Apply] button in case you are connected via ethernet to the device.</p>
+						</td>
+					</tr> 				
+					<tr>
+						<td>Ethernet Protocol</td>
+						<td id="Ethernet_Protocol">Choose the transport layer protocol used for ethernet communication. Supported protocols are:
+							<ul style="margin-left: -20px;">
+								<li>TCP: Transmission Control Protocol</li>
+								<li>UDP: User Datagram Protocol</li>
+							</ul>
+						<p>Please be aware to use the [Apply] button to ensure the changes to this parameter take effect. Additionally, a rescan may be necessary in case of a connection loss.</p>
+						</td>
+					</tr>
+					<tr>
+						<td>Ethernet Speed</td>
+						<td id="Ethernet_Speed">Choose speed and duplex mode ethernet communication. Options are:
+							<ul style="margin-left: -20px;">
+								<li>AutoNegotiation: Use auto-negotiation to determine ethernet speed and duplex mode.</li>
+								<li>FullDuplex100MBits: Force ethernet to run at 10Mbit/s and full duplex mode.</li>
+								<li>FullDuplex10MBits: Force ethernet to run at 10Mbit/s and full duplex mode.</li>
+								<li>HalfDuplex100MBits: Force ethernet to run at 100Mbit/s and half duplex mode.</li>
+								<li>HalfDuplex10MBits: Force ethernet to run at 10Mbit/s and half duplex mode.</li>
+							</ul>
+						<p>In most cases the auto-negotiation options are suitable. The ethernet interface will automatically use the highest performance speed and duplex mode supported by each device present in the network.</p>
+						<p>Forcing a specific ethernet speed using another option than auto-negotiation can cause the communication to fail (e.g., due to network switches that do not support the chosen option). However, not using auto-negotiation might be useful in case power consumption is critical since 10Mbit/s options draw significantly less power in comparison to 100Mbit/s options.</p>
+						<p>Please be aware to use the [Apply] button to ensure the changes to this parameter take effect. Additionally, a rescan may be necessary in case of a connection loss.</p>
+						</td>
+					</tr>
+					<tr>
+						<td>Ethernet IP Address</td>
+						<td id="Ethernet_IP_Address">Choose the IP address used by the DPP ethernet interface. Internet Protocol version 4 (IPv4) standard is used.
+						<p>Please be aware to use the [Apply] button to ensure the changes to this parameter take effect. Additionally, a rescan may be necessary in case of a connection loss.</p>
+						</td>
+					</tr>
+					<tr>
+						<td>Ethernet Subnet Mask</td>
+						<td id="Ethernet_Subnet_Mask">Choose the subnet mask used by the DPP ethernet interface. Internet Protocol version 4 (IPv4) standard is used.
+						<p>Please be aware to use the [Apply] button to ensure the changes to this parameter take effect. Additionally, a rescan may be necessary in case of a connection loss.</p>
+						</td>
+					</tr>
+					<tr>
+						<td>Ethernet Gateway IP Address</td>
+						<td id="Ethernet_Gateway_IP_Address">Choose the gateway IP address used by the DPP ethernet interface. Internet Protocol version 4 (IPv4) standard is used.
+						<p>Please be aware to use the [Apply] button to ensure the changes to this parameter take effect. Additionally, a rescan may be necessary in case of a connection loss.</p>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</body>
+</html>
