@@ -95,11 +95,14 @@ def file_collector(measurement:str):
     return file_collection
 
 def pixe_single_spectrum_plot(filename:str):
+    '''
+    This function will produce a simple labeled plot of uncalibrated raw-data.
+    '''
     data = read_json_formatted_file(filename)
     energyPerBin = data['Calibration']['BinSize_keV/Bin'] # keV/bin
     bin_data = data['RawData'][:-1] #remove that overflow bin at position 8191
     # print(bin_data)
-    bins = np.arange(0,len(bin_data),1)*energyPerBin
+    bins = np.arange(0,len(bin_data),1)
     
     scatter_color = color_schemes['c_dark']
     
@@ -108,8 +111,16 @@ def pixe_single_spectrum_plot(filename:str):
     # ax.plot(bins, bin_data, lw=0.75, color=scatter_color[0], zorder=2)
     ax.step(bins, bin_data, lw=0.75, color=scatter_color[0], zorder=2)
     
+    plt.xlabel('MCA channel')
+    plt.ylabel('Counts')
+    
     plt.grid(which="both")
     plt.tight_layout()
+
+    meas_name = filename.split('//').split('.')[1]
+    print(meas_name)
+    # plt.savefig('.//plots//{meas_name}')
+    
     plt.show()
 
 def all_files_from_measSet(m_name:str):
