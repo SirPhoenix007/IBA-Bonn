@@ -112,8 +112,7 @@ def plot_zero2breakdown(h5dict):
                     elinewidth=0.2,
                     ms=3,
                     fmt='x',
-                    color=color_set[c_index],
-                    label=k)
+                    color=color_set[c_index])#,label=k)
         
         # result = evaluator(sqrtModel=sqrtModel, param_list=p_list, space=s_list, x=measurement['voltage'], y=scaled_measurement)
         
@@ -161,7 +160,7 @@ def plot_zero2breakdown(h5dict):
         x_min = -20
     
     plt.xlim(x_min*0.5, x_max*1.05)
-    plt.ylim((y_min*scaling)*0.5, (y_max*scaling)*1.04)
+    plt.ylim((y_min*scaling)*0.5, (y_max*scaling)*1.35)
     # plt.ylim((y_min*scaling)*0.5, (y_max*scaling)*1.35)
     
     if (len(sys.argv) > 3 and sys.argv[3] == 'log'):

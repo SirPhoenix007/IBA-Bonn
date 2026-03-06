@@ -37,6 +37,9 @@ def sqrt_func(x,param):
 def gauss_func(param, x):
     return param[0] * np.exp(-((x - param[1])**2)/(2*param[2]**2))
 
+def double_gauss_func(param, x):
+    return param[0] * np.exp(-((x - param[1])**2)/(2*param[2]**2)) + param[3] * np.exp(-((x - param[4])**2)/(2*param[5]**2))
+
 def energy_func(param, x):
     return param[0] + param[1]*x + param[2]*x**2
     
