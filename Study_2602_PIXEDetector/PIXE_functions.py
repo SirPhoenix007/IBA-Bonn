@@ -34,17 +34,34 @@ def sqrt_func(x,param):
     return param[0]*np.sqrt(param[1]*x) + param[2]*x + param[3]
     # return param[0]*np.sqrt(param[1]*x - param[4]) + param[2]*x + param[3]
 
+def lin_func(param, x):
+    return param[0]*x + param[1]
+
 def gauss_func(param, x):
     return param[0] * np.exp(-((x - param[1])**2)/(2*param[2]**2))
 
 def double_gauss_func(param, x):
     return param[0] * np.exp(-((x - param[1])**2)/(2*param[2]**2)) + param[3] * np.exp(-((x - param[4])**2)/(2*param[5]**2))
 
+def gauss_linear_func(param, x):
+    G = gauss_func(param[0:3],x)
+    L = lin_func(param[3:],x)
+    return G + L
+
 def energy_func(param, x):
     return param[0] + param[1]*x + param[2]*x**2
     
 def exp_func(x, param):
     return param[0]*np.exp(param[1]*x) + param[2]
+
+
+
+
+
+
+
+
+
 
 def evaluatorOLD(func, param_list:list, boundary_list:list, x:list, y:list, xerr:list, yerr:list):
     params = np.array(param_list)

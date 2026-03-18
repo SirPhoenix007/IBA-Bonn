@@ -4,7 +4,7 @@
 151428- Mini-X Au, Cap off, 60s, 4096, 3, 5461, 40kV, 25mA, +- 0.1 
 151553- Mini-X Au, Cap off, 60s, 4096, 3, 5461, 40kV, 25mA, +- 0.1
 ...
-15138xx- Mini-X Au (Alufolie vor), Cap off, 60s, 4096, 3, 5461, 20kV, 25mA, +- 0.1
+1538xx- Mini-X Au (Alufolie vor), Cap off, 60s, 4096, 3, 5461, 20kV, 25mA, +- 0.1
 1553xx - Mini-X Ag , Cap off, 60s, 4096, 3, 5461, 20kV, 15mA, +- 0.1
 155629 - Mini-X Ag , Cap off, 60s, 4096, 3, 5461, 50kV, 15mA, +- 0.1
 160129 - Mini-X Ag , Cap off, 60s, 4096, 3, 5461, 20kV, 5mA, +- 0.1
