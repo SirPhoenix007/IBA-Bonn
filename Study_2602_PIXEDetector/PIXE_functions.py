@@ -23,6 +23,7 @@ from matplotlib import ticker
 from matplotlib.gridspec import GridSpec
 from scipy.signal import find_peaks
 from scipy.optimize import curve_fit
+from scipy.special import voigt_profile
 from scipy.odr import ODR, Model, RealData
 from getmac import get_mac_address as gma
 from matplotlib.offsetbox import OffsetImage, AnnotationBbox, TextArea, VPacker
@@ -54,7 +55,13 @@ def energy_func(param, x):
 def exp_func(x, param):
     return param[0]*np.exp(param[1]*x) + param[2]
 
-
+def cauchy_voigt_func(param, x):
+    '''
+    param[0]: sigma - std dev for Gaussian component \n
+    param[1]: gamma - std dev for Lorentzian component \n
+    '''
+    
+    return voigt_profile(x,param[0],param[1])
 
 
 

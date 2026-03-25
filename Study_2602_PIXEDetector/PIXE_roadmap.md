@@ -12,6 +12,8 @@
 
 **Set H**: Coffee Bean with Amersham
 
+**Set I**: Different Energy Gain values
+
 #### Amptek Mini-X Source
 
 **Set E**: Source further away
@@ -20,14 +22,18 @@
 
 ---
 
+
 ---
 
 ## Evaluations
 
 ### Energy Calibration
 
-*Background reduction is needed.*
-**Workflow**: raw data -> background reduction -> translate into energies.
+**Added EG values**: The value set for EG is manually adjustable, therefore more values in between can be realised to use with different expected values.
+
+**Voigt profile**: As the line shape of a spectral line is Lorentzian in nature and the detector line shape is Gaussian, their convolution, namely a Cauchy-Voigt profile shall be tested for fitting the peaks.
+
+**Background (reduction)**: *Workflow*: raw data -> background reduction -> translate into energies.
 
 ### Bremsstrahlung
 
@@ -36,6 +42,8 @@
 ### Peak Intensity Comparison
 
 *There is data to compare against on whether the intensities are "properly" detected.*
+
+### Multi-Voigt/Gauss summation for recreation of peak landscape?
 
 **K-/L-lines**
 
