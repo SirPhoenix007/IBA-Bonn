@@ -22,7 +22,6 @@
 
 ---
 
-
 ---
 
 ## Evaluations
@@ -56,8 +55,6 @@ Resulting plots:
 
 ---
 
-
-
 ## Presenting Results
 
 **Workflow Representation**
@@ -80,7 +77,12 @@ raw data -> (background reduction) -> peak detection -> energy calibration -> sp
 
 *G*: x-ray spectrum of sample with highlighted, measured peaks
 
-
 **Beam symboling script**
 
 See notes for details on how.
+
+**Flags**
+
+*dark*: dark background with light text
+
+*large*: larger texts for presentations

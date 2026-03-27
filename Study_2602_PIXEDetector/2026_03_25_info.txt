@@ -4,13 +4,13 @@ E1) 2,5 eV => 2,39 eV   (@8192 MCA) => 19,57 keV
 E2) 5 eV => 4,78 eV     (@8192 MCA) => 39,15 keV
 E3) 6,67 eV => 6,377 eV (@8192 MCA) => 52,24 keV
 E4) 10 eV => 9,5 eV     (@8192 MCA) => 77,82 keV
-E5) ~8 eV		(@8192 MCA) => 65,53 keV
+E5) ~8 eV				(@8192 MCA) => 65,53 keV
 -------------------------------------------------
 		HIGHEST LINE
 		------------
 Copper 		Kb5 @ 8974 eV 	=> E1
 Rubidium 	Kb5 @ 15087 eV	=> E1
-Molybdenium 	Kb2 @ 19962 eV	=> E2
+Molybdenium Kb2 @ 19962 eV	=> E2
 Silver		Kb2 @ 25450 eV	=> E2
 Barium		Kb2 @ 37249 eV	=> E3
 Terbium		Kb4 @ 51845 eV  => E5
