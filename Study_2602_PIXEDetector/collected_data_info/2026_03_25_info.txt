@@ -1,0 +1,51 @@
+25.03.2026 - Amersham 2084 @ 3600s
+-------------------------------------------------
+E1) 2,5 eV => 2,39 eV   (@8192 MCA) => 19,57 keV
+E2) 5 eV => 4,78 eV     (@8192 MCA) => 39,15 keV
+E3) 6,67 eV => 6,377 eV (@8192 MCA) => 52,24 keV
+E4) 10 eV => 9,5 eV     (@8192 MCA) => 77,82 keV
+E5) ~8 eV		(@8192 MCA) => 65,53 keV
+-------------------------------------------------
+		HIGHEST LINE
+		------------
+Copper 		Kb5 @ 8974 eV 	=> E1
+Rubidium 	Kb5 @ 15087 eV	=> E1
+Molybdenium 	Kb2 @ 19962 eV	=> E2
+Silver		Kb2 @ 25450 eV	=> E2
+Barium		Kb2 @ 37249 eV	=> E3
+Terbium		Kb4 @ 51845 eV  => E5
+-------------------------------------------------
+COPPER
+------
+065918 - 60s, Distance/Deadtime Test
+070217 - 60s, Distance/Deadtime Test @ 3cm Foil <> Detector
+070325 - Copper Measurement
+
+RUBIDIUM
+--------
+080539 - 60s, Distance/Deadtime Test abgebrochen
+081037 - 60s, Distance/Deadtime Test
+081432 - 60s, Slow Peaking 400 ns
+081734 - Rubidium Measurement
+
+MOLYBDENIUM
+-----------
+091953 - 60s, Distance/Deadtime Test
+092112 - Molybdenium Measurement
+
+SILVER
+------
+102304 - Fehlmessung
+102319 - 60s, Distance/Deadtime Test
+102428 - Silver Measurement
+
+BARIUM
+------
+120842 - 60s, Distance/Deadtime Test
+121129 - 60s, Distance closer (1,5cm)
+121419 - Barium Measurement (1,5cm)
+
+TERBIUM
+-------
+131924 - 60s, Distance/Deadtime Test, 3770
+132058 - Terbium Measurement (3cm), 3770
