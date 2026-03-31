@@ -25,12 +25,14 @@ from scipy.signal import find_peaks
 from scipy.optimize import curve_fit
 from scipy.special import voigt_profile
 from scipy.odr import ODR, Model, RealData
+from lmfit.models import VoigtModel
 from getmac import get_mac_address as gma
 from matplotlib.offsetbox import OffsetImage, AnnotationBbox, TextArea, VPacker
 #-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-#
 from colors import load_colors
 color_schemes = load_colors()
 #----------------- Fitting Functions -----------------#
+
 def sqrt_func(x,param):
     # return param[0]*np.sqrt(param[1]*x)
     return param[0]*np.sqrt(param[1]*x) + param[2]*x + param[3]
@@ -55,19 +57,6 @@ def energy_func(param, x):
     
 def exp_func(x, param):
     return param[0]*np.exp(param[1]*x) + param[2]
-
-def cauchy_voigt_func(param, x):
-    '''
-    param[0]: sigma - std dev for Gaussian component \n
-    param[1]: gamma - std dev for Lorentzian component \n
-    '''
-    
-    return voigt_profile(x,param[0],param[1])
-
-
-
-
-
 
 
 
@@ -101,6 +90,26 @@ def evaluator_scipy(func, beta0_list:list, x:list, y:list, xerr:list, yerr:list)
     print('UNCERT:', output.sd_beta)
     
     return {'param':output.beta, 'errors':output.sd_beta}
+
+def evaluator_lmfit(beta0_list:list, x:list, y:list):
+    vModel = VoigtModel()
+    
+    params = vModel.make_params(
+        amplitude   = beta0_list[0],
+        center      = beta0_list[1],
+        sigma       = beta0_list[2],
+        gamma       = beta0_list[3]
+    )
+    
+    params['amplitude'].min = 0
+    params['sigma'].min = 0
+    params['gamma'].min = 0
+    
+    result = vModel.fit(y, params, x=x)
+    
+    print(result.fit_report())
+    
+    return result
 #----------------- Fitting Functions -----------------#
 
 def detector_pic(id):
@@ -164,7 +173,7 @@ def file_collector(measurement:str):
             file_collection.append(full_path)
     return file_collection
 
-def pixe_single_spectrum_plot(filename:str):
+def pixe_single_spectrum_plot_Withsave(filename:str):
     '''
     This function will produce a simple labeled plot of uncalibrated raw-data.
     '''
@@ -229,5 +238,5 @@ def pixe_single_spectrum_plot(filename:str):
 def all_files_from_measSet(m_name:str):
     f_c = file_collector(m_name)
     for file in f_c:
-        pixe_single_spectrum_plot(file)
+        pixe_single_spectrum_plot_Withsave(file)
     return 4
