@@ -58,6 +58,12 @@ plt.rcParams.update({
 color_schemes = load_colors()
 #-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-#
 #http://localhost:5006/PIXE_interactive_plot
+#bokeh serve --show .\PIXE_interactive_plot.py 
+
+
+'''
+sys.argv[1] sollte der Dateiname für das Spektrum sein.
+'''
 
 # Data
 x = np.linspace(0, 10, 200)
