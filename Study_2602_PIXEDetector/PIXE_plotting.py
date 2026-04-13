@@ -68,7 +68,9 @@ print('---------------------------------------')
 # PARSER SETUP
 parser = argparse.ArgumentParser(description='PIXE Spectrum Plotting')
 
-parser.add_argument('-sm','--simple_mode', choices=['single', 'dual'], default='single', help='Plotting mode for simple plots: single or dual axis')
+parser.add_argument('-sm','--simple_mode', choices=['None','single', 'dual'], default='None', help='Plotting mode for simple plots: single or dual axis')
+parser.add_argument('-dm','--detailed_mode', choices=['None','1','2'], default='None', help='Plotting mode for detailed plots: single axis + expected lines (1,2)')
+parser.add_argument('-s','--save', help='Save the generated plot as .png and .pdf files', action='store_true')
 
 
 #~+~+~+~+~+~+~+~+~+~+~+~+~+~+~+~+~+~+~+~+~+~+~+~+~+~+~+~+~+~+~+~+~+~+~+~+~+~#
@@ -176,10 +178,9 @@ def plot_basic_dualAxis_spectrum(meas_file:str, meas_EG:int, meas_MCA:int, meas_
     
     
     meas_file_name = meas_file.split('.')[0]
-    converted_data = data_converter(meas_data, ecal_param)
     converted_x_axis = data_converter(np.linspace(0, meas_MCA-1, meas_MCA), ecal_param)
     fig, ax = plt.subplots(figsize=(6,4), dpi=DPI)
-    ax.plot(converted_x_axis, converted_data, color=color_schemes['c_five2'][0], label=f'Calibrated Spectrum \n ID: {meas_file_name}')
+    ax.plot(converted_x_axis, meas_data, color=color_schemes['c_five2'][0], label=f'Calibrated Spectrum \n ID: {meas_file_name}')
     
     ax.set_xlim(0, convxticks_list[-1])
     ax.set_xticks(convxticks_list, [f'{int(i)}' for i in convxticks_list])
@@ -196,6 +197,82 @@ def plot_basic_dualAxis_spectrum(meas_file:str, meas_EG:int, meas_MCA:int, meas_
     plt.tight_layout()
     plt.show()
 
+#~+~+~+~+~+~+~+~+~+~+~+~+~+~+~+~+~+~+~+~+~+~+~+~+~+~+~+~+~+~+~+~+~+~+~+~+~+~#
+
+def plot_data_expected_singleAxis_spectrum(meas_file:str, meas_MCA:int, meas_data:list, ecal_param:list, elem_symbol:str, both_axes:bool=False):
+    '''
+    Single axis plot with energy vs. counts.\n
+    Simplified xticks for readable energy values.\n 
+    No secondary x-axis with MCA channels.
+    '''
+       
+    DPI = 200
+    
+    if (len(meas_data) == 8192):
+        xticks_list = np.arange(0,8193,1024)
+        convxticks_list = data_converter(xticks_list, ecal_param)
+    elif (len(meas_data) == 4096):
+        xticks_list = np.arange(0,4097,512)
+        convxticks_list = data_converter(xticks_list, ecal_param)
+    elif (len(meas_data) == 2048):
+        xticks_list = np.arange(0,2049,512)
+        convxticks_list = data_converter(xticks_list, ecal_param)
+        
+    if convxticks_list[-1] <= 10000:
+        eV_xticks_list = np.arange(0, round(convxticks_list[-1]/500) *500, 500)
+    elif convxticks_list[-1] <= 25000:
+        eV_xticks_list = np.arange(0, round(convxticks_list[-1]/1000) *1000, 1000)
+    elif convxticks_list[-1] <= 50000:
+        eV_xticks_list = np.arange(0, round(convxticks_list[-1]/2500) *2500, 2500)
+    elif convxticks_list[-1] <= 100000:
+        eV_xticks_list = np.arange(0, round(convxticks_list[-1]/5000) *5000, 5000)    
+        
+    meas_file_name = meas_file.split('.')[0]
+    
+    converted_x_axis = data_converter(np.linspace(0, meas_MCA-1, meas_MCA), ecal_param)
+    
+    fig, ax = plt.subplots(figsize=(10,4), dpi=DPI, nrows=2, sharex=True, height_ratios=[2,1])
+    
+    ax[0].plot(converted_x_axis, meas_data, color=color_schemes['c_five2'][0], label=f'Calibrated Spectrum \n ID: {meas_file_name}')
+    
+    for key, val in xraydb.xray_lines(elem_symbol).items():
+        
+        if both_axes == True:
+            line_param_bothaxes = [val.intensity*np.max(meas_data),val.energy,1]
+        line_param = [val.intensity,val.energy,1]
+        # print(line_param[0:2])
+        line_lin = np.linspace(val.energy-300,val.energy+300,1000)
+        # xlin = np.linspace(0,int(E_max),int(E_max))
+        
+        if key[0] == 'K':
+            col = color_schemes['c_rainbow'][1]
+        elif (key[0] == 'L'):
+            col = color_schemes['c_light'][1]
+        elif (key[0] == 'M'):
+            col = color_schemes['c_rainbow'][7]
+        
+        if both_axes == True:
+            ax[0].plot(line_lin,gauss_func(line_param_bothaxes,line_lin), color=col, alpha=1, lw=1)
+        ax[1].plot(line_lin,gauss_func(line_param,line_lin), color=col, alpha=1, lw=1)
+   
+    ax[1].plot([],[],color=color_schemes['c_rainbow'][1],lw=1,label='K-lines')
+    ax[1].plot([],[],color=color_schemes['c_light'][1],lw=1,label='L-lines')
+    ax[1].plot([],[],color=color_schemes['c_rainbow'][7],lw=1,label='M-lines')
+    
+    ax[0].set_xlim(0, convxticks_list[-1])
+    ax[0].set_xticks(eV_xticks_list, [f'{int(i)}' for i in eV_xticks_list])
+    
+    for i in range(2):
+        ax[i].legend()
+        ax[i].grid()
+        ax[i].set_ylim(0, None)
+    
+    plt.xlabel('Energy / eV', fontsize=10)
+    ax[0].set_ylabel('Counts', fontsize=10)
+    ax[1].set_ylabel('Intensity', fontsize=10)
+ 
+    plt.tight_layout()
+    plt.show()
 #-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-#
 if __name__ == "__main__":
     start_routine = time.monotonic_ns()
@@ -204,9 +281,17 @@ if __name__ == "__main__":
     
     ecal_data = read_ecal('./energy_cali/09_Apr_2026_eCali.json')
     file_list = read_full_directory('collected_data//2026_03_25')
-    meas_file, meas_data, meas_MCA, meas_EG, ecal_curr_param, ecal_curr_errors = measurement_parameters(file_list[-2], ecal_data)
-        
-    plot_basic_singleAxis_spectrum(meas_file, meas_EG, meas_MCA, meas_data, ecal_curr_param)
+    meas_file, meas_data, meas_MCA, meas_EG, ecal_curr_param, ecal_curr_errors = measurement_parameters(file_list[-1], ecal_data)
+    
+    if args.simple_mode == 'single':
+        plot_basic_singleAxis_spectrum(meas_file, meas_EG, meas_MCA, meas_data, ecal_curr_param)
+    elif args.simple_mode == 'dual':
+        plot_basic_dualAxis_spectrum(meas_file, meas_EG, meas_MCA, meas_data, ecal_curr_param)
+    
+    if args.detailed_mode == '1':
+        plot_data_expected_singleAxis_spectrum(meas_file, meas_MCA, meas_data, ecal_curr_param, 'Tb',both_axes=False)
+    elif args.detailed_mode == '2':
+        plot_data_expected_singleAxis_spectrum(meas_file, meas_MCA, meas_data, ecal_curr_param, 'Tb',both_axes=True)
     
     print('---------------------------------------')
     end_routine = time.monotonic_ns()
