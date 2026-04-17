@@ -72,6 +72,8 @@ parser = argparse.ArgumentParser(description='PIXE Spectrum Plotting')
 parser.add_argument('-sm','--simple_mode', choices=['None','single', 'dual'], default='None', help='Plotting mode for simple plots: single or dual axis')
 parser.add_argument('-dm','--detailed_mode', choices=['None','1','2'], default='None', help='Plotting mode for detailed plots: single axis + expected lines (1,2)')
 
+parser.add_argument('-l','--log', help='Plot y-axis in logarithmic scale', action='store_true')
+
 parser.add_argument('-p','--path', help='Directory of data to insert into routine.')
 parser.add_argument('-s','--save', help='Save the generated plot as .png and .pdf files', action='store_true')
 
@@ -99,7 +101,7 @@ def measurement_parameters(file:str, ecal_data:dict):
     print(f'INFO: FILE {file} READ (MCA: {curr_MCA}, EG: {curr_EG})')
     
     for i in range(1,6):
-        if curr_MCA == ecal_data[str(i)]['MCA'] and curr_EG == ecal_data[str(i)]['EG']:
+        if (curr_MCA == ecal_data[str(i)]['MCA'] or 2*curr_MCA == ecal_data[str(i)]['MCA']) and curr_EG == ecal_data[str(i)]['EG']:
             ecal_MCA = ecal_data[str(i)]['MCA']
             ecal_EG = ecal_data[str(i)]['EG']
             ecal_param = ecal_data[str(i)]['param']
@@ -117,7 +119,7 @@ def data_converter(measurement_data:list, ecal_param:list):
 
 #~+~+~+~+~+~+~+~+~+~+~+~+~+~+~+~+~+~+~+~+~+~+~+~+~+~+~+~+~+~+~+~+~+~+~+~+~+~#
 
-def plot_basic_singleAxis_spectrum(meas_file:str, meas_EG:int, meas_MCA:int, meas_data:list, ecal_param:list, save_flag:bool=False):
+def plot_basic_singleAxis_spectrum(meas_file:str, meas_EG:int, meas_MCA:int, meas_data:list, ecal_param:list, save_flag:bool=False, log_flag:bool=False):
     '''
     Single axis plot with energy vs. counts.\n
     Simplified xticks for readable energy values.\n 
@@ -156,7 +158,12 @@ def plot_basic_singleAxis_spectrum(meas_file:str, meas_EG:int, meas_MCA:int, mea
     ax.set_xlim(0, convxticks_list[-1])
     ax.set_xticks(eV_xticks_list, [f'{int(i/1000)}' for i in eV_xticks_list])
     
-    ax.set_ylim(0,np.max(meas_data)*1.2)
+    if log_flag == True:
+        ax.set_yscale('log')
+        ax.set_ylim(1e0,np.max(meas_data)*1.2)
+    else:
+        ax.set_yscale('linear')
+        ax.set_ylim(0,np.max(meas_data)*1.2)
     
     plt.xlabel('Energy / keV', fontsize=10)
     plt.ylabel('Counts', fontsize=10)
@@ -164,13 +171,19 @@ def plot_basic_singleAxis_spectrum(meas_file:str, meas_EG:int, meas_MCA:int, mea
     plt.grid()
     plt.tight_layout()
     
-    if (save_flag == True):
-        plt.savefig(f'./plots/calibrated/{meas_file_name}_singleAxis.png', transparent=False, dpi=DPI)
-        plt.savefig(f'./plots/calibrated/{meas_file_name}_singleAxis.pdf', transparent=False, dpi=DPI)
+    if (save_flag == True and log_flag == True):
+        plt.savefig(f'./plots/calibrated/only_data_log/{meas_file_name}_singleAx_log.png', transparent=False, dpi=DPI)
+        plt.savefig(f'./plots/calibrated/only_data_log/{meas_file_name}_singleAx_log.pdf', transparent=False, dpi=DPI)
+    elif (save_flag == True and log_flag == False):
+        plt.savefig(f'./plots/calibrated/only_data_lin/{meas_file_name}_singleAx.png', transparent=False, dpi=DPI)
+        plt.savefig(f'./plots/calibrated/only_data_lin/{meas_file_name}_singleAx.pdf', transparent=False, dpi=DPI)
     else:
         plt.show()
 
-def plot_basic_dualAxis_spectrum(meas_file:str, meas_EG:int, meas_MCA:int, meas_data:list, ecal_param:list, save_flag:bool=False):
+    plt.close()
+    return 0
+
+def plot_basic_dualAxis_spectrum(meas_file:str, meas_EG:int, meas_MCA:int, meas_data:list, ecal_param:list, save_flag:bool=False, log_flag:bool=False):
     '''
     Dual axis plot with energy vs. counts.\n
     xticks depending on MCA channels.\n 
@@ -201,7 +214,12 @@ def plot_basic_dualAxis_spectrum(meas_file:str, meas_EG:int, meas_MCA:int, meas_
     ax.set_xlim(0, convxticks_list[-1])
     ax.set_xticks(convxticks_list, [f'{int(i)}' for i in convxticks_list])
     
-    ax.set_ylim(0,np.max(meas_data)*1.2)
+    if log_flag == True:
+        ax.set_yscale('log')
+        ax.set_ylim(1e0,np.max(meas_data)*1.2)
+    else:
+        ax.set_yscale('linear')
+        ax.set_ylim(0,np.max(meas_data)*1.2)
     
     secax = ax.secondary_xaxis('top')
     secax.set_xlim(0,xticks_list[-1])
@@ -214,15 +232,21 @@ def plot_basic_dualAxis_spectrum(meas_file:str, meas_EG:int, meas_MCA:int, meas_
     plt.grid()
     plt.tight_layout()
     
-    if (save_flag == True):
-        plt.savefig(f'./plots/calibrated/{meas_file_name}_dualAxes.png', transparent=False, dpi=DPI)
-        plt.savefig(f'./plots/calibrated/{meas_file_name}_dualAxes.pdf', transparent=False, dpi=DPI)
+    if (save_flag == True and log_flag == True):
+        plt.savefig(f'./plots/calibrated/only_data_log/{meas_file_name}_singleAx_log.png', transparent=False, dpi=DPI)
+        plt.savefig(f'./plots/calibrated/only_data_log/{meas_file_name}_singleAx_log.pdf', transparent=False, dpi=DPI)
+    elif (save_flag == True and log_flag == False):
+        plt.savefig(f'./plots/calibrated/only_data_lin/{meas_file_name}_singleAx.png', transparent=False, dpi=DPI)
+        plt.savefig(f'./plots/calibrated/only_data_lin/{meas_file_name}_singleAx.pdf', transparent=False, dpi=DPI)
     else:
         plt.show()
+    
+    plt.close()
+    return 0
 
 #~+~+~+~+~+~+~+~+~+~+~+~+~+~+~+~+~+~+~+~+~+~+~+~+~+~+~+~+~+~+~+~+~+~+~+~+~+~#
 
-def plot_data_expected_singleAxis_spectrum(meas_file:str, meas_MCA:int, meas_data:list, ecal_param:list, elem_symbol:str, both_axes:bool=False, save_flag:bool=False):
+def plot_data_expected_singleAxis_spectrum(meas_file:str, meas_MCA:int, meas_data:list, ecal_param:list, elem_symbol:str, both_axes:bool=False, save_flag:bool=False, log_flag:bool=False):
     '''
     Single axis plot with energy vs. counts.\n
     Simplified xticks for readable energy values.\n 
@@ -277,8 +301,10 @@ def plot_data_expected_singleAxis_spectrum(meas_file:str, meas_MCA:int, meas_dat
         
         if both_axes == True:
             ax[0].plot(line_lin,gauss_func(line_param_bothaxes,line_lin), color=col, alpha=1, lw=1)
+            # ax[0].plot(line_lin-1740,gauss_func(line_param_bothaxes,line_lin), color=col, alpha=0.5, lw=1) # Si KAlpha Escape Peak
         ax[1].plot(line_lin,gauss_func(line_param,line_lin), color=col, alpha=1, lw=1)
    
+    ax[1].plot([],[],alpha=0,lw=1,label=f'Expected lines for {elem_symbol}')
     ax[1].plot([],[],color=color_schemes['c_rainbow'][1],lw=1,label='K-lines')
     ax[1].plot([],[],color=color_schemes['c_light'][1],lw=1,label='L-lines')
     ax[1].plot([],[],color=color_schemes['c_rainbow'][7],lw=1,label='M-lines')
@@ -286,12 +312,16 @@ def plot_data_expected_singleAxis_spectrum(meas_file:str, meas_MCA:int, meas_dat
     ax[0].set_xlim(0, convxticks_list[-1])
     ax[0].set_xticks(eV_xticks_list, [f'{int(i)}' for i in eV_xticks_list])
     
-    ax[0].set_ylim(0,np.max(meas_data)*1.2)
+    if log_flag == True:
+        ax[0].set_yscale('log')
+        ax[0].set_ylim(1e0,np.max(meas_data)*1.2)
+    else:
+        ax[0].set_yscale('linear')
+        ax[0].set_ylim(0,np.max(meas_data)*1.2)
     
     for i in range(2):
         ax[i].legend()
         ax[i].grid()
-        ax[i].set_ylim(0, None)
     
     plt.xlabel('Energy / eV', fontsize=10)
     ax[0].set_ylabel('Counts', fontsize=10)
@@ -300,19 +330,28 @@ def plot_data_expected_singleAxis_spectrum(meas_file:str, meas_MCA:int, meas_dat
     plt.tight_layout()
     
     if (both_axes == True):
-        if (save_flag == True):
-            plt.savefig(f'./plots/calibrated/{meas_file_name}_expected_dualAxes.png', transparent=False, dpi=DPI)
-            plt.savefig(f'./plots/calibrated/{meas_file_name}_expected_dualAxes.pdf', transparent=False, dpi=DPI)
+        if (save_flag == True and log_flag == True):
+            plt.savefig(f'./plots/calibrated/incl_expected_log/{meas_file_name}_expected_dualAx_log.png', transparent=False, dpi=DPI)
+            plt.savefig(f'./plots/calibrated/incl_expected_log/{meas_file_name}_expected_dualAx_log.pdf', transparent=False, dpi=DPI)
+        elif (save_flag == True and log_flag == False):
+            plt.savefig(f'./plots/calibrated/incl_expected_lin/{meas_file_name}_expected_dualAx.png', transparent=False, dpi=DPI)
+            plt.savefig(f'./plots/calibrated/incl_expected_lin/{meas_file_name}_expected_dualAx.pdf', transparent=False, dpi=DPI)
         else:
             plt.show()
     else:
-        if (save_flag == True):
-            plt.savefig(f'./plots/calibrated/{meas_file_name}_expected_singleAxis.png', transparent=False, dpi=DPI)
-            plt.savefig(f'./plots/calibrated/{meas_file_name}_expected_singleAxis.pdf', transparent=False, dpi=DPI)
+        if (save_flag == True and log_flag == True):
+            plt.savefig(f'./plots/calibrated/incl_expected_log/{meas_file_name}_expected_singleAx_log.png', transparent=False, dpi=DPI)
+            plt.savefig(f'./plots/calibrated/incl_expected_log/{meas_file_name}_expected_singleAx_log.pdf', transparent=False, dpi=DPI)
+        elif (save_flag == True and log_flag == False):
+            plt.savefig(f'./plots/calibrated/incl_expected_lin/{meas_file_name}_expected_singleAx.png', transparent=False, dpi=DPI)
+            plt.savefig(f'./plots/calibrated/incl_expected_lin/{meas_file_name}_expected_singleAx.pdf', transparent=False, dpi=DPI)
         else:
             plt.show()
+    plt.close()
+    return 0
         
-d2026_03_25 = {'20260325-065918':'Cu', '20260325-070217':'Cu', '20260325-070325':'Cu',
+d2026_03_25 = {
+              '20260325-065918':'Cu', '20260325-070217':'Cu', '20260325-070325':'Cu',
               '20260325-080539':'Rb', '20260325-081037':'Rb', '20260325-081432':'Rb', '20260325-081734':'Rb',
               '20260325-091953':'Mo', '20260325-092112':'Mo',
               '20260325-102319':'Ag', '20260325-102428':'Ag',
@@ -328,19 +367,20 @@ if __name__ == "__main__":
     file_list = read_full_directory(args.path)
     
     saving_plots_flag = args.save
+    log_plots_flag = args.log
     
     for f in tqdm.tqdm(range(len(file_list))):
         meas_file, meas_data, meas_MCA, meas_EG, ecal_curr_param, ecal_curr_errors = measurement_parameters(file_list[f], ecal_data)
     
         if args.simple_mode == 'single':
-            plot_basic_singleAxis_spectrum(meas_file, meas_EG, meas_MCA, meas_data, ecal_curr_param,saving_plots_flag)
+            plot_basic_singleAxis_spectrum(meas_file, meas_EG, meas_MCA, meas_data, ecal_curr_param, saving_plots_flag, log_plots_flag)
         elif args.simple_mode == 'dual':
-            plot_basic_dualAxis_spectrum(meas_file, meas_EG, meas_MCA, meas_data, ecal_curr_param,saving_plots_flag)
+            plot_basic_dualAxis_spectrum(meas_file, meas_EG, meas_MCA, meas_data, ecal_curr_param, saving_plots_flag, log_plots_flag)
         
         if args.detailed_mode == '1':
-            plot_data_expected_singleAxis_spectrum(meas_file, meas_MCA, meas_data, ecal_curr_param,elem_symbol=d2026_03_25[file_list[f].split('//')[2].split('.')[0]],both_axes=False, save_flag=saving_plots_flag)
+            plot_data_expected_singleAxis_spectrum(meas_file, meas_MCA, meas_data, ecal_curr_param,elem_symbol=d2026_03_25[file_list[f].split('//')[2].split('.')[0]],both_axes=False, save_flag=saving_plots_flag, log_flag=log_plots_flag)
         elif args.detailed_mode == '2':
-            plot_data_expected_singleAxis_spectrum(meas_file, meas_MCA, meas_data, ecal_curr_param,elem_symbol=d2026_03_25[file_list[f].split('//')[2].split('.')[0]],both_axes=True, save_flag=saving_plots_flag)
+            plot_data_expected_singleAxis_spectrum(meas_file, meas_MCA, meas_data, ecal_curr_param,elem_symbol=d2026_03_25[file_list[f].split('//')[2].split('.')[0]],both_axes=True, save_flag=saving_plots_flag, log_flag=log_plots_flag)
     
     print('---------------------------------------')
     end_routine = time.monotonic_ns()
