@@ -35,6 +35,7 @@ from matplotlib.offsetbox import OffsetImage, AnnotationBbox, TextArea, VPacker
 #-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-#
 from colors import load_colors
 from PIXE_functions import *
+from PIXE_polygauss import *
 #-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-#
 
 from matplotlib import rc
@@ -349,6 +350,12 @@ def plot_data_expected_singleAxis_spectrum(meas_file:str, meas_MCA:int, meas_dat
             plt.show()
     plt.close()
     return 0
+
+#~+~+~+~+~+~+~+~+~+~+~+~+~+~+~+~+~+~+~+~+~+~+~+~+~+~+~+~+~+~+~+~+~+~+~+~+~+~#
+
+def plot_data_multigauss_spectrum(meas_file:str, meas_MCA:int, meas_data:list, ecal_param:list, elem_symbol:str, save_flag:bool=False, log_flag:bool=False):
+    
+    return 11
         
 d2026_03_25 = {
               '20260325-065918':'Cu', '20260325-070217':'Cu', '20260325-070325':'Cu',
