@@ -75,7 +75,7 @@ print('---------------------------------------')
 def h5_plotter(measurement, m_volt, m_curr, x_err_value, y_err_value, scaling, file_suffix):
     DPI = 300
     plot_type = 'FullData_andFit'
-    fig = plt.figure(figsize=(8,4), dpi=DPI, layout='constrained')
+    fig = plt.figure(figsize=(16,4), dpi=DPI, layout='constrained')
     gs = GridSpec(2, 4, figure=fig)
     
     c_index = 0
@@ -294,7 +294,7 @@ if __name__ == "__main__":
     
     
     # fc = file_collector(dettype='SSB',id='17-440D')
-    fc = file_collector(dettype='SSB',id='33-268B')
+    fc = file_collector(dettype='PIIPS',id='57431')
     h5dict = h5_data_compactor(fc)
     # m_volt, m_curr = h5_measurement_combiner(h5dict)
     for k in list(h5dict.keys()):

@@ -157,7 +157,7 @@ def plot_basic_singleAxis_spectrum(meas_file:str, meas_EG:int, meas_MCA:int, mea
     ax.plot(converted_x_axis, meas_data, color=color_schemes['c_five2'][0], label=f'Calibrated Spectrum \n ID: {meas_file_name}')
     
     ax.set_xlim(0, convxticks_list[-1])
-    ax.set_xticks(eV_xticks_list, [f'{int(i/1000)}' for i in eV_xticks_list])
+    ax.set_xticks(eV_xticks_list, [f'{round(i/1000,1)}' for i in eV_xticks_list])
     
     if log_flag == True:
         ax.set_yscale('log')
@@ -178,7 +178,7 @@ def plot_basic_singleAxis_spectrum(meas_file:str, meas_EG:int, meas_MCA:int, mea
     elif (save_flag == True and log_flag == False):
         plt.savefig(f'./plots/calibrated/only_data_lin/{meas_file_name}_singleAx.png', transparent=False, dpi=DPI)
         plt.savefig(f'./plots/calibrated/only_data_lin/{meas_file_name}_singleAx.pdf', transparent=False, dpi=DPI)
-    else:
+    elif (save_flag == False):
         plt.show()
 
     plt.close()
@@ -234,12 +234,12 @@ def plot_basic_dualAxis_spectrum(meas_file:str, meas_EG:int, meas_MCA:int, meas_
     plt.tight_layout()
     
     if (save_flag == True and log_flag == True):
-        plt.savefig(f'./plots/calibrated/only_data_log/{meas_file_name}_singleAx_log.png', transparent=False, dpi=DPI)
-        plt.savefig(f'./plots/calibrated/only_data_log/{meas_file_name}_singleAx_log.pdf', transparent=False, dpi=DPI)
+        plt.savefig(f'./plots/calibrated/only_data_log/{meas_file_name}_dualAx_log.png', transparent=False, dpi=DPI)
+        plt.savefig(f'./plots/calibrated/only_data_log/{meas_file_name}_dualAx_log.pdf', transparent=False, dpi=DPI)
     elif (save_flag == True and log_flag == False):
-        plt.savefig(f'./plots/calibrated/only_data_lin/{meas_file_name}_singleAx.png', transparent=False, dpi=DPI)
-        plt.savefig(f'./plots/calibrated/only_data_lin/{meas_file_name}_singleAx.pdf', transparent=False, dpi=DPI)
-    else:
+        plt.savefig(f'./plots/calibrated/only_data_lin/{meas_file_name}_dualAx.png', transparent=False, dpi=DPI)
+        plt.savefig(f'./plots/calibrated/only_data_lin/{meas_file_name}_dualAx.pdf', transparent=False, dpi=DPI)
+    elif (save_flag == False):
         plt.show()
     
     plt.close()
