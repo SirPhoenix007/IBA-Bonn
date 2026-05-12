@@ -74,6 +74,7 @@ print('---------------------------------------')
 
 def h5_plotter(measurement, m_volt, m_curr, x_err_value, y_err_value, scaling, file_suffix):
     DPI = 300
+    LARGE = 12
     plot_type = 'FullData_andFit'
     fig = plt.figure(figsize=(16,4), dpi=DPI, layout='constrained')
     gs = GridSpec(2, 4, figure=fig)
@@ -189,7 +190,7 @@ def h5_plotter(measurement, m_volt, m_curr, x_err_value, y_err_value, scaling, f
     #----------------- Detector Image includer -----------------#
     det_pic_file = detector_pic(measurement['det_id'])
     img = plt.imread(det_pic_file)
-    annotation = TextArea(f"{measurement['det_type']} Detector \n ID: {measurement['det_id']}", textprops=dict(color="black", fontsize=5, multialignment='center'))
+    annotation = TextArea(f"{measurement['det_type']} Detector \n ID: {measurement['det_id']}", textprops=dict(color="black", fontsize=8, multialignment='center'))
     imagebox = OffsetImage(img, zoom=0.05)
     stacked = VPacker(children=[imagebox, annotation],
                  align="center",
@@ -246,9 +247,11 @@ def h5_plotter(measurement, m_volt, m_curr, x_err_value, y_err_value, scaling, f
                 #  xy=(0.,1.), xycoords='axes fraction',
                 #  xytext=(+1, 0), textcoords='offset fontsize', fontsize=5)
     
-    ax1.set_xlabel(r'Bias Voltage / V')
-    ax2.set_xlabel(r'Bias Voltage / $\sqrt{\mathrm{V}}$')
-    ax1.set_ylabel(r'Leakage Current / $\mu$A')
+    ax1.set_xlabel(r'Bias Voltage / V', fontsize=LARGE)
+    ax2.set_xlabel(r'Bias Voltage / $\sqrt{\mathrm{V}}$', fontsize=LARGE)
+    ax1.set_ylabel(r'Leakage Current / $\mu$A', fontsize=LARGE)
+    ax1.set_xticks([0,50,100,150,200,250,300,350,400],[0,50,100,150,200,250,300,350,400],fontsize=LARGE)
+    ax1.set_yticks([0.001,0.0015,0.002,0.0025,0.003,0.0035],[0.001,0.0015,0.002,0.0025,0.003,0.0035],fontsize=LARGE)
     # plt.ylabel(r'Leakage Current / nA')
     
     if (x_min < 5 and x_max >= 100):
@@ -271,8 +274,8 @@ def h5_plotter(measurement, m_volt, m_curr, x_err_value, y_err_value, scaling, f
     
     ax1.grid(which='both')
     ax2.grid(which='both')
-    ax1.legend(loc='lower right', fontsize=5)
-    ax2.legend(loc='lower right', fontsize=5)
+    ax1.legend(loc='lower right', fontsize=LARGE)
+    ax2.legend(loc='lower right', fontsize=LARGE)
     # plt.tight_layout()
     
     # ax3.xaxis.set_major_formatter(ticker.NullLocator())
