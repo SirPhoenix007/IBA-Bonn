@@ -247,9 +247,9 @@ def h5_plotter(measurement, m_volt, m_curr, x_err_value, y_err_value, scaling, f
                 #  xy=(0.,1.), xycoords='axes fraction',
                 #  xytext=(+1, 0), textcoords='offset fontsize', fontsize=5)
     
-    ax1.set_xlabel(r'Bias Voltage / V', fontsize=LARGE)
-    ax2.set_xlabel(r'Bias Voltage / $\sqrt{\mathrm{V}}$', fontsize=LARGE)
-    ax1.set_ylabel(r'Leakage Current / $\mu$A', fontsize=LARGE)
+    ax1.set_xlabel(r'Bias Voltage $U_{\mathrm{B}}$ / V', fontsize=LARGE)
+    ax2.set_xlabel(r'Bias Voltage $\sqrt{U_{\mathrm{B}}}$ / $\sqrt{\mathrm{V}}$', fontsize=LARGE)
+    ax1.set_ylabel(r'Leakage Current $I_{\mathrm{L}}$ / $\mu$A', fontsize=LARGE)
     ax1.set_xticks([0,50,100,150,200,250,300,350,400],[0,50,100,150,200,250,300,350,400],fontsize=LARGE)
     ax1.set_yticks([0.001,0.0015,0.002,0.0025,0.003,0.0035],[0.001,0.0015,0.002,0.0025,0.003,0.0035],fontsize=LARGE)
     # plt.ylabel(r'Leakage Current / nA')
