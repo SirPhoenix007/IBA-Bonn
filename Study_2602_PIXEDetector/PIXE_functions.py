@@ -179,8 +179,8 @@ def pixe_single_spectrum_plot_Withsave(filename:str):
     '''
     DPI = 250
     data = read_json_formatted_file(filename)
-    meas_name = filename.split('//')[2].split('.')[0]
-    meas_folder = filename.split('//')[1]
+    meas_name = filename.split('//')[3].split('.')[0]
+    meas_folder = filename.split('//')[2]
     
     energyPerBin = data['Calibration']['BinSize_keV/Bin'] # keV/bin
     bin_data = data['RawData'][:-1] #remove that overflow bin at position 8191
