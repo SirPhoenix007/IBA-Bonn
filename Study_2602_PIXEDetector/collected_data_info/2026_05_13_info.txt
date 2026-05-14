@@ -1,0 +1,44 @@
+13.05.2026
+Harwell Source
+--------------
+
+E1 - 10 eV - 2730 @ 8192 MCA
+E2 - 5  eV - 5461 @ 8192 MCA
+E3 - 20 eV - 1365 @ 8192 MCA
+E4 - ~8 eV - 3500 @ 8192 MCA
+E5 - ~8 eV - 3400 @ 8192 MCA
+E6 - 2.5eV - 10922@ 8192 MCA
+-----------------------
+
+Einmessung (60s)
+-----------------------
+143550 - E1, "Untergrund"
+143835 - E1, 20cm Abstand, in Plastiktüte
+144110 - E1, 15cm Abstand, in Plastiktüte
+144533 - E1, 10cm Abstand, in Plastiktüte
+144818 - E1,  5cm Abstand, in Plastiktüte
+145010 - E2,  5cm Abstand, in Plastiktüte
+145213 - E3,  5cm Abstand, in Plastiktüte
+145649 - E1,  3cm Abstand, in Plastiktüte
+------
+154222 - E4,  3cm Abstand, in Plastiktüte
+154331 - E5,  3cm Abstand, in Plastiktüte
+------
+155254 - E1,1,5cm Abstand, in Plastiktüte
+
+Einmessung (60s)
+-----------------------
+155602 - E1, 10cm Abstand, ohne Plastiktüte
+155748 - E1,  5cm Abstand, ohne Plastiktüte
+160023 - E1,  3cm Abstand, ohne Plastiktüte
+160152 - E3,  3cm Abstand, ohne Plastiktüte
+
+
+Messung (1800s)
+-----------------------
+150007 - E1,  3cm Abstand, in Plastiktüte
+
+Langzeitmessung (36000s)
+-----------------------
+160638 - E5,1,5cm Abstand, in Plastiktüte
+060516 - E6,1,5cm Abstand, in Plastiktüte
