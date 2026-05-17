@@ -173,7 +173,7 @@ def file_collector(measurement:str):
             file_collection.append(full_path)
     return file_collection
 
-def pixe_single_spectrum_plot_Withsave(filename:str):
+def pixe_single_spectrum_plot_Withsave(filename:str, figsize_custom:tuple = (6,3)):
     '''
     This function will produce a simple labeled plot of uncalibrated raw-data.
     '''
@@ -192,7 +192,7 @@ def pixe_single_spectrum_plot_Withsave(filename:str):
     
     scatter_color = color_schemes['c_dark']
     
-    fig, ax = plt.subplots(figsize=(6,3), dpi=DPI)
+    fig, ax = plt.subplots(figsize=figsize_custom, dpi=DPI)
     # ax.set_facecolor(color_schemes['c_back'])
     # ax.plot(bins, bin_data, lw=0.75, color=scatter_color[0], zorder=2)
     ax.step(bins, bin_data, lw=0.75, color=scatter_color[3], zorder=2)

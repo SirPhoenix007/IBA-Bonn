@@ -11,6 +11,7 @@ import h5py
 import math
 import xraydb
 import plotly
+import base64
 #-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-#
 import numpy as np
 import pandas as pd
@@ -20,7 +21,11 @@ import seaborn as sb
 #-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-#
 from bokeh.plotting import figure, curdoc
 from bokeh.layouts import column
-from bokeh.models import Slider, HoverTool, BoxZoomTool, ResetTool, PanTool, SaveTool
+from bokeh.models import Slider, HoverTool, BoxZoomTool, ResetTool, PanTool, SaveTool, FileInput, Div, ColumnDataSource, Paragraph
+from bokeh.resources import CDN
+from bokeh.embed import file_html
+from bokeh.io import show
+
 import matplotlib.pyplot as plt
 from matplotlib import ticker
 from matplotlib.gridspec import GridSpec
@@ -65,31 +70,71 @@ color_schemes = load_colors()
 sys.argv[1] sollte der Dateiname für das Spektrum sein.
 '''
 
-# Data
-x = np.linspace(0, 10, 200)
-y = np.sin(x)
 
+source = ColumnDataSource(data=dict(x=[], y=[]))
+# -------------------------------------------------
 # Plot
-p = figure(title="Interactive Bokeh Plot", height=400, width=700)
-line = p.line(x, y, line_width=3)
+# -------------------------------------------------
+plot = figure(
+    title="VSPC Data",
+    height=400,
+    width=800,
+    tools="pan,wheel_zoom,box_zoom,undo,redo,reset",
+    sizing_mode="stretch_width"
+)
 
-# Slider widget
-slider = Slider(start=0.1, end=5, value=1, step=0.1, title="Frequency")
+plot.line(
+    x="x",
+    y="y",
+    source=source,
+    line_width=2,
+    color=color_schemes['c_five2'][1]
+)
 
-# Callback
-def update(attr, old, new):
-    freq = slider.value
-    new_y = np.sin(freq * x)
-    line.data_source.data = {"x": x, "y": new_y}
+output = Div(text='Uplode a .vspc file.',)
+file_input = FileInput(accept='.vspc')
 
-slider.on_change("value", update)
 
-p.add_tools(HoverTool(
-    tooltips=[("x", "@x"), ("y", "@y")]
-))
+def load_file(attr, old, new):
 
-# Layout
-layout = column(slider, p)
+    if not new:
+        plot.title.text = f"Nothing loaded yet."
+        return
+
+    try:
+        # Decode uploaded file
+        file_bytes = base64.b64decode(new)
+
+        # Custom unpacking
+        json_data = json.loads(file_bytes.decode('utf-8'))
+        # json_data = read_json_formatted_file(file_bytes, encoding="utf-8")
+
+        # Update plot
+        source.data = {
+            "x": np.arange(0,len(json_data['RawData'][:-1]),1),
+            "y": json_data['RawData'][:-1]
+        }
+
+        plot.title.text = f"Loaded: {json_data['MeasurementInfo']['Time']['Start']}"
+
+    except Exception as e:
+        plot.title.text = f"Error loading file: {e}"
+
+
+
+
+file_input.on_change("value", load_file)
+
+plot.add_tools(HoverTool(
+            tooltips=[("x", "@x"), ("y", "@y")]
+        ))
+
+layout = column(
+    output,
+    file_input,
+    plot,
+    sizing_mode="stretch_width"
+)
 
 curdoc().add_root(layout)
-curdoc().title = "Bokeh Interactive Plot"
+curdoc().title = "Raw Data Plot"
