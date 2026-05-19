@@ -44,7 +44,13 @@ def lin_func(param, x):
 def gauss_func(param, x):
     return param[0] * np.exp(-((x - param[1])**2)/(2*param[2]**2))
 
+def gauss_func_ODR(x, height, center, width):
+    return height * np.exp(-((x - center)**2)/(2*width**2))
+
 def double_gauss_func(param, x):
+    return param[0] * np.exp(-((x - param[1])**2)/(2*param[2]**2)) + param[3] * np.exp(-((x - param[4])**2)/(2*param[5]**2))
+
+def double_gauss_func_ODR(x, param):
     return param[0] * np.exp(-((x - param[1])**2)/(2*param[2]**2)) + param[3] * np.exp(-((x - param[4])**2)/(2*param[5]**2))
 
 def gauss_linear_func(param, x):
@@ -58,11 +64,20 @@ def energy_func(param, x):
 def exp_func(x, param):
     return param[0]*np.exp(param[1]*x) + param[2]
 
-
-
-def evaluatorOLD(func, param_list:list, boundary_list:list, x:list, y:list, xerr:list, yerr:list):
+def evaluator_curvefit(func, param_list:list, boundary_list:list, x:list, y:list, xerr:list, yerr:list):
     params = np.array(param_list)
-    bounds_lower, bounds_upper = boundary_list[0], boundary_list[1]
+    bounds = np.array(boundary_list)
+    print('PARAMS:',params)
+    print('BOUNDS:',bounds)
+    
+    popt, pcov = curve_fit(func, x, y, p0=params, bounds=bounds)
+    
+    print('RESULTS:',popt)
+    print('ERRORS:',np.sqrt(np.diag(pcov)))
+
+def evaluator_ODRPACK(func, param_list:list, boundary_list:list, x:list, y:list, xerr:list, yerr:list):
+    params = np.array(param_list)
+    bounds_lower, bounds_upper = np.array(boundary_list[0]), np.array(boundary_list[1])
     print(params)
     print(bounds_lower, bounds_upper)
         
@@ -76,7 +91,7 @@ def evaluatorOLD(func, param_list:list, boundary_list:list, x:list, y:list, xerr
     print('STOP:', result.stopreason)
     print('PARAMS:', result.beta)
     
-    return result.beta
+    return result
 
 def evaluator_scipy(func, beta0_list:list, x:list, y:list, xerr:list, yerr:list):
     
