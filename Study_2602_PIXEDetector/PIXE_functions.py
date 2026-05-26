@@ -101,8 +101,8 @@ def evaluator_scipy(func, beta0_list:list, x:list, y:list, xerr:list, yerr:list)
     odr = ODR(data, model, beta0=beta0_list)
     output = odr.run()
     
-    print('PARAMS:', output.beta)
-    print('UNCERT:', output.sd_beta)
+    # print('PARAMS:', output.beta)
+    # print('UNCERT:', output.sd_beta)
     
     return {'param':output.beta, 'errors':output.sd_beta}
 
