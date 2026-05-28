@@ -12,3 +12,13 @@ def multi_gauss(param:list, x):
         width  = param[i+2]
         total_gauss += gauss(height, center, width, x)
     return total_gauss
+
+def multi_gauss_cf(x, *args):
+    param = list(args)
+    total_gauss = np.zeros(len(x))
+    for i in range(0,len(param),3):
+        height = param[i]
+        center = param[i+1]
+        width  = param[i+2]
+        total_gauss += gauss(height, center, width, x)
+    return total_gauss

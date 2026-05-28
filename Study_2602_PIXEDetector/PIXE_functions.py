@@ -31,6 +31,7 @@ from matplotlib.offsetbox import OffsetImage, AnnotationBbox, TextArea, VPacker
 #-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-#
 from colors import load_colors
 color_schemes = load_colors()
+from PIXE_polygauss import multi_gauss, multi_gauss_cf
 #----------------- Fitting Functions -----------------#
 
 def sqrt_func(x,param):
@@ -64,16 +65,49 @@ def energy_func(param, x):
 def exp_func(x, param):
     return param[0]*np.exp(param[1]*x) + param[2]
 
-def evaluator_curvefit(func, param_list:list, boundary_list:list, x:list, y:list, xerr:list, yerr:list):
+def evaluator_curvefit(func:str, param_list:list, boundary_list:list, x:list, y:list, xerr:list, yerr:list):
+    
+    if func == 'single':
+        use_func = gauss_func_ODR
+    elif (func == 'double'):
+        use_func = double_gauss_func_ODR
+    elif (func == 'multi'):
+        use_func = multi_gauss_cf
+    
     params = np.array(param_list)
     bounds = np.array(boundary_list)
-    print('PARAMS:',params)
-    print('BOUNDS:',bounds)
+    # print('PARAMS:',params)
+    # print('BOUNDS:',bounds)
     
-    popt, pcov = curve_fit(func, x, y, p0=params, bounds=bounds)
+    if (bounds == ''):
+        popt, pcov = curve_fit(use_func, x, y, p0=params)
+    else:
+        popt, pcov = curve_fit(use_func, x, y, p0=params, bounds=bounds)
+    
     
     print('RESULTS:',popt)
     print('ERRORS:',np.sqrt(np.diag(pcov)))
+    return {'param':popt, 'errors':np.sqrt(np.diag(pcov))}
+
+def evaluator_scipy(func:str, beta0_list:list, x:list, y:list, xerr:list, yerr:list):
+    
+    if func == 'single':
+        use_func = gauss_func
+    elif (func == 'double'):
+        use_func = double_gauss_func
+    elif (func == 'multi'):
+        use_func = multi_gauss
+    
+    data = RealData(x=x, y=y, sx=xerr, sy=yerr)
+    model = Model(func)
+    
+    odr = ODR(data, model, beta0=beta0_list)
+    output = odr.run()
+    
+    # print('PARAMS:', output.beta)
+    # print('UNCERT:', output.sd_beta)
+    
+    return {'param':output.beta, 'errors':output.sd_beta}
 
 def evaluator_ODRPACK(func, param_list:list, boundary_list:list, x:list, y:list, xerr:list, yerr:list):
     params = np.array(param_list)
@@ -93,18 +127,7 @@ def evaluator_ODRPACK(func, param_list:list, boundary_list:list, x:list, y:list,
     
     return result
 
-def evaluator_scipy(func, beta0_list:list, x:list, y:list, xerr:list, yerr:list):
-    
-    data = RealData(x=x, y=y, sx=xerr, sy=yerr)
-    model = Model(func)
-    
-    odr = ODR(data, model, beta0=beta0_list)
-    output = odr.run()
-    
-    # print('PARAMS:', output.beta)
-    # print('UNCERT:', output.sd_beta)
-    
-    return {'param':output.beta, 'errors':output.sd_beta}
+
 
 def evaluator_lmfit(beta0_list:list, x:list, y:list):
     vModel = VoigtModel()
