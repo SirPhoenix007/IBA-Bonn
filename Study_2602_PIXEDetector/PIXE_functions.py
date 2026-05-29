@@ -51,8 +51,8 @@ def gauss_func_ODR(x, height, center, width):
 def double_gauss_func(param, x):
     return param[0] * np.exp(-((x - param[1])**2)/(2*param[2]**2)) + param[3] * np.exp(-((x - param[4])**2)/(2*param[5]**2))
 
-def double_gauss_func_ODR(x, param):
-    return param[0] * np.exp(-((x - param[1])**2)/(2*param[2]**2)) + param[3] * np.exp(-((x - param[4])**2)/(2*param[5]**2))
+def double_gauss_func_ODR(x, height1, center1, width1, height2, center2, width2):
+    return height1 * np.exp(-((x - center1)**2)/(2*width1**2)) + height2 * np.exp(-((x - center2)**2)/(2*width2**2))
 
 def gauss_linear_func(param, x):
     G = gauss_func(param[0:3],x)
