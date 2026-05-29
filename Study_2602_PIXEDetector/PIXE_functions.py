@@ -80,13 +80,13 @@ def evaluator_curvefit(func:str, param_list:list, boundary_list:list, x:list, y:
     # print('BOUNDS:',bounds)
     
     if (bounds == ''):
-        popt, pcov = curve_fit(use_func, x, y, p0=params)
+        popt, pcov = curve_fit(use_func, x, y, p0=params, maxfev=10000)
     else:
-        popt, pcov = curve_fit(use_func, x, y, p0=params, bounds=bounds)
+        popt, pcov = curve_fit(use_func, x, y, p0=params, bounds=bounds, maxfev=10000)
     
     
-    print('RESULTS:',popt)
-    print('ERRORS:',np.sqrt(np.diag(pcov)))
+    # print('RESULTS:',popt)
+    # print('ERRORS:',np.sqrt(np.diag(pcov)))
     return {'param':popt, 'errors':np.sqrt(np.diag(pcov))}
 
 def evaluator_scipy(func:str, beta0_list:list, x:list, y:list, xerr:list, yerr:list):
