@@ -31,7 +31,7 @@ from matplotlib.offsetbox import OffsetImage, AnnotationBbox, TextArea, VPacker
 #-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-#
 from colors import load_colors
 color_schemes = load_colors()
-from PIXE_polygauss import multi_gauss, multi_gauss_cf
+from polygauss import multi_gauss, multi_gauss_cf
 #----------------- Fitting Functions -----------------#
 
 def sqrt_func(x,param):
