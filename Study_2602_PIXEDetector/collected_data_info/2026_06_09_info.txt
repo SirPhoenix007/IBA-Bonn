@@ -10,3 +10,7 @@ Messungen:
 E2-E4 je ~150cps / 4min
 E1 ~150cps / 4min und 10h
 ---------------------------
+
+181334 - E1 - Untergrund 60s
+182123 - E1 - Test 30cm 60s
+182316 - E1 - Test 20cm 60s
