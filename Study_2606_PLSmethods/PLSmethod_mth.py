@@ -236,7 +236,7 @@ if __name__ == "__main__":
     with warnings.catch_warnings(record=True) as caught:
         warnings.simplefilter('always')
         
-    jobs = [[8,30,'sine',3] for _ in range(100)]
+    jobs = [[40,30,'poly',3] for _ in range(100)]
     results = []
     with ProcessPoolExecutor(max_workers=12) as executor:
         futures = [executor.submit(single_experiment, job) for job in jobs]
@@ -252,3 +252,4 @@ if __name__ == "__main__":
     
     with open(f"./simulation/toy_model_run_{idnr}.json", "w") as dumptruck:
         json.dump(results, dumptruck, cls=NumpyEncoder, indent=2)
+        
