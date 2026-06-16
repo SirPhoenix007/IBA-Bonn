@@ -157,7 +157,7 @@ def evaluate_baseline(toy_model_data:dict):
     lam_min = [0,0]
     minimum = [1e5,1e5]
     res_list = [[],[]]
-    for lam in lambda_range:
+    for lam in tqdm.tqdm(lambda_range):
         arpls_bsl,_ = arpls_baseline(data, bins, 10**lam)
         arpls_result = rmse(real_bsl,arpls_bsl, 8192)
         res_list[0].append(arpls_result)
@@ -238,7 +238,7 @@ if __name__ == "__main__":
         
     jobs = [[8,30,'sine',3] for _ in range(100)]
     results = []
-    with ProcessPoolExecutor(max_workers=10) as executor:
+    with ProcessPoolExecutor(max_workers=12) as executor:
         futures = [executor.submit(single_experiment, job) for job in jobs]
 
         for future in tqdm.tqdm(as_completed(futures), total=len(futures)):
