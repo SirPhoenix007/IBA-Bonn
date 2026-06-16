@@ -4,6 +4,7 @@ import time
 import os
 import json
 import tqdm
+import warnings
 #-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-#
 import numpy as np
 import pandas as pd
@@ -145,8 +146,8 @@ def toy_model(N:int, snr:int, baseline_type:str, plot_flag:bool, D:int=0):
 
 def evaluate_baseline(toy_model_data:dict):
     
-    plt.figure(figsize=(20,4), dpi=250)
-    plt.grid(axis='y', which='both')
+    # plt.figure(figsize=(20,4), dpi=250)
+    # plt.grid(axis='y', which='both')
     
     lambda_range = np.linspace(4,14,2001)
     
@@ -231,14 +232,23 @@ class NumpyEncoder(json.JSONEncoder):
 
 if __name__ == "__main__":
     idnr = time.strftime("%d%m%y_%H%M%S", time.localtime())
-    jobs = [[8,30,'poly',3] for _ in range(100)]
+    
+    with warnings.catch_warnings(record=True) as caught:
+        warnings.simplefilter('always')
+        
+    jobs = [[8,30,'sine',3] for _ in range(100)]
     results = []
     with ProcessPoolExecutor(max_workers=10) as executor:
         futures = [executor.submit(single_experiment, job) for job in jobs]
 
         for future in tqdm.tqdm(as_completed(futures), total=len(futures)):
             results.append(future.result())
-        
+    
+    warning_count = len(caught)
+    
     print(f'Completed {len(results)} experiments!')
+    
+    print(f'Supression of {warning_count} warnings!')
+    
     with open(f"./simulation/toy_model_run_{idnr}.json", "w") as dumptruck:
         json.dump(results, dumptruck, cls=NumpyEncoder, indent=2)
