@@ -231,7 +231,7 @@ class NumpyEncoder(json.JSONEncoder):
 
 if __name__ == "__main__":
     idnr = time.strftime("%d%m%y_%H%M%S", time.localtime())
-    jobs = [[8,30,'poly',3] for _ in range(100)]
+    jobs = [[8,30,'lin',3] for _ in range(100)]
     results = []
     with ProcessPoolExecutor(max_workers=10) as executor:
         futures = [executor.submit(single_experiment, job) for job in jobs]
