@@ -2,6 +2,7 @@
 import time
 #-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-#
 import os
+import sys
 import json
 import tqdm
 import warnings
@@ -157,7 +158,7 @@ def evaluate_baseline(toy_model_data:dict):
     lam_min = [0,0]
     minimum = [1e5,1e5]
     res_list = [[],[]]
-    for lam in tqdm.tqdm(lambda_range):
+    for lam in lambda_range:
         arpls_bsl,_ = arpls_baseline(data, bins, 10**lam)
         arpls_result = rmse(real_bsl,arpls_bsl, 8192)
         res_list[0].append(arpls_result)
@@ -194,10 +195,12 @@ def evaluate_baseline(toy_model_data:dict):
     # plt.plot(bins, ar_min, label='arPLS Baseline')
     # plt.legend()
     return {
-        "arpls_lambda": lam_min[0],
-        "arpls_rmse": minimum[0],
+        "arpls_lambda_min": lam_min[0],
+        "arpls_rmse_min": minimum[0],
+        "arpls_rmse_all": res_list[0],
         "aspls_lambda": lam_min[1],
-        "aspls_rmse": minimum[1]}   
+        "aspls_rmse_all": minimum[1],
+        "aspls_rmse_all": res_list[1],}   
     
     
 def single_experiment(args):
@@ -231,25 +234,36 @@ class NumpyEncoder(json.JSONEncoder):
 
 
 if __name__ == "__main__":
-    idnr = time.strftime("%d%m%y_%H%M%S", time.localtime())
     
-    with warnings.catch_warnings(record=True) as caught:
-        warnings.simplefilter('always')
+    jobs_dict = {
+        '0':[8,20,'poly',4],
+        '1':[24,20,'poly',4],
+        '2':[40,20,'poly',4],
+        '3':[56,20,'poly',4]
+    }
+    
+    print(f'Queue started with {len(jobs_dict)} jobs to run.')
+    for i in range(0,len(jobs_dict)):
+    
+        idnr = time.strftime("%d%m%y_%H%M%S", time.localtime())
         
-    jobs = [[40,30,'poly',3] for _ in range(100)]
-    results = []
-    with ProcessPoolExecutor(max_workers=12) as executor:
-        futures = [executor.submit(single_experiment, job) for job in jobs]
+        with warnings.catch_warnings(record=True) as caught:
+            warnings.simplefilter('always')
+            
+        jobs = [jobs_dict[str(i)] for _ in range(100)]
+        results = []
+        with ProcessPoolExecutor(max_workers=10) as executor:
+            futures = [executor.submit(single_experiment, job) for job in jobs]
 
-        for future in tqdm.tqdm(as_completed(futures), total=len(futures)):
-            results.append(future.result())
-    
-    warning_count = len(caught)
-    
-    print(f'Completed {len(results)} experiments!')
-    
-    print(f'Supression of {warning_count} warnings!')
-    
-    with open(f"./simulation/toy_model_run_{idnr}.json", "w") as dumptruck:
-        json.dump(results, dumptruck, cls=NumpyEncoder, indent=2)
+            for future in tqdm.tqdm(as_completed(futures), total=len(futures)):
+                results.append(future.result())
+        
+        warning_count = len(caught)
+        
+        print(f'Completed job {i+1} with {len(results)} experiments!')
+        
+        print(f'Supression of {warning_count} warnings!')
+        
+        with open(f"./simulation/toy_model_run_{idnr}.json", "w") as dumptruck:
+            json.dump(results, dumptruck, cls=NumpyEncoder, indent=2)
         
