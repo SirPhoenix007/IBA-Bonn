@@ -10,6 +10,7 @@ import warnings
 import numpy as np
 import pandas as pd
 #-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-#
+import multiprocessing as mup
 import matplotlib.pyplot as plt
 from concurrent.futures import ProcessPoolExecutor, as_completed
 from pybaselines import Baseline
@@ -49,21 +50,36 @@ def rmse(data:list, fit:list, length:int):
     '''
     Root-Mean-Square-Error
     '''
+    if data is None or fit is None:
+        # A failed baseline fit (e.g. caught LinAlgError) is represented
+        # as None upstream; propagate that as a NaN result instead of
+        # crashing inside sklearn's input validation.
+        return np.nan
+    
     data = np.array(data)
     fit = np.array(fit)
     return root_mean_squared_error(data, fit)
 
 def arpls_baseline(bin_data:list, bins:list, lam:int = 1e2):
     bsl_fitter = Baseline(x_data=bins)
-    
-    baseline, params = bsl_fitter.arpls(bin_data, lam=lam, max_iter=500)
+
+    try:
+        baseline, params = bsl_fitter.arpls(bin_data, lam=lam, max_iter=500)
+    except np.linalg.LinAlgError:
+        # Extremely large lam can make the banded Whittaker system
+        # numerically non-positive-definite (floating point round-off).
+        # Treat this lam as a failed fit rather than crashing the worker.
+        return None, None
     subtracted = bin_data - baseline
     return baseline, subtracted
 
 def aspls_baseline(bin_data:list, bins:list, lam:int = 1e2):
     bsl_fitter = Baseline(x_data=bins)
-    
-    baseline, params = bsl_fitter.aspls(bin_data, lam=lam, max_iter=500)
+
+    try:
+        baseline, params = bsl_fitter.aspls(bin_data, lam=lam, max_iter=500)
+    except np.linalg.LinAlgError:
+        return None, None
     subtracted = bin_data - baseline
     return baseline, subtracted
 
@@ -150,7 +166,7 @@ def evaluate_baseline(toy_model_data:dict):
     # plt.figure(figsize=(20,4), dpi=250)
     # plt.grid(axis='y', which='both')
     
-    lambda_range = np.linspace(4,14,2001)
+    lambda_range = np.linspace(5,13,1601)
     
     bins = toy_model_data['Bins']
     data = toy_model_data['SyntheticData']
@@ -158,20 +174,26 @@ def evaluate_baseline(toy_model_data:dict):
     lam_min = [0,0]
     minimum = [1e5,1e5]
     res_list = [[],[]]
-    for lam in lambda_range:
+    for lam in tqdm.tqdm(lambda_range):
         arpls_bsl,_ = arpls_baseline(data, bins, 10**lam)
-        arpls_result = rmse(real_bsl,arpls_bsl, 8192)
-        res_list[0].append(arpls_result)
-        if arpls_result < minimum[0]:
-            minimum[0] = arpls_result
-            lam_min[0] = lam
+        if arpls_bsl is None:
+            res_list[0].append(np.nan)
+        else:
+            arpls_result = rmse(real_bsl,arpls_bsl, 8192)
+            res_list[0].append(arpls_result)
+            if arpls_result < minimum[0]:
+                minimum[0] = arpls_result
+                lam_min[0] = lam
         
         aspls_bsl,_ = aspls_baseline(data, bins, 10**lam)
-        aspls_result = rmse(real_bsl,aspls_bsl, 8192)
-        res_list[1].append(aspls_result)
-        if aspls_result < minimum[1]:
-            minimum[1] = aspls_result
-            lam_min[1] = lam
+        if aspls_bsl is None:
+            res_list[1].append(np.nan)
+        else:
+            aspls_result = rmse(real_bsl,aspls_bsl, 8192)
+            res_list[1].append(aspls_result)
+            if aspls_result < minimum[1]:
+                minimum[1] = aspls_result
+                lam_min[1] = lam
             
         # print(f'{lam:.4f}: {result:.4f}')
         # plt.plot(bins,arpls_bsl)
@@ -235,16 +257,24 @@ class NumpyEncoder(json.JSONEncoder):
 
 if __name__ == "__main__":
     
+    start_setup = time.process_time_ns()
+    
     jobs_dict = {
-        '0':[8,20,'poly',4],
-        '1':[24,20,'poly',4],
-        '2':[40,20,'poly',4],
-        '3':[56,20,'poly',4]
+        '0':[8,15,'poly',3],
+        '1':[24,15,'poly',3],
+        '2':[40,15,'poly',3],
+        '3':[56,15,'poly',3]
     }
     
     print(f'Queue started with {len(jobs_dict)} jobs to run.')
+    print(f'Jobs in queue:')
     for i in range(0,len(jobs_dict)):
-    
+        print(i, jobs_dict[str(i)])
+        
+        
+    for i in range(0,len(jobs_dict)):
+        job_time_start = time.process_time_ns()
+        print(f'Starting on job {i+1} with the parameters {jobs_dict[str(i)]}')
         idnr = time.strftime("%d%m%y_%H%M%S", time.localtime())
         
         with warnings.catch_warnings(record=True) as caught:
@@ -252,7 +282,7 @@ if __name__ == "__main__":
             
         jobs = [jobs_dict[str(i)] for _ in range(100)]
         results = []
-        with ProcessPoolExecutor(max_workers=10) as executor:
+        with ProcessPoolExecutor(max_workers=8, mp_context=mup.get_context("spawn")) as executor:
             futures = [executor.submit(single_experiment, job) for job in jobs]
 
             for future in tqdm.tqdm(as_completed(futures), total=len(futures)):
@@ -266,4 +296,10 @@ if __name__ == "__main__":
         
         with open(f"./simulation/toy_model_run_{idnr}.json", "w") as dumptruck:
             json.dump(results, dumptruck, cls=NumpyEncoder, indent=2)
+        
+        job_time_stop = time.process_time_ns()
+        delta_t_job = (job_time_stop - job_time_start) / 10**9
+        delta_t_sinceStart = (job_time_stop - start_setup) / 10**9
+        print(f'Job {i+1} took {delta_t_job:.3f} s.')
+        print(f'Since the start it took {delta_t_sinceStart:.3f} s.')
         
