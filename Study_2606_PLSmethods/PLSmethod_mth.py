@@ -45,6 +45,38 @@ plt.rcParams.update({
 color_schemes = load_colors()
 
 #-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-#
+def dual_print(*args, name, **kwargs):
+    print(*args)
+    with open(name, 'a') as out:
+        print(*args, **kwargs, file=out)
+
+def job_report(start_setup, job_time_start, durations, job_dict, report_file_name, job_id, job_ids, report_id_long):
+    
+    n_job = len(job_dict)
+    
+    job_time_stop = time.time()
+    delta_t_job = (job_time_stop - job_time_start)/60
+    delta_t_sinceStart = (job_time_stop - start_setup)/60
+    durations.append(delta_t_job)
+    job_ids.append(job_id)
+    print(f'Job {len(durations)-1} took {delta_t_job:.3f} min.')
+    print(f'Since the start it took {delta_t_sinceStart:.3f} min.')
+    
+    if (n_job == len(durations)):
+        dual_print('     <<< ================== JOB REPORT ================== >>>', name=report_file_name)
+        dual_print('| ' + f'Job no.'.ljust(8) + ' | ' + f'Job duration'.ljust(12) + ' | ' + f'Job parameter'.ljust(20) + ' | ' + f'Job file'.ljust(14) + ' |', name=report_file_name)
+        dual_print('-------------------------------------------------------------------', name=report_file_name)
+        for i in range(0,n_job):
+            dual_print('| ' + f'Job {i}'.ljust(8) + ' | ' + f'{durations[i]:.2f} min'.ljust(12) + ' | ' + f'{job_dict[str(i)]}'.ljust(20) + ' | ' + f'{job_ids[i]}'.ljust(14) + ' |', name=report_file_name)
+            dual_print('|-----------------------------------------------------------------|', name=report_file_name)
+        
+        dual_print(f'\n >>> Start of Job queue: {report_id_long}', name=report_file_name)
+        dual_print(f' >>>>> End of Job queue: {time.strftime("%d/%m/%y %H:%M:%S", time.localtime())}\n', name=report_file_name)
+        dual_print(f' >>> Total Runtime: {delta_t_sinceStart:.3f} min / {delta_t_sinceStart/60:.3f} h.\n', name=report_file_name)
+        dual_print('     <<< =============== END of JOB REPORT =============== >>>', name=report_file_name)
+        
+    return durations
+
 
 def rmse(data:list, fit:list, length:int):
     '''
@@ -257,13 +289,38 @@ class NumpyEncoder(json.JSONEncoder):
 
 if __name__ == "__main__":
     
-    start_setup = time.process_time_ns()
+    report_id = time.strftime("%d%m%y_%H%M%S", time.localtime())
+    report_id_long = time.strftime("%d/%m/%y %H:%M:%S", time.localtime())
+    report_file_name = f'./simulation/reports/job_report_{report_id}.txt'
+    
+    start_setup = time.time()
+    durations = []
     
     jobs_dict = {
-        '0':[8,15,'poly',3],
-        '1':[24,15,'poly',3],
-        '2':[40,15,'poly',3],
-        '3':[56,15,'poly',3]
+        '0':[8,30,'poly',1],
+        '1':[24,30,'poly',1],
+        '2':[40,30,'poly',1],
+        '3':[56,30,'poly',1],
+        '4':[8,20,'poly',1],
+        '5':[24,20,'poly',1],
+        '6':[40,20,'poly',1],
+        '7':[56,20,'poly',1],
+        '8':[8,15,'poly',1],
+        '9':[24,15,'poly',1],
+        '10':[40,15,'poly',1],
+        '11':[56,15,'poly',1],
+        '12':[8,30,'poly',4],
+        '13':[24,30,'poly',4],
+        '14':[40,30,'poly',4],
+        '15':[56,30,'poly',4],
+        '16':[8,20,'poly',4],
+        '17':[24,20,'poly',4],
+        '18':[40,20,'poly',4],
+        '19':[56,20,'poly',4],
+        '20':[8,15,'poly',4],
+        '21':[24,15,'poly',4],
+        '22':[40,15,'poly',4],
+        '23':[56,15,'poly',4]
     }
     
     print(f'Queue started with {len(jobs_dict)} jobs to run.')
@@ -273,8 +330,8 @@ if __name__ == "__main__":
         
         
     for i in range(0,len(jobs_dict)):
-        job_time_start = time.process_time_ns()
-        print(f'Starting on job {i+1} with the parameters {jobs_dict[str(i)]}')
+        job_time_start = time.time()
+        print(f'Starting on job {i} with the parameters {jobs_dict[str(i)]}')
         idnr = time.strftime("%d%m%y_%H%M%S", time.localtime())
         
         with warnings.catch_warnings(record=True) as caught:
@@ -282,7 +339,7 @@ if __name__ == "__main__":
             
         jobs = [jobs_dict[str(i)] for _ in range(100)]
         results = []
-        with ProcessPoolExecutor(max_workers=8, mp_context=mup.get_context("spawn")) as executor:
+        with ProcessPoolExecutor(max_workers=11, mp_context=mup.get_context("spawn")) as executor:
             futures = [executor.submit(single_experiment, job) for job in jobs]
 
             for future in tqdm.tqdm(as_completed(futures), total=len(futures)):
@@ -290,16 +347,13 @@ if __name__ == "__main__":
         
         warning_count = len(caught)
         
-        print(f'Completed job {i+1} with {len(results)} experiments!')
+        print(f'Completed job {i} with {len(results)} experiments!')
         
         print(f'Supression of {warning_count} warnings!')
         
         with open(f"./simulation/toy_model_run_{idnr}.json", "w") as dumptruck:
             json.dump(results, dumptruck, cls=NumpyEncoder, indent=2)
         
-        job_time_stop = time.process_time_ns()
-        delta_t_job = (job_time_stop - job_time_start) / 10**9
-        delta_t_sinceStart = (job_time_stop - start_setup) / 10**9
-        print(f'Job {i+1} took {delta_t_job:.3f} s.')
-        print(f'Since the start it took {delta_t_sinceStart:.3f} s.')
+        durations = job_report(start_setup, job_time_start, durations, jobs_dict, report_file_name, idnr, report_id_long)
+
         
