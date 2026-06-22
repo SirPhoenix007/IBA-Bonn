@@ -294,7 +294,7 @@ if __name__ == "__main__":
     report_file_name = f'./simulation/reports/job_report_{report_id}.txt'
     
     start_setup = time.time()
-    durations = []
+    durations, jobs_ids = [],[]
     
     jobs_dict = {
         '0':[8,30,'poly',1],
@@ -354,6 +354,6 @@ if __name__ == "__main__":
         with open(f"./simulation/toy_model_run_{idnr}.json", "w") as dumptruck:
             json.dump(results, dumptruck, cls=NumpyEncoder, indent=2)
         
-        durations = job_report(start_setup, job_time_start, durations, jobs_dict, report_file_name, idnr, report_id_long)
+        durations = job_report(start_setup, job_time_start, durations, jobs_dict, report_file_name, idnr, jobs_ids , report_id_long)
 
         
