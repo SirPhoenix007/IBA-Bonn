@@ -252,8 +252,8 @@ def evaluate_baseline(toy_model_data:dict):
         "arpls_lambda_min": lam_min[0],
         "arpls_rmse_min": minimum[0],
         "arpls_rmse_all": res_list[0],
-        "aspls_lambda": lam_min[1],
-        "aspls_rmse_all": minimum[1],
+        "aspls_lambda_min": lam_min[1],
+        "aspls_rmse_min": minimum[1],
         "aspls_rmse_all": res_list[1],}   
     
     
@@ -320,7 +320,31 @@ if __name__ == "__main__":
         '20':[8,15,'poly',4],
         '21':[24,15,'poly',4],
         '22':[40,15,'poly',4],
-        '23':[56,15,'poly',4]
+        '23':[56,15,'poly',4],
+        '24':[8,30,'poly',2],
+        '25':[24,30,'poly',2],
+        '26':[40,30,'poly',2],
+        '27':[56,30,'poly',2],
+        '28':[8,20,'poly',2],
+        '29':[24,20,'poly',2],
+        '30':[40,20,'poly',2],
+        '31':[56,20,'poly',2],
+        '32':[8,15,'poly',2],
+        '33':[24,15,'poly',2],
+        '34':[40,15,'poly',2],
+        '35':[56,15,'poly',2],
+        '36':[8,30,'poly',3],
+        '37':[24,30,'poly',3],
+        '38':[40,30,'poly',3],
+        '39':[56,30,'poly',3],
+        '40':[8,20,'poly',3],
+        '41':[24,20,'poly',3],
+        '42':[40,20,'poly',3],
+        '43':[56,20,'poly',3],
+        '44':[8,15,'poly',3],
+        '45':[24,15,'poly',3],
+        '46':[40,15,'poly',3],
+        '47':[56,15,'poly',3]
     }
     
     print(f'Queue started with {len(jobs_dict)} jobs to run.')
