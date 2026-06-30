@@ -180,25 +180,8 @@ def peak_fitter(lines:list, peaks:list, peaks_err:list, init_values:list):
 
 
 def read_json_formatted_file(filepath, encoding="utf-8"):
-    """
-    Reads a file whose contents are JSON-formatted, regardless of file extension.
-
-    Parameters:
-        filepath (str): Path to the file
-        encoding (str): File encoding (default: utf-8)
-
-    Returns:
-        dict or list: Parsed JSON content
-
-    Raises:
-        ValueError: If the file content is not valid JSON
-        OSError: If the file cannot be read
-    """
-    with open(filepath, "r", encoding=encoding) as f:
-        content = f.read()
-
     try:
-        return json.loads(content)
+        return json.load(open(filepath, "r", encoding=encoding))
     except json.JSONDecodeError as e:
         raise ValueError(f"File content is not valid JSON: {e}") from e
     
