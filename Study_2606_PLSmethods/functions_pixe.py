@@ -42,6 +42,9 @@ def sqrt_func(x,param):
 def lin_func(param, x):
     return param[0]*x + param[1]
 
+def lin_func_cf(x, a, b):
+    return a*x + b
+
 def gauss_func(param, x):
     return param[0] * np.exp(-((x - param[1])**2)/(2*param[2]**2))
 
