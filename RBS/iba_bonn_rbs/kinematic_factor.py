@@ -28,8 +28,6 @@ def sig(m1, m2, theta):
         m1, m2: amu \n
         theta: deg
     '''
-    
-    theta = theta * np.pi() / 180
     return 1 - lam(m1, m2)**2 * np.sin(theta)**2
 
 def kap(m1, m2, theta):
@@ -38,7 +36,6 @@ def kap(m1, m2, theta):
         m1, m2: amu \n
         theta: deg
     '''
-    theta = theta * np.pi() / 180
     return lam(m1, m2) * np.cos(theta)
 
 def K_factor(m1, m2, theta):
@@ -47,4 +44,16 @@ def K_factor(m1, m2, theta):
         m1, m2: amu \n
         theta: deg
     '''
+    theta = theta * np.pi / 180
+    
     return ((np.sqrt(sig(m1, m2, theta)) + kap(m1, m2, theta))/(1 + lam(m1, m2)))**2
+
+def dKdt(m1, m2, theta):
+    '''
+    INPUTS: \n
+        m1, m2: amu \n
+        theta: deg
+    '''
+    theta = theta * np.pi / 180
+    
+    return K_factor(m1, m2, theta)*(-2*lam(m1, m2)*np.sin(theta))/(np.sqrt(sig(m1, m2, theta)))
