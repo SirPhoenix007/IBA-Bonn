@@ -26,7 +26,7 @@ def sig(m1, m2, theta):
     '''
     INPUTS:\n
         m1, m2: amu \n
-        theta: deg
+        theta: rad
     '''
     return 1 - lam(m1, m2)**2 * np.sin(theta)**2
 
@@ -34,7 +34,7 @@ def kap(m1, m2, theta):
     '''
     INPUTS: \n
         m1, m2: amu \n
-        theta: deg
+        theta: rad
     '''
     return lam(m1, m2) * np.cos(theta)
 
@@ -57,3 +57,29 @@ def dKdt(m1, m2, theta):
     theta = theta * np.pi / 180
     
     return K_factor(m1, m2, theta)*(-2*lam(m1, m2)*np.sin(theta))/(np.sqrt(sig(m1, m2, theta)))
+
+def dKdM1(m1, m2, theta):
+    '''
+    INPUTS: \n
+        m1, m2: amu \n
+        theta: deg
+    '''
+    theta = theta * np.pi / 180
+    
+    A = (np.cos(theta)*(2*sig(m1,m2,theta)-1)*np.sqrt(sig(m1,m2,theta))**(-1) + lam(m1,m2)*np.cos(2*theta)*np.sqrt(sig(m1, m2, theta)))/((1+lam(m1,m2))**2)
+    B = K_factor(m1, m2, theta)/(1+lam(m1, m2))
+    
+    return 2/m2 * (A - B)
+
+def dKdM2(m1, m2, theta):
+    '''
+    INPUTS: \n
+        m1, m2: amu \n
+        theta: deg
+    '''
+    theta = theta * np.pi / 180
+    
+    A = (lam(m1, m2)**2*np.cos(2*theta) - (kap(m1, m2, theta))/(np.sqrt(sig(m1, m2, theta))))/((1+lam(m1,m2))**2)
+    B = lam(m1, m2)*K_factor(m1, m2, theta)/(1+lam(m1, m2))
+    
+    return 2/m2 * (A - B)

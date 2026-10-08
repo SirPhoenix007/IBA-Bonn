@@ -13,6 +13,7 @@ import numpy as np
 import pandas as pd
 import odrpack as odr
 import seaborn as sb
+import mendeleev as md
 #-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-#
 import matplotlib.pyplot as plt
 from matplotlib import ticker
@@ -50,14 +51,20 @@ plt.rcParams.update({
 
 def k_factor_plot(m1:float, m2:list, theta:list, colors:list, linestyles:list):
     
+    m2_atw = []
+    m2_name = []
+    for i in m2:
+        m2_atw.append(i.atomic_weight)
+        m2_name.append(i.name)
+    
     plt.figure(figsize=(5,3), dpi=160)
     
     for m in range(len(m2)):
         k_list = []
         for t in theta:
-            k_list.append(rbs.kinematic_factor.K_factor(m1, m2[m], t))
+            k_list.append(rbs.kinematic_factor.K_factor(m1, m2_atw[m], t))
             
-        plt.plot(theta, k_list, color=colors[m], ls=linestyles[m], lw=1, label=f'M_2 = {m2[m]}')
+        plt.plot(theta, k_list, color=colors[m], ls=linestyles[m], lw=1, label=f'M_2 = {m2_name[m]}')
         
     plt.xlabel(r'Angle $\theta$')
     plt.ylabel(r'Kinematic factor $K$')
@@ -68,27 +75,85 @@ def k_factor_plot(m1:float, m2:list, theta:list, colors:list, linestyles:list):
 
 def dkdt_factor_plot(m1:float, m2:list, theta:list, colors:list, linestyles:list):
     
+    
+    m2_atw = []
+    m2_name = []
+    for i in m2:
+        m2_atw.append(i.atomic_weight)
+        m2_name.append(i.name)
     plt.figure(figsize=(5,3), dpi=160)
     
-    for m in range(len(m2)):
+    for m in range(len(m2_atw)):
         k_list = []
         for t in theta:
-            k_list.append(rbs.kinematic_factor.dKdt(m1, m2[m], t))
+            k_list.append(rbs.kinematic_factor.dKdt(m1, m2_atw[m], t))
             
-        plt.plot(theta, k_list, color=colors[m], ls=linestyles[m], lw=1, label=f'M_2 = {m2[m]}')
+        plt.plot(theta, np.abs(k_list), color=colors[m], ls=linestyles[m], lw=1, label=f'Target = {m2_name[m]}')
         
     plt.xlabel(r'Angle $\theta$')
-    plt.ylabel(r'Kinematic factor $dK/d\theta$')
+    plt.ylabel(r'Kinematic factor $-dK/d\theta$')
+    plt.yscale('log')
     plt.grid()
     plt.legend()
     plt.show()
-    return 1
+    return 2
+
+def dkdM1_factor_plot(m1:float, m2:list, theta:list, colors:list, linestyles:list):
+    
+    m2_atw = []
+    m2_name = []
+    for i in m2:
+        m2_atw.append(i.atomic_weight)
+        m2_name.append(i.name)
+    
+    plt.figure(figsize=(5,3), dpi=160)
+    
+    for m in range(len(m2)):
+            k_list = []
+            for t in theta:
+                k_list.append(rbs.kinematic_factor.dKdM1(m1, m2_atw[m], t))
+                
+            plt.plot(theta, k_list, color=colors[m], ls=linestyles[m], lw=1, label=f'M_2 = {m2_name[m]}')
+            
+    plt.xlabel(r'Angle $\theta$')
+    plt.ylabel(r'$dK/dM_1$')
+    plt.grid()
+    # plt.yscale('log')
+    plt.legend()
+    plt.show()
+    return 3
+
+def dkdM2_factor_plot(m1:float, m2:list, theta:list, colors:list, linestyles:list):
+    
+    m2_atw = []
+    m2_name = []
+    for i in m2:
+        m2_atw.append(i.atomic_weight)
+        m2_name.append(i.name)
+    
+    plt.figure(figsize=(5,3), dpi=160)
+    
+    for m in range(len(m2)):
+            k_list = []
+            for t in theta:
+                k_list.append(rbs.kinematic_factor.dKdM2(m1, m2_atw[m], t))
+                
+            plt.plot(theta, k_list, color=colors[m], ls=linestyles[m], lw=1, label=f'M_2 = {m2_name[m]}')
+            
+    plt.xlabel(r'Angle $\theta$')
+    plt.ylabel(r'Kinematic factor $dK/dM_1$')
+    plt.grid()
+    plt.legend()
+    plt.show()
+    return 3
 
 if __name__ == "__main__":
-    m1 = 4
-    m2 = [10,40,80,130,190]
+    m1 = md.element('He').atomic_weight
+    m2 = [md.element('O'),md.element('K'), md.element('Fe'), md.element('Ag'), md.element('Nd'), md.element('U')]
     theta = np.arange(0,180,1)
-    colors = rbs.colors.load_colors()['c_five2']
-    linestyles = ['-','-','-','-','-']
+    colors = rbs.colors.load_colors()['c_complementary']
+    linestyles = ['-','-','-','-','-','-']
     k_factor_plot(m1, m2, theta, colors, linestyles)
     dkdt_factor_plot(m1, m2, theta, colors, linestyles)
+    dkdM1_factor_plot(m1, m2, theta, colors, linestyles)
+    dkdM2_factor_plot(m1, m2, theta, colors, linestyles)
