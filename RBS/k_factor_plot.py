@@ -1,29 +1,29 @@
 #by Henry Schumacher
 #-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-#
-import time
+lazy import time
 #-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-#
-import os
-import sys
-import json
-import tqdm
-import xraydb
-import argparse
+lazy import os
+lazy import sys
+lazy import json
+lazy import tqdm
+lazy import xraydb
+lazy import argparse
 #-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-#
-import numpy as np
-import pandas as pd
-import odrpack as odr
-import seaborn as sb
-import mendeleev as md
+lazy import numpy as np
+lazy import pandas as pd
+lazy import odrpack as odr
+lazy import seaborn as sb
+lazy import mendeleev as md
 #-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-#
-import matplotlib.pyplot as plt
-from matplotlib import ticker
-from matplotlib.gridspec import GridSpec
-from scipy.signal import find_peaks
-from scipy.optimize import curve_fit
-from scipy.special import voigt_profile
-from getmac import get_mac_address as gma
-from itertools import chain
-from matplotlib.offsetbox import OffsetImage, AnnotationBbox, TextArea, VPacker
+lazy import matplotlib.pyplot as plt
+lazy from matplotlib import ticker
+lazy from matplotlib.gridspec import GridSpec
+lazy from scipy.signal import find_peaks
+lazy from scipy.optimize import curve_fit
+lazy from scipy.special import voigt_profile
+lazy from getmac import get_mac_address as gma
+lazy from itertools import chain
+lazy from matplotlib.offsetbox import OffsetImage, AnnotationBbox, TextArea, VPacker
 #-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-#
 import iba_bonn_rbs as rbs
 #-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-#
