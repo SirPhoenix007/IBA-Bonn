@@ -24,6 +24,7 @@ from scipy.special import voigt_profile
 from getmac import get_mac_address as gma
 from itertools import chain
 from matplotlib.offsetbox import OffsetImage, AnnotationBbox, TextArea, VPacker
+from matplotlib.ticker import LinearLocator
 #-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-#
 import iba_bonn_rbs as rbs
 #-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-#
@@ -49,34 +50,39 @@ plt.rcParams.update({
 
 #-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-#
 
-def threeDimensional_k_factor_plot(m1:float, m2:list, theta:list, colors:list, linestyles:list):
+def threeDimensional_k_factor_plot(m1:float, m2:list, theta:list):
     
-    m2_atw = []
-    m2_name = []
+    m1_m2 = []
+    m2_alone = []
     for i in m2:
-        m2_atw.append(i.atomic_weight)
-        m2_name.append(i.name)
+        m1_m2.append(m1/i.atomic_weight)
+        m2_alone.append(i.atomic_weight)
+
     
-    plt.figure(figsize=(5,3), dpi=160)
+    fig, ax = plt.subplots(figsize=(6,3), dpi=250, subplot_kw={"projection":"3d"})
     
-    for m in range(len(m2)):
-            k_list = []
-            for t in theta:
-                k_list.append(rbs.kinematic_factor.K_factor(m1, m2_atw[m], t))
-                
-            plt.plot(theta, k_list, color=colors[m], ls=linestyles[m], lw=1, label=f'Target = {m2_name[m]}')
-        
-    plt.xlabel(r'Angle $\theta$')
-    plt.ylabel(r'Kinematic factor $K$')
-    plt.grid()
-    plt.legend()
+    X = m1_m2
+    Y = theta
+    X,Y = np.meshgrid(X,Y)
+    Z = rbs.kinematic_factor.K_factor(m1, m2_alone, Y)
+    
+    surface = ax.plot_surface(X,Y,Z, cmap='plasma', linewidth=0, antialiased=False)
+    
+    ax.set_zlim=(0,1)
+    
+    
+    # Add a color bar which maps values to colors.
+    fig.colorbar(surface, shrink=0.75, aspect=12)
+    ax.set_box_aspect((16, 16, 8))
+    ax.set_xlabel(r'Mass ration $\lambda$')
+    ax.set_ylabel(r'Angle $\theta$')
+    ax.set_zlabel(r'Kinematic factor $K$')
+    
     plt.show()
     return 1
 
 if __name__ == "__main__":
     m1 = md.element('He').atomic_weight
-    m2 = [md.element('O'),md.element('K'), md.element('Fe'), md.element('Ag'), md.element('Nd'), md.element('U')]
+    m2 = [md.element(i) for i in range(2,83)]
     theta = np.arange(0,180,1)
-    colors = rbs.colors.load_colors()['c_dark']
-    linestyles = ['-','-','-','-','-','-']
-    threeDimensional_k_factor_plot(m1, m2, theta, colors, linestyles)
+    threeDimensional_k_factor_plot(m1, m2, theta)
