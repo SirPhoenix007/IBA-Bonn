@@ -7,7 +7,7 @@ import csv
 import sys
 import json
 import uuid
-import h5py
+# import h5py
 import math
 import xraydb
 import plotly
@@ -15,7 +15,7 @@ import plotly
 import numpy as np
 import pandas as pd
 # import pyxray as xy
-import odrpack as odr
+# import odrpack as odr
 import seaborn as sb
 #-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-#
 import matplotlib.pyplot as plt
@@ -29,9 +29,9 @@ from lmfit.models import VoigtModel
 from getmac import get_mac_address as gma
 from matplotlib.offsetbox import OffsetImage, AnnotationBbox, TextArea, VPacker
 #-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-#
-from colors import load_colors
-color_schemes = load_colors()
-from PIXE_polygauss import multi_gauss, multi_gauss_cf
+from . import colors
+color_schemes = colors.load_colors()
+from . import pixe_polygauss
 #----------------- Fitting Functions -----------------#
 
 def sqrt_func(x,param):
@@ -40,7 +40,7 @@ def sqrt_func(x,param):
     # return param[0]*np.sqrt(param[1]*x - param[4]) + param[2]*x + param[3]
 
 def lin_func(param, x):
-    return param[0]*x + param[1]
+    return param[0] + param[1]*x
 
 def gauss_func(param, x):
     return param[0] * np.exp(-((x - param[1])**2)/(2*param[2]**2))
@@ -72,7 +72,7 @@ def evaluator_curvefit(func:str, param_list:list, boundary_list:list, x:list, y:
     elif (func == 'double'):
         use_func = double_gauss_func_ODR
     elif (func == 'multi'):
-        use_func = multi_gauss_cf
+        use_func = pixe_polygauss.multi_gauss_cf
     
     params = np.array(param_list)
     bounds = np.array(boundary_list)
@@ -96,7 +96,7 @@ def evaluator_scipy(func:str, beta0_list:list, x:list, y:list, xerr:list, yerr:l
     elif (func == 'double'):
         use_func = double_gauss_func
     elif (func == 'multi'):
-        use_func = multi_gauss
+        use_func = pixe_polygauss.multi_gauss
     
     data = RealData(x=x, y=y, sx=xerr, sy=yerr)
     model = Model(func)
@@ -109,23 +109,23 @@ def evaluator_scipy(func:str, beta0_list:list, x:list, y:list, xerr:list, yerr:l
     
     return {'param':output.beta, 'errors':output.sd_beta}
 
-def evaluator_ODRPACK(func, param_list:list, boundary_list:list, x:list, y:list, xerr:list, yerr:list):
-    params = np.array(param_list)
-    bounds_lower, bounds_upper = np.array(boundary_list[0]), np.array(boundary_list[1])
-    print(params)
-    print(bounds_lower, bounds_upper)
+# def evaluator_ODRPACK(func, param_list:list, boundary_list:list, x:list, y:list, xerr:list, yerr:list):
+#     params = np.array(param_list)
+#     bounds_lower, bounds_upper = np.array(boundary_list[0]), np.array(boundary_list[1])
+#     print(params)
+#     print(bounds_lower, bounds_upper)
         
-    weight_x = 1/(np.array(xerr)**2)
-    weight_y = 1/(np.array(yerr)**2)
+#     weight_x = 1/(np.array(xerr)**2)
+#     weight_y = 1/(np.array(yerr)**2)
     
-    result = odr.odr_fit(func, x, y,
-                         params, bounds=(bounds_lower, bounds_upper), 
-                         weight_x=weight_x, weight_y=weight_y)
+#     result = odr.odr_fit(func, x, y,
+#                          params, bounds=(bounds_lower, bounds_upper), 
+#                          weight_x=weight_x, weight_y=weight_y)
     
-    print('STOP:', result.stopreason)
-    print('PARAMS:', result.beta)
+#     print('STOP:', result.stopreason)
+#     print('PARAMS:', result.beta)
     
-    return result
+#     return result
 
 
 
