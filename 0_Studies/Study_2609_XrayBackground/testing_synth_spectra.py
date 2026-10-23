@@ -79,14 +79,14 @@ print('asPLS:' + f'{eval_result['aspls_lambda_min']}: {eval_result['aspls_rmse_m
 arPLS,_ = pls_methods.arpls_baseline(test_data['SyntheticData'],test_data['Bins'],lam=eval_result['arpls_lambda_min'])
 asPLS,_ = pls_methods.aspls_baseline(test_data['SyntheticData'],test_data['Bins'],lam=eval_result['aspls_lambda_min'])
 plt.figure(figsize=(8,4), dpi=300)
-plt.plot(test_data['Bins'],test_data['SyntheticData'])
-plt.plot(test_data['Bins'],arPLS)
-plt.plot(test_data['Bins'],asPLS)
+plt.plot(test_data['Bins'],test_data['SyntheticData'], lw=0.2, label='synthetic spectrum')
+plt.plot(test_data['Bins'],arPLS, lw=0.2, label='arPLS')
+plt.plot(test_data['Bins'],asPLS, lw=0.2, label='asPLS')
 # plt.plot(test_data['Bins'],delta)
 
 # plt.ylim(1.5,2.8)
 plt.yscale('linear')
-
+plt.legend()
 plt.show()
 
 comp = ddlc.Dynamic_Double_Logarithmic_Compression(test_data['SyntheticData'])
@@ -98,7 +98,7 @@ delta = test_data['SyntheticData'] - decomp
 
 
 
-eval_result = pls_methods.evaluate_baseline(test_data)
+eval_result = pls_methods.evaluate_baseline(test_data, compressed_flag=True)
 
 print('arPLS:' + f'{eval_result['arpls_lambda_min']}: {eval_result['arpls_rmse_min']}')
 print('asPLS:' + f'{eval_result['aspls_lambda_min']}: {eval_result['aspls_rmse_min']}')
@@ -107,12 +107,14 @@ arPLS,_ = pls_methods.arpls_baseline(test_data['SyntheticData'],test_data['Bins'
 asPLS,_ = pls_methods.aspls_baseline(test_data['SyntheticData'],test_data['Bins'],lam=eval_result['aspls_lambda_min'])
 
 plt.figure(figsize=(8,4), dpi=300)
-plt.plot(test_data['Bins'],comp)
-plt.plot(test_data['Bins'],arPLS)
-plt.plot(test_data['Bins'],asPLS)
+plt.plot(test_data['Bins'],comp, lw=0.2, label='compressed synth. spectrum')
+plt.plot(test_data['Bins'],arPLS, lw=0.2, label='arPLS')
+plt.plot(test_data['Bins'],asPLS, lw=0.2, label='asPLS')
 # plt.plot(test_data['Bins'],delta)
-
+plt.legend()
 # plt.ylim(1.5,2.8)
 plt.yscale('linear')
 
 plt.show()
+
+#TODO: Use mean value or something instead of blindly the minimum as high lam fuck up the baseline

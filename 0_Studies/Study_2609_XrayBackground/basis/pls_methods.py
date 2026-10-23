@@ -66,12 +66,12 @@ def aspls_baseline(bin_data:list, bins:list, lam:int = 1e2):
     subtracted = bin_data - baseline
     return baseline, subtracted
 
-def evaluate_baseline(toy_model_data:dict):
+def evaluate_baseline(toy_model_data:dict, compressed_flag:bool=False):
     
     plt.figure(figsize=(20,4), dpi=250)
     plt.grid(axis='y', which='both')
     
-    lambda_range = np.linspace(2,13,2201)
+    lambda_range = np.linspace(2,12,2001)
     
     bins = toy_model_data['Bins']
     data = toy_model_data['SyntheticData']
@@ -106,8 +106,14 @@ def evaluate_baseline(toy_model_data:dict):
     plt.plot(lambda_range,res_list[0],label='arPLS')
     plt.plot(lambda_range,res_list[1],label='asPLS')
     plt.legend()
-    plt.ylim(1,20000)
-    plt.yscale('log')
+    
+    if (compressed_flag == False):
+        plt.ylim(1,20000)
+        plt.yscale('log')
+    elif (compressed_flag == True):
+        plt.ylim(1e-6,1)
+        plt.yscale('log')
+        
     plt.show()
     # print(f'arPLS: Minimum: {lam_min[0]:.2f}: {minimum[0]:.2f} / {(minimum[0]/(data.mean())):.3f}')
     # print(f'asPLS: Minimum: {lam_min[1]:.2f}: {minimum[1]:.2f} / {(minimum[1]/(data.mean())):.3f}')
