@@ -111,7 +111,7 @@ def evaluate_baseline(toy_model_data:dict, compressed_flag:bool=False):
         plt.ylim(1,20000)
         plt.yscale('log')
     elif (compressed_flag == True):
-        plt.ylim(1e-6,1)
+        plt.ylim(1e-4,1)
         plt.yscale('log')
         
     plt.show()
