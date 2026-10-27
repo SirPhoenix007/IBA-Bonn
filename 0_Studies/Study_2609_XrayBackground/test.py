@@ -20,12 +20,8 @@ plt.rcParams.update({
      ]),
 })
 
-a = [1,2,3,4,5]
-b = [0,1,2,1,0]
+a = np.array([1,2,3,4,5])
+b = np.array([0,1,2,1,0])
 
-plt.figure(figsize=(4,3), dpi=150)
-
-plt.plot(a,b, label='TEST123')
-plt.legend()
-plt.tight_layout()
-plt.show()
+c = np.sum(a-b)/np.sum(a)
+print(c)
