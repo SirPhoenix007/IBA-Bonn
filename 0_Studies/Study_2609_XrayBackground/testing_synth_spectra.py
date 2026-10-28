@@ -75,12 +75,13 @@ def plot_uncompressed_PLS(test_data, eval_result):
     arPLS,_ = pls_methods.arpls_baseline(test_data['SyntheticData'],test_data['Bins'],lam=10**eval_result['arpls_lambda_min'])
     asPLS,_ = pls_methods.aspls_baseline(test_data['SyntheticData'],test_data['Bins'],lam=10**eval_result['aspls_lambda_min'])
     plt.figure(figsize=(4,2), dpi=300)
-    plt.plot(test_data['Bins'],test_data['SyntheticData'], lw=0.35, label='synthetic spectrum')
-    plt.plot(test_data['Bins'],arPLS, lw=0.35, label='arPLS')
-    plt.plot(test_data['Bins'],asPLS, lw=0.35, label='asPLS')
+    plt.plot(test_data['Bins'],test_data['SyntheticData'], lw=0.5, label='synthetic spectrum')
+    plt.plot(test_data['Bins'],arPLS, lw=0.5, label='arPLS')
+    plt.plot(test_data['Bins'],asPLS, lw=0.5, label='asPLS')
     # plt.plot(test_data['Bins'],delta)
 
     # plt.ylim(1.5,2.8)
+    plt.grid()
     plt.yscale('linear')
     plt.legend()
     plt.show()
@@ -95,14 +96,14 @@ def plot_compressed_PLS(comp_test_data, comp_eval_result):
     asPLS,_ = pls_methods.aspls_baseline(comp_test_data['SyntheticData'],comp_test_data['Bins'],lam=10**comp_eval_result['aspls_lambda_min'])
 
     plt.figure(figsize=(4,2), dpi=150)
-    plt.plot(comp_test_data['Bins'],comp_test_data['SyntheticData'], lw=0.35, label='compressed synth. spectrum')
-    plt.plot(comp_test_data['Bins'],arPLS, lw=0.35, label='arPLS')
-    plt.plot(comp_test_data['Bins'],asPLS, lw=0.35, label='asPLS')
+    plt.plot(comp_test_data['Bins'],comp_test_data['SyntheticData'], lw=0.5, label='compressed synth. spectrum')
+    plt.plot(comp_test_data['Bins'],arPLS, lw=0.5, label='arPLS')
+    plt.plot(comp_test_data['Bins'],asPLS, lw=0.5, label='asPLS')
     # plt.plot(test_data['Bins'],delta)
     plt.legend()
     # plt.ylim(1.5,2.8)
     plt.yscale('linear')
-
+    plt.grid()
     plt.show()
     return 20
 
@@ -116,10 +117,13 @@ def LL_compression_report(test_data):
     test_data['SyntheticData'] = comp
     test_data['Baseline'] = base
     decomp = compression.LL_Decompression(comp)
+    
+    delta_list = original-decomp
     delta = np.sum((original - decomp)/original)
+    delta_rmse = root_mean_squared_error(original, decomp)
     
     print('-------------------------------')
-    print(f'LL compression/decompression delta: {delta*100:.3g} %')
+    print(f'LL compression/decompression delta: {delta*100:.3g} % / RMSE: {delta_rmse:.3g}')
     print('-------------------------------')
     
     comp_eval_result = pls_methods.evaluate_baseline(test_data, compressed_flag=True)
@@ -136,10 +140,15 @@ def LLS_compression_report(test_data):
     test_data['SyntheticData'] = comp
     test_data['Baseline'] = base
     decomp = compression.LLS_Decompression(comp)
+    
+    delta_list = original-decomp
     delta = np.sum((original - decomp)/original)
+    delta_rmse = root_mean_squared_error(original, decomp)
+    
     print('-------------------------------')
-    print(f'LLS compression/decompression delta: {delta*100:.3g} %')
+    print(f'LLS compression/decompression delta: {delta*100:.3g} % / RMSE: {delta_rmse:.3g}')
     print('-------------------------------')
+    
     comp_eval_result = pls_methods.evaluate_baseline(test_data, compressed_flag=True)
     
     plot_compressed_PLS(test_data, comp_eval_result)
@@ -147,7 +156,7 @@ def LLS_compression_report(test_data):
 
 
 if __name__ == "__main__":
-    test_data = generate_toymodel.toy_model(N=24, snr=25, baseline_type='lin', plot_flag=True)
+    test_data = generate_toymodel.toy_model(N=12, snr=25, baseline_type='lin', plot_flag=True)
     eval_result = pls_methods.evaluate_baseline(test_data)
     
     plot_uncompressed_PLS(test_data, eval_result)
