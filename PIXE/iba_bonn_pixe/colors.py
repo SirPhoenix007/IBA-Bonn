@@ -10,3 +10,14 @@ def load_colors():
     c_back =            "#A6A6A6"
     color_dictionary = {'c_rainbow': c_rainbow, 'c_complementary':c_complementary, 'c_violetorange':c_violetorange, 'c_five':c_five, 'c_five2':c_five2, 'c_dark':c_dark, 'c_light':c_light, 'c_back':c_back}
     return color_dictionary
+
+def color_database():
+    red         = []
+    orange      = []
+    yellow      = []
+    green       = []
+    blue        = []
+    violet      = []
+    available_colors = {'red':red, 'orange':orange, 'yellow':yellow, 'green':green, 'blue':blue, 'violet':violet}
+    
+    return available_colors
