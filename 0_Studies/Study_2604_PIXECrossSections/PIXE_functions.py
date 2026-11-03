@@ -7,7 +7,7 @@ import csv
 import sys
 import json
 import uuid
-import h5py
+# import h5py
 import math
 import xraydb
 import plotly
@@ -15,7 +15,7 @@ import plotly
 import numpy as np
 import pandas as pd
 # import pyxray as xy
-import odrpack as odr
+# import odrpack as odr
 import seaborn as sb
 #-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-#
 import matplotlib.pyplot as plt
