@@ -20,8 +20,20 @@ plt.rcParams.update({
      ]),
 })
 
-a = np.array([1,2,3,4,5])
-b = np.array([0,1,2,1,0])
+length_spectrum = 250
 
-c = np.sum(a-b)/np.sum(a)
-print(c)
+x = np.linspace(0,length_spectrum,length_spectrum)
+H = -40*x**2 + 0.001*x**4
+
+a, b, c = 1,1,1
+plt.plot(x,H)
+for i in range(length_spectrum):
+    H_i = H[i]
+    y = []
+    for j in range(length_spectrum):
+        factor = 1 - ((i-j)**2/(a**2*(b+c*i)))
+        y.append(H_i*factor)
+    plt.plot(x,y, color='black', lw=0.2)
+
+plt.ylim(np.min(H)-5 , np.max(H)+5)
+plt.show()

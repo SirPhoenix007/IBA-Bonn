@@ -196,15 +196,17 @@ def single_setting_ecal(MCA:int, EG:int):
     ax2.set_xticks(np.arange(0,MCA+1,1024),np.arange(0,MCA+1,1024))
     
     
-    ymax = math.ceil(np.max(lines_flat) / 5000) * 5000 + 5000 
+    ymax = math.ceil(beta_export_lin[0][1]*MCA / 5000) * 5000 + 5000 
     ax.set_ylim(0,ymax - 2500)
     ax.set_yticks(np.arange(0,ymax,5000),np.arange(0,ymax/1000,5))
     
     resi_ymax = math.ceil(max(np.max(res_lin),np.max(res_poly2))/50)*50
     resi_ymin = math.floor(min(np.min(res_lin),np.min(res_poly2))/50)*50
     # ax2.set_ylim(resi_ymin*1.1,resi_ymax*1.1)
-    if np.sum(resi_ymax + np.abs(resi_ymin)) >= 300:
+    if np.sum(resi_ymax + np.abs(resi_ymin)) >= 300 and np.sum(resi_ymax + np.abs(resi_ymin)) < 500:
         ax2.set_yticks(np.arange(resi_ymin,resi_ymax, 100))
+    elif np.sum(resi_ymax + np.abs(resi_ymin)) >= 500:
+        ax2.set_yticks(np.arange(resi_ymin,resi_ymax, 200))
     else:
         ax2.set_yticks(np.arange(resi_ymin,resi_ymax, 50))
     
@@ -214,21 +216,21 @@ def single_setting_ecal(MCA:int, EG:int):
     ax.legend(fontsize=6)
     ax2.legend(fontsize=6)
     
-    plt.tight_layout()
+    fig.tight_layout()
     
     plt.savefig(f'./energy_calibration/ECAL_{MCA}_{EG}.png', transparent=False, dpi=DPI)
     plt.savefig(f'./energy_calibration/ECAL_{MCA}_{EG}.pdf', transparent=False, dpi=DPI)
     
-    plt.show()
+    # plt.show()
     
     return 10
 
-# single_setting_ecal(8192,2730)
-# single_setting_ecal(8192,3400)
-# single_setting_ecal(8192,3770)
-# single_setting_ecal(8192,4096)
-# single_setting_ecal(8192,5461)
-# single_setting_ecal(8192,10922)
+single_setting_ecal(8192,2730)
+single_setting_ecal(8192,3400)
+single_setting_ecal(8192,3770)
+single_setting_ecal(8192,4096)
+single_setting_ecal(8192,5461)
+single_setting_ecal(8192,10922)
 
 
 #TODO: Create second function with identical plot but for slides
