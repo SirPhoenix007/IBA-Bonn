@@ -5,12 +5,27 @@ lazy import argparse
 lazy import numpy as np
 lazy import matplotlib.pyplot as plt
 lazy import xraydb as xy
-
+lazy import time
+lazy import tqdm
+lazy from functools import wraps
 lazy from scipy import integrate
 lazy from scipy.special import expn
 # lazy import medeleev as md #TODO to be added in future, when medeleev is functional under 3.15
 
 lazy from M_coeff_matrix import load_coefficients
+
+#-----------------------------------------------------------------
+def timeit(func):
+    @wraps(func)
+    def wrapper(*args, **kwargs):
+        start = time.perf_counter()
+        result = func(*args, **kwargs)
+        elapsed = time.perf_counter() - start
+
+        print(f"{func.__name__} took {elapsed:.6f} seconds")
+        return result
+
+    return wrapper
 
 
 # ---------------------------------------------------------------- Konstanten
@@ -115,10 +130,10 @@ def form_factor_F_WL1(W:float, Q:float, n:float):
         t = np.sqrt(max(1/(n**2) - W, 0.0))
         first_term = 16 * Q / ((Q + t**2 + 1/4)**2 - t**2)**5
         # second_term = ((Q + (t - 1)**2)/(Q + (t + 1)**2))**(1/t)
-        third_term = Q**5 - (8/3 + 11/3*t**2)*Q**4 + (41/24 + 6*t**2 + 14/3*t**4)*Q**3
-        forth_term = (5/48 + 31/24*t**2 + 10/3*t**4 + 2*t**6)*Q**2
-        fifth_term = (47/3840 + 41/120*t**4 + 2/3*t**6 + 1/3*t**8)*Q
-        sixth_term = -(-(1/768) + 17/768*t**2 + 7/48*t**4 + 11/24*t**6 + 2/3*t**8 + 1/3*t**10)
+        third_term = Q**5 - (8/3 - 11/3*t**2)*Q**4 + (41/24 - 6*t**2 + 14/3*t**4)*Q**3
+        forth_term = (5/48 + 31/24*t**2 - 10/3*t**4 + 2*t**6)*Q**2
+        fifth_term = (47/3840 - 41/120*t**4 + 2/3*t**6 - 1/3*t**8)*Q
+        sixth_term = ((1/768) - 17/768*t**2 + 7/48*t**4 - 11/24*t**6 + 2/3*t**8 - 1/3*t**10)
         
         if t < 1e-7:
             exponent = -2.0 / (Q + 1/4)
@@ -146,9 +161,9 @@ def form_factor_F_WL2(W:float, Q:float, n:float):
     else:
         t = np.sqrt(max(1/(n**2) - W, 0.0))
         first_term = 16 * Q / ((Q + t**2 + 1/4)**2 - t**2)**5
-        third_term = 9/4*Q**4 - (3/4 - t**2)*Q**3 + (19/32 + 3/4*t**2 + 1/2*t**4)*Q**2
-        forth_term = (107/960 - 41/48*t**2 - 113/60*t**4 - t**6)*Q
-        fifth_term = (11/3072 - 3/64*t**2 - 7/32*t**4 - 5/12*t**6 - 1/4*t**8)
+        third_term = 9/4*Q**4 - (3/4 - t**2)*Q**3 + (19/32 + 3/4*t**2 - 1/2*t**4)*Q**2
+        forth_term = (107/960 - 41/48*t**2 + 113/60*t**4 - t**6)*Q
+        fifth_term = (11/3072 - 3/64*t**2 + 7/32*t**4 - 5/12*t**6 + 1/4*t**8)
         
         if t < 1e-7:
             exponent = -2.0 / (Q + 1/4)
@@ -172,13 +187,13 @@ def form_factor_F_WL3(W:float, Q:float, n:float):
         forth_term = (107/960 + 41/48*k**2 + 113/60*k**4 + k**6)*Q
         fifth_term = (11/3072 + 3/64*k**2 + 7/32*k**4 + 5/12*k**6 + 1/4*k**8)
         
-        return 1/3 * prefactor * first_term * second_term * (third_term + forth_term + fifth_term)
+        return 2/3 * prefactor * first_term * second_term * (third_term + forth_term + fifth_term)
     else:
         t = np.sqrt(max(1/(n**2) - W, 0.0))
         first_term = 16 * Q / ((Q + t**2 + 1/4)**2 - t**2)**5
         third_term = 9/4*Q**4 - (3/4 - t**2)*Q**3 + (19/32 + 3/4*t**2 + 1/2*t**4)*Q**2
-        forth_term = (107/960 - 41/48*t**2 - 113/60*t**4 - t**6)*Q
-        fifth_term = (11/3072 - 3/64*t**2 - 7/32*t**4 - 5/12*t**6 - 1/4*t**8)
+        forth_term = (107/960 - 41/48*t**2 + 113/60*t**4 - t**6)*Q
+        fifth_term = (11/3072 - 3/64*t**2 + 7/32*t**4 - 5/12*t**6 + 1/4*t**8)
         
         if t < 1e-7:
             exponent = -2.0 / (Q + 1/4)
@@ -213,10 +228,10 @@ def form_factor_F_WM1(W:float, Q:float, n:float):
         coefficient_term = 0
         for i in range(0,10):
             for j in range(0,10):
-                coefficient_term += C_3s[j,i] * (t**(2*i)) * Q**j
+                coefficient_term += C_3s[j,i] * ((-1)**i*t**(2*i)) * Q**j
             
         if t < 1e-7:
-            exponent = -4/3 / (Q + 1/(n**2)) # TODO: CHEK WIT PAPS
+            exponent = -4/3 / (Q + 1/(n**2)) # TODO: check against Cohen_1985
         else:
             exponent = np.log1p(-4/3 * t / (Q + (t + 1/3) ** 2)) / t
         
@@ -314,8 +329,7 @@ def sigma_PWBA(eta:float, theta:float, M:float, j2:float, Z1:int, Z2:int, n:int,
     return sigma_0 * f_PWBA / eta
 
 
-
-def test_PWBA(E1_MeV:float, M1_u:float, M2_u:float, Z1:int, Z2:int, n:int, edge:str):
+def test_PWBA_point(E1_MeV:float, M1_u:float, M2_u:float, Z1:int, Z2:int, n:int, edge:str):
     
     E1 = E1_MeV * 1e6
     M1 = M1_u * U_IN_EV
@@ -335,6 +349,30 @@ def test_PWBA(E1_MeV:float, M1_u:float, M2_u:float, Z1:int, Z2:int, n:int, edge:
     
     return sigma_PWBA(eta, theta, M, j2, Z1, Z2, n, edge)
 
+
+def test_PWBA_range(E1_MeV_range:list, M1_u:float, M2_u:float, Z1:int, Z2:int, n:int, edge:str):
+    
+    result_sigma = []
+    E1 = np.array(E1_MeV_range) * 1e6
+    M1 = M1_u * U_IN_EV
+    M2 = M2_u * U_IN_EV
+    
+    #TODO check j2 values
+    if edge in ['K', 'L1', 'M1', 'M2']:
+        j2 = 0.5
+    elif edge in ['L2', 'L3', 'M3', 'M4']:
+        j2 = 1.5
+    elif edge in ['M5']:
+        j2 = 2.5
+
+    eta = eta_s(E1, Z2, M1, M2, edge)
+    theta = theta_s(n, Z2, edge)
+    M = reduced_mass(M1, M2)
+    
+    for e in tqdm.tqdm(range(len(E1))):
+        result_sigma.append(sigma_PWBA(eta[e], theta, M, j2, Z1, Z2, n, edge))
+    return np.array(result_sigma)
+
 '''
 sigma_ECPSSR = correction_term * sigma_PWBA(msR*eta, zeta_s*theta,...)
 '''
@@ -352,9 +390,13 @@ if __name__ == "__main__":
     # print(f'L3-shell: {result:12.3f} b')
     # result = test_PWBA(E1_MeV=1.0, M1_u=1.007276, M2_u=241.057, Z1=1, Z2=95, n=3, edge='M1')
     # print(f'M1-shell: {result:12.3f} b')
+    
+    test_PWBA_range(E1_MeV_range=np.linspace(0.2,2,40), M1_u=1.007276, M2_u=xy.atomic_mass('Si'), Z1=1, Z2=xy.atomic_number('Si'), n=3, edge='M1')
+    
     for E in np.linspace(0.2,2,40):
-        result = test_PWBA(E1_MeV=E, M1_u=1.007276, M2_u=xy.atomic_mass('K'), Z1=1, Z2=xy.atomic_number('K'), n=3, edge='M1')
+        result = test_PWBA_point(E1_MeV=E, M1_u=1.007276, M2_u=xy.atomic_mass('Si'), Z1=1, Z2=xy.atomic_number('Si'), n=3, edge='M1')
         print(f' {E} MeV: {result:12.3f} b')
+    
     
     # print('ALPHA:')
     
