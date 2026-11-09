@@ -213,7 +213,7 @@ def form_factor_F_WM1(W:float, Q:float, n:float):
         coefficient_term = 0
         for i in range(0,10):
             for j in range(0,10):
-                coefficient_term = C_3s[j,i] * (-t**(2*i)) * Q**j
+                coefficient_term += C_3s[j,i] * (-t**(2*i)) * Q**j
             
         if t < 1e-7:
             exponent = -4/3 / (Q + 1/(n**2)) # TODO: CHEK WIT PAPS
@@ -322,7 +322,7 @@ def test_PWBA(E1_MeV:float, M1_u:float, M2_u:float, Z1:int, Z2:int, n:int, edge:
     M2 = M2_u * U_IN_EV
     
     #TODO check j2 values
-    if edge in ['K', 'L1', 'L2', 'M1', 'M2']:
+    if edge in ['K', 'L1', 'M1', 'M2']:
         j2 = 0.5
     elif edge in ['L2', 'L3', 'M3', 'M4']:
         j2 = 1.5
