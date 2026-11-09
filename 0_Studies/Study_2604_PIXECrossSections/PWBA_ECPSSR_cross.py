@@ -118,7 +118,7 @@ def form_factor_F_WL1(W:float, Q:float, n:float):
         
         prefactor = 16 / (1 - np.exp(-2 * np.pi / k))
         first_term = Q / ((Q - k**2 + 1/4)**2 + k**2)**5
-        second_term = np.exp(-(2 / k) * np.arctan2(2 * k, Q - k**2 + 1/4))
+        second_term = np.exp(-(2 / k) * np.arctan2(k, Q - k**2 + 1/4))
         third_term = Q**5 - (8/3 + 11/3*k**2)*Q**4 + (41/24 + 6*k**2 + 14/3*k**4)*Q**3
         fourth_term = (5/48 - 31/24*k**2 - 10/3*k**4 - 2*k**6)*Q**2
         fifth_term = (47/3840 - 41/120*k**4 - 2/3*k**6 - 1/3*k**8)*Q
@@ -152,7 +152,7 @@ def form_factor_F_WL2(W:float, Q:float, n:float):
         
         prefactor = 16 / (1 - np.exp(-2 * np.pi / k))
         first_term = Q / ((Q - k**2 + 1/4)**2 + k**2)**5
-        second_term = np.exp(-(2 / k) * np.arctan2(2 * k, Q - k**2 + 1/4))
+        second_term = np.exp(-(2 / k) * np.arctan2(k, Q - k**2 + 1/4))
         third_term = 9/4*Q**4 - (3/4 + k**2)*Q**3 + (19/32 - 3/4*k**2 - 1/2*k**4)*Q**2
         forth_term = (107/960 + 41/48*k**2 + 113/60*k**4 + k**6)*Q
         fifth_term = (11/3072 + 3/64*k**2 + 7/32*k**4 + 5/12*k**6 + 1/4*k**8)
@@ -182,7 +182,7 @@ def form_factor_F_WL3(W:float, Q:float, n:float):
         
         prefactor = 16 / (1 - np.exp(-2 * np.pi / k))
         first_term = Q / ((Q - k**2 + 1/4)**2 + k**2)**5
-        second_term = np.exp(-(2 / k) * np.arctan2(2 * k, Q - k**2 + 1/4))
+        second_term = np.exp(-(2 / k) * np.arctan2(k, Q - k**2 + 1/4))
         third_term = 9/4*Q**4 - (3/4 + k**2)*Q**3 + (19/32 - 3/4*k**2 - 1/2*k**4)*Q**2
         forth_term = (107/960 + 41/48*k**2 + 113/60*k**4 + k**6)*Q
         fifth_term = (11/3072 + 3/64*k**2 + 7/32*k**4 + 5/12*k**6 + 1/4*k**8)
@@ -191,7 +191,7 @@ def form_factor_F_WL3(W:float, Q:float, n:float):
     else:
         t = np.sqrt(max(1/(n**2) - W, 0.0))
         first_term = 16 * Q / ((Q + t**2 + 1/4)**2 - t**2)**5
-        third_term = 9/4*Q**4 - (3/4 - t**2)*Q**3 + (19/32 + 3/4*t**2 + 1/2*t**4)*Q**2
+        third_term = 9/4*Q**4 - (3/4 - t**2)*Q**3 + (19/32 + 3/4*t**2 - 1/2*t**4)*Q**2
         forth_term = (107/960 - 41/48*t**2 + 113/60*t**4 - t**6)*Q
         fifth_term = (11/3072 - 3/64*t**2 + 7/32*t**4 - 5/12*t**6 + 1/4*t**8)
         
@@ -204,31 +204,35 @@ def form_factor_F_WL3(W:float, Q:float, n:float):
 
 #===============M-Shell===============#
 
-def form_factor_F_WM1(W:float, Q:float, n:float):
+def form_factor_F_WM1(W:float, Q:float, n:float, **kwargs):
     '''
     |F_W,M'(Q)|^2 ------- Choi 1973a
     '''
     
-    C_3s = load_coefficients(M_='3s')
+    C_3s, pow_3s = kwargs['C_3s'], kwargs['pow_3s']
     
     if W > ((1/(n**2)) + 1e-12):
         k = np.sqrt(W - 1.0/(n**2))
         
-        prefactor = 128 / (27 * (1 - np.exp(-2 * np.pi / k)))
+        prefactor = 128*Q / (27 * (1 - np.exp(-2 * np.pi / k)))
         second_term = np.exp(-(2 / k) * np.arctan2(2/3 * k, Q - k**2 + 1/9))
         third_term = ((Q - k**2 + 1/9)**2 + 4/9*k**2)**7
-        coefficient_term = 0
-        for i in range(0,10):
-            for j in range(0,10):
-                coefficient_term += C_3s[j,i] * k**(2*i) * Q**j
+        # coefficient_term = 0
+        # for i in range(0,10):
+        #     for j in range(0,10):
+        #         coefficient_term += C_3s[j,i] * k**(2*i) * Q**j
+        C_3s_k = C_3s @ ((k**2) ** pow_3s)
+        coefficient_term = np.polyval(C_3s_k[::-1], Q)
         return (prefactor * second_term / third_term) * coefficient_term
     else:
         t = np.sqrt(max(1/(n**2) - W, 0.0))
-        third_term = 128 / (27*((Q + t**2 + 1/9)**2 - 4/9*t**2)**7)
-        coefficient_term = 0
-        for i in range(0,10):
-            for j in range(0,10):
-                coefficient_term += C_3s[j,i] * ((-1)**i*t**(2*i)) * Q**j
+        third_term = 128*Q / (27*((Q + t**2 + 1/9)**2 - 4/9*t**2)**7)
+        # coefficient_term = 0
+        # for i in range(0,10):
+        #     for j in range(0,10):
+        #         coefficient_term += C_3s[j,i] * ((-1)**i*t**(2*i)) * Q**j
+        C_3s_t = C_3s @ ((-t**2) ** pow_3s)
+        coefficient_term = np.polyval(C_3s_t[::-1], Q)
             
         if t < 1e-7:
             exponent = -4/3 / (Q + 1/(n**2)) # TODO: check against Cohen_1985
@@ -252,43 +256,18 @@ def Q_limits(W:float, eta:float, M:float):
     Qmin = prefactor * (1 - root_term)**2
     Qmax = prefactor * (1 + root_term)**2
     return [Qmin, Qmax]
+        
+def dQ_integration_form_factor(W:float, eta:float, M:float, n:int, ff, GL_points, GL_weights, **kwargs):
     
-def dQ_integration_form_factor(W:float, eta:float, M:float, n:int, edge:str):
-      
     Q_lim = np.array(Q_limits(W, eta, M))
+    log_lim = np.log(Q_lim)
+    if log_lim[1] <= log_lim[0]:
+        return 0.0
+    Q = np.exp(0.5*(log_lim[1] - log_lim[0])*GL_points + 0.5*(log_lim[1] + log_lim[0]))
     
-    if edge == 'K':
-        f = lambda x: form_factor_F_WK(W, np.exp(x), n) / np.exp(x)
-        log_lim = np.log(Q_lim)
-        pts = [p for p in (0.0,) if log_lim[0] < p < log_lim[1]]
-        result, _ = integrate.quad(f, log_lim[0], log_lim[1], points=pts or None, limit=200, epsabs=0.0, epsrel=1e-8)
-        return result
-    elif edge == 'L1':
-        f = lambda x: form_factor_F_WL1(W, np.exp(x), n) / np.exp(x)
-        log_lim = np.log(Q_lim)
-        pts = [p for p in (0.0,) if log_lim[0] < p < log_lim[1]]
-        result, _ = integrate.quad(f, log_lim[0], log_lim[1], points=pts or None, limit=200, epsabs=0.0, epsrel=1e-8)
-        return result
-    elif edge == 'L2':
-        f = lambda x: form_factor_F_WL2(W, np.exp(x), n) / np.exp(x)
-        log_lim = np.log(Q_lim)
-        pts = [p for p in (0.0,) if log_lim[0] < p < log_lim[1]]
-        result, _ = integrate.quad(f, log_lim[0], log_lim[1], points=pts or None, limit=200, epsabs=0.0, epsrel=1e-8)
-        return result
-    elif edge == 'L3':
-        f = lambda x: form_factor_F_WL3(W, np.exp(x), n) / np.exp(x)
-        log_lim = np.log(Q_lim)
-        pts = [p for p in (0.0,) if log_lim[0] < p < log_lim[1]]
-        result, _ = integrate.quad(f, log_lim[0], log_lim[1], points=pts or None, limit=200, epsabs=0.0, epsrel=1e-8)
-        return result
-    elif edge == 'M1':
-        f = lambda x: form_factor_F_WM1(W, np.exp(x), n) / np.exp(x)
-        log_lim = np.log(Q_lim)
-        pts = [p for p in (0.0,) if log_lim[0] < p < log_lim[1]]
-        result, _ = integrate.quad(f, log_lim[0], log_lim[1], points=pts or None, limit=200, epsabs=0.0, epsrel=1e-8)
-        return result
+    return 0.5*(log_lim[1] - log_lim[0]) * np.sum(GL_weights * ff(W, Q, n, **kwargs) / Q)
 
-def dW_integration_form_factor(eta:float, theta:float, M:float, n:int, edge:str):
+def dW_integration_form_factor(eta:float, theta:float, M:float, n:int, ff, GL_points, GL_weights, **kwargs):
     
     Wmin = theta / n**2
     Wmax = M * eta / ME_EV
@@ -305,72 +284,77 @@ def dW_integration_form_factor(eta:float, theta:float, M:float, n:int, edge:str)
             steps.append(step_value)
             step_value *= 2.0
         steps.append(kmax)
-        h = lambda k: 2.0 * k * dQ_integration_form_factor(1.0/(n**2) + k**2, eta, M, n, edge)
+        h = lambda k: 2.0 * k * dQ_integration_form_factor(1.0/(n**2) + k**2, eta, M, n, ff, GL_points, GL_weights, **kwargs)
     
         for lo, hi in zip(steps[:-1], steps[1:]):
-            int_value, _ = integrate.quad(h, lo, hi, limit=400, epsabs=0.0, epsrel=1e-7)
+            int_value, _ = integrate.quad(h, lo, hi, limit=80, epsabs=0.0, epsrel=1e-4)
             total += int_value
     
     # Bereich W < 1 :  W = 1 - t^2, dW = 2 t dt
     if Wmin < (1/(n**2)):
         w_hi = min((1/(n**2)), Wmax)
         t_lo, t_hi = np.sqrt((1/(n**2)) - w_hi), np.sqrt((1/(n**2)) - Wmin)
-        g = lambda t: 2.0 * t * dQ_integration_form_factor((1/(n**2)) - t**2, eta, M, n, edge)
-        int_value, _ = integrate.quad(g, t_lo, t_hi, limit=400, epsabs=0.0, epsrel=1e-7)
+        g = lambda t: 2.0 * t * dQ_integration_form_factor((1/(n**2)) - t**2, eta, M, n, ff, GL_points, GL_weights,**kwargs)
+        int_value, _ = integrate.quad(g, t_lo, t_hi, limit=80, epsabs=0.0, epsrel=1e-4)
         total += int_value
     
     return total
 
 def sigma_PWBA(eta:float, theta:float, M:float, j2:float, Z1:int, Z2:int, n:int, edge:str):
     
+    GL_points, GL_weights = np.polynomial.legendre.leggauss(48)
+    FORM_FACTORS = {'K': form_factor_F_WK,
+                        'L1': form_factor_F_WL1,
+                        'L2': form_factor_F_WL2,
+                        'L3': form_factor_F_WL3,
+                        'M1': form_factor_F_WM1}
+    
+    ff = FORM_FACTORS[edge]
+    
     sigma_0 = sigma_0s(j2, Z1, Z2, edge)
-    f_PWBA = dW_integration_form_factor(eta, theta, M, n, edge)
+    
+    if edge == 'M1':
+        C_3s = load_coefficients(M_='3s')
+        pow_3s = np.arange(10)
+        f_PWBA = dW_integration_form_factor(eta, theta, M, n, ff, GL_points, GL_weights, **{'C_3s':C_3s, 'pow_3s':pow_3s})
+    else:
+        f_PWBA = dW_integration_form_factor(eta, theta, M, n, ff, GL_points, GL_weights)
     
     return sigma_0 * f_PWBA / eta
 
 
-def test_PWBA_point(E1_MeV:float, M1_u:float, M2_u:float, Z1:int, Z2:int, n:int, edge:str):
+def test_PWBA_point(E1_MeV:float, M1_u:float, M2_u:float, Z1:int, Z2:int, edge:str):
     
     E1 = E1_MeV * 1e6
     M1 = M1_u * U_IN_EV
     M2 = M2_u * U_IN_EV
     
-    #TODO check j2 values
-    if edge in ['K', 'L1', 'M1', 'M2']:
-        j2 = 0.5
-    elif edge in ['L2', 'L3', 'M3', 'M4']:
-        j2 = 1.5
-    elif edge in ['M5']:
-        j2 = 2.5
+    EDGE_N = {'K': 1, 'L1': 2, 'L2': 2, 'L3': 2, 'M1': 3}
+    EDGE_J2 = {'K': 0.5, 'L1': 0.5, 'L2': 1.5, 'L3': 1.5, 'M1': 0.5, 'M2': 0.5, 'M3': 1.5, 'M4': 1.5, 'M5': 2.5}
 
     eta = eta_s(E1, Z2, M1, M2, edge)
-    theta = theta_s(n, Z2, edge)
+    theta = theta_s(EDGE_N[edge], Z2, edge)
     M = reduced_mass(M1, M2)
     
-    return sigma_PWBA(eta, theta, M, j2, Z1, Z2, n, edge)
+    return sigma_PWBA(eta, theta, M, EDGE_J2[edge], Z1, Z2, EDGE_N[edge], edge)
 
 
-def test_PWBA_range(E1_MeV_range:list, M1_u:float, M2_u:float, Z1:int, Z2:int, n:int, edge:str):
+def test_PWBA_range(E1_MeV_range:list, M1_u:float, M2_u:float, Z1:int, Z2:int, edge:str):
     
     result_sigma = []
     E1 = np.array(E1_MeV_range) * 1e6
     M1 = M1_u * U_IN_EV
     M2 = M2_u * U_IN_EV
     
-    #TODO check j2 values
-    if edge in ['K', 'L1', 'M1', 'M2']:
-        j2 = 0.5
-    elif edge in ['L2', 'L3', 'M3', 'M4']:
-        j2 = 1.5
-    elif edge in ['M5']:
-        j2 = 2.5
+    EDGE_N = {'K': 1, 'L1': 2, 'L2': 2, 'L3': 2, 'M1': 3}
+    EDGE_J2 = {'K': 0.5, 'L1': 0.5, 'L2': 1.5, 'L3': 1.5, 'M1': 0.5, 'M2': 0.5, 'M3': 1.5, 'M4': 1.5, 'M5': 2.5}
 
     eta = eta_s(E1, Z2, M1, M2, edge)
-    theta = theta_s(n, Z2, edge)
+    theta = theta_s(EDGE_N[edge], Z2, edge)
     M = reduced_mass(M1, M2)
     
     for e in tqdm.tqdm(range(len(E1))):
-        result_sigma.append(sigma_PWBA(eta[e], theta, M, j2, Z1, Z2, n, edge))
+        result_sigma.append(sigma_PWBA(eta[e], theta, M, EDGE_J2[edge], Z1, Z2, EDGE_N[edge], edge))
     return np.array(result_sigma)
 
 '''
@@ -391,7 +375,8 @@ if __name__ == "__main__":
     # result = test_PWBA(E1_MeV=1.0, M1_u=1.007276, M2_u=241.057, Z1=1, Z2=95, n=3, edge='M1')
     # print(f'M1-shell: {result:12.3f} b')
     
-    test_PWBA_range(E1_MeV_range=np.linspace(0.2,2,40), M1_u=1.007276, M2_u=xy.atomic_mass('Si'), Z1=1, Z2=xy.atomic_number('Si'), n=3, edge='M1')
+    # print(test_PWBA_point(E1_MeV=1, M1_u=1.007276, M2_u=xy.atomic_mass('Si'), Z1=1, Z2=xy.atomic_number('Si'), n=2, edge='L1'))
+    # print(test_PWBA_point(E1_MeV=10, M1_u=1.007276, M2_u=xy.atomic_mass('Si'), Z1=1, Z2=xy.atomic_number('Si'), n=3, edge='M1'))
     
     for E in np.linspace(0.2,2,40):
         result = test_PWBA_point(E1_MeV=E, M1_u=1.007276, M2_u=xy.atomic_mass('Si'), Z1=1, Z2=xy.atomic_number('Si'), n=3, edge='M1')
