@@ -103,7 +103,7 @@ def toy_model(N:int, snr:int, baseline_type:str, plot_flag:bool, D:int=0):
     # print(f'SNR: {snr:.3f}')
     
     if (plot_flag == True):
-        plt.figure(figsize=(20,4), dpi=250)
+        plt.figure(figsize=(10,2), dpi=200)
         plt.plot(x, peak_data, zorder=4, color='black', label='pure data')
         plt.plot(x, peak_data + noise + baseline, zorder=3, color='firebrick', label='full synthetic data')
         # plt.plot(x, peak_data + baseline + 10000)

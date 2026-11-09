@@ -156,7 +156,7 @@ def LLS_compression_report(test_data):
 
 
 if __name__ == "__main__":
-    test_data = generate_toymodel.toy_model(N=12, snr=25, baseline_type='lin', plot_flag=True)
+    test_data = generate_toymodel.toy_model(N=12, snr=30, baseline_type='lin', plot_flag=True)
     eval_result = pls_methods.evaluate_baseline(test_data)
     
     plot_uncompressed_PLS(test_data, eval_result)
