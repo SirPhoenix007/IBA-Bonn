@@ -213,7 +213,7 @@ def form_factor_F_WM1(W:float, Q:float, n:float):
         coefficient_term = 0
         for i in range(0,10):
             for j in range(0,10):
-                coefficient_term += C_3s[j,i] * (-t**(2*i)) * Q**j
+                coefficient_term += C_3s[j,i] * (t**(2*i)) * Q**j
             
         if t < 1e-7:
             exponent = -4/3 / (Q + 1/(n**2)) # TODO: CHEK WIT PAPS
@@ -341,17 +341,20 @@ sigma_ECPSSR = correction_term * sigma_PWBA(msR*eta, zeta_s*theta,...)
 
 
 if __name__ == "__main__":
-    print('PROTON ON AMERICIUM')
-    result = test_PWBA(E1_MeV=1.0, M1_u=1.007276, M2_u=241.057, Z1=1, Z2=95, n=1, edge='K')
-    print(f'K-shell: {result:12.3f} b')
-    result = test_PWBA(E1_MeV=1.0, M1_u=1.007276, M2_u=241.057, Z1=1, Z2=95, n=2, edge='L1')
-    print(f'L1-shell: {result:12.3f} b')
-    result = test_PWBA(E1_MeV=1.0, M1_u=1.007276, M2_u=241.057, Z1=1, Z2=95, n=2, edge='L2')
-    print(f'L2-shell: {result:12.3f} b')
-    result = test_PWBA(E1_MeV=1.0, M1_u=1.007276, M2_u=241.057, Z1=1, Z2=95, n=2, edge='L3')
-    print(f'L3-shell: {result:12.3f} b')
-    result = test_PWBA(E1_MeV=1.0, M1_u=1.007276, M2_u=241.057, Z1=1, Z2=95, n=2, edge='M1')
-    print(f'M1-shell: {result:12.3f} b')
+    # print('PROTON ON AMERICIUM')
+    # result = test_PWBA(E1_MeV=1.0, M1_u=1.007276, M2_u=241.057, Z1=1, Z2=95, n=1, edge='K')
+    # print(f'K-shell: {result:12.3f} b')
+    # result = test_PWBA(E1_MeV=1.0, M1_u=1.007276, M2_u=241.057, Z1=1, Z2=95, n=2, edge='L1')
+    # print(f'L1-shell: {result:12.3f} b')
+    # result = test_PWBA(E1_MeV=1.0, M1_u=1.007276, M2_u=241.057, Z1=1, Z2=95, n=2, edge='L2')
+    # print(f'L2-shell: {result:12.3f} b')
+    # result = test_PWBA(E1_MeV=1.0, M1_u=1.007276, M2_u=241.057, Z1=1, Z2=95, n=2, edge='L3')
+    # print(f'L3-shell: {result:12.3f} b')
+    # result = test_PWBA(E1_MeV=1.0, M1_u=1.007276, M2_u=241.057, Z1=1, Z2=95, n=3, edge='M1')
+    # print(f'M1-shell: {result:12.3f} b')
+    for E in np.linspace(0.2,2,40):
+        result = test_PWBA(E1_MeV=E, M1_u=1.007276, M2_u=xy.atomic_mass('K'), Z1=1, Z2=xy.atomic_number('K'), n=3, edge='M1')
+        print(f' {E} MeV: {result:12.3f} b')
     
     # print('ALPHA:')
     
