@@ -204,9 +204,9 @@ def form_factor_F_WL3(W:float, Q:float, n:float):
 
 #===============M-Shell===============#
 
-def form_factor_F_WM1(W:float, Q:float, n:float, **kwargs):
+def form_factor_F_WMs(W:float, Q:float, n:float, **kwargs):
     '''
-    |F_W,M'(Q)|^2 ------- Choi 1973a
+    |F_W,M'_3s(Q)|^2 ------- Choi 1973a
     '''
     
     C_3s, pow_3s = kwargs['C_3s'], kwargs['pow_3s']
@@ -240,6 +240,81 @@ def form_factor_F_WM1(W:float, Q:float, n:float, **kwargs):
             exponent = np.log1p(-4/3 * t / (Q + (t + 1/3) ** 2)) / t
         
         return third_term * np.exp(exponent) * coefficient_term
+
+def form_factor_F_WM2(W:float, Q:float, n:float, **kwargs):
+    '''
+    |F_W,M'_3p(Q)|^2 ------- Choi 1973a
+    '''
+    
+    C_3p, pow_3p = kwargs['C_3p'], kwargs['pow_3p']
+    
+    if W > ((1/(n**2)) + 1e-12):
+        k = np.sqrt(W - 1.0/(n**2))
+        
+        prefactor = 128*Q / (27 * (1 - np.exp(-2 * np.pi / k)))
+        second_term = np.exp(-(2 / k) * np.arctan2(2/3 * k, Q - k**2 + 1/9))
+        third_term = ((Q - k**2 + 1/9)**2 + 4/9*k**2)**7
+        # coefficient_term = 0
+        # for i in range(0,10):
+        #     for j in range(0,10):
+        #         coefficient_term += C_3s[j,i] * k**(2*i) * Q**j
+        C_3p_k = C_3p @ ((k**2) ** pow_3p)
+        coefficient_term = np.polyval(C_3p_k[::-1], Q)
+        return (prefactor * second_term / third_term) * coefficient_term
+    else:
+        t = np.sqrt(max(1/(n**2) - W, 0.0))
+        third_term = 128*Q / (27*((Q + t**2 + 1/9)**2 - 4/9*t**2)**7)
+        # coefficient_term = 0
+        # for i in range(0,10):
+        #     for j in range(0,10):
+        #         coefficient_term += C_3s[j,i] * ((-1)**i*t**(2*i)) * Q**j
+        C_3p_t = C_3p @ ((-t**2) ** pow_3p)
+        coefficient_term = np.polyval(C_3p_t[::-1], Q)
+            
+        if t < 1e-7:
+            exponent = -4/3 / (Q + 1/(n**2)) # TODO: check against Cohen_1985
+        else:
+            exponent = np.log1p(-4/3 * t / (Q + (t + 1/3) ** 2)) / t
+        
+        return 1/3* third_term * np.exp(exponent) * coefficient_term
+
+def form_factor_F_WM3(W:float, Q:float, n:float, **kwargs):
+    '''
+    |F_W,M'_3p(Q)|^2 ------- Choi 1973a
+    '''
+    
+    C_3p, pow_3p = kwargs['C_3p'], kwargs['pow_3p']
+    
+    if W > ((1/(n**2)) + 1e-12):
+        k = np.sqrt(W - 1.0/(n**2))
+        
+        prefactor = 128*Q / (27 * (1 - np.exp(-2 * np.pi / k)))
+        second_term = np.exp(-(2 / k) * np.arctan2(2/3 * k, Q - k**2 + 1/9))
+        third_term = ((Q - k**2 + 1/9)**2 + 4/9*k**2)**7
+        # coefficient_term = 0
+        # for i in range(0,10):
+        #     for j in range(0,10):
+        #         coefficient_term += C_3s[j,i] * k**(2*i) * Q**j
+        C_3p_k = C_3p @ ((k**2) ** pow_3p)
+        coefficient_term = np.polyval(C_3p_k[::-1], Q)
+        return (prefactor * second_term / third_term) * coefficient_term
+    else:
+        t = np.sqrt(max(1/(n**2) - W, 0.0))
+        third_term = 128*Q / (27*((Q + t**2 + 1/9)**2 - 4/9*t**2)**7)
+        # coefficient_term = 0
+        # for i in range(0,10):
+        #     for j in range(0,10):
+        #         coefficient_term += C_3s[j,i] * ((-1)**i*t**(2*i)) * Q**j
+        C_3p_t = C_3p @ ((-t**2) ** pow_3p)
+        coefficient_term = np.polyval(C_3p_t[::-1], Q)
+            
+        if t < 1e-7:
+            exponent = -4/3 / (Q + 1/(n**2)) # TODO: check against Cohen_1985
+        else:
+            exponent = np.log1p(-4/3 * t / (Q + (t + 1/3) ** 2)) / t
+        
+        return 2/3 * third_term * np.exp(exponent) * coefficient_term
+    
 #===============FORM FACTORS===============#
 
 def W_limits(eta:float, theta:float, M:float, n:int):
@@ -307,7 +382,9 @@ def sigma_PWBA(eta:float, theta:float, M:float, j2:float, Z1:int, Z2:int, n:int,
                         'L1': form_factor_F_WL1,
                         'L2': form_factor_F_WL2,
                         'L3': form_factor_F_WL3,
-                        'M1': form_factor_F_WM1}
+                        'M1': form_factor_F_WMs,
+                        'M2': form_factor_F_WM2,
+                        'M3': form_factor_F_WM3,}
     
     ff = FORM_FACTORS[edge]
     
@@ -317,6 +394,10 @@ def sigma_PWBA(eta:float, theta:float, M:float, j2:float, Z1:int, Z2:int, n:int,
         C_3s = load_coefficients(M_='3s')
         pow_3s = np.arange(10)
         f_PWBA = dW_integration_form_factor(eta, theta, M, n, ff, GL_points, GL_weights, **{'C_3s':C_3s, 'pow_3s':pow_3s})
+    elif edge in ['M2', 'M3']:
+        C_3p = load_coefficients(M_='3p')
+        pow_3p = np.arange(9)
+        f_PWBA = dW_integration_form_factor(eta, theta, M, n, ff, GL_points, GL_weights, **{'C_3p':C_3p, 'pow_3p':pow_3p})
     else:
         f_PWBA = dW_integration_form_factor(eta, theta, M, n, ff, GL_points, GL_weights)
     
@@ -329,7 +410,7 @@ def test_PWBA_point(E1_MeV:float, M1_u:float, M2_u:float, Z1:int, Z2:int, edge:s
     M1 = M1_u * U_IN_EV
     M2 = M2_u * U_IN_EV
     
-    EDGE_N = {'K': 1, 'L1': 2, 'L2': 2, 'L3': 2, 'M1': 3}
+    EDGE_N = {'K': 1, 'L1': 2, 'L2': 2, 'L3': 2, 'M1': 3, 'M2': 3, 'M3': 3, 'M4': 3, 'M5': 3}
     EDGE_J2 = {'K': 0.5, 'L1': 0.5, 'L2': 1.5, 'L3': 1.5, 'M1': 0.5, 'M2': 0.5, 'M3': 1.5, 'M4': 1.5, 'M5': 2.5}
 
     eta = eta_s(E1, Z2, M1, M2, edge)
@@ -346,7 +427,7 @@ def test_PWBA_range(E1_MeV_range:list, M1_u:float, M2_u:float, Z1:int, Z2:int, e
     M1 = M1_u * U_IN_EV
     M2 = M2_u * U_IN_EV
     
-    EDGE_N = {'K': 1, 'L1': 2, 'L2': 2, 'L3': 2, 'M1': 3}
+    EDGE_N = {'K': 1, 'L1': 2, 'L2': 2, 'L3': 2, 'M1': 3, 'M2': 3, 'M3': 3, 'M4': 3, 'M5': 3}
     EDGE_J2 = {'K': 0.5, 'L1': 0.5, 'L2': 1.5, 'L3': 1.5, 'M1': 0.5, 'M2': 0.5, 'M3': 1.5, 'M4': 1.5, 'M5': 2.5}
 
     eta = eta_s(E1, Z2, M1, M2, edge)
