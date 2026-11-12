@@ -315,8 +315,70 @@ def form_factor_F_WM3(W:float, Q:float, n:float, **kwargs):
         
         return 2/3 * third_term * np.exp(exponent) * coefficient_term
     
-#===============FORM FACTORS===============#
+#========^=======FORM FACTORS=======^========#
 
+#========v=======ECPSSR CORRECTIONS======v=========#
+def xi_s(eta, theta, n): #
+    return 2 * n * np.sqrt(eta) / theta
+
+def g_correction_function(xi, edge):
+    denominator = (1 + xi)
+    if edge == 'K':
+        return (1 + 9*xi + 31*xi**2 + 98*xi**3 + 12*xi**4 + 25*xi**5 + 4.2*xi**6 + 0.515*xi**7)/(denominator**9)
+    elif edge == 'L1':
+        return (1 + 9*xi + 31*xi**2 + 49*xi**3 + 162*xi**4 + 63*xi**5 + 18*xi**6 + 1.97*xi**7)/(denominator**9)
+    elif edge == 'L2':
+        return (1 + 10*xi + 45*xi**2 + 102*xi**3 + 331*xi**4 + 6.7*xi**5 + 58*xi**6 + 7.8*xi**7 + 0.888*xi**8)/(denominator**10)
+
+def I_correction_function(x):
+    if x <= 0.0:
+        return float("inf")
+    elif 0 < x <= 0.035:
+        return 0.75*np.pi*(np.log(x**(-2)) - 1)
+    elif 0.0035 < x <= 3.1:
+        return np.exp(-2*x)*(0.031 + np.sqrt(0.210*x) + 0.005*x - (0.069*x)**(3/2) + 0.324*x**2)**(-1)
+    elif 3.1 < x <= 11.0:
+        return np.exp(-2*x)/(x**1.6)
+    else:
+        return 0.0
+    
+def h_correction_function(xi, theta, n, edge):
+    C_S = {'K':1.5, 'L1':1.5, 'L2':1.2, 'L3':1.2}
+    return (2*n/(theta*xi**3) * I_correction_function(C_S[edge] * n / xi))
+
+def zeta_s(theta, xi, n, Z1, Z2, edge):
+    '''
+    BINDING-POLARIZATION FACTOR zeta(xi)
+    '''
+    factor1 = (2*Z1/Z2 * theta)
+    g_value = g_correction_function(xi, edge)
+    h_value = h_correction_function(xi, theta, n, edge)
+    return 1 + factor1*(g_value - h_value)
+
+def Coulomb_defl(E1, E_edge, M1, Z1, Z2, zeta, edge):
+    
+    l2 = {'K': 0, 'L1': 0, 'L2': 1, 'L3': 1}
+    
+    d = Z1 * Z2 * E2_EV_ANG / (2.0 * E1)                 # Angstrom
+    v1_over_v0 = np.sqrt(E1 / M1 / RYDBERG_EV)              # v1/v0, v0 = e^2/hbar
+    q0 = E_edge / (E2_EV_ANG * v1_over_v0)                # 1/Angstrom
+    arg0 = np.pi * d * q0 * zeta
+    nu = 10 + 2*l2[edge]
+    return (9 + 2*l2[edge]) * expn(nu, arg0)
+
+def rel_correction(xi, n, Z2, edge):
+    Z2s = slater_screening(Z2, edge)
+    
+    if edge in ['K', 'L1']:
+        ys = 0.4*(Z2s/137)**2 / (n*xi)
+    if edge in ['L2', 'L3']:
+        ys = 0.15*(Z2s/137)**2 / xi
+        
+    return np.sqrt(1 + 1.1*ys**2) + ys
+
+#========^=======ECPSSR CORRECTIONS======^=========#
+
+#========v=======INTEGRATION (Q,W)=======v========#
 def W_limits(eta:float, theta:float, M:float, n:int):
     return [theta/(n**2), M * eta / ME_EV] # Wmin, Wmax
 
@@ -374,7 +436,9 @@ def dW_integration_form_factor(eta:float, theta:float, M:float, n:int, ff, GL_po
         total += int_value
     
     return total
+#========^=======INTEGRATION (Q,W)=======^========#
 
+#========v=======CROSS SECTIONS=======v========#
 def sigma_PWBA(eta:float, theta:float, M:float, j2:float, Z1:int, Z2:int, n:int, edge:str):
     
     GL_points, GL_weights = np.polynomial.legendre.leggauss(48)
@@ -403,6 +467,53 @@ def sigma_PWBA(eta:float, theta:float, M:float, j2:float, Z1:int, Z2:int, n:int,
     
     return sigma_0 * f_PWBA / eta
 
+def sigma_PSS(zeta:float, xi:float, eta:float, theta:float, M:float, j2:float, Z1:int, Z2:int, n:int, edge:str):
+    
+    theta_PSS = zeta*theta
+    
+    return sigma_PWBA(eta, theta_PSS, M, j2, Z1, Z2, n, edge)
+
+def sigma_CPSS(zeta:float, xi:float, eta:float, theta:float, M:float, j2:float, E1, M1:float, Z1:int, Z2:int, n:int, edge:str):
+    
+    E_edge = xy.xray_edge(element=Z2, edge=edge).energy
+    C_correction = Coulomb_defl(E1, E_edge, M1, Z1, Z2, zeta, edge)
+    
+    return C_correction*sigma_PSS(zeta, xi, eta, theta, M, j2, Z1, Z2, n, edge)
+
+def sigma_CPSSR(zeta:float, xi:float, eta:float, theta:float, M:float, j2:float, E1, M1:float, Z1:int, Z2:int, n:int, edge:str):
+    
+    m_R = rel_correction(xi, n, Z2, edge)
+    eta_mR = m_R * eta
+    
+    return sigma_CPSS(zeta, xi, eta_mR, theta, M, j2, E1, M1, Z1, Z2, n, edge)
+    
+
+
+#========^=======CROSS SECTIONS=======^========#
+
+#========v=======PRODUCTION OF SIM. DATA=======v========#
+def test_corr_point(E1_MeV:float, M1_u:float, M2_u:float, Z1:int, Z2:int, edge:str):
+    E1 = E1_MeV * 1e6
+    M1 = M1_u * U_IN_EV
+    M2 = M2_u * U_IN_EV
+    
+    EDGE_N = {'K': 1, 'L1': 2, 'L2': 2, 'L3': 2, 'M1': 3, 'M2': 3, 'M3': 3, 'M4': 3, 'M5': 3}
+    EDGE_J2 = {'K': 0.5, 'L1': 0.5, 'L2': 1.5, 'L3': 1.5, 'M1': 0.5, 'M2': 0.5, 'M3': 1.5, 'M4': 1.5, 'M5': 2.5}
+
+    eta = eta_s(E1, Z2, M1, M2, edge)
+    theta = theta_s(EDGE_N[edge], Z2, edge)
+    M = reduced_mass(M1, M2)
+    xi = xi_s(eta, theta, EDGE_N[edge])
+    zeta = zeta_s(theta, xi, EDGE_N[edge], Z1, Z2, edge)
+    
+    sigma_corr = {}
+    sigma_corr['PWBA'] = sigma_PWBA(eta, theta, M, EDGE_J2[edge], Z1, Z2, EDGE_N[edge], edge)
+    sigma_corr['PSS'] = sigma_PSS(zeta, xi, eta, theta, M, EDGE_J2[edge], Z1, Z2, EDGE_N[edge], edge)
+    sigma_corr['CPSS'] = sigma_CPSS(zeta, xi, eta, theta, M, EDGE_J2[edge], E1, M1, Z1, Z2, EDGE_N[edge], edge)
+    sigma_corr['CPSSR'] = sigma_CPSSR(zeta, xi, eta, theta, M, EDGE_J2[edge], E1,M1, Z1, Z2, EDGE_N[edge], edge)
+    
+    return sigma_corr
+        
 
 def test_PWBA_point(E1_MeV:float, M1_u:float, M2_u:float, Z1:int, Z2:int, edge:str):
     
@@ -459,9 +570,12 @@ if __name__ == "__main__":
     # print(test_PWBA_point(E1_MeV=1, M1_u=1.007276, M2_u=xy.atomic_mass('Si'), Z1=1, Z2=xy.atomic_number('Si'), n=2, edge='L1'))
     # print(test_PWBA_point(E1_MeV=10, M1_u=1.007276, M2_u=xy.atomic_mass('Si'), Z1=1, Z2=xy.atomic_number('Si'), n=3, edge='M1'))
     
-    for E in np.linspace(0.2,2,40):
-        result = test_PWBA_point(E1_MeV=E, M1_u=1.007276, M2_u=xy.atomic_mass('Si'), Z1=1, Z2=xy.atomic_number('Si'), n=3, edge='M1')
-        print(f' {E} MeV: {result:12.3f} b')
+    result = test_corr_point(E1_MeV=1.0, M1_u=1.007276, M2_u=xy.atomic_mass('C'), Z1=1, Z2=xy.atomic_number('C'), edge='K')
+    print(result)
+    
+    # for E in np.linspace(0.2,2,40):
+    #     result = test_corr_point(E1_MeV=E, M1_u=1.007276, M2_u=xy.atomic_mass('Si'), Z1=1, Z2=xy.atomic_number('Si'), n=3, edge='M1')
+    #     print(result)
     
     
     # print('ALPHA:')
