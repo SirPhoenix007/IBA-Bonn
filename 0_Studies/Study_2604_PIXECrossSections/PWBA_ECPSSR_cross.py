@@ -46,7 +46,7 @@ def slater_screening(Z2:int, edge:str):
                          'L3':4.15,
                          'M1':11.25,
                          'M2':11.25,
-                         'M3':21.15,
+                         'M3':11.25,
                          'M4':21.15,
                          'M5':21.15}
     
@@ -60,11 +60,11 @@ def reduced_mass(M1:float, M2:float):
 
 def eta_s(E1:float,Z2:int, M1:float, M2:float, edge:str):
     Z2s = slater_screening(Z2, edge)
-    M = reduced_mass(M1, M2)
-    return (ME_EV * E1)/(M1 * Z2s**2 * RYDBERG_EV) #TODO This equation should not have M1 but M. Check ECPSSR results once done.
+    # M = reduced_mass(M1, M2)
+    return (ME_EV * E1)/(M1 * Z2s**2 * RYDBERG_EV)
 
 def theta_s(n:int, Z2:int, edge:str):
-    E_s = xy.xray_edge(Z2, edge, energy_only=True)          #eV
+    E_s = xy.xray_edge(Z2, edge, energy_only=True)
     Z2s = slater_screening(Z2, edge)
     return (n**2 * E_s)/(Z2s**2 * RYDBERG_EV)
 
@@ -335,34 +335,30 @@ def I_correction_function(x):
         return float("inf")
     elif 0 < x <= 0.035:
         return 0.75*np.pi*(np.log(x**(-2)) - 1)
-    elif 0.0035 < x <= 3.1:
-        return np.exp(-2*x)*(0.031 + np.sqrt(0.210*x) + 0.005*x - (0.069*x)**(3/2) + 0.324*x**2)**(-1)
+    elif 0.035 < x <= 3.1:
+        return np.exp(-2*x)*(0.031 + 0.210*np.sqrt(x) + 0.005*x - 0.069*x**(3/2) + 0.324*x**2)**(-1)
     elif 3.1 < x <= 11.0:
         return np.exp(-2*x)/(x**1.6)
     else:
         return 0.0
     
 def h_correction_function(xi, theta, n, edge):
-    C_S = {'K':1.5, 'L1':1.5, 'L2':1.2, 'L3':1.2}
+    C_S = {'K':1.5, 'L1':1.5, 'L2':1.25, 'L3':1.25}
     return (2*n/(theta*xi**3) * I_correction_function(C_S[edge] * n / xi))
 
 def zeta_s(theta, xi, n, Z1, Z2, edge):
     '''
     BINDING-POLARIZATION FACTOR zeta(xi)
     '''
-    factor1 = (2*Z1/Z2 * theta)
+    Z2s = slater_screening(Z2, edge)
+    factor1 = (2*Z1/(Z2s * theta))
     g_value = g_correction_function(xi, edge)
     h_value = h_correction_function(xi, theta, n, edge)
     return 1 + factor1*(g_value - h_value)
 
-def Coulomb_defl(E1, E_edge, M1, Z1, Z2, zeta, edge):
+def Coulomb_defl(arg0, edge):
     
     l2 = {'K': 0, 'L1': 0, 'L2': 1, 'L3': 1}
-    
-    d = Z1 * Z2 * E2_EV_ANG / (2.0 * E1)                 # Angstrom
-    v1_over_v0 = np.sqrt(E1 / M1 / RYDBERG_EV)              # v1/v0, v0 = e^2/hbar
-    q0 = E_edge / (E2_EV_ANG * v1_over_v0)                # 1/Angstrom
-    arg0 = np.pi * d * q0 * zeta
     nu = 10 + 2*l2[edge]
     return (9 + 2*l2[edge]) * expn(nu, arg0)
 
@@ -375,6 +371,15 @@ def rel_correction(xi, n, Z2, edge):
         ys = 0.15*(Z2s/137)**2 / xi
         
     return np.sqrt(1 + 1.1*ys**2) + ys
+
+def f_corr_energy_loss(zeta, M1, E1, M, E_edge, edge):
+    
+    l2 = {'K': 0, 'L1': 0, 'L2': 1, 'L3': 1}
+    z = np.sqrt(1.0 - zeta * E_edge * M1 / (M * E1))
+    nu = 9 + 2*l2[edge]
+    
+    return (1/(2**nu * (nu-1)) * ((nu*z -1)*(1+z)**nu + (nu*z + 1)*(1-z)**nu),z)
+    
 
 #========^=======ECPSSR CORRECTIONS======^=========#
 
@@ -467,124 +472,60 @@ def sigma_PWBA(eta:float, theta:float, M:float, j2:float, Z1:int, Z2:int, n:int,
     
     return sigma_0 * f_PWBA / eta
 
-def sigma_PSS(zeta:float, xi:float, eta:float, theta:float, M:float, j2:float, Z1:int, Z2:int, n:int, edge:str):
+def sigma_ECPSSR(j2:float, E1, M1:float, M2:float, Z1:int, Z2:int, n:int, edge:str, verbose=False):
     
+    sigma_corr = {}
+    
+    eta = eta_s(E1, Z2, M1, M2, edge)
+    theta = theta_s(n, Z2, edge)
+    M = reduced_mass(M1, M2)
+    
+    sigma_corr['PWBA'] = sigma_PWBA(eta, theta, M, j2, Z1, Z2, n, edge)
+    if verbose: print('PWBA CROSS SECTION CALCULATED.')
+    
+    xi = xi_s(eta, theta, n)
+    zeta = zeta_s(theta, xi, n, Z1, Z2, edge)
     theta_PSS = zeta*theta
-    
-    return sigma_PWBA(eta, theta_PSS, M, j2, Z1, Z2, n, edge)
-
-def sigma_CPSS(zeta:float, xi:float, eta:float, theta:float, M:float, j2:float, E1, M1:float, Z1:int, Z2:int, n:int, edge:str):
+    sigma_corr['PSS'] = sigma_PWBA(eta, theta_PSS, M, j2, Z1, Z2, n, edge)
+    if verbose: print('PWBA-PSS CROSS SECTION CALCULATED.')
     
     E_edge = xy.xray_edge(element=Z2, edge=edge).energy
-    C_correction = Coulomb_defl(E1, E_edge, M1, Z1, Z2, zeta, edge)
-    
-    return C_correction*sigma_PSS(zeta, xi, eta, theta, M, j2, Z1, Z2, n, edge)
-
-def sigma_CPSSR(zeta:float, xi:float, eta:float, theta:float, M:float, j2:float, E1, M1:float, Z1:int, Z2:int, n:int, edge:str):
+    d = Z1 * Z2 * E2_EV_ANG / (2.0 * E1)
+    v1_over_v0 = np.sqrt(E1*ME_EV / M1 / RYDBERG_EV)
+    q0 = E_edge / (E2_EV_ANG * v1_over_v0)
+    arg0 = np.pi * d * q0 * zeta
+    C_correction_0 = Coulomb_defl(arg0, edge)
+    sigma_corr['CPSS'] = sigma_corr['PSS'] * C_correction_0
+    if verbose: print('PWBA-CPSS CROSS SECTION CALCULATED.')
     
     m_R = rel_correction(xi, n, Z2, edge)
     eta_mR = m_R * eta
+    sigma_corr['CPSSR'] = sigma_PWBA(eta_mR, theta_PSS, M, j2, Z1, Z2, n, edge) * C_correction_0
+    if verbose: print('PWBA-CPSSR CROSS SECTION CALCULATED.')
     
-    return sigma_CPSS(zeta, xi, eta_mR, theta, M, j2, E1, M1, Z1, Z2, n, edge)
-    
+    _ , z = f_corr_energy_loss(zeta, M1, E1, M, E_edge, edge)
+    arg_el = (2 * arg0) / (z * (1.0 + z))
+    C_correction_el = Coulomb_defl(arg_el, edge)
+    sigma_corr['ECPSSR'] = sigma_PWBA(eta_mR, theta_PSS, M, j2, Z1, Z2, n, edge) * C_correction_el
+    if verbose: print('ECPSSR CROSS SECTION CALCULATED.')
 
+    return sigma_corr
 
 #========^=======CROSS SECTIONS=======^========#
 
 #========v=======PRODUCTION OF SIM. DATA=======v========#
-def test_corr_point(E1_MeV:float, M1_u:float, M2_u:float, Z1:int, Z2:int, edge:str):
-    E1 = E1_MeV * 1e6
+def PWBA_ECPSSR_calculate(E1_MeV, M1_u:float, M2_u:float, Z1:int, Z2:int, edge:str, verbose:bool=False):
+    E1 = E1_MeV * 1e6    
     M1 = M1_u * U_IN_EV
     M2 = M2_u * U_IN_EV
     
     EDGE_N = {'K': 1, 'L1': 2, 'L2': 2, 'L3': 2, 'M1': 3, 'M2': 3, 'M3': 3, 'M4': 3, 'M5': 3}
-    EDGE_J2 = {'K': 0.5, 'L1': 0.5, 'L2': 1.5, 'L3': 1.5, 'M1': 0.5, 'M2': 0.5, 'M3': 1.5, 'M4': 1.5, 'M5': 2.5}
+    EDGE_J2 = {'K': 0.5, 'L1': 0.5, 'L2': 0.5, 'L3': 1.5, 'M1': 0.5, 'M2': 0.5, 'M3': 1.5, 'M4': 1.5, 'M5': 2.5}
 
-    eta = eta_s(E1, Z2, M1, M2, edge)
-    theta = theta_s(EDGE_N[edge], Z2, edge)
-    M = reduced_mass(M1, M2)
-    xi = xi_s(eta, theta, EDGE_N[edge])
-    zeta = zeta_s(theta, xi, EDGE_N[edge], Z1, Z2, edge)
-    
-    sigma_corr = {}
-    sigma_corr['PWBA'] = sigma_PWBA(eta, theta, M, EDGE_J2[edge], Z1, Z2, EDGE_N[edge], edge)
-    sigma_corr['PSS'] = sigma_PSS(zeta, xi, eta, theta, M, EDGE_J2[edge], Z1, Z2, EDGE_N[edge], edge)
-    sigma_corr['CPSS'] = sigma_CPSS(zeta, xi, eta, theta, M, EDGE_J2[edge], E1, M1, Z1, Z2, EDGE_N[edge], edge)
-    sigma_corr['CPSSR'] = sigma_CPSSR(zeta, xi, eta, theta, M, EDGE_J2[edge], E1,M1, Z1, Z2, EDGE_N[edge], edge)
+    sigma_corr = sigma_ECPSSR(EDGE_J2[edge], E1, M1, M2, Z1, Z2, EDGE_N[edge], edge, verbose)
     
     return sigma_corr
-        
-
-def test_PWBA_point(E1_MeV:float, M1_u:float, M2_u:float, Z1:int, Z2:int, edge:str):
-    
-    E1 = E1_MeV * 1e6
-    M1 = M1_u * U_IN_EV
-    M2 = M2_u * U_IN_EV
-    
-    EDGE_N = {'K': 1, 'L1': 2, 'L2': 2, 'L3': 2, 'M1': 3, 'M2': 3, 'M3': 3, 'M4': 3, 'M5': 3}
-    EDGE_J2 = {'K': 0.5, 'L1': 0.5, 'L2': 1.5, 'L3': 1.5, 'M1': 0.5, 'M2': 0.5, 'M3': 1.5, 'M4': 1.5, 'M5': 2.5}
-
-    eta = eta_s(E1, Z2, M1, M2, edge)
-    theta = theta_s(EDGE_N[edge], Z2, edge)
-    M = reduced_mass(M1, M2)
-    
-    return sigma_PWBA(eta, theta, M, EDGE_J2[edge], Z1, Z2, EDGE_N[edge], edge)
-
-
-def test_PWBA_range(E1_MeV_range:list, M1_u:float, M2_u:float, Z1:int, Z2:int, edge:str):
-    
-    result_sigma = []
-    E1 = np.array(E1_MeV_range) * 1e6
-    M1 = M1_u * U_IN_EV
-    M2 = M2_u * U_IN_EV
-    
-    EDGE_N = {'K': 1, 'L1': 2, 'L2': 2, 'L3': 2, 'M1': 3, 'M2': 3, 'M3': 3, 'M4': 3, 'M5': 3}
-    EDGE_J2 = {'K': 0.5, 'L1': 0.5, 'L2': 1.5, 'L3': 1.5, 'M1': 0.5, 'M2': 0.5, 'M3': 1.5, 'M4': 1.5, 'M5': 2.5}
-
-    eta = eta_s(E1, Z2, M1, M2, edge)
-    theta = theta_s(EDGE_N[edge], Z2, edge)
-    M = reduced_mass(M1, M2)
-    
-    for e in tqdm.tqdm(range(len(E1))):
-        result_sigma.append(sigma_PWBA(eta[e], theta, M, EDGE_J2[edge], Z1, Z2, EDGE_N[edge], edge))
-    return np.array(result_sigma)
-
-'''
-sigma_ECPSSR = correction_term * sigma_PWBA(msR*eta, zeta_s*theta,...)
-'''
 
 
 if __name__ == "__main__":
-    # print('PROTON ON AMERICIUM')
-    # result = test_PWBA(E1_MeV=1.0, M1_u=1.007276, M2_u=241.057, Z1=1, Z2=95, n=1, edge='K')
-    # print(f'K-shell: {result:12.3f} b')
-    # result = test_PWBA(E1_MeV=1.0, M1_u=1.007276, M2_u=241.057, Z1=1, Z2=95, n=2, edge='L1')
-    # print(f'L1-shell: {result:12.3f} b')
-    # result = test_PWBA(E1_MeV=1.0, M1_u=1.007276, M2_u=241.057, Z1=1, Z2=95, n=2, edge='L2')
-    # print(f'L2-shell: {result:12.3f} b')
-    # result = test_PWBA(E1_MeV=1.0, M1_u=1.007276, M2_u=241.057, Z1=1, Z2=95, n=2, edge='L3')
-    # print(f'L3-shell: {result:12.3f} b')
-    # result = test_PWBA(E1_MeV=1.0, M1_u=1.007276, M2_u=241.057, Z1=1, Z2=95, n=3, edge='M1')
-    # print(f'M1-shell: {result:12.3f} b')
-    
-    # print(test_PWBA_point(E1_MeV=1, M1_u=1.007276, M2_u=xy.atomic_mass('Si'), Z1=1, Z2=xy.atomic_number('Si'), n=2, edge='L1'))
-    # print(test_PWBA_point(E1_MeV=10, M1_u=1.007276, M2_u=xy.atomic_mass('Si'), Z1=1, Z2=xy.atomic_number('Si'), n=3, edge='M1'))
-    
-    result = test_corr_point(E1_MeV=1.0, M1_u=1.007276, M2_u=xy.atomic_mass('C'), Z1=1, Z2=xy.atomic_number('C'), edge='K')
-    print(result)
-    
-    # for E in np.linspace(0.2,2,40):
-    #     result = test_corr_point(E1_MeV=E, M1_u=1.007276, M2_u=xy.atomic_mass('Si'), Z1=1, Z2=xy.atomic_number('Si'), n=3, edge='M1')
-    #     print(result)
-    
-    
-    # print('ALPHA:')
-    
-    # result = test_PWBA(E1_MeV=1.0, M1_u=2*1.007276, M2_u=241.057, Z1=2, Z2=29, n=1, edge='K')
-    # print(f'K-shell: {result:12.3f} b')
-    # result = test_PWBA(E1_MeV=1.0, M1_u=2*1.007276, M2_u=241.057, Z1=2, Z2=29, n=2, edge='L1')
-    # print(f'L1-shell: {result:12.3f} b')
-    # result = test_PWBA(E1_MeV=1.0, M1_u=2*1.007276, M2_u=241.057, Z1=2, Z2=29, n=2, edge='L2')
-    # print(f'L2-shell: {result:12.3f} b')
-    # result = test_PWBA(E1_MeV=1.0, M1_u=2*1.007276, M2_u=241.057, Z1=2, Z2=29, n=2, edge='L3')
-    # print(f'L3-shell: {result:12.3f} b')
+    print(PWBA_ECPSSR_calculate(E1_MeV=15, M1_u=xy.atomic_mass('H'), M2_u=xy.atomic_mass('Pu'), Z1=1, Z2=xy.atomic_number('Pu'), edge='L1', verbose=False))
