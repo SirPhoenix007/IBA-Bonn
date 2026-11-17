@@ -50,7 +50,9 @@ def rutherford_cross_section(E1, Z1, Z2, angle, verbose=False):
     denominator = np.sqrt(1 - (lamb*np.sin(theta))**2)
     
     result = prefactor * ruth_angle * numerator / denominator
-    return result
+    conversion = 1e-2
+    return result*conversion
 
 if __name__ == "__main__":
-    print(f'RESULT: {round(rutherford_cross_section(E1=5, Z1=2, Z2=79, angle=60)*10,2)} mb/sr ')
+    # print(f'RESULT: {round(rutherford_cross_section(E1=5, Z1=2, Z2=79, angle=60)*10,2)} mb/sr ')
+    print(rutherford_cross_section(5, 2, 79, 60))
