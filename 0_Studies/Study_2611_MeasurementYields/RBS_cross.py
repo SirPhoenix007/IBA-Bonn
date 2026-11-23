@@ -6,10 +6,6 @@ RBS in CMS system
 RBS Mayer -> arcsin(theta1/theta2)?!
 non-RBS corrections
 '''
-
-
-
-
 lazy import argparse
 lazy import numpy as np
 lazy import matplotlib.pyplot as plt
