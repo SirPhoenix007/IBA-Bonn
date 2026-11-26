@@ -90,6 +90,7 @@ def check_normalisation(name, smax=40.0, npts=200001):
 
 
 if __name__ == "__main__":
+    # print(P0(c1=1))
     for name in ["Rb+", "Br-", "neutral"]:
         check_normalisation(name)
         print()
