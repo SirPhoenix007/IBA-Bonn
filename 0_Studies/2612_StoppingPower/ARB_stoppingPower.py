@@ -51,6 +51,9 @@ def x_parameter(Z1:int, Z2:int, E1:float):
 #########
 A_0 = 0.52918 #Angström per a_0
 kappa = 0.6 * (3*np.pi / (8*np.sqrt(2))) ** (2/3) #Jensen (1a)
+ELC = 1.602E-19
+ME = 9.109E-31
+EPS0 = 8.854E-12
 
 def P0(c1):
     return 2.0 * sum(math.comb(3,k) * math.factorial(k + 2) * c1**k for k in range(4))
@@ -85,72 +88,15 @@ def rho_LJ(r, N, c1, lambda_value):
     x = np.sqrt(r/lambda_value)
     return N/(4 * np.pi * lambda_value**3 * P0(c1)) * np.exp(-x) * (1 + c1*x)**3 / x**3
 
-# def rho_Lenz_Jensen(r, mu, Z1):
-#     '''
-#     (3)
-#     '''
-#     xi = r / mu
-#     lambda_LJ = BOHR_RADIUS/(Z1**(1/3)*3.458) #(4)
-#     x = lambda_LJ * xi
-#     C = 0.265 #(4)
-    
-#     return Z1/(4*np.pi*mu**3) * lambda_LJ**3 * x**(-3/2) * np.exp(-x**(1/2)) * (1 + C*x**0.5)**3
+def I_ARB(xi):
+    I1 = np.pi * (-xi*scsp.k1(2*xi) * (scsp.k0(xi)*scsp.i0(xi) + scsp.k1(xi)*scsp.i0(xi)) + 2*xi * scsp.k0(2*xi)*scsp.k1(xi)*scsp.i0(xi))
+    I2 = np.pi * (2*xi*scsp.k1(2*xi) * scsp.k0(xi)*scsp.i0(xi) - scsp.k0(2*xi))
+    return I1 + I2
 
-# def plot_Lenz_Jensen(Z1):
-#     mu = MYSTIC_CONSTANT * BOHR_RADIUS / Z1**(1/3)
-#     plt.figure(figsize=(4,4), dpi=200)
-#     r = np.linspace(0.01,1e2,20000)
-#     Rho = lambda r: r**2 * 4 * np.pi * rho_Lenz_Jensen(r, mu, Z1)
-#     I_LJ, _ = integrate.quad(Rho, 0.01*BOHR_RADIUS, 2000*BOHR_RADIUS, limit=100, epsabs=0.0, epsrel=1e-5)
-#     print(f'P = {I_LJ/(4*Z1)}')
-#     # plt.plot(r, rho_Lenz_Jensen(r, mu, Z1))
-#     plt.plot(r,r**0.5
-#             * np.exp(-np.sqrt(r))
-#             * (1 + 0.265 * np.sqrt(r))**3)
-#     # plt.xlim(0,1000*BOHR_RADIUS)
-#     plt.show()
-
-
-
-# import numpy as np
-# from scipy.integrate import quad
-# from scipy.constants import physical_constants
-
-# a0 = physical_constants["Bohr radius"][0]  # meters
-
-# def rho_LJ(r, Z, P, lam, C=0.265):
-#     mu = 0.8853 * a0 * Z**(-1/3)
-#     x = lam * r / mu
-
-#     if np.isscalar(r) and r == 0:
-#         return np.inf
-
-#     return (
-#         Z / (4 * np.pi * mu**3)
-#         * lam**3 / (4 * P)
-#         * x**(-1.5)
-#         * np.exp(-np.sqrt(x))
-#         * (1 + C * np.sqrt(x))**3
-#     )
-
-# def electron_number_x(Z, P, C=0.333):
-
-#     integrand = lambda x: (
-#         x**0.5
-#         * np.exp(-np.sqrt(x))
-#         * (1 + C * np.sqrt(x))**3
-#     )
-
-#     integral, error = quad(
-#         integrand, 0, np.inf,
-#         epsabs=1e-10,
-#         epsrel=1e-12
-#     )
-
-#     Ne = Z / (4 * P) * integral
-
-#     return Ne, error
-
+def omega_0(r, chi, Z2, N2):
+    c1, lam = lambda_calculation(Z2,N2)
+    rLJ = rho_LJ(r, N, c1, lam)
+    return chi * np.sqrt(rLJ*ELC**2/(EPS0*ME))
 
 if __name__ == "__main__":
     #Test K+ Jensen Values
